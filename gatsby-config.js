@@ -4,7 +4,7 @@ require('dotenv').config({
 
 module.exports = {
   siteMetadata: {
-    title: `Gatsby Default Starter`,
+    title: `Benjamin Lannon`,
     description: `Kick off your next, great Gatsby project with this default starter. This barebones starter ships with the main Gatsby configuration files you might need.`,
     author: `@gatsbyjs`,
   },
@@ -34,9 +34,12 @@ module.exports = {
     {
       resolve: `gatsby-source-prismic`,
       options: {
-        repositoryName: 'lannonbrportfoliodata',
+        repositoryName: `lannonbrportfoliodata`,
         accessToken: `${process.env.PRISMIC_API_KEY}`,
-        lang: '*',
+        lang: `*`,
+        shouldNormalizeImage: () => {
+          return true
+        },
       },
     },
     // this (optional) plugin enables Progressive Web App + Offline functionality

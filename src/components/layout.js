@@ -22,16 +22,17 @@ const Layout = ({ children }) => (
         <div
           style={{
             margin: `0 auto`,
-            maxWidth: 960,
+            maxWidth: 1600,
             padding: `0px 1.0875rem 1.45rem`,
             paddingTop: 0,
           }}
         >
           {children}
           <footer>
-            © {new Date().getFullYear()}, Built with
+            © {new Date().getFullYear()} Benjamin Lannon. Built with
             {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+            <a href="https://www.gatsbyjs.org">Gatsby</a>. Deployed on{' '}
+            <a href="https://netlify.com">Netlify</a>
           </footer>
         </div>
       </>
