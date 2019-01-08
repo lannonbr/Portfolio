@@ -2,8 +2,38 @@ import React from 'react'
 import Img from 'gatsby-image'
 import moment from 'moment'
 import TechCard from '../components/techCard'
+import styled from 'styled-components'
 
-import './project.css'
+const ProjectWrapper = styled.article`
+  display: flex;
+  flex-direction: ${props =>
+    props.idx && (props.idx % 2 === 0 ? `unset` : `row-reverse`)};
+  padding: 10px;
+  margin-bottom: 30px;
+
+  .project__image {
+    flex: 1;
+    box-shadow: 0 2px 6px hsla(120, 0%, 20%, 0.3);
+    border-radius: 4px;
+    margin: 0 20px;
+  }
+
+  .project__details {
+    flex: 1;
+  }
+
+  .project__link {
+    margin-right: 20px;
+  }
+`
+
+function ProjectLink({ url, target, text }) {
+  return (
+    <a href={url} target={target} className="project__link">
+      {text}
+    </a>
+  )
+}
 
 function Project({ project, idx }) {
   const title = project.project_title.text
@@ -14,43 +44,22 @@ function Project({ project, idx }) {
   let date = dateObj.format(`MMMM YYYY`)
 
   return (
-    <article
-      className="project"
-      style={{
-        marginBottom: 30,
-        padding: 10,
-        display: 'flex',
-        flexDirection: idx % 2 === 0 ? 'unset' : 'row-reverse',
-      }}
-    >
-      <Img
-        style={{
-          flex: 1,
-          boxShadow: '0 2px 6px hsla(120, 0%, 20%, 0.3)',
-          borderRadius: 4,
-          marginLeft: 20,
-          marginRight: 20,
-        }}
-        fluid={img.childImageSharp.fluid}
-      />
-      <div style={{ flex: 1 }}>
+    <ProjectWrapper idx={idx}>
+      <Img className="project__image" fluid={img.childImageSharp.fluid} />
+      <div className="project__details">
         <h2>{title}</h2>
-        <time>Created: {date}</time>
+        <time dateTime={project.project_origin_date}>Created: {date}</time>
         <p>{description}</p>
-        <a
-          className="project-link"
-          href={project.github_link.url}
+        <ProjectLink
+          url={project.github_link.url}
           target={project.github_link.target}
-        >
-          GitHub Link
-        </a>
-        <a
-          className="project-link"
-          href={project.website_link.url}
+          text="GitHub Link"
+        />
+        <ProjectLink
+          url={project.website_link.url}
           target={project.website_link.target}
-        >
-          Website Link
-        </a>
+          text="Website Link"
+        />
         {project.technologies.map(tech => {
           return (
             <TechCard
@@ -60,7 +69,7 @@ function Project({ project, idx }) {
           )
         })}
       </div>
-    </article>
+    </ProjectWrapper>
   )
 }
 
