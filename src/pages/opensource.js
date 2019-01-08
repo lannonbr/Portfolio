@@ -3,7 +3,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 
-const ContactPage = () => (
+const OpenSourcePage = () => (
   <Layout>
     <SEO title="Contact" keywords={[`gatsby`, `application`, `react`]} />
     <h1>Open Source</h1>
@@ -17,4 +17,4 @@ const ContactPage = () => (
   </Layout>
 )
 
-export default ContactPage
+export default OpenSourcePage

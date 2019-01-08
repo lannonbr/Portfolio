@@ -17,6 +17,7 @@ const StyledNav = styled(Navigation)`
 function Navigation({ className }) {
   return (
     <nav className={className}>
+      <Link to="/work/">Work</Link>
       <Link to="/projects/">Projects</Link>
       <Link to="/opensource/">Open Source</Link>
       <Link to="/contact/">Contact</Link>
