@@ -10,7 +10,7 @@ const HeaderContainer = styled.div`
   padding: 1.45rem 1.0875rem;
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
+  align-items: center;
 `
 
 const Header = ({ siteTitle }) => (
@@ -27,6 +27,7 @@ const Header = ({ siteTitle }) => (
           style={{
             color: `white`,
             textDecoration: `none`,
+            fontFamily: 'Oswald',
           }}
         >
           {siteTitle}
