@@ -15,6 +15,11 @@ const CardWrapper = styled.div`
   p:last-child {
     margin-bottom: 0;
   }
+
+  p.metadata {
+    display: flex;
+    align-items: center;
+  }
 `
 
 const LanguageCircle = styled.div`
@@ -32,8 +37,14 @@ function GitHubDetailCard(props) {
     <CardWrapper>
       <a href={repo.url}>{repo.nameWithOwner}</a>
       <p className="description">{repo.description}</p>
-      <p>
-        <span>
+      <p className="metadata">
+        <span
+          style={{
+            display: 'flex',
+            alignItems: 'center',
+            justifyContent: 'center',
+          }}
+        >
           <LanguageCircle color={repo.primaryLanguage.color} />
         </span>
         <span style={{ marginRight: 20 }}>{repo.primaryLanguage.name}</span>
