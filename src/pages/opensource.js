@@ -5,6 +5,9 @@ import styled from 'styled-components'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import GitHubDetailCard from '../components/GitHubDetailCard'
+import SplitLayout from '../components/SplitLayout'
+
+import vc from '../images/versioncontrol.svg'
 
 const githubPinnedRepos = graphql`
   {
@@ -46,14 +49,19 @@ const PinnedReposGridContainer = styled.div`
 const OpenSourcePage = () => (
   <Layout>
     <SEO title="Open Source" keywords={[`gatsby`, `application`, `react`]} />
-    <h1>Open Source</h1>
-    <p>I'm heavily involved in the Open Source community.</p>
-    <p>
-      This site is even open sourced on github:{' '}
-      <a href="https://github.com/lannonbr/portfolio-gatsby">
-        lannonbr/portfolio-gatsby
-      </a>
-    </p>
+    <SplitLayout>
+      <div>
+        <h1>Open Source</h1>
+        <p>I'm heavily involved in the Open Source community.</p>
+        <p>
+          This site is even open sourced on github:{' '}
+          <a href="https://github.com/lannonbr/portfolio-gatsby">
+            lannonbr/portfolio-gatsby
+          </a>
+        </p>
+      </div>
+      <img src={vc} />
+    </SplitLayout>
     <h2>My GitHub Pinned Repos</h2>
     <StaticQuery
       query={githubPinnedRepos}
