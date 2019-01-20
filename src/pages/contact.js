@@ -22,7 +22,11 @@ const ContactPage = () => (
           </li>
         </ul>
       </div>
-      <img src={conversation} alt="" />
+      <img
+        src={conversation}
+        alt="People conversing illustration"
+        style={{ maxWidth: 600 }}
+      />
     </SplitLayout>
   </Layout>
 )

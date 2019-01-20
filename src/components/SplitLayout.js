@@ -6,6 +6,10 @@ const SplitLayout = styled.section`
   & > * {
     flex: 1;
   }
+
+  @media (max-width: 768px) {
+    display: block;
+  }
 `
 
 export default SplitLayout

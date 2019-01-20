@@ -3,7 +3,37 @@ import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 
 import Header from './header'
+import Footer from './footer'
 import './layout.css'
+
+import styled from 'styled-components'
+
+const LayoutContainer = styled.div`
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  main {
+    flex: 1 0 auto;
+    margin: 0 auto;
+    width: 100%;
+    max-width: 1600px;
+    padding: 20px 0;
+  }
+
+  main a {
+    color: #2574a9;
+    text-decoration: none;
+  }
+
+  main a:hover {
+    text-decoration: underline;
+  }
+
+  footer {
+    flex-shrink: 0;
+  }
+`
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -17,25 +47,11 @@ const Layout = ({ children }) => (
       }
     `}
     render={data => (
-      <>
+      <LayoutContainer>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <div
-          style={{
-            margin: `0 auto`,
-            maxWidth: 1600,
-            padding: `0px 1.0875rem 1.45rem`,
-            paddingTop: 0,
-          }}
-        >
-          {children}
-          <footer>
-            © {new Date().getFullYear()} Benjamin Lannon. Built with
-            {` `}
-            <a href="https://www.gatsbyjs.org">Gatsby</a>. Deployed on{' '}
-            <a href="https://netlify.com">Netlify</a>
-          </footer>
-        </div>
-      </>
+        <main>{children}</main>
+        <Footer />
+      </LayoutContainer>
     )}
   />
 )

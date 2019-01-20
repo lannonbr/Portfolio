@@ -10,7 +10,7 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <SplitLayout>
-      <img src={office} alt="" />
+      <img src={office} alt="Person sitting on desk illustration" style={{ maxWidth: 600, marginRight: 100 }}/>
       <div>
         <h1>Hi people</h1>
         <p>Welcome to your new Gatsby site.</p>
