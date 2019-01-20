@@ -11,14 +11,15 @@ const HeaderContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    padding-bottom: 0;
+  }
 `
 
 const Header = ({ siteTitle }) => (
-  <header
-    style={{
-      marginBottom: `1.45rem`,
-    }}
-  >
+  <header>
     <HeaderContainer>
       <h1 style={{ margin: 0, fontFamily: 'serif', color: '#663399' }}>
         <Link

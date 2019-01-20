@@ -7,6 +7,7 @@ const StyledNav = styled(Navigation)`
     color: #404040;
     text-decoration: none;
     margin-left: 30px;
+    display: inline-block;
   }
 
   a:first-child {
@@ -17,6 +18,20 @@ const StyledNav = styled(Navigation)`
   a.active {
     padding-bottom: 3px;
     border-bottom: 2px solid #663399;
+  }
+
+  @media (max-width: 768px) {
+    width: 100%;
+    margin-top: 20px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+
+    a {
+      text-align: center;
+      margin-left: 0;
+      margin-bottom: 10px;
+    }
   }
 `
 
