@@ -7,7 +7,7 @@ import Navigation from './navigation'
 const HeaderContainer = styled.div`
   margin: 0 auto;
   max-width: 1600px;
-  padding: 1.45rem 0;
+  padding: 1.45rem 30px;
   display: flex;
   justify-content: space-between;
   align-items: center;

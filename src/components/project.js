@@ -6,8 +6,6 @@ import styled from 'styled-components'
 
 const ProjectWrapper = styled.article`
   display: flex;
-  flex-direction: ${props =>
-    props.idx && (props.idx % 2 === 0 ? `unset` : `row-reverse`)};
   padding: 10px;
   margin-bottom: 30px;
 
@@ -22,8 +20,34 @@ const ProjectWrapper = styled.article`
     flex: 1;
   }
 
+  .project__links {
+    display: flex;
+  }
+
   .project__link {
     margin-right: 20px;
+  }
+
+  .project__tech {
+    display: flex;
+    margin-top: 26px;
+    flex-wrap: wrap;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+
+    .project__image {
+      margin-bottom: 20px;
+    }
+
+    .project__tech {
+      justify-content: center;
+    }
+
+    .project__links {
+      justify-content: center;
+    }
   }
 `
 
@@ -50,24 +74,28 @@ function Project({ project, idx }) {
         <h2>{title}</h2>
         <time dateTime={project.project_origin_date}>Created: {date}</time>
         <p>{description}</p>
-        <ProjectLink
-          url={project.github_link.url}
-          target={project.github_link.target}
-          text="GitHub Link"
-        />
-        <ProjectLink
-          url={project.website_link.url}
-          target={project.website_link.target}
-          text="Website Link"
-        />
-        {project.technologies.map(tech => {
-          return (
-            <TechCard
-              key={tech.technology_field}
-              tech={tech.technology_field}
-            />
-          )
-        })}
+        <div className="project__links">
+          <ProjectLink
+            url={project.github_link.url}
+            target={project.github_link.target}
+            text="GitHub Link"
+          />
+          <ProjectLink
+            url={project.website_link.url}
+            target={project.website_link.target}
+            text="Website Link"
+          />
+        </div>
+        <div className="project__tech">
+          {project.technologies.map(tech => {
+            return (
+              <TechCard
+                key={tech.technology_field}
+                tech={tech.technology_field}
+              />
+            )
+          })}
+        </div>
       </div>
     </ProjectWrapper>
   )

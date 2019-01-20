@@ -62,7 +62,7 @@ const GitHubContributionsGrid = styled.div`
   grid-template-columns: repeat(53, 10px);
   grid-auto-flow: column;
   gap: 1px;
-  /* border: 1px solid black; */
+  max-width: 100%;
 
   @media (max-width: 768px) {
     grid-template-rows: repeat(7, 7px);
@@ -117,7 +117,7 @@ const OpenSourcePage = () => (
             </GitHubContributionsGrid>
           </div>
           <img
-            style={{ maxWidth: 600 }}
+            style={{ width: '100%', maxWidth: 600, marginLeft: 30 }}
             src={vc}
             alt="version control illustration"
           />

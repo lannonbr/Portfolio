@@ -18,7 +18,7 @@ const LayoutContainer = styled.div`
     margin: 0 auto;
     width: 100%;
     max-width: 1600px;
-    padding: 20px 0;
+    padding: 20px 30px;
   }
 
   main a {
