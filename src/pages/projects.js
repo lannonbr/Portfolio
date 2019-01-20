@@ -60,7 +60,7 @@ const ProjectsPage = () => (
         return (
           <>
             {data.allPrismicProject.edges.map((projectObj, idx) => {
-              return <Project project={projectObj.node.data} idx={idx} />
+              return <Project project={projectObj.node.data} idx={idx} key={idx} />
             })}
           </>
         )

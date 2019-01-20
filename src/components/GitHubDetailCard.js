@@ -22,7 +22,7 @@ const CardWrapper = styled.div`
   }
 `
 
-const LanguageCircle = styled.div`
+const LanguageCircle = styled.span`
   width: 20px;
   height: 20px;
   display: inline-block;
