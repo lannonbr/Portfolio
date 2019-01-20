@@ -6,6 +6,7 @@ import Layout from '../components/layout'
 import SEO from '../components/seo'
 import GitHubDetailCard from '../components/GitHubDetailCard'
 import SplitLayout from '../components/SplitLayout'
+import IllustrationImg from '../components/illustrationImg'
 
 import vc from '../images/versioncontrol.svg'
 
@@ -58,22 +59,25 @@ const PinnedReposGridContainer = styled.div`
 
 const GitHubContributionsGrid = styled.div`
   display: grid;
-  grid-template-rows: repeat(7, 10px);
-  grid-template-columns: repeat(53, 10px);
+
+  --day-size: 10px;
+
+  grid-template-rows: repeat(7, var(--day-size));
+  grid-template-columns: repeat(53, var(--day-size));
   grid-auto-flow: column;
   gap: 1px;
-  max-width: 100%;
+
+  @media (max-width: 1200px) {
+    --day-size: 8px;
+    margin-bottom: 30px;
+  }
 
   @media (max-width: 768px) {
-    grid-template-rows: repeat(7, 7px);
-    grid-template-columns: repeat(53, 7px);
-    margin-bottom: 30px;
     justify-content: center;
   }
 
-  @media (max-width: 400px) {
-    grid-template-rows: repeat(7, 6px);
-    grid-template-columns: repeat(53, 6px);
+  @media (max-width: 450px) {
+    display: none;
   }
 `
 
@@ -106,26 +110,26 @@ const OpenSourcePage = () => (
             </p>
             <GitHubContributionsGrid>
               {data.github.user.contributionsCollection.contributionCalendar.weeks.map(
-                week => {
-                  return week.contributionDays.map(day => {
+                (week, widx) => {
+                  return week.contributionDays.map((day, didx) => {
                     return (
-                      <div className="day" style={{ background: day.color }} />
+                      <div className="day" style={{ background: day.color }} key={`${widx}-${didx}`} />
                     )
                   })
                 }
               )}
             </GitHubContributionsGrid>
           </div>
-          <img
-            style={{ width: '100%', maxWidth: 600, marginLeft: 30 }}
+          <IllustrationImg
+            marginLeft
             src={vc}
             alt="version control illustration"
           />
         </SplitLayout>
         <h2>My GitHub Pinned Repos</h2>
         <PinnedReposGridContainer>
-          {data.github.user.pinnedRepositories.edges.map(({ node }) => {
-            return <GitHubDetailCard repo={node} />
+          {data.github.user.pinnedRepositories.edges.map(({ node }, idx) => {
+            return <GitHubDetailCard repo={node} key={idx} />
           })}
         </PinnedReposGridContainer>
       </Layout>

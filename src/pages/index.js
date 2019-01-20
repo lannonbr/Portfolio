@@ -3,6 +3,7 @@ import React from 'react'
 import Layout from '../components/layout'
 import SEO from '../components/seo'
 import SplitLayout from '../components/SplitLayout'
+import IllustrationImg from '../components/illustrationImg'
 
 import office from '../images/office.svg'
 
@@ -10,12 +11,12 @@ const IndexPage = () => (
   <Layout>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <SplitLayout>
-      <img src={office} alt="Person sitting on desk illustration" style={{ maxWidth: 600, marginRight: 100 }}/>
       <div>
         <h1>Hi people</h1>
         <p>Welcome to your new Gatsby site.</p>
         <p>Now go build something great.</p>
       </div>
+      <IllustrationImg src={office} alt="Person sitting on desk illustration" marginLeft />
     </SplitLayout>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam omnis

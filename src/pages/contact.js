@@ -5,6 +5,7 @@ import SEO from '../components/seo'
 
 import conversation from '../images/conversation.svg'
 import SplitLayout from '../components/SplitLayout'
+import IllustrationImg from '../components/illustrationImg'
 
 const ContactPage = () => (
   <Layout>
@@ -22,10 +23,10 @@ const ContactPage = () => (
           </li>
         </ul>
       </div>
-      <img
+      <IllustrationImg
         src={conversation}
         alt="People conversing illustration"
-        style={{ maxWidth: 600 }}
+        marginLeft
       />
     </SplitLayout>
   </Layout>
