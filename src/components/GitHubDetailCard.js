@@ -38,16 +38,20 @@ function GitHubDetailCard(props) {
       <a href={repo.url}>{repo.nameWithOwner}</a>
       <p className="description">{repo.description}</p>
       <p className="metadata">
-        <span
-          style={{
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
-          }}
-        >
-          <LanguageCircle color={repo.primaryLanguage.color} />
-        </span>
-        <span style={{ marginRight: 20 }}>{repo.primaryLanguage.name}</span>
+        {repo.primaryLanguage && (
+          <>
+            <span
+              style={{
+                display: 'flex',
+                alignItems: 'center',
+                justifyContent: 'center',
+              }}
+            >
+              <LanguageCircle color={repo.primaryLanguage.color} />
+            </span>
+            <span style={{ marginRight: 20 }}>{repo.primaryLanguage.name}</span>
+          </>
+        )}
         {repo.stargazers.totalCount > 0 && (
           <span style={{ marginRight: 20 }}>
             {repo.stargazers.totalCount.toLocaleString()} Star
