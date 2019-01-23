@@ -4,7 +4,7 @@ import styled from 'styled-components'
 
 import Layout from '../components/layout'
 import SEO from '../components/seo'
-import GitHubDetailCard from '../components/GitHubDetailCard'
+import GitHubRepoCard from '../components/GitHubRepoCard'
 import SplitLayout from '../components/SplitLayout'
 import IllustrationImg from '../components/illustrationImg'
 
@@ -113,7 +113,11 @@ const OpenSourcePage = () => (
                 (week, widx) => {
                   return week.contributionDays.map((day, didx) => {
                     return (
-                      <div className="day" style={{ background: day.color }} key={`${widx}-${didx}`} />
+                      <div
+                        className="day"
+                        style={{ background: day.color }}
+                        key={`${widx}-${didx}`}
+                      />
                     )
                   })
                 }
@@ -129,7 +133,7 @@ const OpenSourcePage = () => (
         <h2>My GitHub Pinned Repos</h2>
         <PinnedReposGridContainer>
           {data.github.user.pinnedRepositories.edges.map(({ node }, idx) => {
-            return <GitHubDetailCard repo={node} key={idx} />
+            return <GitHubRepoCard repo={node} key={idx} />
           })}
         </PinnedReposGridContainer>
       </Layout>

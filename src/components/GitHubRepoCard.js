@@ -31,7 +31,7 @@ const LanguageCircle = styled.span`
   margin-right: 10px;
 `
 
-function GitHubDetailCard(props) {
+function GitHubRepoCard(props) {
   let repo = props.repo
   return (
     <CardWrapper>
@@ -64,4 +64,4 @@ function GitHubDetailCard(props) {
   )
 }
 
-export default GitHubDetailCard
+export default GitHubRepoCard
