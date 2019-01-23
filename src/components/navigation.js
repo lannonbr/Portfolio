@@ -8,6 +8,8 @@ const StyledNav = styled(Navigation)`
     text-decoration: none;
     margin-left: 30px;
     display: inline-block;
+    padding-bottom: 3px;
+    border-bottom: 2px solid transparent;
   }
 
   a:first-child {
@@ -16,8 +18,7 @@ const StyledNav = styled(Navigation)`
 
   a:hover,
   a.active {
-    padding-bottom: 3px;
-    border-bottom: 2px solid #663399;
+    border-bottom-color: #663399;
   }
 
   @media (max-width: 768px) {
