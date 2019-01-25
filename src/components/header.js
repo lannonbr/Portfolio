@@ -3,6 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Navigation from './navigation'
+import avatar from '../images/avatar.jpg'
 
 const HeaderContainer = styled.div`
   margin: 0 auto;
@@ -21,7 +22,16 @@ const HeaderContainer = styled.div`
 const Header = ({ siteTitle }) => (
   <header>
     <HeaderContainer>
-      <h1 style={{ margin: 0, fontFamily: 'serif', color: '#663399' }}>
+      <h1
+        style={{
+          display: 'flex',
+          alignItems: 'center',
+          margin: 0,
+          fontFamily: 'serif',
+          color: '#663399',
+        }}
+      >
+        <img src={avatar} alt="avatar" style={{ width: 80, height: 'auto', borderRadius: 40, marginBottom: 0, marginRight: 20, boxShadow: 'inset 0 0 10px #000000' }} />
         <Link
           to="/"
           style={{

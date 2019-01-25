@@ -12,18 +12,18 @@ const IndexPage = () => (
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <SplitLayout>
       <div>
-        <h1>Hi people</h1>
-        <p>Welcome to your new Gatsby site.</p>
-        <p>Now go build something great.</p>
+        <h1>Hi all, I'm Benjamin</h1>
+        <p>
+          I'm a software engineer in Upstate New York with a passion for Web
+          Development.
+        </p>
       </div>
-      <IllustrationImg src={office} alt="Person sitting on desk illustration" marginLeft />
+      <IllustrationImg
+        src={office}
+        alt="Person sitting on desk illustration"
+        marginLeft
+      />
     </SplitLayout>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aperiam omnis
-      ratione sit aut accusamus dolorum voluptate, voluptates inventore tempore
-      beatae natus explicabo, quam minima, quae quia blanditiis. Commodi, dicta
-      unde.
-    </p>
   </Layout>
 )
 
