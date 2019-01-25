@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 const StyledFooter = styled.footer`
@@ -35,6 +36,8 @@ function Footer(props) {
         <a href="https://www.gatsbyjs.org">Gatsby</a>
         {` • `}Deployed on{` `}
         <a href="https://netlify.com">Netlify</a>
+        {` • `}
+        <Link to="/uses/">Uses</Link>
       </p>
     </StyledFooter>
   )
