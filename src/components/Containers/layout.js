@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
+import { Transition, config, animated } from 'react-spring'
 
 import Header from './header'
 import Footer from './footer'
@@ -49,7 +50,17 @@ const Layout = ({ children }) => (
     render={data => (
       <LayoutContainer>
         <Header siteTitle={data.site.siteMetadata.title} />
-        <main>{children}</main>
+        <Transition
+          native
+          items={[children]}
+          from={{ opacity: 0, transform: 'translateY(75px)' }}
+          enter={{ opacity: 1, transform: 'translateY(0)' }}
+          config={{ ...config.default }}
+        >
+          {children => props => (
+            <animated.main style={props} children={children} />
+          )}
+        </Transition>
         <Footer />
       </LayoutContainer>
     )}

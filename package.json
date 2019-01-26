@@ -23,6 +23,7 @@
     "react-dom": "^16.6.3",
     "react-feather": "^1.1.5",
     "react-helmet": "^5.2.0",
+    "react-spring": "^7.2.10",
     "styled-components": "^4.1.3"
   },
   "keywords": [
