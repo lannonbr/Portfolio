@@ -1,6 +1,8 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import { Star, GitBranch } from 'react-feather'
+
 const CardWrapper = styled.div`
   border: 1px solid #d1d5da;
   border-radius: 3px;
@@ -53,12 +55,19 @@ function GitHubRepoCard(props) {
           </>
         )}
         {repo.stargazers.totalCount > 0 && (
-          <span style={{ marginRight: 20 }}>
-            {repo.stargazers.totalCount.toLocaleString()} Star
-            {repo.stargazers.totalCount > 1 ? 's' : ''}
+          <span
+            style={{ marginRight: 30, display: 'flex', alignItems: 'center' }}
+          >
+            <Star width={20} style={{ marginRight: 5 }} />
+            {repo.stargazers.totalCount.toLocaleString()}
           </span>
         )}
-        {repo.forkCount > 0 && <span>{repo.forkCount} forks</span>}
+        {repo.forkCount > 0 && (
+          <span style={{ display: 'flex', alignItems: 'center' }}>
+            <GitBranch width={20} style={{ marginRight: 5 }} />
+            {repo.forkCount}
+          </span>
+        )}
       </p>
     </CardWrapper>
   )
