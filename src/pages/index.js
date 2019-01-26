@@ -18,11 +18,13 @@ const IndexPage = () => (
           Development.
         </p>
       </div>
-      <IllustrationImg
-        src={office}
-        alt="Person sitting on desk illustration"
-        marginLeft
-      />
+      <div>
+        <IllustrationImg
+          src={office}
+          alt="Person sitting on desk illustration"
+          marginLeft
+        />
+      </div>
     </SplitLayout>
   </Layout>
 )

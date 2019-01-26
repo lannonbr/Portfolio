@@ -22,11 +22,13 @@ const ContactPage = () => (
           </li>
         </ul>
       </div>
-      <IllustrationImg
-        src={conversation}
-        alt="People conversing illustration"
-        marginLeft
-      />
+      <div>
+        <IllustrationImg
+          src={conversation}
+          alt="People conversing illustration"
+          marginLeft
+        />
+      </div>
     </SplitLayout>
   </Layout>
 )

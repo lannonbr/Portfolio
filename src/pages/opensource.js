@@ -123,11 +123,13 @@ const OpenSourcePage = () => (
               )}
             </GitHubContributionsGrid>
           </div>
-          <IllustrationImg
-            marginLeft
-            src={vc}
-            alt="version control illustration"
-          />
+          <div>
+            <IllustrationImg
+              marginLeft
+              src={vc}
+              alt="version control illustration"
+            />
+          </div>
         </SplitLayout>
         <h2>My GitHub Pinned Repos</h2>
         <PinnedReposGridContainer>
