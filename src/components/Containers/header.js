@@ -3,7 +3,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 import Navigation from './navigation'
-import avatar from '../images/avatar.jpg'
+import avatar from '../../images/avatar.jpg'
 
 const HeaderContainer = styled.div`
   margin: 0 auto;
@@ -31,7 +31,18 @@ const Header = ({ siteTitle }) => (
           color: '#663399',
         }}
       >
-        <img src={avatar} alt="avatar" style={{ width: 80, height: 'auto', borderRadius: 40, marginBottom: 0, marginRight: 20, boxShadow: 'inset 0 0 10px #000000' }} />
+        <img
+          src={avatar}
+          alt="avatar"
+          style={{
+            width: 80,
+            height: 'auto',
+            borderRadius: 40,
+            marginBottom: 0,
+            marginRight: 20,
+            boxShadow: 'inset 0 0 10px #000000',
+          }}
+        />
         <Link
           to="/"
           style={{

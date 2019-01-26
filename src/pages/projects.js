@@ -1,8 +1,8 @@
 import React from 'react'
 import { StaticQuery, graphql } from 'gatsby'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import { Layout } from '../components/Containers'
+import SEO from '../components/Utils/seo'
 import Project from '../components/project'
 
 const prismicProjectsQuery = graphql`
@@ -60,7 +60,9 @@ const ProjectsPage = () => (
         return (
           <>
             {data.allPrismicProject.edges.map((projectObj, idx) => {
-              return <Project project={projectObj.node.data} idx={idx} key={idx} />
+              return (
+                <Project project={projectObj.node.data} idx={idx} key={idx} />
+              )
             })}
           </>
         )

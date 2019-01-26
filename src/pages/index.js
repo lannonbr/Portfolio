@@ -1,8 +1,8 @@
 import React from 'react'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
-import SplitLayout from '../components/SplitLayout'
+import { Layout, SplitLayout } from '../components/Containers'
+
+import SEO from '../components/Utils/seo'
 import IllustrationImg from '../components/illustrationImg'
 
 import office from '../images/office.svg'

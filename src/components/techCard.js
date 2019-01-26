@@ -4,8 +4,7 @@ import styled from 'styled-components'
 const TechCardWrapper = styled.span`
   padding: 8px 12px;
   background: white;
-  border: 1px solid #eee;
-  box-shadow: 1px 4px 4px #ddd;
+  border: 1px solid #ddd;
   border-radius: 3px;
   margin: 10px;
   display: inline-block;

@@ -2,10 +2,9 @@ import React from 'react'
 import { graphql, StaticQuery } from 'gatsby'
 import styled from 'styled-components'
 
-import Layout from '../components/layout'
-import SEO from '../components/seo'
+import { Layout, SplitLayout } from '../components/Containers'
+import SEO from '../components/Utils/seo'
 import GitHubRepoCard from '../components/GitHubRepoCard'
-import SplitLayout from '../components/SplitLayout'
 import IllustrationImg from '../components/illustrationImg'
 
 import vc from '../images/versioncontrol.svg'

@@ -1,8 +1,9 @@
 import React from 'react'
 import Img from 'gatsby-image'
 import moment from 'moment'
-import TechCard from '../components/techCard'
 import styled from 'styled-components'
+
+import TechCard from './techCard'
 
 const ProjectWrapper = styled.article`
   display: flex;
