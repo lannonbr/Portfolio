@@ -22,7 +22,7 @@ const UsesPage = () => (
         mechanical keyboard. It has Kailh blue switches.
       </li>
       <li>
-        I'm good with a{' '}
+        I'm use a{' '}
         <a href="https://www.amazon.com/Dell-Optical-Mouse-MS116-275-BBCB/dp/B012DT5U96/">
           basic Dell mouse
         </a>
@@ -40,7 +40,7 @@ const UsesPage = () => (
     <h2>Software</h2>
     <ul>
       <li>
-        My main text editor of Choise is{' '}
+        My main text editor of choice is{' '}
         <a href="https://code.visualstudio.com">VS Code</a>. If I need to work
         on a server, I use Vim.
       </li>
