@@ -48,8 +48,8 @@ function Navigation({ className }) {
       <Link to="/opensource/" activeClassName="active">
         Open Source
       </Link>
-      <Link to="/contact/" activeClassName="active">
-        Contact
+      <Link to="/uses/" activeClassName="active">
+        Uses
       </Link>
     </nav>
   )
