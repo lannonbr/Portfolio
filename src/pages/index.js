@@ -22,6 +22,18 @@ const FrontpageDiv = styled.div`
     font-size: 30px;
     line-height: 50px;
   }
+
+  @media (max-width: 768px) {
+    h1 {
+      font-size: 30px;
+      text-align: center;
+    }
+
+    p {
+      font-size: 16px;
+      line-height: 20px;
+    }
+  }
 `
 
 const IndexPage = () => (

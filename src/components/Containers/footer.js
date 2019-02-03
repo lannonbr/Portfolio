@@ -35,12 +35,12 @@ const StyledFooter = styled.footer`
   @media (max-width: 768px) {
     justify-content: flex-start;
     padding: 20px;
-    row-gap: 10px;
 
     div {
       flex-basis: 50%;
       margin-right: 0;
       font-size: 12px;
+      margin-bottom: 20px;
     }
   }
 `
