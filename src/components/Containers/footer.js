@@ -4,12 +4,14 @@ import styled from 'styled-components'
 const StyledFooter = styled.footer`
   background: #66339906;
   border-top: 1px solid #ddd;
-  height: 100px;
+  min-height: 100px;
   display: flex;
+  flex-wrap: wrap;
   align-items: center;
   justify-content: center;
   color: #404040;
   font-size: 14px;
+  padding: 5px;
 
   div {
     margin-right: 60px;
@@ -28,6 +30,18 @@ const StyledFooter = styled.footer`
   a:hover {
     color: #663399dd;
     text-decoration: underline;
+  }
+
+  @media (max-width: 768px) {
+    justify-content: flex-start;
+    padding: 20px;
+    row-gap: 10px;
+
+    div {
+      flex-basis: 50%;
+      margin-right: 0;
+      font-size: 12px;
+    }
   }
 `
 
