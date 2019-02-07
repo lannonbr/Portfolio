@@ -19,6 +19,15 @@ const ProjectWrapper = styled.article`
 
   .project__details {
     flex: 1;
+
+    h2 {
+      margin-bottom: 0;
+    }
+
+    time {
+      margin-bottom: 1.45rem;
+      display: inline-block;
+    }
   }
 
   .project__links {
@@ -73,7 +82,7 @@ function Project({ project, idx }) {
       <Img className="project__image" fluid={img.childImageSharp.fluid} />
       <div className="project__details">
         <h2>{title}</h2>
-        <time dateTime={project.project_origin_date}>Created: {date}</time>
+        <time dateTime={project.project_origin_date}>Created {date}</time>
         <p>{description}</p>
         <div className="project__links">
           <ProjectLink
