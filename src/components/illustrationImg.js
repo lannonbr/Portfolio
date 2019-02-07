@@ -2,8 +2,8 @@ import React from 'react'
 import styled from 'styled-components'
 
 const ImgWrapper = styled.img`
-  margin-left: ${props => (props.marginLeft ? '30px' : 'unset')};
-  margin-right: ${props => (props.marginRight ? '30px' : 'unset')};
+  margin-left: 30px;
+  margin-right: 30px;
 
   @media (max-width: 768px) {
     margin-left: 0;

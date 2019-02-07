@@ -33,6 +33,11 @@ const LanguageCircle = styled.span`
   margin-right: 10px;
 `
 
+const flexAlignCenter = {
+  display: 'flex',
+  alignItems: 'center',
+}
+
 function GitHubRepoCard(props) {
   let repo = props.repo
   return (
@@ -44,8 +49,7 @@ function GitHubRepoCard(props) {
           <>
             <span
               style={{
-                display: 'flex',
-                alignItems: 'center',
+                ...flexAlignCenter,
                 justifyContent: 'center',
               }}
             >
@@ -55,15 +59,13 @@ function GitHubRepoCard(props) {
           </>
         )}
         {repo.stargazers.totalCount > 0 && (
-          <span
-            style={{ marginRight: 30, display: 'flex', alignItems: 'center' }}
-          >
+          <span style={{ marginRight: 30, ...flexAlignCenter }}>
             <Star width={20} style={{ marginRight: 5 }} />
             {repo.stargazers.totalCount.toLocaleString()}
           </span>
         )}
         {repo.forkCount > 0 && (
-          <span style={{ display: 'flex', alignItems: 'center' }}>
+          <span style={{ ...flexAlignCenter }}>
             <GitBranch width={20} style={{ marginRight: 5 }} />
             {repo.forkCount}
           </span>

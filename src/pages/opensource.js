@@ -80,66 +80,68 @@ const GitHubContributionsGrid = styled.div`
   }
 `
 
-const OpenSourcePage = () => (
-  <StaticQuery
-    query={githubPinnedRepos}
-    render={data => (
-      <Layout>
-        <SEO
-          title="Open Source"
-          keywords={[`gatsby`, `application`, `react`]}
-        />
-        <SplitLayout>
-          <div>
-            <h1>Open Source</h1>
-            <p>
-              I'm heavily involved in the Open Source community with a current
-              focus on the Gatsby and VS Code communities
-            </p>
-            <p>
-              This site is even open sourced on GitHub:{' '}
-              <a href="https://github.com/lannonbr/portfolio-gatsby">
-                lannonbr/portfolio-gatsby
-              </a>
-            </p>
-            <h2>GitHub Contributions</h2>
-            <p>
-              {data.github.user.contributionsCollection.contributionCalendar.totalContributions.toLocaleString()}{' '}
-              contributions over the last year
-            </p>
-            <GitHubContributionsGrid>
-              {data.github.user.contributionsCollection.contributionCalendar.weeks.map(
-                (week, widx) => {
-                  return week.contributionDays.map((day, didx) => {
-                    return (
-                      <div
-                        className="day"
-                        style={{ background: day.color }}
-                        key={`${widx}-${didx}`}
-                      />
-                    )
-                  })
-                }
-              )}
-            </GitHubContributionsGrid>
-          </div>
-          <div>
-            <IllustrationImg
-              marginLeft
-              src={vc}
-              alt="version control illustration"
+const OpenSourcePage = () => {
+  return (
+    <StaticQuery
+      query={githubPinnedRepos}
+      render={data => {
+        let pinnedRepos = data.github.user.pinnedRepositories
+        let calendar =
+          data.github.user.contributionsCollection.contributionCalendar
+
+        return (
+          <Layout>
+            <SEO
+              title="Open Source"
+              keywords={[`gatsby`, `application`, `react`]}
             />
-          </div>
-        </SplitLayout>
-        <h2>My GitHub Pinned Repos</h2>
-        <PinnedReposGridContainer>
-          {data.github.user.pinnedRepositories.edges.map(({ node }, idx) => {
-            return <GitHubRepoCard repo={node} key={idx} />
-          })}
-        </PinnedReposGridContainer>
-      </Layout>
-    )}
-  />
-)
+            <SplitLayout>
+              <div>
+                <h1>Open Source</h1>
+                <p>
+                  I'm heavily involved in the Open Source community with a
+                  current focus on the Gatsby and VS Code communities
+                </p>
+                <p>
+                  This site is even open sourced on GitHub:{' '}
+                  <a href="https://github.com/lannonbr/portfolio-gatsby">
+                    lannonbr/portfolio-gatsby
+                  </a>
+                </p>
+                <h2>GitHub Contributions</h2>
+                <p>
+                  {calendar.totalContributions.toLocaleString()} contributions
+                  over the last year
+                </p>
+                <GitHubContributionsGrid>
+                  {calendar.weeks.map((week, weekIndex) => {
+                    return week.contributionDays.map((day, dayIndex) => {
+                      return (
+                        <div
+                          className="day"
+                          style={{ background: day.color }}
+                          key={`${weekIndex}-${dayIndex}`}
+                        />
+                      )
+                    })
+                  })}
+                </GitHubContributionsGrid>
+              </div>
+              <div>
+                <IllustrationImg src={vc} alt="version control illustration" />
+              </div>
+            </SplitLayout>
+            <h2>My GitHub Pinned Repos</h2>
+            <PinnedReposGridContainer>
+              {pinnedRepos.edges.map(({ node: repo }, index) => {
+                return <GitHubRepoCard repo={repo} key={index} />
+              })}
+            </PinnedReposGridContainer>
+          </Layout>
+        )
+      }}
+    />
+  )
+}
 
 export default OpenSourcePage

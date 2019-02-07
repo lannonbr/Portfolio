@@ -51,7 +51,6 @@ const IndexPage = () => (
         <IllustrationImg
           src={office}
           alt="Person sitting on desk illustration"
-          marginLeft
         />
       </div>
     </SplitLayout>
