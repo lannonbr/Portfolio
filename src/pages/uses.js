@@ -49,7 +49,7 @@ const UsesPage = () => (
         monospace font so I can have font ligatures.
       </li>
       <li>
-        For Productivity, I use <a href="https://www.notion.so/">Notion</a> for
+        For productivity, I use <a href="https://www.notion.so/">Notion</a> for
         note taking and <a href="https://todoist.com">Todoist</a> for a todo
         list.
       </li>
