@@ -11,10 +11,13 @@ const ProjectWrapper = styled.article`
   margin-bottom: 30px;
 
   .project__image {
-    flex: 1;
     box-shadow: 0 2px 6px hsla(120, 0%, 20%, 0.3);
     border-radius: 4px;
     margin: 0 20px;
+  }
+
+  .project__image-link {
+    flex: 1;
   }
 
   .project__details {
@@ -79,7 +82,9 @@ function Project({ project, idx }) {
 
   return (
     <ProjectWrapper idx={idx}>
-      <Img className="project__image" fluid={img.childImageSharp.fluid} />
+      <a className="project__image-link" href={project.website_link.url}>
+        <Img className="project__image" fluid={img.childImageSharp.fluid} />
+      </a>
       <div className="project__details">
         <h2>{title}</h2>
         <time dateTime={project.project_origin_date}>Created {date}</time>
