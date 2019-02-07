@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
-import { Transition, config, animated } from 'react-spring'
+import { useSpring, animated } from 'react-spring'
 
 import Header from './header'
 import Footer from './footer'
@@ -36,36 +36,33 @@ const LayoutContainer = styled.div`
   }
 `
 
-const Layout = ({ children }) => (
-  <StaticQuery
-    query={graphql`
-      query SiteTitleQuery {
-        site {
-          siteMetadata {
-            title
+const Layout = ({ children }) => {
+  const props = useSpring({
+    from: { opacity: 0, transform: 'translateY(75px)' },
+    to: { opacity: 1, transform: 'translateY(0)' },
+  })
+
+  return (
+    <StaticQuery
+      query={graphql`
+        query SiteTitleQuery {
+          site {
+            siteMetadata {
+              title
+            }
           }
         }
-      }
-    `}
-    render={data => (
-      <LayoutContainer>
-        <Header siteTitle={data.site.siteMetadata.title} />
-        <Transition
-          native
-          items={[children]}
-          from={{ opacity: 0, transform: 'translateY(75px)' }}
-          enter={{ opacity: 1, transform: 'translateY(0)' }}
-          config={{ ...config.default }}
-        >
-          {children => props => (
-            <animated.main style={props} children={children} />
-          )}
-        </Transition>
-        <Footer />
-      </LayoutContainer>
-    )}
-  />
-)
+      `}
+      render={data => (
+        <LayoutContainer>
+          <Header siteTitle={data.site.siteMetadata.title} />
+          <animated.main style={props} children={children} />
+          <Footer />
+        </LayoutContainer>
+      )}
+    />
+  )
+}
 
 Layout.propTypes = {
   children: PropTypes.node.isRequired,
