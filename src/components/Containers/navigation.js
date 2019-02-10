@@ -48,9 +48,6 @@ function Navigation({ className }) {
       <Link to="/opensource/" activeClassName="active">
         Open Source
       </Link>
-      <Link to="/uses/" activeClassName="active">
-        Uses
-      </Link>
     </nav>
   )
 }
