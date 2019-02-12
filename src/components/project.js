@@ -91,14 +91,14 @@ function Project({ project, idx }) {
         <p>{description}</p>
         <div className="project__links">
           <ProjectLink
-            url={project.github_link.url}
-            target={project.github_link.target}
-            text="GitHub Link"
-          />
-          <ProjectLink
             url={project.website_link.url}
             target={project.website_link.target}
             text="Website Link"
+          />
+          <ProjectLink
+            url={project.github_link.url}
+            target={project.github_link.target}
+            text="GitHub Link"
           />
         </div>
         <div className="project__tech">
