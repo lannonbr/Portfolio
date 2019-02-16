@@ -8,7 +8,7 @@ module.exports = {
     author: `@lannonbr`,
     navigationLinks: [
       { url: '/work/', name: 'Work' },
-      { url: '/projects/', name: 'Projects (With Hooks)' },
+      { url: '/projects/', name: 'Projects' },
       { url: '/opensource/', name: 'Open Source' },
     ],
   },
