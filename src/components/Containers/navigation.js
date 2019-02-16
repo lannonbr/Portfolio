@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import useNavigation from '../../hooks/useNavigation'
 
 const StyledNav = styled(Navigation)`
   a {
@@ -37,17 +38,15 @@ const StyledNav = styled(Navigation)`
 `
 
 function Navigation({ className }) {
+  let navLinks = useNavigation()
+
   return (
     <nav className={className}>
-      <Link to="/work/" activeClassName="active">
-        Work
-      </Link>
-      <Link to="/projects/" activeClassName="active">
-        Projects
-      </Link>
-      <Link to="/opensource/" activeClassName="active">
-        Open Source
-      </Link>
+      {navLinks.map(link => (
+        <Link to={link.url} activeClassName="active">
+          {link.name}
+        </Link>
+      ))}
     </nav>
   )
 }

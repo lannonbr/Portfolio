@@ -6,6 +6,11 @@ module.exports = {
     title: `Benjamin Lannon`,
     description: `Benjamin Lannon's Portfolio website`,
     author: `@lannonbr`,
+    navigationLinks: [
+      { url: '/work/', name: 'Work' },
+      { url: '/projects/', name: 'Projects (With Hooks)' },
+      { url: '/opensource/', name: 'Open Source' },
+    ],
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
