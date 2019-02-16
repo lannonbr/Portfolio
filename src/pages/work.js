@@ -38,7 +38,8 @@ const WorkPage = () => (
         <p>
           I am currently employed as a web developer, but I am always wanting to
           learn new technologies and ways to build new things. As a developer, I
-          strive to create products and solutions that can lift up others.
+          strive to create products and solutions that can empower othe
+          developers.
         </p>
         <p>
           If you want to see the hardware / software I use, head over to my{' '}
