@@ -2,7 +2,7 @@ import React from 'react'
 import styled from 'styled-components'
 
 const ImgWrapper = styled.img`
-  margin-left: 30px;
+  padding-left: 30px;
   margin-right: 30px;
 
   @media (max-width: 768px) {
