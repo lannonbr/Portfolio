@@ -2,12 +2,13 @@ import React from 'react'
 import styled from 'styled-components'
 
 const TechCardWrapper = styled.span`
-  padding: 8px 12px;
+  padding: 4px 6px;
   background: white;
   border: 1px solid #ddd;
   border-radius: 3px;
-  margin: 10px;
+  margin: 8px;
   display: inline-block;
+  font-size: 14px;
 
   &:first-of-type {
     margin-left: 0;
