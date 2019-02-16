@@ -36,10 +36,9 @@ const WorkPage = () => (
       <div>
         <h1>Work</h1>
         <p>
-          I am currently employed as a web developer, but I am always wanting to
-          learn new technologies and ways to build new things. As a developer, I
-          strive to create products and solutions that can empower other
-          developers.
+          I am currently employed as a web developer, but I am always learning
+          new technologies and building new things. As a developer, I strive to
+          create products and solutions that can empower other developers.
         </p>
         <p>
           If you want to see the hardware / software I use, head over to my{' '}
@@ -56,7 +55,7 @@ const WorkPage = () => (
     <h2>Community Involvement</h2>
     <p>
       I am an active member of the Syracuse Developer community and go to events
-      such as Open Hack or the Syracue JS meetup. It's a place that I've found
+      such as Open Hack and the Syracue JS meetup. It's a place that I've found
       local dev opportunities and a place to help out / get answers in the tech
       community. You can find out more at{' '}
       <a href="https://syracuse.io">Syracuse.io</a>.
@@ -69,16 +68,16 @@ const WorkPage = () => (
     </p>
     <p>
       Finally, I've found a haven in the Twitch Dev community of individuals
-      livestreaming and learning with others. As I've been community members of
-      these channels, I enjoy partaking in discussions with the streamer and
-      community members in the chatroom and getting involved with projects
-      they're building and putting up on GitHub. You may often see me in the
-      chats of <a href="https://twitch.tv/noopkat">Suz Hinton</a>,{' '}
+      livestreaming and learning with others. I enjoy partaking in discussions
+      with the streamer and community members in the chatroom and getting
+      involved with projects they're building and putting up on GitHub. You may
+      often see me in the chats of{' '}
+      <a href="https://twitch.tv/noopkat">Suz Hinton</a>,{' '}
       <a href="https://twitch.tv/clarkio">Brian Clark</a>,{' '}
       <a href="https://twitch.tv/csharpfritz">Jeff Fritz</a>, and plenty of
       others.
     </p>
-    <h2>Currently tinkering with</h2>
+    <h2>Currently Tinkering With</h2>
     <p>
       These are a few technologies I am tinkering with by building side projects
     </p>
@@ -96,8 +95,8 @@ const TinkeringItems = props => {
           A React based Web Framework. I've been building this site as well as
           my <a href="https://vscode.rocks">VS Code blog</a> with Gatsby. As
           well, given Gatsby is Open Source, I've been actively contributing to
-          their repo through issues and PRs. and making the experience of
-          developing with Gatsby more enjoyable and easier to comprehend
+          their repo through issues and PRs and making the experience of
+          developing with Gatsby more enjoyable and comprehendable.
         </p>
         <a href="https://gatsby.org">Gatsby.org</a>
       </TinkerCard>
@@ -123,8 +122,8 @@ const TinkeringItems = props => {
         <h5>As of August 2018</h5>
         <p>
           Microsoft's VS Code text editor can be enhanced with additional
-          features through extensions. I particularly have built an extension to
-          add parameter annotations into JS-based files:{' '}
+          features through extensions. I built an extension to add parameter
+          annotations into JS-based files:{' '}
           <a href="https://marketplace.visualstudio.com/items?itemName=lannonbr.vscode-js-annotations">
             JS Parameter Annotations
           </a>
@@ -142,9 +141,9 @@ const TinkeringItems = props => {
             Elgato Stream Deck
           </a>{' '}
           is becoming useful for non-streamers as a productivity device.
-          Recently, they've created a SDK for developers to build new plugins
-          for the device. There's been devs making plugins to toggle Wi-Fi light
-          bulbs, trigger DevOps deployment scripts, view statistics, and I am
+          Recently, they've created an SDK for developers to build new plugins
+          for the device. There have been devs making plugins to toggle Wi-Fi
+          light bulbs, trigger DevOps deployment scripts, view statistics. I am
           interested in thinking of how I could use it to benefit my workflows.
         </p>
         <a href="https://developer.elgato.com/documentation/stream-deck/sdk/overview/">
