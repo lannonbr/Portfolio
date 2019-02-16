@@ -69,10 +69,9 @@ const WorkPage = () => (
     <p>
       Finally, I've found a haven in the Twitch Dev community of individuals
       livestreaming and learning with others. I enjoy partaking in discussions
-      with the streamer and community members in the chatroom and getting
-      involved with projects they're building and putting up on GitHub. You may
-      often see me in the chats of{' '}
-      <a href="https://twitch.tv/noopkat">Suz Hinton</a>,{' '}
+      with streamers and community members in the chatroom and getting involved
+      with projects they're building and putting up on GitHub. You may often see
+      me in the chats of <a href="https://twitch.tv/noopkat">Suz Hinton</a>,{' '}
       <a href="https://twitch.tv/clarkio">Brian Clark</a>,{' '}
       <a href="https://twitch.tv/csharpfritz">Jeff Fritz</a>, and plenty of
       others.
@@ -89,16 +88,23 @@ const TinkeringItems = props => {
   return (
     <TinkeringContainer>
       <TinkerCard>
-        <h3>Gatsby</h3>
-        <h5>As of August 2018</h5>
+        <h3>Stream Deck SDK</h3>
+        <h5>As of February 2019</h5>
         <p>
-          A React based Web Framework. I've been building this site as well as
-          my <a href="https://vscode.rocks">VS Code blog</a> with Gatsby. As
-          well, given Gatsby is Open Source, I've been actively contributing to
-          their repo through issues and PRs and making the experience of
-          developing with Gatsby more enjoyable and comprehendable.
+          Although I do not stream, the{' '}
+          <a href="https://www.elgato.com/en/gaming/stream-deck">
+            Elgato Stream Deck
+          </a>{' '}
+          is becoming useful for non-streamers as a productivity device.
+          Recently, they've created an SDK for developers to build new plugins
+          for the device. There have been devs making plugins to toggle Wi-Fi
+          light bulbs, trigger DevOps deployment scripts, and view statistics. I
+          am interested in thinking of how I could use it to benefit my
+          workflows.
         </p>
-        <a href="https://gatsby.org">Gatsby.org</a>
+        <a href="https://developer.elgato.com/documentation/stream-deck/sdk/overview/">
+          Elgato SDK Docs
+        </a>
       </TinkerCard>
       <TinkerCard>
         <h3>GitHub Actions</h3>
@@ -118,6 +124,19 @@ const TinkeringItems = props => {
         <a href="https://developer.github.com/actions/">GitHub Actions Docs</a>
       </TinkerCard>
       <TinkerCard>
+        <h3>Gatsby</h3>
+        <h5>As of August 2018</h5>
+        <p>
+          A React based Web Framework. I've been building this site as well as
+          my <a href="https://vscode.rocks">VS Code blog</a> with Gatsby. As
+          well, given Gatsby is Open Source, I've been actively contributing to
+          their repo through issues and PRs and making the experience of
+          developing with Gatsby more enjoyable and comprehendable.
+        </p>
+        <a href="https://gatsby.org">Gatsby.org</a>
+      </TinkerCard>
+
+      <TinkerCard>
         <h3>VS Code Extensions</h3>
         <h5>As of August 2018</h5>
         <p>
@@ -130,24 +149,6 @@ const TinkeringItems = props => {
         </p>
         <a href="https://code.visualstudio.com/api/">
           VS Code Extension API Docs
-        </a>
-      </TinkerCard>
-      <TinkerCard>
-        <h3>Stream Deck SDK</h3>
-        <h5>As of February 2019</h5>
-        <p>
-          Although I do not stream, the{' '}
-          <a href="https://www.elgato.com/en/gaming/stream-deck">
-            Elgato Stream Deck
-          </a>{' '}
-          is becoming useful for non-streamers as a productivity device.
-          Recently, they've created an SDK for developers to build new plugins
-          for the device. There have been devs making plugins to toggle Wi-Fi
-          light bulbs, trigger DevOps deployment scripts, view statistics. I am
-          interested in thinking of how I could use it to benefit my workflows.
-        </p>
-        <a href="https://developer.elgato.com/documentation/stream-deck/sdk/overview/">
-          Elgato SDK Docs
         </a>
       </TinkerCard>
     </TinkeringContainer>
