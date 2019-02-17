@@ -3,31 +3,9 @@ import React from 'react'
 import { Layout, SplitLayout } from '../components/Containers'
 import SEO from '../components/Utils/seo'
 import { Link } from 'gatsby'
-import styled from 'styled-components'
 import IllustrationImg from '../components/illustrationImg'
 import conversation from '../images/conversation.svg'
-
-const TinkerCard = styled.section`
-  border: 1px solid #d1d5da;
-  padding: 16px;
-  border-radius: 3px;
-  display: flex;
-  flex-direction: column;
-
-  p {
-    flex-grow: 1;
-  }
-`
-
-const TinkeringContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-`
+import TinkerProjects from '../components/TinkerProjects'
 
 const WorkPage = () => (
   <Layout>
@@ -63,7 +41,7 @@ const WorkPage = () => (
     <p>
       As well, I am heavily active on GitHub. If you want to learn more about my
       open source work, head over to the{' '}
-      <Link to="opensource">Open Source Page</Link> or my{' '}
+      <Link to="/opensource/">Open Source Page</Link> or my{' '}
       <a href="https://github.com/lannonbr">Github</a>.
     </p>
     <p>
@@ -80,79 +58,8 @@ const WorkPage = () => (
     <p>
       These are a few technologies I am tinkering with by building side projects
     </p>
-    <TinkeringItems />
+    <TinkerProjects />
   </Layout>
 )
-
-const TinkeringItems = props => {
-  return (
-    <TinkeringContainer>
-      <TinkerCard>
-        <h3>Stream Deck SDK</h3>
-        <h5>As of February 2019</h5>
-        <p>
-          Although I do not stream, the{' '}
-          <a href="https://www.elgato.com/en/gaming/stream-deck">
-            Elgato Stream Deck
-          </a>{' '}
-          is becoming useful for non-streamers as a productivity device.
-          Recently, they've created an SDK for developers to build new plugins
-          for the device. There have been devs making plugins to toggle Wi-Fi
-          light bulbs, trigger DevOps deployment scripts, and view statistics. I
-          am interested in thinking of how I could use it to benefit my
-          workflows.
-        </p>
-        <a href="https://developer.elgato.com/documentation/stream-deck/sdk/overview/">
-          Elgato SDK Docs
-        </a>
-      </TinkerCard>
-      <TinkerCard>
-        <h3>GitHub Actions</h3>
-        <h5>As of November 2018</h5>
-        <p>
-          GitHub Actions allow developers to integrate workflows into GitHub.
-          It's a step beyond normal{' '}
-          <abbr title="Continuous Integration / Continuous Delivery">
-            CI/CD
-          </abbr>{' '}
-          and I'm testing ways of expanding ideas on how I can create tools to
-          extend GitHub.
-        </p>
-        <a href="https://github.com/features/actions">
-          GitHub Actions Splash page
-        </a>
-        <a href="https://developer.github.com/actions/">GitHub Actions Docs</a>
-      </TinkerCard>
-      <TinkerCard>
-        <h3>Gatsby</h3>
-        <h5>As of August 2018</h5>
-        <p>
-          A React based Web Framework. I've been building this site as well as
-          my <a href="https://vscode.rocks">VS Code blog</a> with Gatsby. As
-          well, given Gatsby is Open Source, I've been actively contributing to
-          their repo through issues and PRs and making the experience of
-          developing with Gatsby more enjoyable and comprehendable.
-        </p>
-        <a href="https://gatsby.org">Gatsby.org</a>
-      </TinkerCard>
-
-      <TinkerCard>
-        <h3>VS Code Extensions</h3>
-        <h5>As of August 2018</h5>
-        <p>
-          Microsoft's VS Code text editor can be enhanced with additional
-          features through extensions. I built an extension to add parameter
-          annotations into JS-based files:{' '}
-          <a href="https://marketplace.visualstudio.com/items?itemName=lannonbr.vscode-js-annotations">
-            JS Parameter Annotations
-          </a>
-        </p>
-        <a href="https://code.visualstudio.com/api/">
-          VS Code Extension API Docs
-        </a>
-      </TinkerCard>
-    </TinkeringContainer>
-  )
-}
 
 export default WorkPage

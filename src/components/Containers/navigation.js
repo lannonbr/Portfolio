@@ -43,7 +43,7 @@ function Navigation({ className }) {
   return (
     <nav className={className}>
       {navLinks.map(link => (
-        <Link to={link.url} activeClassName="active">
+        <Link key={link.name} to={link.url} activeClassName="active">
           {link.name}
         </Link>
       ))}
