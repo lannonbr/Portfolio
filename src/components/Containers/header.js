@@ -8,14 +8,17 @@ import avatar from '../../images/avatar.jpg'
 const HeaderContainer = styled.div`
   margin: 0 auto;
   max-width: 1600px;
-  padding: 1.45rem 30px;
+  padding: 1.45rem 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 
   @media (max-width: 768px) {
+    padding-left: 10px;
+    padding-right: 10px;
     flex-direction: column;
     padding-bottom: 0;
+    align-items: flex-start;
   }
 `
 
