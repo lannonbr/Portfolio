@@ -55,11 +55,13 @@ const ProjectWrapper = styled.article`
     }
 
     .project__tech {
-      justify-content: center;
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
+      grid-gap: 10px;
     }
 
     .project__links {
-      justify-content: center;
+      justify-content: flex-start;
     }
   }
 `

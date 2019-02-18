@@ -17,6 +17,10 @@ const TechCardWrapper = styled.span`
   &:last-of-type {
     margin-right: 0;
   }
+
+  @media (max-width: 768px) {
+    margin: 0;
+  }
 `
 
 function TechCard({ tech }) {
