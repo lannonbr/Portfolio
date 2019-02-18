@@ -25,11 +25,10 @@ const StyledNav = styled(Navigation)`
   @media (max-width: 768px) {
     width: 100%;
     margin-top: 20px;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    align-items: center;
+    display: flex;
 
     a {
+      flex: 1;
       text-align: center;
       margin-left: 0;
       margin-bottom: 10px;
