@@ -27,7 +27,7 @@ const Header = ({ siteTitle }) => {
     {
       file(relativePath: { eq: "avatar.jpg" }) {
         childImageSharp {
-          fixed(width: 80, height: 80) {
+          fixed(width: 320, height: 320) {
             ...GatsbyImageSharpFixed
           }
         }
@@ -61,6 +61,8 @@ const Header = ({ siteTitle }) => {
               critical={true}
               alt="avatar"
               style={{
+                width: 80,
+                height: 80,
                 borderRadius: 40,
                 marginBottom: 0,
                 marginRight: 20,
