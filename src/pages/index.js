@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Layout, SplitLayout } from '../components/Containers'
+import { SplitLayout } from '../components/Containers'
 
 import SEO from '../components/Utils/seo'
 import IllustrationImg from '../components/illustrationImg'
@@ -37,7 +37,7 @@ const FrontpageDiv = styled.div`
 `
 
 const IndexPage = () => (
-  <Layout>
+  <>
     <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
     <SplitLayout>
       <FrontpageDiv>
@@ -54,7 +54,7 @@ const IndexPage = () => (
         />
       </div>
     </SplitLayout>
-  </Layout>
+  </>
 )
 
 export default IndexPage

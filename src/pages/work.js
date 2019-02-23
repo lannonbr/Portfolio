@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { Layout, SplitLayout } from '../components/Containers'
+import { SplitLayout } from '../components/Containers'
 import SEO from '../components/Utils/seo'
 import { Link } from 'gatsby'
 import IllustrationImg from '../components/illustrationImg'
@@ -8,7 +8,7 @@ import conversation from '../images/conversation.svg'
 import TinkerProjects from '../components/TinkerProjects'
 
 const WorkPage = () => (
-  <Layout>
+  <>
     <SEO title="Work" keywords={[`gatsby`, `application`, `react`]} />
     <SplitLayout>
       <div>
@@ -59,7 +59,7 @@ const WorkPage = () => (
       These are a few technologies I am tinkering with by building side projects
     </p>
     <TinkerProjects />
-  </Layout>
+  </>
 )
 
 export default WorkPage

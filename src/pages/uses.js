@@ -1,10 +1,10 @@
 import React from 'react'
 
-import { Layout, SplitLayout } from '../components/Containers'
+import { SplitLayout } from '../components/Containers'
 import SEO from '../components/Utils/seo'
 
 const UsesPage = () => (
-  <Layout>
+  <>
     <SEO title="Uses" keywords={[`gatsby`, `application`, `react`]} />
     <h1>Uses</h1>
     <p>
@@ -71,7 +71,7 @@ const UsesPage = () => (
         </ul>
       </div>
     </SplitLayout>
-  </Layout>
+  </>
 )
 
 export default UsesPage

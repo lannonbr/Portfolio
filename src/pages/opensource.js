@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import { Layout, SplitLayout } from '../components/Containers'
+import { SplitLayout } from '../components/Containers'
 import SEO from '../components/Utils/seo'
 import GitHubRepoCard from '../components/GitHubRepoCard'
 import IllustrationImg from '../components/illustrationImg'
@@ -34,7 +34,7 @@ const OpenSourcePage = () => {
   starredRepos.edges = starredRepos.edges.reverse()
 
   return (
-    <Layout>
+    <>
       <SEO title="Open Source" keywords={[`gatsby`, `application`, `react`]} />
       <SplitLayout>
         <div>
@@ -74,7 +74,7 @@ const OpenSourcePage = () => {
           return <GitHubRepoCard repo={repo} key={index} />
         })}
       </PinnedReposGridContainer>
-    </Layout>
+    </>
   )
 }
 
