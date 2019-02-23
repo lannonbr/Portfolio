@@ -7,7 +7,9 @@ import GitHubRepoCard from '../components/GitHubRepoCard'
 import IllustrationImg from '../components/illustrationImg'
 
 import usePinnedRepositories from '../hooks/usePinnedRepositories'
-import useContributionCalendar from '../hooks/useContributionCalendar'
+import useStarredRepos from '../hooks/useStarredRepos'
+
+import star from '../images/star.svg'
 
 import vc from '../images/versioncontrol.svg'
 
@@ -21,33 +23,15 @@ const PinnedReposGridContainer = styled.div`
   }
 `
 
-const GitHubContributionsGrid = styled.div`
-  display: grid;
-
-  --day-size: 10px;
-
-  grid-template-rows: repeat(7, var(--day-size));
-  grid-template-columns: repeat(53, var(--day-size));
-  grid-auto-flow: column;
-  gap: 1px;
-
-  @media (max-width: 1200px) {
-    --day-size: 8px;
-    margin-bottom: 30px;
-  }
-
-  @media (max-width: 768px) {
-    justify-content: center;
-  }
-
-  @media (max-width: 450px) {
-    display: none;
-  }
+const StarList = styled.ul`
+  list-style-image: url(${star});
 `
 
 const OpenSourcePage = () => {
   const pinnedRepos = usePinnedRepositories()
-  const calendar = useContributionCalendar()
+  let starredRepos = useStarredRepos()
+
+  starredRepos.edges = starredRepos.edges.reverse()
 
   return (
     <Layout>
@@ -65,24 +49,20 @@ const OpenSourcePage = () => {
               lannonbr/portfolio-gatsby
             </a>
           </p>
-          <h2>GitHub Contributions</h2>
-          <p>
-            {calendar.totalContributions.toLocaleString()} contributions over
-            the last year
-          </p>
-          <GitHubContributionsGrid>
-            {calendar.weeks.map((week, weekIndex) => {
-              return week.contributionDays.map((day, dayIndex) => {
+          <h2>Recently Starred Repos</h2>
+          <p>A few of the recent repositories that have caught my eye:</p>
+          <StarList>
+            {starredRepos &&
+              starredRepos.edges.map(({ node: repo }) => {
                 return (
-                  <div
-                    className="day"
-                    style={{ background: day.color }}
-                    key={`${weekIndex}-${dayIndex}`}
-                  />
+                  <li>
+                    <a href={repo.url}>{repo.nameWithOwner}</a> -{' '}
+                    {repo.stargazers.totalCount} star
+                    {repo.stargazers.totalCount > 1 && 's'}
+                  </li>
                 )
-              })
-            })}
-          </GitHubContributionsGrid>
+              })}
+          </StarList>
         </div>
         <div>
           <IllustrationImg src={vc} alt="version control illustration" />

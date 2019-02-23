@@ -30,6 +30,7 @@ const Header = ({ siteTitle }) => (
           margin: 0,
           fontFamily: 'serif',
           color: '#663399',
+          height: 80,
         }}
       >
         <Link
