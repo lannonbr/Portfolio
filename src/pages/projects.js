@@ -9,7 +9,10 @@ const ProjectsPage = () => {
 
   return (
     <>
-      <SEO title="Projects" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO
+        title="Projects"
+        keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
+      />
       <h1>Projects</h1>
       <p>Here are a few larger scale projects I've created.</p>
       {projects.edges.map((projectObj, idx) => (

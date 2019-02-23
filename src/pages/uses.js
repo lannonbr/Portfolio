@@ -5,7 +5,10 @@ import SEO from '../components/Utils/seo'
 
 const UsesPage = () => (
   <>
-    <SEO title="Uses" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Uses"
+      keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
+    />
     <h1>Uses</h1>
     <p>
       With inspiration from <a href="https://wesbos.com/uses/">Wes Bos</a>, this

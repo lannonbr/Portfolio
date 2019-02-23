@@ -35,7 +35,7 @@ const OpenSourcePage = () => {
 
   return (
     <>
-      <SEO title="Open Source" keywords={[`gatsby`, `application`, `react`]} />
+      <SEO title="Open Source" keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]} />
       <SplitLayout>
         <div>
           <h1>Open Source</h1>

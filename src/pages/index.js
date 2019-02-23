@@ -38,7 +38,10 @@ const FrontpageDiv = styled.div`
 
 const IndexPage = () => (
   <>
-    <SEO title="Home" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Home"
+      keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
+    />
     <SplitLayout>
       <FrontpageDiv>
         <h1>Hi all, I'm Benjamin</h1>

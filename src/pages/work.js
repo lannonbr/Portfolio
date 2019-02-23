@@ -9,7 +9,10 @@ import TinkerProjects from '../components/TinkerProjects'
 
 const WorkPage = () => (
   <>
-    <SEO title="Work" keywords={[`gatsby`, `application`, `react`]} />
+    <SEO
+      title="Work"
+      keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
+    />
     <SplitLayout>
       <div>
         <h1>Work</h1>
