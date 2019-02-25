@@ -17,7 +17,7 @@ const WorkPage = () => (
       <div>
         <h1>Work</h1>
         <p>
-          I am currently employed as a web developer, but I am always learning
+          I am currently employed as a web developer and I am always learning
           new technologies and building new things. As a developer, I strive to
           create products and solutions that can empower other developers.
         </p>
