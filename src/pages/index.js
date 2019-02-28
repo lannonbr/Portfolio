@@ -47,7 +47,7 @@ const IndexPage = () => (
         <h1>Hi all, I'm Benjamin</h1>
         <p>
           I'm a web developer in Upstate New York with a passion for exploration
-          and continually learning.
+          and continual learning.
         </p>
       </FrontpageDiv>
       <div>
