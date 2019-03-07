@@ -3,7 +3,6 @@ import styled from 'styled-components'
 
 const TechCardWrapper = styled.span`
   padding: 4px 6px;
-  background: white;
   border: 1px solid #ddd;
   border-radius: 3px;
   margin: 8px;

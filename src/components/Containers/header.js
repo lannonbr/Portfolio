@@ -3,6 +3,8 @@ import Img from 'gatsby-image'
 import React from 'react'
 import styled from 'styled-components'
 
+import { ThemeToggler } from 'gatsby-plugin-dark-mode'
+
 import Navigation from './navigation'
 
 const HeaderContainer = styled.div`
@@ -22,6 +24,24 @@ const HeaderContainer = styled.div`
   }
 `
 
+const NavWrapper = styled.div`
+  display: flex;
+
+  label {
+    margin-left: 30px;
+  }
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+
+    label {
+      margin: 0;
+    }
+  }
+`
+
 const Header = ({ siteTitle }) => {
   const imgQueryResult = useStaticQuery(graphql`
     {
@@ -36,45 +56,63 @@ const Header = ({ siteTitle }) => {
   `)
 
   return (
-    <header>
-      <HeaderContainer>
-        <h1
-          style={{
-            margin: 0,
-            fontFamily: 'serif',
-            color: '#663399',
-            height: 80,
-          }}
-        >
-          <Link
-            to="/"
-            style={{
-              display: 'flex',
-              alignItems: 'center',
-              color: `#663399`,
-              textDecoration: `none`,
-              fontFamily: 'Oswald',
-            }}
-          >
-            <Img
-              fixed={imgQueryResult.file.childImageSharp.fixed}
-              critical={true}
-              alt="avatar"
+    <ThemeToggler>
+      {({ theme, toggleTheme }) => (
+        <header>
+          <HeaderContainer>
+            <h1
               style={{
-                width: 80,
+                margin: 0,
                 height: 80,
-                borderRadius: 40,
-                marginBottom: 0,
-                marginRight: 20,
-                boxShadow: 'inset 0 0 10px #000000',
               }}
-            />
-            {siteTitle}
-          </Link>
-        </h1>
-        <Navigation />
-      </HeaderContainer>
-    </header>
+            >
+              <Link
+                to="/"
+                style={{
+                  display: 'flex',
+                  alignItems: 'center',
+                  color: 'var(--purple)',
+                  textDecoration: `none`,
+                  fontFamily: 'var(--headerFont)',
+                }}
+              >
+                <Img
+                  fixed={imgQueryResult.file.childImageSharp.fixed}
+                  critical={true}
+                  alt="avatar"
+                  style={{
+                    width: 80,
+                    height: 80,
+                    borderRadius: 40,
+                    marginBottom: 0,
+                    marginRight: 20,
+                    boxShadow: 'inset 0 0 10px #000000',
+                  }}
+                />
+                {siteTitle}
+              </Link>
+            </h1>
+            <NavWrapper
+              style={{
+                display: 'flex',
+              }}
+            >
+              <Navigation />
+              <label>
+                <input
+                  type="checkbox"
+                  onChange={e =>
+                    toggleTheme(e.target.checked ? 'dark' : 'light')
+                  }
+                  checked={theme === 'dark'}
+                />{' '}
+                Dark mode
+              </label>
+            </NavWrapper>
+          </HeaderContainer>
+        </header>
+      )}
+    </ThemeToggler>
   )
 }
 

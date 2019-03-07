@@ -5,7 +5,7 @@ import useNavigation from '../../hooks/useNavigation'
 
 const StyledNav = styled(Navigation)`
   a {
-    color: #404040;
+    color: var(--bodyTextColor);
     text-decoration: none;
     margin-left: 30px;
     display: inline-block;
@@ -19,7 +19,7 @@ const StyledNav = styled(Navigation)`
 
   a:hover,
   a.active {
-    border-bottom-color: #663399;
+    border-bottom-color: var(--purple);
   }
 
   @media (max-width: 768px) {

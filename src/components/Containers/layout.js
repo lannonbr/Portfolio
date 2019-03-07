@@ -22,7 +22,7 @@ const LayoutContainer = styled.div`
   }
 
   main a {
-    color: #2574a9;
+    color: var(--blueLink);
     text-decoration: none;
   }
 

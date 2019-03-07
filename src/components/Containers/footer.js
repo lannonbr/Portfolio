@@ -2,14 +2,14 @@ import React from 'react'
 import styled from 'styled-components'
 
 const StyledFooter = styled.footer`
-  background: #66339906;
+  background: var(--footerBackground);
   border-top: 1px solid #ddd;
   min-height: 100px;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  color: #404040;
+  color: var(--bodyTextColor);
   font-size: 14px;
   padding: 5px;
 
@@ -22,13 +22,13 @@ const StyledFooter = styled.footer`
   }
 
   a {
-    color: #66339988;
+    color: var(--footerLink);
     font-weight: 600;
     text-decoration: none;
   }
 
   a:hover {
-    color: #663399dd;
+    color: var(--footerLinkHover);
     text-decoration: underline;
   }
 

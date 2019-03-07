@@ -13,6 +13,7 @@ module.exports = {
     ],
   },
   plugins: [
+    `gatsby-plugin-dark-mode`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-remove-serviceworker`,
     {
