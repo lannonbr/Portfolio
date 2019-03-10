@@ -92,11 +92,7 @@ const Header = ({ siteTitle }) => {
                 {siteTitle}
               </Link>
             </h1>
-            <NavWrapper
-              style={{
-                display: 'flex',
-              }}
-            >
+            <NavWrapper>
               <Navigation />
               <label>
                 <input
