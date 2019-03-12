@@ -25,6 +25,11 @@ const WorkPage = () => (
           If you want to see the hardware / software I use, head over to my{' '}
           <Link to="/uses/">Uses Page</Link>.
         </p>
+        <p>
+          As well, I have a site which I list development resources that I
+          personally use or recommend:{' '}
+          <a href="https://lannonbr.dev">Lannonbr.dev</a>.
+        </p>
       </div>
       <div>
         <IllustrationImg
