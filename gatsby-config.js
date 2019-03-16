@@ -2,6 +2,12 @@
 require('dotenv').config()
 
 module.exports = {
+  __experimentalThemes: [
+    {
+      resolve: `gatsby-theme-lannonbr`,
+      options: {},
+    },
+  ],
   siteMetadata: {
     title: `Benjamin Lannon`,
     description: `Benjamin Lannon's Portfolio website`,
@@ -13,7 +19,6 @@ module.exports = {
     ],
   },
   plugins: [
-    `gatsby-plugin-dark-mode`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-remove-serviceworker`,
     {
@@ -23,13 +28,6 @@ module.exports = {
         path: `${__dirname}/src/images`,
       },
     },
-    {
-      resolve: `gatsby-plugin-layout`,
-      options: {
-        component: require.resolve('./src/components/Containers/layout.js'),
-      },
-    },
-    `gatsby-plugin-styled-components`,
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     {
@@ -40,14 +38,6 @@ module.exports = {
         lang: `*`,
         shouldNormalizeImage: () => {
           return true
-        },
-      },
-    },
-    {
-      resolve: 'gatsby-plugin-web-font-loader',
-      options: {
-        google: {
-          families: ['Oswald', 'Lato'],
         },
       },
     },
