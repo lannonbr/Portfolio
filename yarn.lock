@@ -4929,10 +4929,10 @@ gatsby-source-prismic@^2.2.0:
     prismic-dom "^2.1.0"
     prismic-javascript "^1.1.5"
 
-gatsby-theme-lannonbr@^1.0.1:
-  version "1.0.1"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-lannonbr/-/gatsby-theme-lannonbr-1.0.1.tgz#2902a3fa7276427eeab7384310a87e34780aa810"
-  integrity sha512-3qAsHlIPn7LoqW06eDbv7QmEx2Jy77ayI/IaHW1kBCeNPaI51mqP6k5Dja9Y2ZAKJcyPP/aKJ9c6N7eV/cCB9g==
+gatsby-theme-lannonbr@^1.0.4:
+  version "1.0.4"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-lannonbr/-/gatsby-theme-lannonbr-1.0.4.tgz#de42b531aa396220aadbb52d15e1fe68d0b0f938"
+  integrity sha512-/4ACUwmn3vE+w0DHcPz8PpkWOC5R6BLfJK3x9nsG6Y4L/GCyNPgnJGsA1HMaxUwWTrHXfWbsEX5BY7oVfuewEw==
   dependencies:
     babel-plugin-styled-components "^1.10.0"
     gatsby-plugin-compile-es6-packages "^1.0.6"

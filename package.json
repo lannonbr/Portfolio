@@ -5,7 +5,7 @@
   "version": "0.1.0",
   "author": "Benjamin Lannon <benjamin@lannonbr.com>",
   "dependencies": {
-    "gatsby-theme-lannonbr": "^1.0.1",
+    "gatsby-theme-lannonbr": "^1.0.4",
     "dotenv": "^6.2.0",
     "gatsby": "^2.1.4",
     "gatsby-image": "^2.0.29",
