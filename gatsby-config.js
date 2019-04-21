@@ -16,6 +16,7 @@ module.exports = {
       { url: '/work/', name: 'Work' },
       { url: '/projects/', name: 'Projects' },
       { url: '/opensource/', name: 'Open Source' },
+      { url: '/talks/', name: 'Talks' },
     ],
   },
   plugins: [
