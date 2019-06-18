@@ -17,6 +17,7 @@ module.exports = {
       { url: '/projects/', name: 'Projects' },
       { url: '/opensource/', name: 'Open Source' },
       { url: '/talks/', name: 'Talks' },
+      { url: '/blog/', name: 'Blog' },
     ],
   },
   plugins: [
@@ -27,6 +28,13 @@ module.exports = {
       options: {
         name: `images`,
         path: `${__dirname}/src/images`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `blog`,
+        path: `${__dirname}/blog`,
       },
     },
     `gatsby-transformer-sharp`,
@@ -52,6 +60,20 @@ module.exports = {
           Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
         },
         fetchOptions: {},
+      },
+    },
+    {
+      resolve: `gatsby-plugin-mdx`,
+      options: {
+        extensions: [`.md`, `.mdx`],
+        gatsbyRemarkPlugins: [
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
       },
     },
   ],
