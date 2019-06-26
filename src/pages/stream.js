@@ -32,7 +32,7 @@ const StreamPage = () => {
 
           <h2>Current Project: Gatsby-GitHub-Stats</h2>
           <p>
-            Our current project is a statistics dashboard for Gatsby's GitHub
+            Our main current project is a statistics dashboard for Gatsby's GitHub
             repo. GitHub provides some statistics, but I wanted to be able to
             create further insights.
           </p>
