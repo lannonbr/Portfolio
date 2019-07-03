@@ -13,7 +13,6 @@ const BlogIndexPage = ({ data }) => {
       <h2>All Posts</h2>
       <ul>
         {data.allMdx.nodes.map(node => {
-          console.log(node)
           return (
             <li>
               <Link to={node.fields.slug}>

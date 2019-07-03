@@ -2,12 +2,6 @@
 require('dotenv').config()
 
 module.exports = {
-  __experimentalThemes: [
-    {
-      resolve: `gatsby-theme-lannonbr`,
-      options: {},
-    },
-  ],
   siteMetadata: {
     title: `Benjamin Lannon`,
     description: `Benjamin Lannon's Portfolio website`,
@@ -22,6 +16,10 @@ module.exports = {
     ],
   },
   plugins: [
+    {
+      resolve: `gatsby-theme-lannonbr`,
+      options: {},
+    },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-remove-serviceworker`,
     {
