@@ -1,6 +1,7 @@
 ---
 title: 'Livestreaming on Twitch'
 date: '2019-06-17'
+description: 'Intro article about me starting to stream on Twitch'
 keywords:
   - Live Streaming
   - Gatsby

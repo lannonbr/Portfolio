@@ -30,6 +30,7 @@ const BlogPost = ({ data }) => {
       <SEO
         title={data.mdx.frontmatter.title}
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
+        description={data.mdx.frontmatter.description}
       />
       <Link className="home" to="/blog/">
         <Home />
@@ -50,6 +51,7 @@ export const PageQuery = graphql`
         title
         date(formatString: "ll")
         keywords
+        description
       }
     }
   }
