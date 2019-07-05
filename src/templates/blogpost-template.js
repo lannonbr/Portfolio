@@ -32,12 +32,20 @@ const BlogPost = ({ data }) => {
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
         description={data.mdx.frontmatter.description}
       />
-      <Link className="home" to="/blog/">
+      <Link
+        className="home"
+        to="/blog/"
+        style={{
+          marginBottom: 16,
+        }}
+      >
         <Home />
         Blog Home
       </Link>
-      <h1>{data.mdx.frontmatter.title}</h1>
-      <time>{data.mdx.frontmatter.date}</time>
+      <h1 style={{ marginBottom: 8 }}>{data.mdx.frontmatter.title}</h1>
+      <time style={{ display: 'block', marginBottom: 32 }}>
+        {data.mdx.frontmatter.date}
+      </time>
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
     </BlogPostContainer>
   )
