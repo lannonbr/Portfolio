@@ -14,7 +14,7 @@ const BlogIndexPage = ({ data }) => {
       <ul>
         {data.allMdx.nodes.map(node => {
           return (
-            <li>
+            <li key={node.fields.slug}>
               <Link to={node.fields.slug}>
                 {node.frontmatter.title} - {node.frontmatter.date}
               </Link>
