@@ -39,6 +39,12 @@ const StyledBlogPostCard = styled(Link)`
   }
 `
 
+const BlogGrid = styled.div`
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  grid-gap: 20px;
+`
+
 const BlogIndexPage = ({ data }) => {
   return (
     <>
@@ -48,13 +54,7 @@ const BlogIndexPage = ({ data }) => {
       />
       <h1>Blog</h1>
       <h2>All Posts</h2>
-      <div
-        style={{
-          display: 'grid',
-          gridTemplateColumns: 'repeat(auto-fill, minmax(250px, 1fr)',
-          gridGap: 20,
-        }}
-      >
+      <BlogGrid>
         {data.allMdx.nodes.map(node => {
           return (
             <StyledBlogPostCard
@@ -67,7 +67,7 @@ const BlogIndexPage = ({ data }) => {
             </StyledBlogPostCard>
           )
         })}
-      </div>
+      </BlogGrid>
     </>
   )
 }
