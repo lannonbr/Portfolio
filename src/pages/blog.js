@@ -76,7 +76,10 @@ export default BlogIndexPage
 
 export const query = graphql`
   query {
-    allMdx(filter: { fileAbsolutePath: { regex: "/blog/" } }) {
+    allMdx(
+      filter: { fileAbsolutePath: { regex: "/blog/" } }
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
       nodes {
         fields {
           slug
