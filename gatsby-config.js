@@ -74,6 +74,16 @@ module.exports = {
             },
           },
         ],
+        // Refactor this when gatsby#15486 is resolved
+        plugins: [
+          `gatsby-remark-prismjs`,
+          {
+            resolve: `gatsby-remark-images`,
+            options: {
+              maxWidth: 800,
+            },
+          },
+        ],
       },
     },
   ],
