@@ -9,6 +9,13 @@ import moment from 'moment'
 
 const talks = [
   {
+    name: 'OSS - Development in the Open',
+    date: '2019-08-06',
+    event: 'Careers in Code Bootcamp',
+    location: 'Syracuse, NY',
+    slides: 'https://cic-oss-talk.netlify.com/',
+  },
+  {
     name: 'OSS Development Talk and Q&A',
     date: '2019-07-16',
     event: 'Syracuse JS Meetup',
