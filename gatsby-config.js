@@ -66,7 +66,6 @@ module.exports = {
       options: {
         extensions: [`.md`, `.mdx`],
         gatsbyRemarkPlugins: [
-          `gatsby-remark-prismjs`,
           {
             resolve: `gatsby-remark-images`,
             options: {
@@ -76,7 +75,6 @@ module.exports = {
         ],
         // Refactor this when gatsby#15486 is resolved
         plugins: [
-          `gatsby-remark-prismjs`,
           {
             resolve: `gatsby-remark-images`,
             options: {

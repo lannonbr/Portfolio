@@ -24,7 +24,7 @@ mkdir my-cool-action
 
 Next, a file needs to be generated to describe some metadata for the particular action. Create a file named `action.yml` and fill it in with the following:
 
-```yml
+```yml title=action.yml
 name: My Cool Action
 author: Benjamin Lannon
 description: 'Action that does some cool stuff!'
@@ -52,9 +52,7 @@ As well, a field that is optional but good to look at is the `inputs` field whic
 
 Next, we can create a main.js file to actually run some JS as part of an action.
 
-```js
-// main.js
-
+```js title=main.js
 let name = process.env.INPUT_NAME
 
 console.log(`Hello, ${name}`)
@@ -68,8 +66,7 @@ Next, I am going to create a workflow that will use this action. I pushed this r
 
 Next, we want to create a workflow file. It will live in the `.github/workflows` directory.
 
-```yml
-# .github/workflows/main.yml
+```yml title=.github/workflows/main.yml
 name: Run JS Action
 on: push
 jobs:
