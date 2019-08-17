@@ -10,7 +10,7 @@ keywords:
 
 ![GitHub Actions branding](./GitHubActions.png)
 
-GitHub announced this past Thursday, August 8, a new beta of GitHub Actions including CI & CD support. I want to look into a variety of new features added into the new beta and capabilities they can do.
+GitHub announced on August 8 a new beta of GitHub Actions including CI & CD support. I want to look into a variety of new features added into the new beta and capabilities they can do.
 
 This post will look into the new "JavaScript Actions", which allows you to build new actions by just writing JavaScript.
 
