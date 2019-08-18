@@ -1,0 +1,11 @@
+name: Daily Build
+on:
+  schedule:
+  - cron: "0/5 * * * *"
+
+jobs:
+  build:
+    runs-on: ubuntu-latest    
+    steps:
+      run: |
+        curl -X POST -d {} $NETLIFY_BUILD_HOOK
