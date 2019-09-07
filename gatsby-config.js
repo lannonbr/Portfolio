@@ -13,12 +13,20 @@ module.exports = {
       { url: '/talks/', name: 'Talks' },
       { url: '/blog/', name: 'Blog' },
       { url: '/stream/', name: 'Stream' },
+      { url: '/notes/', name: 'Notes' },
     ],
   },
   plugins: [
     {
       resolve: `gatsby-theme-lannonbr`,
       options: {},
+    },
+    {
+      resolve: `gatsby-theme-notes`,
+      options: {
+        basePath: '/notes',
+        mdx: false,
+      },
     },
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-remove-serviceworker`,
