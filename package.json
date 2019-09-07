@@ -19,6 +19,7 @@
     "gatsby-source-graphql": "^2.1.10",
     "gatsby-source-prismic": "^2.2.0",
     "gatsby-theme-lannonbr": "^1.2.0",
+    "gatsby-theme-notes": "^1.0.3",
     "gatsby-transformer-sharp": "^2.2.12",
     "mdx-utils": "^0.2.0",
     "moment": "^2.24.0",
