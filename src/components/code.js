@@ -23,9 +23,7 @@ const getParams = (name = ``) => {
 const Code = ({ codeString, language, className, metastring, ...props }) => {
   console.log(props)
 
-  const [lang, { title = ``, ...Others }] = getParams(
-    className + ' ' + metastring
-  )
+  const [lang, { title = `` }] = getParams(className + ' ' + metastring)
 
   return (
     <Highlight
