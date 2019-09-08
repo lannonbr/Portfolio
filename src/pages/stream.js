@@ -30,20 +30,12 @@ const StreamPage = () => {
             <a href="https://twitch.tv/lannonbr">https://twitch.tv/lannonbr</a>
           </p>
 
-          <h2>Current Project: Gatsby-GitHub-Stats</h2>
+          <h2>Current Project: Tinkering with GitHub Actions</h2>
           <p>
-            Our main current project is a statistics dashboard for Gatsby's GitHub
-            repo. GitHub provides some statistics, but I wanted to be able to
-            create further insights.
-          </p>
-
-          <p>
-            If you wish to learn more about the project, head over to the GitHub
-            repo:{' '}
-            <a href="https://github.com/lannonbr/gatsby-github-stats">
-              https://github.com/lannonbr/gatsby-github-stats
-            </a>
-            .
+            The second beta of GitHub Actions has been out for a bit now, and
+            for the past few weeks I've been showcasing workflows I've been
+            developing using the new ecosystem that is based on a YAML syntax
+            for workflow files.
           </p>
 
           <h2>Stream Notes</h2>
