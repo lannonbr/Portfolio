@@ -8,7 +8,7 @@
 6. if it is intentional, push a PR to remove it
 7. if it was on accident, possibly help resolve or wait for them to resolve it
 
-# Issues
+## Issues
 
 - In step 3, what happens if we don't see a built_by field?
   - have to do a `git blame` and find the PR that it was added in.
