@@ -30,6 +30,6 @@ const components = {
   },
 }
 
-export const wrapRootElement = ({ element }) => {
+export const wrapPageElement = ({ element }) => {
   return <MDXProvider components={components}>{element}</MDXProvider>
 }
