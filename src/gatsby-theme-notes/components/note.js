@@ -25,8 +25,6 @@ const WikiPage = ({
   },
   ...props
 }) => {
-  console.log(props)
-
   let backPath = props.path
     .split('/')
     .slice(0, -1)
