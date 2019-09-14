@@ -2,11 +2,11 @@ import React from 'react'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
-import { Home } from 'react-feather'
+import { Home, ArrowLeft } from 'react-feather'
 import Layout from './layout'
 import useOptions from 'gatsby-theme-notes/src/use-options'
 
-const HomeLink = styled(Link)`
+const NavigationLink = styled(Link)`
   margin-bottom: 16px;
 
   && {
@@ -25,13 +25,32 @@ const WikiPage = ({
   },
   ...props
 }) => {
+  console.log(props)
+
+  let backPath = props.path
+    .split('/')
+    .slice(0, -1)
+    .join('/')
+
   const options = useOptions()
   return (
     <Layout {...props}>
-      <HomeLink to={options.basePath}>
-        <Home />
-        Notes Home
-      </HomeLink>
+      <div
+        style={{
+          display: 'flex',
+        }}
+      >
+        {backPath !== options.basePath && (
+          <NavigationLink to={backPath} style={{ marginRight: 20 }}>
+            <ArrowLeft />
+            Back
+          </NavigationLink>
+        )}
+        <NavigationLink to={options.basePath}>
+          <Home />
+          Notes Home
+        </NavigationLink>
+      </div>
       <MDXRenderer>{body}</MDXRenderer>
     </Layout>
   )
