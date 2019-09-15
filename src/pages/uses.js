@@ -32,7 +32,8 @@ const UsesPage = () => (
             <a href="https://todoist.com">Todoist</a> for a todo list.
           </li>
           <li>
-            <a href="https://www.iterm2.com/">iTerm2</a> as my terminal.
+            <a href="https://www.iterm2.com/">iTerm2</a> as my terminal on
+            MacOS. Windows Terminal on Windows 10.
           </li>
           <li>Firefox and Chrome for web browsers.</li>
           <li>
@@ -47,9 +48,19 @@ const UsesPage = () => (
         </ul>
       </div>
       <div>
-        <h2>Hardware</h2>
+        <h2>PC Build</h2>
+        <p>My main machine as of July 2019 is a custom built PC</p>
         <ul>
-          <li>I use a 2015 MacBook Pro for my main rig since 2016.</li>
+          <li>AMD Ryzen 7 3700x - 8 core / 16 thread CPU</li>
+          <li>Corsair Vengence LPX 3200MHz DDR4 RAM - 32GB (2x16GB)</li>
+          <li>Samsung 970 Evo Plus NvMe M.2 1TB SSD</li>
+          <li>Nvidia GeForce RTX 2070 Super GPU</li>
+          <li>MSI MPG x570 Gaming Edge Wifi Motherboard</li>
+          <li>EVGA Supernova 750W G3 Gold Power Suppy</li>
+        </ul>
+        <h2>Other Hardware</h2>
+        <ul>
+          <li>I use a 2015 MacBook Pro for my mobile rig.</li>
           <li>
             An{' '}
             <a href="https://aziocorp.com/collections/keyboard/products/retro-classic-usb?variant=10731924389931">
