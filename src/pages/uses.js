@@ -79,8 +79,15 @@ const UsesPage = () => (
             2{' '}
             <a href="https://www.amazon.com/Dell-UltraSharp-27-Inch-LED-Lit-Monitor/dp/B00P0EQD1Q">
               Dell UltraSharp U2715H external Monitors
-            </a>{' '}
-            at my desk with my macbook usually closed.
+            </a>
+            .
+          </li>
+          <li>Logitech C922x HD Camera</li>
+          <li>Blue Yeti USB Mic w/ arm &amp; pop filter</li>
+          <li>
+            <a href="https://www.elgato.com/en/gaming/stream-deck">
+              Elgato 15-button Stream Deck
+            </a>
           </li>
         </ul>
       </div>
