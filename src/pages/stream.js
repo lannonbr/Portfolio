@@ -17,25 +17,24 @@ const StreamPage = () => {
         <div>
           <h1>Live Coding on Twitch</h1>
           <p>
-            I've been a frequent community member of the Live Coders team on
-            Twitch and the broader live programming community. I've always had
-            the urge to give it a shot myself, but never got to doing such until
-            now.
+            For years on Twitch, I was an active community member of many
+            programming streams. Through all of it, I had the itch to try
+            streaming myself and about halfway through 2019, I took the plunge.
           </p>
           <p>
-            Starting in June 2019, I began a livestream on Twitch.tv. I am
-            likely to tinker around with many technologies like Gatsby, React,
-            GitHub Actions, Docker, Node, etc. Tune in every Wednesday Evening
-            at 4PM ET (UTC-4) at{' '}
+            In June 2019, I began a livestream on Twitch.tv. I tinker around
+            with many technologies like Gatsby, React, GitHub Actions, Docker,
+            Node, etc. Tune in every Wednesday Evening at 4PM ET (UTC-4) at{' '}
             <a href="https://twitch.tv/lannonbr">https://twitch.tv/lannonbr</a>
           </p>
 
-          <h2>Current Project: Tinkering with GitHub Actions</h2>
+          <h2>Projects: Gatsby / GitHub Actions</h2>
           <p>
-            The second beta of GitHub Actions has been out for a bit now, and
-            for the past few weeks I've been showcasing workflows I've been
-            developing using the new ecosystem that is based on a YAML syntax
-            for workflow files.
+            Ony my stream, you will see a lot of various projects spread out
+            between using Gatsby and GitHub Actions. It's the mixture of
+            developing applications and websites alongside automations around
+            maintainence of these projects that gives a balance between product
+            and tooling.
           </p>
 
           <h2>Stream Notes</h2>
