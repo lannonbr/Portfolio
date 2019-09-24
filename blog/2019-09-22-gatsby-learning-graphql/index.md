@@ -1,5 +1,5 @@
 ---
-title: 'Progressive Disclosure of GraphQL: A pathway to learn GraphQL with Gatsby'
+title: 'A pathway to learn GraphQL with Gatsby'
 date: '2019-09-22'
 description: 'Article on why it can be easier to learn GraphQL with Gatsby'
 keywords:
@@ -213,8 +213,4 @@ And then it is immediately consumable across GraphiQL and the rest of the Gatsby
 
 ## Conclusion
 
-Each of these tools provided by Gatsby and GraphQL leads feels like a smooth flow. As you get into Gatsby, querying data is exposed by default,
-
-Through each of these tools, it explores deeper and more complex features of GraphQL. Although each are abstracted by Gatsby, they parallel fairly closely with features from the GraphQL language. It takes GraphQL at large and abstracts it out to components that build upon each other. With such, most people likely aren't making resolvers or creating tons of custom field extensions, but the APIs allow people who want to extend the schema at large to do so and scale to more GraphQL language features as they examine more complex APIs.
-
-This leads all to the _Progressive Disclosure of GraphQL_.
+Each of these tools provided by Gatsby and GraphQL build up on each other and explore the depths of the language as you learn more features progressively. With such, most people likely aren't making resolvers or creating tons of custom field extensions, but the APIs allow people who want to extend the schema at large to do so. Compared to being thrown into the entire language at once, this step-by-step way of learning gives a better focus and stronger context as it is coupled to Gatsby and gives strong purpose for each layer. There are other pathways, but this specific flow exposes a strong pattern of exposing less commonly used features deeper in a toolchain or UI, coined by the Nielsen Norman Group as Progressive Disclosure. Their initial purpose is for just UI, but as I showed, it can also layer into other spaces. If you want to read through another example further, take a look at Jason Lengstorf's post, [Automation + Control: Progressive Disclosure of Complexity](https://lengstorf.com/progressive-disclosure-of-complexity/).
