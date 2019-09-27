@@ -1,7 +1,7 @@
 ---
 title: 'A pathway to learn GraphQL with Gatsby'
 date: '2019-09-27'
-description: 'Article on why it can be easier to learn GraphQL with Gatsby'
+description: 'The GraphQL Ecosystem in Gatsby can be seen as a progressive ecosystem rather than thrown all at once at you.'
 keywords:
   - GraphQL
   - Gatsby
