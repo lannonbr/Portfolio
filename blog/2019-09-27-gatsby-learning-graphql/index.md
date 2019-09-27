@@ -1,6 +1,6 @@
 ---
 title: 'A pathway to learn GraphQL with Gatsby'
-date: '2019-09-22'
+date: '2019-09-27'
 description: 'Article on why it can be easier to learn GraphQL with Gatsby'
 keywords:
   - GraphQL
