@@ -9,6 +9,13 @@ import moment from 'moment'
 
 const talks = [
   {
+    name: "Open Source Community Involvement: It's not just about the code",
+    date: '2019-09-28',
+    event: 'GDG Capital Reigon DevFest',
+    location: 'Albany, NY',
+    slides: 'https://lannonbr-gdg-2019.netlify.com/',
+  },
+  {
     name: 'OSS - Development in the Open',
     date: '2019-08-06',
     event: 'Careers in Code Bootcamp',
