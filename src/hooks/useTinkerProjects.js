@@ -1,35 +1,25 @@
 import { useStaticQuery, graphql } from 'gatsby'
 
 function useTinkerProjects() {
-  const { allPrismicTinkerproject: tinkerProjects } = useStaticQuery(graphql`
+  const data = useStaticQuery(graphql`
     {
-      allPrismicTinkerproject(
-        sort: { fields: data___start_time, order: DESC }
-      ) {
-        edges {
-          node {
-            prismicId
-            data {
-              title {
-                text
-              }
-              start_time
-              description {
-                html
-              }
-              links {
-                link {
-                  html
-                }
-              }
-            }
+      allTinkerProjectsYaml(sort: { fields: created_date, order: DESC }) {
+        nodes {
+          id
+          name
+          created_date(formatString: "MMMM YYYY")
+          origin_date: created_date
+          desc
+          links {
+            name
+            url
           }
         }
       }
     }
   `)
 
-  return tinkerProjects
+  return data.allTinkerProjectsYaml
 }
 
 export default useTinkerProjects

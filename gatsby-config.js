@@ -44,19 +44,16 @@ module.exports = {
         path: `${__dirname}/blog`,
       },
     },
-    `gatsby-transformer-sharp`,
-    `gatsby-plugin-sharp`,
     {
-      resolve: `gatsby-source-prismic`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        repositoryName: `lannonbrportfoliodata`,
-        accessToken: `${process.env.PRISMIC_API_KEY}`,
-        lang: `*`,
-        shouldNormalizeImage: () => {
-          return true
-        },
+        name: `projects`,
+        path: `${__dirname}/content/projects`,
       },
     },
+    `gatsby-transformer-yaml`,
+    `gatsby-transformer-sharp`,
+    `gatsby-plugin-sharp`,
     {
       resolve: `gatsby-source-graphql`,
       options: {

@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import moment from 'moment'
 import useTinkerProjects from '../hooks/useTinkerProjects'
 
 const TinkerCardGrid = styled.div`
@@ -47,30 +46,22 @@ function TinkerProjects() {
 
   return (
     <TinkerCardGrid>
-      {tinkerProjects.edges.map(({ node: project }) => {
-        let title = project.data.title.text
-        let time = moment(project.data.start_time, 'YYYY-MM-DD')
-        let date = time.format('MMMM YYYY')
-        let links = project.data.links
+      {tinkerProjects.nodes.map(project => {
+        let title = project.name
+        let date = project.created_date
+        let links = project.links
 
         return (
-          <TinkerCard key={project.prismicId}>
+          <TinkerCard key={project.id}>
             <h3>{title}</h3>
             <h5>As of {date}</h5>
-            <div
-              className="description"
-              dangerouslySetInnerHTML={{
-                __html: project.data.description.html,
-              }}
-            />
+            <p className="description">{project.desc}</p>
             <div className="links">
-              {links.map(({ link }, idx) => {
+              {links.map((link, idx) => {
                 return (
-                  <span
-                    className="link"
-                    key={idx}
-                    dangerouslySetInnerHTML={{ __html: link.html.slice(3, -4) }}
-                  />
+                  <a className="link" key={idx} href={link.url}>
+                    {link.name}
+                  </a>
                 )
               })}
             </div>

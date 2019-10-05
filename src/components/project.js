@@ -1,6 +1,5 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import moment from 'moment'
 import styled from 'styled-components'
 
 import TechCard from './techCard'
@@ -66,51 +65,36 @@ const ProjectWrapper = styled.article`
   }
 `
 
-function ProjectLink({ url, target, text }) {
+function ProjectLink({ url, text }) {
   return (
-    <a href={url} target={target} className="project__link">
+    <a href={url} className="project__link">
       {text}
     </a>
   )
 }
 
 function Project({ project, idx }) {
-  const title = project.project_title.text
-  const description = project.description.text
-  let img = project.main_image.localFile
-
-  let dateObj = moment(project.project_origin_date, 'YYYY-MM-DD')
-  let date = dateObj.format(`MMMM YYYY`)
+  const title = project.name
+  const description = project.desc
+  let img = project.img
+  let date = project.created_date
 
   return (
     <ProjectWrapper idx={idx}>
-      <a className="project__image-link" href={project.website_link.url}>
+      <a className="project__image-link" href={project.website_link}>
         <Img className="project__image" fluid={img.childImageSharp.fluid} />
       </a>
       <div className="project__details">
         <h2>{title}</h2>
-        <time dateTime={project.project_origin_date}>Created {date}</time>
+        <time dateTime={project.origin_date}>Created {date}</time>
         <p>{description}</p>
         <div className="project__links">
-          <ProjectLink
-            url={project.website_link.url}
-            target={project.website_link.target}
-            text="Website Link"
-          />
-          <ProjectLink
-            url={project.github_link.url}
-            target={project.github_link.target}
-            text="GitHub Link"
-          />
+          <ProjectLink url={project.website_link} text="Website Link" />
+          <ProjectLink url={project.github_link} text="GitHub Link" />
         </div>
         <div className="project__tech">
           {project.technologies.map(tech => {
-            return (
-              <TechCard
-                key={tech.technology_field}
-                tech={tech.technology_field}
-              />
-            )
+            return <TechCard key={tech} tech={tech} />
           })}
         </div>
       </div>
