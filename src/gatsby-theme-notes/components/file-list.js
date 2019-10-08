@@ -1,6 +1,5 @@
 import React from 'react'
 import { Link } from 'gatsby'
-import { Styled } from 'theme-ui'
 
 export default ({ files }) => (
   <ul css={{ padding: '0 20px' }}>
@@ -8,9 +7,13 @@ export default ({ files }) => (
       .sort((a, b) => a.localeCompare(b))
       .map(url => (
         <li key={url}>
-          <Styled.a as={Link} to={url}>
+          <Link to={url} css={{
+            "&:hover": {
+              textDecoration: "underline"
+            }
+          }}>
             {url}
-          </Styled.a>
+          </Link>
         </li>
       ))}
   </ul>
