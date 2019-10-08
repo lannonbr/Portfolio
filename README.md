@@ -1,21 +1,23 @@
-# Lannonbr.com
+# Portfolio-Gatsby
 
-This is the git repository for the source of lannonbr.com, the personal website of myself, Benjamin Lannon.
+This is the current iteration of my personal portfolio site as of early 2019.
 
 The site is developed in Gatsby.
 
 ## What's involved
 
-* Data sourced from GitHub using their v4 GraphQL API
-* Data from Prismic CMS
+- Data sourced from GitHub using their v4 GraphQL API
 
-Auth tokens for both are required to load in everything correctly.
+A personal access token for GitHub is required to load in the data on the open source page correctly.
 
 Other tools used include:
 
-* Styled-components
-* Moment
-* React-feather
+- [gatsby-theme-lannonbr](https://github.com/lannonbr/gatsby-theme-lannonbr) (A gatsby theme powering features like dark mode & the layout of this site)
+- [gatsby-theme-notes](https://www.gatsbyjs.org/packages/gatsby-theme-notes/)
+- MDX
+- Styled-components
+- React-feather
+- MomentJS
 
 ## Other Tidbits
 
