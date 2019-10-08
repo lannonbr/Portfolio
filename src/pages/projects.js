@@ -2,10 +2,10 @@ import React from 'react'
 
 import SEO from '../components/Utils/seo'
 import Project from '../components/project'
-import useProjects from '../hooks/useProjects'
+import useFeaturedProjects from '../hooks/useFeaturedProjects'
 
 const ProjectsPage = () => {
-  const projects = useProjects()
+  const projects = useFeaturedProjects()
 
   return (
     <>
@@ -15,8 +15,8 @@ const ProjectsPage = () => {
       />
       <h1>Projects</h1>
       <p>Here are a few larger scale projects I've created.</p>
-      {projects.edges.map((projectObj, idx) => (
-        <Project project={projectObj.node.data} idx={idx} key={idx} />
+      {projects.nodes.map((project, idx) => (
+        <Project project={project} idx={idx} key={idx} />
       ))}
     </>
   )

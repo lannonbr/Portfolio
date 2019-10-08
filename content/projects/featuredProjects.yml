@@ -1,0 +1,57 @@
+- name: Gatsby GitHub Stats
+  created_date: '2019-05-19'
+  img: './images/gatsby-github-stats.png'
+  desc: |
+    A dashboard of GitHub metrics for the gatsbyjs/gatsby repository that displays the past two weeks of metrics including issues, PRs, and stars.
+  github_link: 'https://github.com/lannonbr/gatsby-github-stats'
+  website_link: 'https://gatsby-github-stats.netlify.com'
+  technologies:
+    - Gatsby
+    - Gatsby Themes
+    - Theme UI
+    - Recharts
+- name: Syracuse.io
+  created_date: '2019-01-08'
+  img: './images/syracuseio.png'
+  desc: |
+    Collaborating with Mike Vormwald, we recreated syracuse.io in Gatsby from previously a Jekyll site. Now we still have the benefit of writing content in markdown but have the speed and power that comes through using Gatsby and React.
+  github_link: 'https://github.com/syracuseio/syracuseio'
+  website_link: 'https://syracuse.io'
+  technologies:
+    - Gatsby
+    - Styled Components
+    - Meetup.com API
+- name: VS Code Issue Tracker
+  created_date: '2018-09-10'
+  img: './images/vscode-issue-tracker.png'
+  desc: |
+    During September 2018, the VS Code team worked on getting the issues on their GitHub down and I wanted to see how they progressed over the month so I developed a static site that graphed said data over time. I utilized GitHub's API to get the state of the issues on an hourly basis and the end result was quite sucessful given they were able to triage about 4000 issues during that month.
+  github_link: 'https://github.com/lannonbr/vscode-issue-tracker'
+  website_link: 'https://vscode-issue-tracker.netlify.com'
+  technologies:
+    - AWS Lambda
+    - C3.JS
+    - Netlify
+    - GitHub GraphQL API
+    - Firebase
+- name: VS Code Rocks
+  created_date: '2018-07-01'
+  img: './images/vscode-rocks.png'
+  desc: |
+    VS Code Rocks is one of my side projects to write content for VS Code and its community. Given I am an extension developer, I write both VS Code's features for normal uses as well as tutorials into various extension APIs on how to extend VS Code. It's a Gatsby site on the back-end and I write individual posts in markdown.
+  github_link: 'https://github.com/lannonbr/vscode-rocks'
+  website_link: 'https://vscode.rocks'
+  technologies:
+    - Gatsby
+    - Styled Components
+    - Markdown
+- name: Clarkson Mirror Website
+  created_date: '2015-12-12'
+  img: './images/clarkson-mirror.png'
+  desc: |
+    This was a design for the public facing website for Clarkson University's FOSS Mirror which hosts a variety of Linux distributions and other software projects. I designed the frontend to browse the various projects and some graphs using C3.JS to visualize the download traffic over time in a variety of formats. As of 2018, we've been pushing over 100TB a month across the world.
+  github_link: 'https://github.com/COSI-Lab/MirrorWebsite'
+  website_link: 'https://mirror.clarkson.edu'
+  technologies:
+    - SASS
+    - C3.JS
