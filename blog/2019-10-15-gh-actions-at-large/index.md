@@ -1,6 +1,7 @@
 ---
 title: 'GitHub Actions: Small abstractions with massive scope'
-date: '2019-10-14'
+date: '2019-10-15'
+description: 'A high-level look at how one should use GitHub Actions'
 keywords:
   - GitHub Actions
   - Automation
