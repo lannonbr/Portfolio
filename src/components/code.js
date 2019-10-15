@@ -3,7 +3,6 @@ import Highlight, { defaultProps } from 'prism-react-renderer'
 import theme from 'prism-react-renderer/themes/nightOwl'
 
 const getParams = (name = ``) => {
-  console.log(name)
   const [lang, params = ``] = name.split(` `)
   return [
     lang
@@ -21,8 +20,6 @@ const getParams = (name = ``) => {
 }
 
 const Code = ({ codeString, language, className, metastring, ...props }) => {
-  console.log(props)
-
   const [lang, { title = `` }] = getParams(className + ' ' + metastring)
 
   return (
