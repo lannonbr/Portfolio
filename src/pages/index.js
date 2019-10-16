@@ -51,8 +51,15 @@ const NewBlogComponent = styled.div`
     margin-left: 5px;
   }
 
+  span {
+    display: flex;
+    align-items: center;
+  }
+
   @media (max-width: 768px) {
     font-size: 18px;
+    flex-direction: column;
+    align-items: flex-start;
   }
 `
 
@@ -70,8 +77,10 @@ const IndexPage = ({ data }) => (
       }}
     >
       <NewBlogComponent>
-        <Coffee style={{ marginRight: 5 }} />
-        New Blogpost:{' '}
+        <span>
+          <Coffee style={{ marginRight: 5 }} />
+          New Blogpost:
+        </span>
         <Link to={data.newestBlogpost.nodes[0].fields.slug}>
           {data.newestBlogpost.nodes[0].frontmatter.title}
         </Link>
