@@ -17,10 +17,8 @@ module.exports = {
     ],
   },
   plugins: [
-    {
-      resolve: `gatsby-theme-lannonbr`,
-      options: {},
-    },
+    // Themes
+    `gatsby-theme-lannonbr`,
     {
       resolve: `gatsby-theme-notes`,
       options: {
@@ -28,6 +26,8 @@ module.exports = {
         mdx: false,
       },
     },
+
+    // Other Plugins
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-remove-serviceworker`,
     {
