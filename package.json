@@ -17,7 +17,7 @@
     "gatsby-remark-images": "^3.1.28",
     "gatsby-source-filesystem": "^2.1.35",
     "gatsby-source-graphql": "^2.1.21",
-    "gatsby-theme-lannonbr": "^2.0.0",
+    "gatsby-theme-lannonbr": "^2.0.1",
     "gatsby-theme-notes": "^1.0.12",
     "gatsby-transformer-sharp": "^2.3.2",
     "gatsby-transformer-yaml": "^2.2.15",

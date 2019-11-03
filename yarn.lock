@@ -5921,10 +5921,10 @@ gatsby-telemetry@^1.1.35:
     stack-utils "1.0.2"
     uuid "3.3.3"
 
-gatsby-theme-lannonbr@^2.0.0:
-  version "2.0.0"
-  resolved "https://registry.yarnpkg.com/gatsby-theme-lannonbr/-/gatsby-theme-lannonbr-2.0.0.tgz#a5d0f18b65fd19e2b34bca10a23db9d73481dc43"
-  integrity sha512-qfUBCbc/gp8RrTn5UChPIqeOrwhdtjo0RYC9XunRkCaMY/4yLXK1ttjpw3piIazrpI9JBBnsqCRgVBD+VnSFxg==
+gatsby-theme-lannonbr@^2.0.1:
+  version "2.0.1"
+  resolved "https://registry.yarnpkg.com/gatsby-theme-lannonbr/-/gatsby-theme-lannonbr-2.0.1.tgz#3a063d129308bd1a2b6314dca3d57e26d1d356a5"
+  integrity sha512-XwIULRp5xwxUQ7OcPlV0wPDT0jV5h5chc8K5gEvppdknR7o3UJPdp8JSBMtY1ct8FXdqSBCjuFGinY+vuqdylQ==
   dependencies:
     babel-plugin-styled-components "^1.10.6"
     gatsby-plugin-dark-mode "^1.1.0"
