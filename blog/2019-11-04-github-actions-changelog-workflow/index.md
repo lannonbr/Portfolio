@@ -13,7 +13,7 @@ Over the past week, I spun up a new workflow with GitHub Actions for an upcoming
 
 ![Screenshot of Actions changelog](./changelog-screenshot.png)
 
-After a few sessions, I got a scheduled workflow to scrape the page, filter out tasks, send it up to a database if it is not already saved, and then rebuild the site if there are new entries. I wanted to do a dive on the flow and highlight some things that made Actions fluid to work with for this use case.
+After a few sessions, I got a scheduled workflow to scrape the page, filter out tasks, send it to a database if it is not already saved, and then rebuild the site if there are new entries. I wanted to do a dive on the flow and highlight some things that made Actions fluid to work with for this use case.
 
 Here's some links to the workflow and action which I will reference through the article:
 
@@ -24,7 +24,7 @@ Here's some links to the workflow and action which I will reference through the 
 
 Starting off, as GitHub's changelog doesn't have an API, I had to go in and scrape it manually. A route I went down was used the node module [cheerio](https://www.npmjs.com/package/cheerio) which provides a jQuery syntax to be able to parse and pick out the data of what I wish.
 
-Once the page was pulled down with a package like `node-fetch`, I could dive through the HTML to get just the content I wish. Looking at the content of the actual site, there is 3 items that can be extracted:
+Once the page was pulled down with a package like `node-fetch`, I could dive through the HTML to get just the content I wish. Looking at the content of the actual site, there are 3 items that can be extracted:
 
 - The post's date
 - The post's title
@@ -38,7 +38,7 @@ Now, I needed to check the post entries already saved in my database and only up
 
 ## Fauna writes
 
-I decided to use [Fauna](https://fauna.com/) to expiriment with the tool. It also provides a simple document datastore that is managed for you with minimal setup and a GraphQL client which then can be easily integrated into a Gatsby site down the pipeline.
+I decided to use [Fauna](https://fauna.com/) to experiment with the tool. It provides a simple document datastore that is managed for you with minimal setup and a GraphQL client which then can be easily integrated into a Gatsby site down the pipeline.
 
 Pulling down entries from Fauna are done with their query language, FQL. I used the JavaScript client which sticks fairly close to the FQL standard.
 
@@ -101,7 +101,7 @@ type Query {
 }
 ```
 
-Some magic Fauna does behind the scenes is that it will generate new indexes based upon the fields you insert into the `Query` type when it matches up to a collection that already exists in a database. Following, Fauna's dashboard provides a GraphQL playground you can use to run queries or mutations with this newly defined schema. As you see below, it grabs the content that was stored:
+Some magic Fauna does behind the scenes is that it will generate new indexes based upon the fields you insert into the `Query` type when it matches up to a collection that already exists in a database. As there are no directives or parameters on the query field, it will be an index that returns all items. Following, Fauna's dashboard provides a GraphQL playground you can use to run queries or mutations with this newly defined schema. As you can see below, it grabs the content that was stored:
 
 ![Fauna GraphQL Playground](./fauna-graphql.png)
 
@@ -140,6 +140,6 @@ This workflow is run 4 times a day and has been working for a week without any e
 Through all of this work, I came out with a fully autonomous toolchain to rebuild the site when new posts are up on GitHub's changelog. With such, I have a few things to some things to leave you with and ideas for the future.
 
 - Conditional workflows: Setup workflows so if you don't need to run through every step 100% of the time. This will become very useful in private repos as you have usage cap for free and will have to pay afterwards.
-- refining queries: No matter which type of database you use to store data in a scenario like this, narrowing the queries will be beneficial for all parties. I am planning on creating some Fauna indexes in this situation so as time goes on and more and more posts are added, the array of posts pulled down can stay small and fast.
+- Refining queries: No matter which type of database you use to store data in a scenario like this, narrowing the queries will be beneficial for all parties. I am planning on creating some Fauna indexes in this situation so as time goes on and more and more posts are added, the array of posts pulled down can stay small and fast.
 
 Although this workflow was built for a specific toolchain, a lot of the insights can be reused bring these powerful between GitHub, external services, and your projects.
