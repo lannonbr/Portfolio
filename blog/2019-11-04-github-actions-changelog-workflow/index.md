@@ -1,7 +1,7 @@
 ---
 title: 'GitHub Actions Changelog Workflow'
 date: '2019-11-04'
-description: 'A look into a GitHub Actions workflow I made to scrape data from GitHub and present another viewhigh-level look at how one should use GitHub Actions'
+description: 'A look into a GitHub Actions workflow I made to scrape data from GitHub and present the data into a Gatsby site'
 keywords:
   - GitHub Actions
   - Automation
