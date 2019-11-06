@@ -16,6 +16,21 @@ const StreamPage = () => {
       <SplitLayout>
         <div>
           <h1>Live Coding on Twitch</h1>
+          <div
+            style={{
+              backgroundColor: '#FACDCD',
+              color: '#911111',
+              padding: 16,
+              marginBottom: 10,
+              borderRadius: 4,
+            }}
+          >
+            <p style={{ margin: 0 }}>
+              <b>Notice (As of Nov 6):</b> due to my GPU breaking, the stream
+              will be on hiatus until I can get it repaired. Sorry for the
+              inconvience
+            </p>
+          </div>
           <p>
             For years on Twitch, I was an active community member of many
             programming streams. Through all of it, I had the itch to try
