@@ -1,7 +1,5 @@
-name: Daily Build
-on:
-  schedule:
-    - cron: '0 6 * * * '
+name: Build on push
+on: push
 jobs:
   build:
     runs-on: ubuntu-latest
