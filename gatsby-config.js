@@ -29,6 +29,7 @@ module.exports = {
 
     // Other Plugins
     `gatsby-plugin-react-helmet`,
+    `gatsby-plugin-printer`,
     `gatsby-plugin-remove-serviceworker`,
     {
       resolve: `gatsby-source-filesystem`,

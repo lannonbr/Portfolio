@@ -1,5 +1,7 @@
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
+const { createPrinterNode } = require('gatsby-plugin-printer')
+const moment = require('moment')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -53,5 +55,25 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
     })
 
     createNodeField({ node, name: 'slug', value: `/blog${slug}` })
+
+    let filePathSplit = node.fileAbsolutePath.split('/')
+    let fileName = filePathSplit[filePathSplit.length - 2]
+
+    createPrinterNode({
+      id: node.id,
+      fileName,
+      outputDir: 'og-images/blog',
+      data: {
+        title: node.frontmatter.title,
+        date: moment(node.frontmatter.date).format('MMM, Do, YYYY'),
+      },
+      component: require.resolve('./src/printer-components/blogpost.js'),
+    })
+
+    actions.createNodeField({
+      node,
+      name: 'ogFileName',
+      value: fileName,
+    })
   }
 }

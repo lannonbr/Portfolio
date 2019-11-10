@@ -31,6 +31,7 @@ const BlogPost = ({ data }) => {
         title={data.mdx.frontmatter.title}
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
         description={data.mdx.frontmatter.description}
+        ogImage={data.mdx.fields.ogFileName}
       />
       <Link
         className="home"
@@ -60,6 +61,9 @@ export const PageQuery = graphql`
         date(formatString: "ll")
         keywords
         description
+      }
+      fields {
+        ogFileName
       }
     }
   }
