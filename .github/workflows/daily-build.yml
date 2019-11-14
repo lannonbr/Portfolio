@@ -4,6 +4,9 @@ on:
     - cron: '0 6 * * * '
 jobs:
   build:
+    env:
+      LIFX_TOKEN: ${{ secrets.LIFX_TOKEN }}
+      LIFX_BULB_ID: ${{ secrets.LIFX_BULB_ID }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v1
@@ -16,3 +19,13 @@ jobs:
           yarn
           yarn build
           npx netlify-cli deploy --dir=public --prod
+      - name: Trigger light to go green on success
+        if: success()
+        uses: .github/actions/lifx-trigger-action
+        with:
+          color: green
+      - name: Trigger light to go red on failure
+        if: failure()
+        uses: .github/actions/lifx-trigger-action
+        with:
+          color: red

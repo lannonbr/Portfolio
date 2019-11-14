@@ -1,22 +1,25 @@
-name: Build on push
+# LIFX Trigger Action
+
+Trigger a LIFX bulb to change a color for a short period of time
+
+## Required Environment variables
+
+- `LIFX_TOKEN`: an access token For the LIFX API.
+- `LIFX_BULB_ID`: The id of the light bulb you wish to trigger
+
+## Usage
+
+```yaml
 on: push
 jobs:
-  build:
+  run:
+    runs-on: ubuntu-latest
     env:
       LIFX_TOKEN: ${{ secrets.LIFX_TOKEN }}
       LIFX_BULB_ID: ${{ secrets.LIFX_BULB_ID }}
-    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Build
-        env:
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          yarn
-          yarn build
-          npx netlify-cli deploy --dir=public --prod
+      - name: Do stuff
+        run: echo do stuff
       - name: Trigger light to go green on success
         if: success()
         uses: .github/actions/lifx-trigger-action
@@ -27,3 +30,4 @@ jobs:
         uses: .github/actions/lifx-trigger-action
         with:
           color: red
+```

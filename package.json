@@ -45,8 +45,6 @@
     "test": "echo \"Write tests! -> https://gatsby.app/unit-testing\""
   },
   "devDependencies": {
-    "lifx-http-api": "^1.0.3",
-    "netlify-lambda": "^1.4.13",
     "prettier": "^1.18.2"
   },
   "repository": {
