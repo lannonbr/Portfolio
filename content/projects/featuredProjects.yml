@@ -1,3 +1,15 @@
+- name: GARS (GitHub Actions Resource Site)
+  created_date: '2019-11-13'
+  img: './images/gars.png'
+  desc: |
+    A resource site to showcase the ins and outs of GitHub Actions. Reference Guides, tutorials, and more.
+  github_link: 'https://github.com/lannonbr/ActionsResourceSite'
+  website_link: 'https://gars.dev'
+  technologies:
+    - Gatsby
+    - GitHub Actions
+    - Fauna
+    - MDX
 - name: Gatsby GitHub Stats
   created_date: '2019-05-19'
   img: './images/gatsby-github-stats.png'
