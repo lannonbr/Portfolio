@@ -1,9 +1,0 @@
-name: Lifx Trigger Action
-description: Trigger a LIFX bulb to change a color for a short period of time
-inputs:
-  color:
-    required: true
-    description: 'Color the bulb will go'
-runs:
-  using: 'node12'
-  main: 'dist/index.js'
