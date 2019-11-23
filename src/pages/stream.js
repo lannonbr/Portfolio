@@ -27,6 +27,10 @@ const StreamPage = () => {
             Node, etc. Tune in every Wednesday Evening at 4PM ET (UTC-4) at{' '}
             <a href="https://twitch.tv/lannonbr">https://twitch.tv/lannonbr</a>
           </p>
+          <p>
+            I am member of the Twitch{` `}
+            <a href="https://livecoders.dev">Live Coders</a> team.
+          </p>
 
           <h2>Projects: Gatsby / GitHub Actions</h2>
           <p>

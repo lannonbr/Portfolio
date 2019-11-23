@@ -54,13 +54,12 @@ const WorkPage = () => (
     </p>
     <p>
       Finally, I've found a haven in the Twitch Dev community of individuals
-      livestreaming and learning with others. I enjoy partaking in discussions
-      with streamers and community members in the chatroom and getting involved
-      with projects they're building and putting up on GitHub. You may often see
-      me in the chats of <a href="https://twitch.tv/noopkat">Suz Hinton</a>,{' '}
-      <a href="https://twitch.tv/clarkio">Brian Clark</a>,{' '}
-      <a href="https://twitch.tv/csharpfritz">Jeff Fritz</a>, and plenty of
-      others.
+      livestreaming and learning with others. I am a part of the{' '}
+      <a href="https://livecoders.dev">LiveCoders</a> team and stream weekly
+      working on various projects live. I partake in discussions with other
+      streamers and community members in the stream chatrooms and getting
+      involved with projects they're building and putting up on GitHub. You can
+      learn more about my stream on the <Link to="/stream/">Stream Page</Link>.
     </p>
     <h2>Currently Tinkering With</h2>
     <p>
