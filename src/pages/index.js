@@ -37,55 +37,12 @@ const FrontpageDiv = styled.div`
   }
 `
 
-const NewBlogComponent = styled.div`
-  font-size: 20px;
-  margin-bottom: 20px;
-  border: 1px solid #d1d5da;
-  display: inline-block;
-  padding: 16px;
-  font-weight: bold;
-  display: flex;
-  align-items: center;
-
-  a {
-    margin-left: 5px;
-  }
-
-  span {
-    display: flex;
-    align-items: center;
-  }
-
-  @media (max-width: 768px) {
-    font-size: 18px;
-    flex-direction: column;
-    align-items: flex-start;
-  }
-`
-
 const IndexPage = ({ data }) => (
   <>
     <SEO
       title="Home"
       keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
     />
-    <div
-      style={{
-        display: 'flex',
-        justifyContent: 'center',
-        alignItems: 'center',
-      }}
-    >
-      <NewBlogComponent>
-        <span>
-          <Coffee style={{ marginRight: 5 }} />
-          New Blogpost:
-        </span>
-        <Link to={data.newestBlogpost.nodes[0].fields.slug}>
-          {data.newestBlogpost.nodes[0].frontmatter.title}
-        </Link>
-      </NewBlogComponent>
-    </div>
     <SplitLayout>
       <FrontpageDiv>
         <h1>Hi all, I'm Benjamin</h1>
@@ -93,6 +50,23 @@ const IndexPage = ({ data }) => (
           I'm a web developer in Upstate New York with a passion for exploration
           and continual learning.
         </p>
+        <h2 style={{ display: 'inline-flex', alignItems: 'center' }}>
+          <Coffee style={{ marginRight: 5 }} />
+          New Posts
+        </h2>
+        {data.newBlogposts.nodes.map(post => {
+          return (
+            <div style={{ marginBottom: 10 }}>
+              <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
+              <time
+                dateTime={post.frontmatter.fullDate}
+                style={{ marginLeft: 10 }}
+              >
+                {post.frontmatter.date}
+              </time>
+            </div>
+          )
+        })}
       </FrontpageDiv>
       <div>
         <IllustrationImg
@@ -108,14 +82,16 @@ export default IndexPage
 
 export const query = graphql`
   query IndexQuery {
-    newestBlogpost: allMdx(
+    newBlogposts: allMdx(
       filter: { fileAbsolutePath: { regex: "/blog/" } }
       sort: { fields: frontmatter___date, order: DESC }
-      limit: 1
+      limit: 5
     ) {
       nodes {
         frontmatter {
           title
+          date(formatString: "ll")
+          fullDate: date
         }
         fields {
           slug
