@@ -30,7 +30,10 @@ const Code = ({ codeString, language, className, metastring, ...props }) => {
       theme={theme}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <>
+        <div
+          className="codeBlock"
+          style={{ boxShadow: '0px 4px 8px rgba(0,0,0,0.4)' }}
+        >
           {title && (
             <div
               className={className}
@@ -57,7 +60,7 @@ const Code = ({ codeString, language, className, metastring, ...props }) => {
               </div>
             ))}
           </pre>
-        </>
+        </div>
       )}
     </Highlight>
   )
