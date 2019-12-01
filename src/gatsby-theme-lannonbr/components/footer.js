@@ -35,8 +35,7 @@ const StyledFooter = styled.footer`
   }
   @media (max-width: 768px) {
     display: block;
-    > div {
-      /* flex-basis: 50%; */
+    div {
       margin-right: 0;
       font-size: 14px;
       margin-bottom: 20px;
@@ -54,7 +53,7 @@ const TextContainer = styled.div`
   }
 
   @media (max-width: 768px) {
-    justify-content: center;
+    justify-content: space-around;
   }
 `
 
