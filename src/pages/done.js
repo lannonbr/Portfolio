@@ -37,7 +37,7 @@ const DoneList = () => {
   let months = {}
 
   data.allDoneListYaml.nodes.forEach(entry => {
-    let [month, _, year] = entry.date.split(' ')
+    let [month, , year] = entry.date.split(' ')
 
     if (!Object.keys(months).includes(`${month} ${year}`)) {
       months[`${month} ${year}`] = []
@@ -58,6 +58,7 @@ const DoneList = () => {
         {Object.entries(months).map(month => {
           return (
             <div
+              key={month[0]}
               style={{
                 marginBottom: 30,
               }}
