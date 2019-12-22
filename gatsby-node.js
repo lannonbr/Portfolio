@@ -2,6 +2,7 @@ const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 const { createPrinterNode } = require('gatsby-plugin-printer')
 const moment = require('moment')
+const crypto = require('crypto')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -41,12 +42,13 @@ exports.createPages = async ({ graphql, actions }) => {
   })
 }
 
-exports.onCreateNode = ({ node, actions, getNode }) => {
-  const { createNodeField } = actions
+exports.onCreateNode = async ({ node, actions, getNode }) => {
+  const { createNodeField, createNode } = actions
 
   // Create slug for blogposts
   if (
     node.internal.type === 'Mdx' &&
+    node.fileAbsolutePath &&
     node.fileAbsolutePath.includes('/blog/')
   ) {
     const slug = createFilePath({
@@ -75,5 +77,25 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
       name: 'ogFileName',
       value: fileName,
     })
+  }
+
+  if (node.internal.type === 'DoneListYaml') {
+    createNode({
+      id: `${node.id}-mdx-desc`,
+      parent: null,
+      children: [],
+      internal: {
+        type: `CustomMdxStringNode`,
+        contentDigest: crypto
+          .createHash('md5')
+          .update(node.desc)
+          .digest('hex'),
+        mediaType: `text/markdown`,
+        content: node.desc,
+        description: 'Custom MDX Node',
+      },
+    })
+
+    node.mdxDesc___NODE = `${node.id}-mdx-desc`
   }
 }
