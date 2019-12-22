@@ -72,6 +72,7 @@ const DoneList = () => {
               >
                 {month[0]}
               </h2>
+              <hr style={{ color: 'var(--primaryColor)' }} />
               {month[1].map(entry => {
                 let descBody = entry.mdxDesc.childMdx.body
 
