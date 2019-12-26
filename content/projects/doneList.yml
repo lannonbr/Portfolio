@@ -38,3 +38,5 @@
   desc: 'Created an [Advent Calendar for GitHub Actions](https://lannonbr-actions-advent-calendar.netlify.com/)'
 - date: '2019-12-18'
   desc: 'Setup a heatmap for the Live Coders Data Analysis Project'
+- date: '2019-12-18'
+  desc: 'Put the [Live Coders Heatmap](https://livecoders-heatmap.netlify.com) up on Netlify'
