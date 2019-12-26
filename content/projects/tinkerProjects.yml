@@ -1,3 +1,10 @@
+- name: WebAssembly
+  created_date: 2018-12-15
+  desc: |
+    WebAssembly (Also known as WASM) is a binary format that can compile languages like C, Rust, Go, and other non-native web languages to be used on the web. This can bring performance boosts for high-computation tasks and be able to move tasks that previously needed a server to be run clientside inside a website.
+  links:
+    - name: WASM MDN Docs
+      url: https://developer.mozilla.org/en-US/docs/WebAssembly
 - name: GitHub Actions
   created_date: 2018-11-01
   desc: |
