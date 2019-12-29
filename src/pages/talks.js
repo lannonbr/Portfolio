@@ -9,6 +9,13 @@ import moment from 'moment'
 
 const talks = [
   {
+    name: 'Intro to GitHub Actions Workshop',
+    date: '2019-11-19',
+    event: 'Syracuse JS Meetup',
+    location: 'Syracuse, NY',
+    recording: 'https://www.youtube.com/watch?v=M_UG7jlUglA',
+  },
+  {
     name: "Open Source Community Involvement: It's not just about the code",
     date: '2019-09-28',
     event: 'GDG Capital Reigon DevFest',
