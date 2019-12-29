@@ -1,15 +1,15 @@
 - date: '2019-01-09'
-  desc: Started work on Syracuse.io Gatsby refresh
+  desc: Started work on [Syracuse.io](https://syracuse.io) Gatsby refresh
 - date: '2019-01-15'
   desc: Gave Gatsby Workshop at SyrJS meetup
 - date: '2019-02-05'
   desc: Paired on Jeff Fritz's stream on a Sentiment analysis widget for his chatbot
 - date: '2019-02-23'
-  desc: Launched Gatsby redesign of lannonbr.com
+  desc: Launched Gatsby redesign of [lannonbr.com](https://lannonbr.com/)
 - date: '2019-03-01'
-  desc: 'Had Gatsby PR for Reproduction doc page merged'
+  desc: 'Had [Gatsby PR](https://github.com/gatsbyjs/gatsby/pull/12166) for Reproduction doc page merged'
 - date: '2019-03-14'
-  desc: 'Had Gatsby PR for Stub List page merged'
+  desc: 'Had [Gatsby PR](https://github.com/gatsbyjs/gatsby/pull/12418) for Stub List page merged'
 - date: '2019-05-29'
   desc: Made [Gatsby GitHub Stats](https://gatsby-github-stats.netlify.com) dashboard a Gatsby site
 - date: '2019-05-29'
@@ -19,17 +19,19 @@
 - date: '2019-06-22'
   desc: Paired on IlluminatedSpace's stream on their Gastsby site
 - date: '2019-07-08'
-  desc: 'Had Gatsby PR on working with images in Markdown docs page merged'
+  desc: 'Had [Gatsby PR](https://github.com/gatsbyjs/gatsby/pull/15296) on working with images in Markdown docs page merged'
 - date: '2019-07-13'
   desc: 'Built a PC'
 - date: '2019-07-28'
   desc: Joined [LiveCoders](https://livecoders.dev) Twitch Team
 - date: '2019-07-29'
-  desc: 'Had Gatsby PR for Docs Table of Contents merged'
+  desc: 'Had [Gatsby PR](https://github.com/gatsbyjs/gatsby/pull/15251) for Docs Table of Contents merged'
 - date: '2019-09-28'
   desc: Gave a talk at GDG Capital Reigon DevFest
 - date: '2019-10-17'
-  desc: 'Had Gatsby PR on Processing external images docs page merged'
+  desc: 'Had [Gatsby PR](https://github.com/gatsbyjs/gatsby/pull/17497) on Processing external images docs page merged'
+- date: '2019-11-07'
+  desc: 'Mentioned in the VS Code release notes for [VS Code 1.40](https://code.visualstudio.com/updates/v1_40)'
 - date: '2019-11-13'
   desc: 'Launched [GARS](https://gars.dev): GitHub Actions Resource Site'
 - date: '2019-11-22'
@@ -38,3 +40,5 @@
   desc: 'Created an [Advent Calendar for GitHub Actions](https://lannonbr-actions-advent-calendar.netlify.com/)'
 - date: '2019-12-18'
   desc: 'Setup a heatmap for the Live Coders Data Analysis Project'
+- date: '2019-12-24'
+  desc: 'Put the [Live Coders Heatmap](https://livecoders-heatmap.netlify.com) up on Netlify'
