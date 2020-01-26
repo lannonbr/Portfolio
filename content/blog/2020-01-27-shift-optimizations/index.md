@@ -1,7 +1,7 @@
 ---
 title: "Array.shift optimizations in Firefox's JS Engine"
 date: '2020-01-27'
-description: 'A retrospective for what I did in 2019'
+description: 'A look into a JS optimization in Firefox involving array.shift'
 keywords:
   - Firefox
   - JS Engines
@@ -25,7 +25,7 @@ It will take an item off the array and shift every other item over.
 
 Let's have an example with a simple array of size 6 counting the numbers 0-5.
 
-![Normal Array](./array.png)
+![Illustration of an array](./array.png)
 
 If you ran this code on it:
 
@@ -36,11 +36,11 @@ array.shift()
 
 It would return the number `0` and the array remaining would be `[1, 2, 3, 4, 5]`. Now that's fine for a small array as it shifted the 5 remaining items over.
 
-![Slow shift](./shift-slow.png)
+![Illustration of a shift where all items have to move over to the left by one each](./shift-slow.png)
 
 but what if we had an array of size 100,000? Or what if the items of the array were complex objects? Thinking about this algorithm simply, it does not scale as you would need to traverse a large amount of data every time you ran `array.shift()`.
 
-I was working on a codebase that ran into this bottleneck, but what perplexed me was how in Firefox it ran almost instantly while in Node / Chrome it took literal seconds to complete. To figure out how this actually worked, I dug around and found some inner workings of how Firefox implements this function which gives it a huge performance boost.
+I was working on a codebase that ran into this bottleneck, but what perplexed me was how in Firefox it ran almost instantly while in Node / Chrome it took seconds to complete. To figure out how this actually worked, I dug around and found some inner workings of how Firefox implements this function which gives it a huge performance boost.
 
 ## Perf Boost with Pointers
 
@@ -48,7 +48,7 @@ When thinking about JavaScript runtimes which the JS will be run on, not all wor
 
 In the case of Firefox, their engine is called SpiderMonkey which is mainly written in C / C++. With that being the case, arrays in C are pointers that tell a computer at what memory address is the beginning of an array. Up till 2017, the `array.shift` method that was implemented in SpiderMonkey was a slow implementation that it had to move items one by one. In 2017, though, some engineers at Mozilla had [a simple idea](https://jandemooij.nl/blog/2017/12/06/some-spidermonkey-optimizations-in-firefox-quantum/): what if instead of moving the items one by one in a shift, you just move the pointer or tell the computer a new address to where the array starts.
 
-![Fast shift](./shift-fast.png)
+![Illustration of a shift where only the pointer is moved over one to the right](./shift-fast.png)
 
 So now there is just 2 computations in the end.
 
