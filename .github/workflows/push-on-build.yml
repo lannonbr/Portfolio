@@ -9,16 +9,18 @@ jobs:
       LIFX_BULB_ID: ${{ secrets.LIFX_BULB_ID }}
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v1
-      - name: Build
+      - uses: actions/checkout@v2
+      - name: Install Deps
+        run: yarn
+      - name: Build Site
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: yarn build
+      - name: Deploy Site
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
-        run: |
-          yarn
-          yarn build
-          npx netlify-cli deploy --dir=public --prod
+        run: npx netlify-cli deploy --dir=public --prod
       - name: Trigger light to go green on success
         if: success()
         uses: lannonbr/lifx-trigger-action@1.0.0
