@@ -58,6 +58,7 @@ exports.onCreateNode = async ({ node, actions, getNode }) => {
 
     createNodeField({ node, name: 'slug', value: `/blog${slug}` })
 
+    // Create og-images with gatsby-plugin-printer
     let filePathSplit = node.fileAbsolutePath.split('/')
     let fileName = filePathSplit[filePathSplit.length - 2]
 
@@ -79,10 +80,11 @@ exports.onCreateNode = async ({ node, actions, getNode }) => {
     })
   }
 
+  // Create a child node for the descriptions of the Done List
   if (node.internal.type === 'DoneListYaml') {
-    createNode({
+    let childNode = {
       id: `${node.id}-mdx-desc`,
-      parent: null,
+      parent: node.id,
       children: [],
       internal: {
         type: `CustomMdxStringNode`,
@@ -94,8 +96,8 @@ exports.onCreateNode = async ({ node, actions, getNode }) => {
         content: node.desc,
         description: 'Custom MDX Node',
       },
-    })
-
-    node.mdxDesc___NODE = `${node.id}-mdx-desc`
+    }
+    createNode(childNode)
+    node.children.push(childNode.id)
   }
 }

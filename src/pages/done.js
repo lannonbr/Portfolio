@@ -24,7 +24,7 @@ const DoneList = () => {
         nodes {
           id
           date(formatString: "ll")
-          mdxDesc {
+          childCustomMdxStringNode {
             childMdx {
               body
             }
@@ -75,7 +75,7 @@ const DoneList = () => {
               </h2>
               <hr style={{ color: 'var(--primaryColor)' }} />
               {month[1].map(entry => {
-                let descBody = entry.mdxDesc.childMdx.body
+                let descBody = entry.childCustomMdxStringNode.childMdx.body
 
                 return (
                   <Card key={entry.id}>
