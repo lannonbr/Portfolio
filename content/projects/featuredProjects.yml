@@ -1,3 +1,15 @@
+- name: Live Coders Heatmap
+  created_date: '2019-12-24'
+  img: './images/lc-heatmap.png'
+  desc: |
+    A Heatmap showing when people on the Live Coders Twitch team are live.
+  github_link: 'https://github.com/lannonbr/LC-Heatmap'
+  website_link: 'https://livecoders-heatmap.netlify.com'
+  technologies:
+    - GitHub Actions
+    - DynamoDB
+    - D3
+    - date-fns
 - name: GARS (GitHub Actions Resource Site)
   created_date: '2019-11-13'
   img: './images/gars.png'
