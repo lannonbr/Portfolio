@@ -7,7 +7,7 @@ keywords:
   - WebAssembly
 ---
 
-On top of using wasm-pack directly, you can also use it in JS bundlers. In this case, there has been an implementation to integrate wasm-pack into a webpack bundle with little code.
+On top of using [wasm-pack](https://github.com/rustwasm/wasm-pack) directly, you can also use it in JS bundlers. In this case, there has been an implementation to integrate wasm-pack into a webpack bundle with little code.
 
 # Project setup
 
@@ -91,7 +91,7 @@ module.exports = {
 }
 ```
 
-The only thing out of the ordinary is we have a new plugin of `WasmPackPlugin`. The one required option is `crateDirectory` to tell wasm-pack where the root of the Rust code is. In this instance we have it at the root, but we could contain all of the rust code in it's own folder if we wanted to.
+The only thing out of the ordinary is we have a new plugin of `WasmPackPlugin`. The one required option is `crateDirectory` to tell wasm-pack where the root of the Rust code is. In this instance we have it at the root, but we could contain all of the rust code in its own folder if we wanted to.
 
 Then add a build script as part of the `package.json` and then run it.
 
@@ -108,7 +108,7 @@ Then add a build script as part of the `package.json` and then run it.
 
 What is outputted is various build artifacts. There will be a `pkg` file that includes the output of `wasm-pack`. Then it will take the `index.js` and `index_bg.wasm` file and use them as part of the outputted bundle.
 
-Finally, there will be a `dist` folder which includes the end result. If you create an index.html file in this directory and import the script in:
+Finally, there will be a `dist` folder which includes the end result. Create an index.html file in this directory and import the script in:
 
 ```html title=dist/index.html
 <!DOCTYPE html>
@@ -124,7 +124,7 @@ Finally, there will be a `dist` folder which includes the end result. If you cre
 </html>
 ```
 
-Now if you serve this `dist` folder on a web server that properly serves WASM, you will be able to see the wasm working. A note with that previous statement is the `WebAssembly` web API which will run WASM needs the WASM to be loaded with the MIME type of `application/wasm` or it won't run. At the moment, there are some hiccups with Firefox loading this, but other browsers that support WASM will work, like Chrome, Edge, Safari, and others. These issues with browsers not being able to load WASM or HTTP Servers not being able to serve it properly will likely be resolved over time.
+Now if you serve this `dist` folder on a web server that properly serves WASM, you will be able to see it functioning. A notice about that previous statement is the `WebAssembly` web API which will run WASM needs the `.wasm` file to be loaded with the MIME type of `application/wasm` or it won't run. At the moment, there are some hiccups with Firefox loading this, but other browsers that support WASM will work, like Chrome, Edge, Safari, and others. These issues with browsers not being able to load WASM or HTTP Servers not being able to serve it properly will likely be resolved over time.
 
 A http server that serves `.wasm` files as `application/wasm` is the node package `http-server`. You can run it with npx like so:
 
