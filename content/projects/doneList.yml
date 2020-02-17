@@ -46,3 +46,7 @@
   desc: 'added weekly stats to the Live Coders Heatmap ([Tweet](https://twitter.com/lannonbr/status/1215047871306903555))'
 - date: '2020-01-11'
   desc: 'Started work on the Live Coders Website with a kick-off meeting about the goals for an MVP of the site.'
+- date: '2020-02-07'
+  desc: 'Upgraded to a Mirrorless camera for my stream (Sony a5100)'
+- date: '2020-02-17'
+  desc: 'published a blogpost on using webpack & wasm-pack together'
