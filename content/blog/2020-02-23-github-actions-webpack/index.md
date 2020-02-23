@@ -46,6 +46,7 @@ jobs:
   main:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - uses: lannonbr/print-current-date@master
 ```
 
