@@ -1,7 +1,7 @@
 ---
 title: 'Creating a SMS bot to notify of upcoming events with GitHub Actions and Twilio'
 date: '2020-02-24'
-description: 'Desc'
+description: 'A guide on how to use Twilio and GitHub Actions to send weekly event alerts'
 keywords:
   - GitHub Actions
   - Twilio
