@@ -7,7 +7,7 @@ keywords:
   - Twilio
 ---
 
-When I open my web browser, I wrote a page where I can see upcoming events.
+When I open my web browser, there is a page I developed where I can see upcoming events.
 
 ![Web UI for events](./events-web-ui.png)
 
