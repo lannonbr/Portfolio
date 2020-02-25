@@ -17,7 +17,7 @@ const UsesPage = () => (
     <SplitLayout>
       <div>
         <h2>Software</h2>
-        <ul>
+        <ul className="list-disc pl-4">
           <li>
             My main text editor of choice is{' '}
             <a href="https://code.visualstudio.com">VS Code</a>. If I need to
@@ -50,7 +50,7 @@ const UsesPage = () => (
       <div>
         <h2>PC Build</h2>
         <p>My main machine as of July 2019 is a custom built PC</p>
-        <ul>
+        <ul className="list-disc pl-4">
           <li>AMD Ryzen 7 3700x - 8 core / 16 thread CPU</li>
           <li>Corsair Vengence LPX 3200MHz DDR4 RAM - 32GB (2x16GB)</li>
           <li>Samsung 970 Evo Plus NvMe M.2 1TB SSD</li>
@@ -59,7 +59,7 @@ const UsesPage = () => (
           <li>EVGA Supernova 750W G3 Gold Power Suppy</li>
         </ul>
         <h2>Other Hardware</h2>
-        <ul>
+        <ul className="list-disc pl-4">
           <li>I use a 2015 MacBook Pro for my mobile rig.</li>
           <li>
             An{' '}
@@ -82,7 +82,13 @@ const UsesPage = () => (
             </a>
             .
           </li>
-          <li>Logitech C922x HD Camera</li>
+          <li>
+            2{' '}
+            <a href="https://www.elgato.com/en/gaming/key-light">
+              Elgato key lights
+            </a>
+          </li>
+          <li>Sony a5100 Mirrorless Camera</li>
           <li>Blue Yeti USB Mic w/ arm &amp; pop filter</li>
           <li>
             <a href="https://www.elgato.com/en/gaming/stream-deck">
