@@ -9,11 +9,7 @@ const StyledBlogPostCard = styled(Link)`
     hsl(272.6, 64.5%, 42%) 1%,
     hsl(290.7, 50.2%, 52%) 72%
   );
-  /* width: 500px; */
-  height: 300px;
-  display: inline-block;
 
-  border-radius: 4px;
   box-shadow: rgba(0, 0, 0, 0.16) 0px 20px 80px;
   transition: transform 200ms ease-in-out 0s, box-shadow 200ms ease-in-out 0s;
 
@@ -24,25 +20,7 @@ const StyledBlogPostCard = styled(Link)`
 
   &.link {
     color: white;
-    font-size: 24px;
-    display: flex;
-    justify-content: flex-end;
-    flex-direction: column;
-    padding-bottom: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
-
-    time {
-      margin-top: 10px;
-      font-size: 18px;
-    }
   }
-`
-
-const BlogGrid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
-  grid-gap: 20px;
 `
 
 const BlogIndexPage = ({ data }) => {
@@ -54,20 +32,20 @@ const BlogIndexPage = ({ data }) => {
       />
       <h1>Blog</h1>
       <h2>All Posts</h2>
-      <BlogGrid>
+      <div className="grid gap-4 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
         {data.allMdx.nodes.map(node => {
           return (
             <StyledBlogPostCard
               key={node.fields.slug}
               to={node.fields.slug}
-              className="link"
+              className="link inline-block h-64 rounded-md flex flex-col justify-end pb-5 px-3 text-2xl"
             >
               {node.frontmatter.title}
-              <time>{node.frontmatter.date}</time>
+              <time className="text-lg mt-3">{node.frontmatter.date}</time>
             </StyledBlogPostCard>
           )
         })}
-      </BlogGrid>
+      </div>
     </>
   )
 }

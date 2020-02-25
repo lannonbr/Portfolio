@@ -13,16 +13,6 @@ import star from '../images/star.svg'
 
 import vc from '../images/versioncontrol.svg'
 
-const PinnedReposGridContainer = styled.div`
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 20px;
-
-  @media (max-width: 768px) {
-    grid-template-columns: 1fr;
-  }
-`
-
 const StarList = styled.ul`
   list-style-image: url(${star});
 `
@@ -72,11 +62,11 @@ const OpenSourcePage = () => {
         </div>
       </SplitLayout>
       <h2>My GitHub Pinned Repos</h2>
-      <PinnedReposGridContainer>
+      <div className="grid gap-5 grid-cols-1 md:grid-cols-2">
         {pinnedRepos.edges.map(({ node: repo }, index) => {
           return <GitHubRepoCard repo={repo} key={index} />
         })}
-      </PinnedReposGridContainer>
+      </div>
     </>
   )
 }
