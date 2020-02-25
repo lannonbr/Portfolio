@@ -56,24 +56,6 @@ const TextContainer = styled.div`
     justify-content: space-around;
   }
 `
-
-const IconContainer = styled.div`
-  a {
-    padding-right: 20px;
-    width: 24px;
-    height: 24px;
-  }
-
-  @media (max-width: 768px) {
-    display: flex;
-    justify-content: center;
-
-    a {
-      margin-right: 20px;
-    }
-  }
-`
-
 function Footer() {
   return (
     <StyledFooter>
@@ -96,20 +78,20 @@ function Footer() {
           </p>
         </div>
       </TextContainer>
-      <IconContainer>
-        <a href="mailto:benjamin@lannonbr.com">
+      <div className="flex justify-center">
+        <a href="mailto:benjamin@lannonbr.com" className="pr-4 md:pr-5">
           <Mail />
         </a>
-        <a href="https://github.com/lannonbr">
+        <a href="https://github.com/lannonbr" className="pr-4 md:pr-5">
           <GitHub />
         </a>
-        <a href="https://twitter.com/lannonbr">
+        <a href="https://twitter.com/lannonbr" className="pr-4 md:pr-5">
           <Twitter />
         </a>
         <a href="https://twitch.tv/lannonbr">
           <Twitch />
         </a>
-      </IconContainer>
+      </div>
     </StyledFooter>
   )
 }

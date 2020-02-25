@@ -35,7 +35,10 @@ const OpenSourcePage = () => {
 
   return (
     <>
-      <SEO title="Open Source" keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]} />
+      <SEO
+        title="Open Source"
+        keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
+      />
       <SplitLayout>
         <div>
           <h1>Open Source</h1>
@@ -51,7 +54,7 @@ const OpenSourcePage = () => {
           </p>
           <h2>Recently Starred Repos</h2>
           <p>A few of the recent repositories that have caught my eye:</p>
-          <StarList>
+          <StarList className="pl-8">
             {starredRepos &&
               starredRepos.edges.map(({ node: repo }) => {
                 return (
