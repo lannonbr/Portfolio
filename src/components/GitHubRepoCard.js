@@ -1,77 +1,39 @@
 import React from 'react'
-import styled from 'styled-components'
 
 import { Star, GitBranch } from 'react-feather'
-
-const CardWrapper = styled.div`
-  border: 1px solid #d1d5da;
-  border-radius: 3px;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-
-  p.description {
-    flex-grow: 1;
-  }
-
-  p:last-child {
-    margin-bottom: 0;
-  }
-
-  p.metadata {
-    display: flex;
-    align-items: center;
-  }
-`
-
-const LanguageCircle = styled.span`
-  width: 20px;
-  height: 20px;
-  display: inline-block;
-  background-color: ${props => props.color};
-  border-radius: 10px;
-  margin-right: 10px;
-`
-
-const flexAlignCenter = {
-  display: 'flex',
-  alignItems: 'center',
-}
 
 function GitHubRepoCard(props) {
   let repo = props.repo
   return (
-    <CardWrapper>
+    <div className="flex flex-col border border-solid border-gray-400 rounded-md p-4">
       <a href={repo.url}>{repo.nameWithOwner}</a>
-      <p className="description">{repo.description}</p>
-      <p className="metadata">
+      <p className="flex-grow">{repo.description}</p>
+      <p className="flex items-center mb-0">
         {repo.primaryLanguage && (
           <>
-            <span
-              style={{
-                ...flexAlignCenter,
-                justifyContent: 'center',
-              }}
-            >
-              <LanguageCircle color={repo.primaryLanguage.color} />
+            <span className="flex items-center justify-center">
+              <span
+                className="w-5 h-5 mr-2 inline-block rounded-full"
+                style={{ backgroundColor: repo.primaryLanguage.color }}
+              />
             </span>
-            <span style={{ marginRight: 20 }}>{repo.primaryLanguage.name}</span>
+            <span className="mr-5">{repo.primaryLanguage.name}</span>
           </>
         )}
         {repo.stargazers.totalCount > 0 && (
-          <span style={{ marginRight: 30, ...flexAlignCenter }}>
-            <Star width={20} style={{ marginRight: 5 }} />
+          <span className="flex items-center mr-5">
+            <Star width={20} className="mr-1" />
             {repo.stargazers.totalCount.toLocaleString()}
           </span>
         )}
         {repo.forkCount > 0 && (
-          <span style={{ ...flexAlignCenter }}>
-            <GitBranch width={20} style={{ marginRight: 5 }} />
+          <span className="flex items-center">
+            <GitBranch width={20} className="mr-1" />
             {repo.forkCount}
           </span>
         )}
       </p>
-    </CardWrapper>
+    </div>
   )
 }
 
