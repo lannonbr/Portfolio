@@ -3,6 +3,8 @@ import { MDXProvider } from '@mdx-js/react'
 import Code from './src/components/code'
 import { preToCodeBlock } from 'mdx-utils'
 
+import './src/styles/tailwind-include.css'
+
 const components = {
   inlineCode: ({ children }) => {
     return (
