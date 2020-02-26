@@ -30,26 +30,20 @@ const Code = ({ codeString, language, className, metastring, ...props }) => {
       theme={theme}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
-        <div
-          className="codeBlock"
-          style={{ boxShadow: '0px 4px 8px rgba(0,0,0,0.4)' }}
-        >
+        <div className="codeBlock mb-4 shadow-xl text-sm">
           {title && (
             <div
-              className={className}
-              style={{ ...style, padding: '10px 20px', fontSize: 14 }}
+              className={className + 'text-sm px-5 py-4'}
+              style={{ ...style }}
             >
               {title}
             </div>
           )}
           <pre
-            className={className}
+            className={className + 'p-5 mt-0 overflow-auto'}
             style={{
               ...style,
-              padding: '20px',
-              marginTop: 0,
               borderTop: title ? '1px solid #8BADC1' : 'unset',
-              overflow: 'auto',
             }}
           >
             {tokens.map((line, i) => (
