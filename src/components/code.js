@@ -33,14 +33,14 @@ const Code = ({ codeString, language, className, metastring, ...props }) => {
         <div className="codeBlock mb-4 shadow-xl text-sm">
           {title && (
             <div
-              className={className + 'text-sm px-5 py-4'}
+              className={className + ' text-sm px-5 py-4'}
               style={{ ...style }}
             >
               {title}
             </div>
           )}
           <pre
-            className={className + 'p-5 mt-0 overflow-auto'}
+            className={className + ' p-5 mt-0 overflow-auto'}
             style={{
               ...style,
               borderTop: title ? '1px solid #8BADC1' : 'unset',
