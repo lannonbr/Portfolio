@@ -1,77 +1,5 @@
 import React from 'react'
 import Img from 'gatsby-image'
-import styled from 'styled-components'
-
-import TechCard from './techCard'
-
-const ProjectWrapper = styled.article`
-  display: flex;
-  padding: 10px;
-  margin-bottom: 30px;
-
-  .project__image {
-    box-shadow: 0 2px 6px hsla(120, 0%, 20%, 0.3);
-    border-radius: 4px;
-    margin: 0 20px;
-  }
-
-  .project__image-link {
-    flex: 1;
-  }
-
-  .project__details {
-    flex: 1;
-
-    h2 {
-      margin-bottom: 0;
-    }
-
-    time {
-      margin-bottom: 1.45rem;
-      display: inline-block;
-    }
-  }
-
-  .project__links {
-    display: flex;
-  }
-
-  .project__link {
-    margin-right: 20px;
-  }
-
-  .project__tech {
-    display: flex;
-    margin-top: 26px;
-    flex-wrap: wrap;
-  }
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-
-    .project__image {
-      margin-bottom: 20px;
-    }
-
-    .project__tech {
-      display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(125px, 1fr));
-      grid-gap: 10px;
-    }
-
-    .project__links {
-      justify-content: flex-start;
-    }
-  }
-`
-
-function ProjectLink({ url, text }) {
-  return (
-    <a href={url} className="project__link">
-      {text}
-    </a>
-  )
-}
 
 function Project({ project, idx }) {
   const title = project.name
@@ -80,25 +8,37 @@ function Project({ project, idx }) {
   let date = project.created_date
 
   return (
-    <ProjectWrapper idx={idx}>
-      <a className="project__image-link" href={project.website_link}>
-        <Img className="project__image" fluid={img.childImageSharp.fluid} />
+    <article idx={idx} className="flex flex-col md:flex-row p-3 mb-6">
+      <a className="flex-1" href={project.website_link}>
+        <Img
+          className="mb-5 md:mb-0 md:mx-5 rounded shadow-lg"
+          fluid={img.childImageSharp.fluid}
+        />
       </a>
-      <div className="project__details">
-        <h2>{title}</h2>
-        <time dateTime={project.origin_date}>Created {date}</time>
+      <div className="flex-1">
+        <h2 className="mb-0">{title}</h2>
+        <time className="mb-6 inline-block" dateTime={project.origin_date}>
+          Created {date}
+        </time>
         <p>{description}</p>
-        <div className="project__links">
-          <ProjectLink url={project.website_link} text="Website Link" />
-          <ProjectLink url={project.github_link} text="GitHub Link" />
+        <div className="flex">
+          <a href={project.website_link} className="mr-5">
+            Website Link
+          </a>
+          <a href={project.github_link}>GitHub Link</a>
         </div>
-        <div className="project__tech">
-          {project.technologies.map(tech => {
-            return <TechCard key={tech} tech={tech} />
-          })}
+        <div className="grid grid-cols-3 gap-2 mt-6 md:flex md:flex-wrap">
+          {project.technologies.map(tech => (
+            <span
+              key={tech}
+              className="px-2 py-1 border border-solid border-gray-400 mr-2 text-sm inline-block rounded"
+            >
+              {tech}
+            </span>
+          ))}
         </div>
       </div>
-    </ProjectWrapper>
+    </article>
   )
 }
 

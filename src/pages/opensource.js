@@ -1,6 +1,4 @@
 import React from 'react'
-import styled from 'styled-components'
-
 import { SplitLayout } from '../components/Containers'
 import SEO from '../components/Utils/seo'
 import GitHubRepoCard from '../components/GitHubRepoCard'
@@ -12,10 +10,6 @@ import useStarredRepos from '../hooks/useStarredRepos'
 import star from '../images/star.svg'
 
 import vc from '../images/versioncontrol.svg'
-
-const StarList = styled.ul`
-  list-style-image: url(${star});
-`
 
 const OpenSourcePage = () => {
   const pinnedRepos = usePinnedRepositories()
@@ -44,7 +38,7 @@ const OpenSourcePage = () => {
           </p>
           <h2>Recently Starred Repos</h2>
           <p>A few of the recent repositories that have caught my eye:</p>
-          <StarList className="pl-8">
+          <ul className="pl-8" style={{ listStyleImage: `url(${star})` }}>
             {starredRepos &&
               starredRepos.edges.map(({ node: repo }) => {
                 return (
@@ -55,7 +49,7 @@ const OpenSourcePage = () => {
                   </li>
                 )
               })}
-          </StarList>
+          </ul>
         </div>
         <div>
           <IllustrationImg src={vc} alt="version control illustration" />

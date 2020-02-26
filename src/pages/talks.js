@@ -3,7 +3,6 @@ import talk from '../images/talk.svg'
 import { SplitLayout } from '../components/Containers'
 import SEO from '../components/Utils/seo'
 import IllustrationImg from '../components/illustrationImg'
-import styled from 'styled-components'
 import { Youtube, File } from 'react-feather'
 import moment from 'moment'
 
@@ -53,40 +52,6 @@ const talks = [
   },
 ]
 
-const TalkCard = styled.article`
-  border: 1px solid #d1d5da;
-  border-radius: 3px;
-  padding: 16px;
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 20px;
-
-  header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-
-    @media (max-width: 768px) {
-      display: block;
-    }
-  }
-
-  ul {
-    margin: 0;
-    padding-left: 0;
-  }
-
-  li {
-    display: flex;
-    align-items: center;
-
-    a {
-      margin-left: 10px;
-    }
-  }
-`
-
 const TalksPage = () => {
   return (
     <>
@@ -104,29 +69,33 @@ const TalksPage = () => {
           <h2>List of Talks</h2>
           {talks.map(talk => {
             return (
-              <TalkCard>
-                <header>
+              <article className="border border-solid border-gray-400 rounded p-4 flex flex-col mb-5">
+                <header className="p-0 md:flex justify-between items-center">
                   <h3>{talk.name}</h3>
                   <p>
                     {moment(talk.date).format('ll')} | {talk.event} |{' '}
                     {talk.location}
                   </p>
                 </header>
-                <ul>
+                <ul className="m-0 pl-0">
                   {talk.slides && (
-                    <li>
+                    <li className="flex items-center">
                       <File />
-                      <a href={talk.slides}>Slides</a>
+                      <a href={talk.slides} className="ml-2">
+                        Slides
+                      </a>
                     </li>
                   )}
                   {talk.recording && (
-                    <li>
+                    <li className="flex items-center">
                       <Youtube />
-                      <a href={talk.recording}>Recording</a>
+                      <a href={talk.recording} className="ml-2">
+                        Recording
+                      </a>
                     </li>
                   )}
                 </ul>
-              </TalkCard>
+              </article>
             )
           })}
         </div>

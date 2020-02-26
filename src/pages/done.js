@@ -1,21 +1,7 @@
 import React from 'react'
 import SEO from '../components/Utils/seo'
 import { useStaticQuery, graphql } from 'gatsby'
-import styled from 'styled-components'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
-
-const Card = styled.div`
-  margin-bottom: 16px;
-
-  p {
-    margin-bottom: 0;
-  }
-
-  time {
-    font-style: italic;
-    color: #686868;
-  }
-`
 
 const DoneList = () => {
   const data = useStaticQuery(graphql`
@@ -55,33 +41,28 @@ const DoneList = () => {
         <h1>Done List</h1>
         <p>This is a listing of things I've accomplished.</p>
 
-        {Object.entries(months).map(month => {
+        {Object.entries(months).map(([month, events]) => {
           return (
-            <div
-              key={month[0]}
-              style={{
-                marginBottom: 30,
-              }}
-            >
+            <div key={month} className="mb-8">
               <h2
+                className="text-2xl mt-3 mb-1"
                 style={{
                   color: 'var(--primaryColor)',
-                  fontSize: 22,
-                  marginTop: 10,
-                  marginBottom: 5,
                 }}
               >
-                {month[0]}
+                {month}
               </h2>
               <hr style={{ color: 'var(--primaryColor)' }} />
-              {month[1].map(entry => {
+              {events.map(entry => {
                 let descBody = entry.childCustomMdxStringNode.childMdx.body
 
                 return (
-                  <Card key={entry.id}>
+                  <div key={entry.id} className="mb-5">
                     <MDXRenderer>{descBody}</MDXRenderer>
-                    <time>{entry.date}</time>
-                  </Card>
+                    <time className="-mt-4 block text-gray-600 italic">
+                      {entry.date}
+                    </time>
+                  </div>
                 )
               })}
             </div>

@@ -7,13 +7,8 @@ const StyledFooter = styled.footer`
   background: var(--footerBackground);
   border-top: 1px solid #ddd;
   min-height: 100px;
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
   color: var(--bodyTextColor);
-  font-size: 14px;
-  padding: 5px;
+
   div {
     margin-right: 60px;
   }
@@ -24,17 +19,19 @@ const StyledFooter = styled.footer`
   p {
     margin: 0;
   }
+
   a {
     color: var(--footerLink);
     font-weight: 600;
     text-decoration: none;
   }
+
   a:hover {
     color: var(--footerLinkHover);
     text-decoration: underline;
   }
+
   @media (max-width: 768px) {
-    display: block;
     div {
       margin-right: 0;
       font-size: 14px;
@@ -43,23 +40,10 @@ const StyledFooter = styled.footer`
   }
 `
 
-const TextContainer = styled.div`
-  display: flex;
-
-  a {
-    padding-right: 20px;
-    width: 24px;
-    height: 24px;
-  }
-
-  @media (max-width: 768px) {
-    justify-content: space-around;
-  }
-`
 function Footer() {
   return (
-    <StyledFooter>
-      <TextContainer>
+    <StyledFooter className="md:flex flex-wrap items-center justify-center text-sm p-2">
+      <div className="flex justify-around md:justify-start">
         <div>
           <b>© {new Date().getFullYear()}</b>
           <p>Benjamin Lannon</p>
@@ -68,16 +52,20 @@ function Footer() {
         <div>
           <b>Built with</b>
           <p>
-            <a href="https://www.gatsbyjs.org">Gatsby</a>
+            <a href="https://www.gatsbyjs.org" className="pr-4">
+              Gatsby
+            </a>
           </p>
         </div>
         <div>
           <b>Deployed on</b>
           <p>
-            <a href="https://netlify.com">Netlify</a>
+            <a href="https://netlify.com" className="pr-4">
+              Netlify
+            </a>
           </p>
         </div>
-      </TextContainer>
+      </div>
       <div className="flex justify-center">
         <a href="mailto:benjamin@lannonbr.com" className="pr-4 md:pr-5">
           <Mail />

@@ -10,12 +10,10 @@ const StyledBlogPostCard = styled(Link)`
     hsl(290.7, 50.2%, 52%) 72%
   );
 
-  box-shadow: rgba(0, 0, 0, 0.16) 0px 20px 80px;
   transition: transform 200ms ease-in-out 0s, box-shadow 200ms ease-in-out 0s;
 
   &:hover {
     transform: translateY(-4px);
-    box-shadow: rgba(0, 0, 0, 0.24) 0px 20px 80px;
   }
 
   &.link {
@@ -38,7 +36,7 @@ const BlogIndexPage = ({ data }) => {
             <StyledBlogPostCard
               key={node.fields.slug}
               to={node.fields.slug}
-              className="link inline-block h-64 rounded-md flex flex-col justify-end pb-5 px-3 text-2xl"
+              className="link inline-block h-64 rounded-md flex flex-col justify-end pb-5 px-3 text-2xl shadow-xl hover:shadow-2xl"
             >
               {node.frontmatter.title}
               <time className="text-lg mt-3">{node.frontmatter.date}</time>
