@@ -5,13 +5,6 @@ import Footer from 'gatsby-theme-lannonbr/src/components/footer'
 import GlobalStyles from 'gatsby-theme-lannonbr/src/utils/globalStyles'
 
 const LayoutContainer = styled.div`
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  overflow-x: hidden;
-  main {
-    flex: 1 0 auto;
-  }
   main a {
     color: var(--bodyLink);
     text-decoration: none;
@@ -29,10 +22,10 @@ const LayoutContainer = styled.div`
 `
 
 const Layout = ({ location, children }) => (
-  <LayoutContainer>
+  <LayoutContainer className="min-h-screen flex flex-col overflow-x-hidden">
     <GlobalStyles />
     <Header location={location} />
-    <main>{children}</main>
+    <main className="flex-grow flex-shrink-0 py-5 px-2">{children}</main>
     <Footer />
   </LayoutContainer>
 )
