@@ -9,11 +9,15 @@ export default ({ directories }) =>
     <>
       <Box py={3} style={{ display: `flex`, flexWrap: `wrap` }}>
         {Object.entries(directories).map(([key, value]) => (
-          <Link css={{
-            "&:hover": {
-              textDecoration: "underline"
-            }
-          }} key={key} to={value[0].pagePath}>
+          <Link
+            css={{
+              '&:hover': {
+                textDecoration: 'underline',
+              },
+            }}
+            key={key}
+            to={value[0].pagePath}
+          >
             <Box
               w={[1, 2, 2]}
               p={3}
@@ -29,6 +33,6 @@ export default ({ directories }) =>
           </Link>
         ))}
       </Box>
-      <hr />
+      <hr className="border-purple-800 mb-5" />
     </>
   ) : null

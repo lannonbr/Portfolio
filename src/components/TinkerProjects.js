@@ -9,7 +9,7 @@ function TinkerProjects() {
       {tinkerProjects.nodes.map(project => (
         <section
           key={project.id}
-          className="border border-solid border-gray-400 p-4 rounded flex flex-col"
+          className="border border-gray-400 p-4 rounded flex flex-col"
         >
           <h3>{project.name}</h3>
           <h5>As of {project.created_date}</h5>

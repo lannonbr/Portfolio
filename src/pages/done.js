@@ -52,7 +52,7 @@ const DoneList = () => {
               >
                 {month}
               </h2>
-              <hr style={{ color: 'var(--primaryColor)' }} />
+              <hr className="border-purple-800" />
               {events.map(entry => {
                 let descBody = entry.childCustomMdxStringNode.childMdx.body
 
