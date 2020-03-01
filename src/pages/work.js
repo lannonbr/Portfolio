@@ -1,6 +1,4 @@
 import React from 'react'
-
-import { SplitLayout } from '../components/Containers'
 import SEO from '../components/Utils/seo'
 import { Link } from 'gatsby'
 import IllustrationImg from '../components/illustrationImg'
@@ -13,8 +11,8 @@ const WorkPage = () => (
       title="Work"
       keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
     />
-    <SplitLayout>
-      <div>
+    <section className="md:flex mb-4">
+      <div className="flex-1">
         <h1>Work</h1>
         <p>
           I am currently employed as a web developer and I am always learning
@@ -31,13 +29,13 @@ const WorkPage = () => (
           <a href="https://lannonbr.dev">Lannonbr.dev</a>.
         </p>
       </div>
-      <div>
+      <div className="flex-1">
         <IllustrationImg
           src={conversation}
           alt="Two people having a conversation"
         />
       </div>
-    </SplitLayout>
+    </section>
     <h2>Community Involvement</h2>
     <p>
       I am an active member of the Syracuse Developer community and go to events

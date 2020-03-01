@@ -1,6 +1,5 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
-import { SplitLayout } from '../components/Containers'
 
 import SEO from '../components/Utils/seo'
 import IllustrationImg from '../components/illustrationImg'
@@ -14,8 +13,8 @@ const IndexPage = ({ data }) => (
       title="Home"
       keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
     />
-    <SplitLayout>
-      <div className="flex flex-col justify-center">
+    <section className="md:flex mb-4">
+      <div className="flex-1 flex flex-col justify-center">
         <h1 className="text-center text-4xl md:text-left md:text-6xl">
           Hi all, I'm Benjamin
         </h1>
@@ -38,13 +37,13 @@ const IndexPage = ({ data }) => (
           )
         })}
       </div>
-      <div>
+      <div className="flex-1">
         <IllustrationImg
           src={office}
           alt="Person sitting on desk illustration"
         />
       </div>
-    </SplitLayout>
+    </section>
   </>
 )
 

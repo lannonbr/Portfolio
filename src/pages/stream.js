@@ -1,6 +1,4 @@
 import React from 'react'
-
-import { SplitLayout } from '../components/Containers'
 import SEO from '../components/Utils/seo'
 import IllustrationImg from '../components/illustrationImg'
 
@@ -13,8 +11,8 @@ const StreamPage = () => {
         title="Stream"
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
       />
-      <SplitLayout>
-        <div>
+      <section className="md:flex mb-4">
+        <div className="flex-1">
           <h1>Live Coding on Twitch</h1>
           <p>
             For years on Twitch, I was an active community member of many
@@ -53,10 +51,10 @@ const StreamPage = () => {
             on Notion.
           </p>
         </div>
-        <div>
+        <div className="flex-1">
           <IllustrationImg src={streamData} alt="data illustration" />
         </div>
-      </SplitLayout>
+      </section>
     </>
   )
 }

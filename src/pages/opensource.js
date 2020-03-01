@@ -1,5 +1,4 @@
 import React from 'react'
-import { SplitLayout } from '../components/Containers'
 import SEO from '../components/Utils/seo'
 import GitHubRepoCard from '../components/GitHubRepoCard'
 import IllustrationImg from '../components/illustrationImg'
@@ -23,8 +22,8 @@ const OpenSourcePage = () => {
         title="Open Source"
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
       />
-      <SplitLayout>
-        <div>
+      <section className="md:flex mb-4">
+        <div className="flex-1">
           <h1>Open Source</h1>
           <p>
             I'm heavily involved in the Open Source community with a current
@@ -51,10 +50,10 @@ const OpenSourcePage = () => {
               })}
           </ul>
         </div>
-        <div>
+        <div className="flex-1">
           <IllustrationImg src={vc} alt="version control illustration" />
         </div>
-      </SplitLayout>
+      </section>
       <h2>My GitHub Pinned Repos</h2>
       <div className="grid gap-5 grid-cols-1 md:grid-cols-2">
         {pinnedRepos.edges.map(({ node: repo }, index) => {

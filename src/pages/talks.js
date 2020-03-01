@@ -1,6 +1,5 @@
 import React from 'react'
 import talk from '../images/talk.svg'
-import { SplitLayout } from '../components/Containers'
 import SEO from '../components/Utils/seo'
 import IllustrationImg from '../components/illustrationImg'
 import { Youtube, File } from 'react-feather'
@@ -59,8 +58,8 @@ const TalksPage = () => {
         title="Talks"
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
       />
-      <SplitLayout>
-        <div>
+      <section className="md:flex mb-4">
+        <div className="flex-1">
           <h1>Talks</h1>
           <p>
             Through 2019, I've been starting to give presentations and workshops
@@ -99,10 +98,10 @@ const TalksPage = () => {
             )
           })}
         </div>
-        <div>
+        <div className="flex-1">
           <IllustrationImg src={talk} alt="speaking illustration" />
         </div>
-      </SplitLayout>
+      </section>
     </>
   )
 }
