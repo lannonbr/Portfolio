@@ -1,7 +1,7 @@
 import React from 'react'
 
 export default props => (
-  <div style={{ maxWidth: 1280, margin: '0 auto', height: '100%' }}>
+  <div className="mx-auto h-full" style={{ maxWidth: 1280 }}>
     {props.children}
   </div>
 )

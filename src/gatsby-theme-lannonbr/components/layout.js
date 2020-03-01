@@ -9,15 +9,12 @@ const LayoutContainer = styled.div`
     color: var(--bodyLink);
     text-decoration: none;
   }
-  > header,
-  main {
+
+  > header {
     padding: 20px 10px;
     max-width: 1600px;
     width: 100%;
     margin: 0 auto;
-  }
-  footer {
-    flex-shrink: 0;
   }
 `
 
@@ -25,7 +22,12 @@ const Layout = ({ location, children }) => (
   <LayoutContainer className="min-h-screen flex flex-col overflow-x-hidden">
     <GlobalStyles />
     <Header location={location} />
-    <main className="flex-grow flex-shrink-0 py-5 px-2">{children}</main>
+    <main
+      className="flex-grow flex-shrink-0 py-5 px-2 w-full mx-auto"
+      style={{ maxWidth: 1600 }}
+    >
+      {children}
+    </main>
     <Footer />
   </LayoutContainer>
 )

@@ -2,12 +2,10 @@ import React from 'react'
 import SEO from '../components/Utils/seo'
 import GitHubRepoCard from '../components/GitHubRepoCard'
 import IllustrationImg from '../components/illustrationImg'
-
 import usePinnedRepositories from '../hooks/usePinnedRepositories'
 import useStarredRepos from '../hooks/useStarredRepos'
 
 import star from '../images/star.svg'
-
 import vc from '../images/versioncontrol.svg'
 
 const OpenSourcePage = () => {

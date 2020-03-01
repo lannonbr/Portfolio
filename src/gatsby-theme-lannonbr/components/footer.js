@@ -4,79 +4,77 @@ import { Mail, GitHub, Twitter } from 'react-feather'
 import Twitch from '../../components/twitchLogo'
 
 const StyledFooter = styled.footer`
-  background: var(--footerBackground);
-  border-top: 1px solid #ddd;
-  min-height: 100px;
-  color: var(--bodyTextColor);
-
-  div {
-    margin-right: 60px;
-  }
-  div:last-child {
-    margin-right: 0;
-  }
-
-  p {
-    margin: 0;
-  }
-
   a {
     color: var(--footerLink);
-    font-weight: 600;
-    text-decoration: none;
   }
 
   a:hover {
     color: var(--footerLinkHover);
-    text-decoration: underline;
-  }
-
-  @media (max-width: 768px) {
-    div {
-      margin-right: 0;
-      font-size: 14px;
-      margin-bottom: 20px;
-    }
   }
 `
 
 function Footer() {
   return (
-    <StyledFooter className="md:flex flex-wrap items-center justify-center text-sm p-2">
-      <div className="flex justify-around md:justify-start">
-        <div>
+    <StyledFooter
+      className="md:flex flex-wrap items-center justify-center text-sm p-2 border border-gray-400 text-sm flex-shrink-0"
+      style={{
+        backgroundColor: 'var(--footerBackground)',
+        color: 'var(--bodyTextColor)',
+        minHeight: 100,
+      }}
+    >
+      <div className="flex justify-around md:justify-start mb-5 md:mb-0 md:mr-16">
+        <div className="md:mr-16">
           <b>© {new Date().getFullYear()}</b>
-          <p>Benjamin Lannon</p>
+          <p className="m-0">Benjamin Lannon</p>
         </div>
 
-        <div>
+        <div className="md:mr-16">
           <b>Built with</b>
-          <p>
-            <a href="https://www.gatsbyjs.org" className="pr-4">
+          <p className="m-0">
+            <a
+              href="https://www.gatsbyjs.org"
+              className="pr-4 font-semibold no-underline hover:underline"
+            >
               Gatsby
             </a>
           </p>
         </div>
         <div>
           <b>Deployed on</b>
-          <p>
-            <a href="https://netlify.com" className="pr-4">
+          <p className="m-0">
+            <a
+              href="https://netlify.com"
+              className="pr-4 font-semibold no-underline hover:underline"
+            >
               Netlify
             </a>
           </p>
         </div>
       </div>
       <div className="flex justify-center">
-        <a href="mailto:benjamin@lannonbr.com" className="pr-4 md:pr-5">
+        <a
+          href="mailto:benjamin@lannonbr.com"
+          className="pr-4 md:pr-5 font-semibold no-underline hover:underline"
+        >
           <Mail />
         </a>
-        <a href="https://github.com/lannonbr" className="pr-4 md:pr-5">
+        <a
+          href="https://github.com/lannonbr"
+          className="pr-4 md:pr-5 font-semibold no-underline hover:underline"
+        >
           <GitHub />
         </a>
-        <a href="https://twitter.com/lannonbr" className="pr-4 md:pr-5">
+        <a
+          href="https://twitter.com/lannonbr"
+          className="pr-4 md:pr-5 font-semibold no-underline hover:underline"
+        >
           <Twitter />
         </a>
-        <a href="https://twitch.tv/lannonbr">
+        <a
+          href="https://twitch.tv/lannonbr"
+          className="font-semibold no-underline hover:underline"
+        >
           <Twitch />
         </a>
       </div>

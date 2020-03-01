@@ -17,10 +17,8 @@ const BlogPost = ({ data }) => {
         <Home className="mr-2" />
         Blog Home
       </Link>
-      <h1 style={{ marginBottom: 8 }}>{data.mdx.frontmatter.title}</h1>
-      <time style={{ display: 'block', marginBottom: 32 }}>
-        {data.mdx.frontmatter.date}
-      </time>
+      <h1 className="mb-2">{data.mdx.frontmatter.title}</h1>
+      <time className="block mb-8">{data.mdx.frontmatter.date}</time>
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
     </article>
   )
