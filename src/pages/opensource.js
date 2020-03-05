@@ -20,8 +20,8 @@ const OpenSourcePage = () => {
         title="Open Source"
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
       />
-      <section className="md:flex mb-4">
-        <div className="flex-1">
+      <section className="md:grid md:grid-cols-2 md:gap-8 mb-4">
+        <div>
           <h1>Open Source</h1>
           <p>
             I'm heavily involved in the Open Source community with a current
@@ -48,7 +48,7 @@ const OpenSourcePage = () => {
               })}
           </ul>
         </div>
-        <div className="flex-1">
+        <div>
           <IllustrationImg src={vc} alt="version control illustration" />
         </div>
       </section>

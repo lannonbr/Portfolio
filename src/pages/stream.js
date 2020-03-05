@@ -11,8 +11,8 @@ const StreamPage = () => {
         title="Stream"
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
       />
-      <section className="md:flex mb-4">
-        <div className="flex-1">
+      <section className="md:grid md:grid-cols-2 md:gap-8 mb-4">
+        <div>
           <h1>Live Coding on Twitch</h1>
           <p>
             For years on Twitch, I was an active community member of many
@@ -51,7 +51,7 @@ const StreamPage = () => {
             on Notion.
           </p>
         </div>
-        <div className="flex-1">
+        <div>
           <IllustrationImg src={streamData} alt="data illustration" />
         </div>
       </section>

@@ -10,8 +10,8 @@ export default props => (
       title="Notes"
       keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
     />
-    <section className="md:flex mb-4">
-      <div className="flex-1">
+    <section className="md:grid md:grid-cols-2 md:gap-8 mb-4">
+      <div>
         <h1>Notes</h1>
         <p>
           This is a collection of personal notes that may not be fully
@@ -21,7 +21,7 @@ export default props => (
         </p>
         <Notes {...props} />
       </div>
-      <div className="flex-1">
+      <div>
         <IllustrationImg src={streamData} alt="Taking Notes illustration" />
       </div>
     </section>

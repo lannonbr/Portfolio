@@ -11,8 +11,8 @@ const WorkPage = () => (
       title="Work"
       keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
     />
-    <section className="md:flex mb-4">
-      <div className="flex-1">
+    <section className="md:grid md:grid-cols-2 md:gap-8 mb-4">
+      <div>
         <h1>Work</h1>
         <p>
           I am currently employed as a web developer and I am always learning
@@ -29,7 +29,7 @@ const WorkPage = () => (
           <a href="https://lannonbr.dev">Lannonbr.dev</a>.
         </p>
       </div>
-      <div className="flex-1">
+      <div>
         <IllustrationImg
           src={conversation}
           alt="Two people having a conversation"

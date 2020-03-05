@@ -12,8 +12,8 @@ const UsesPage = () => (
       With inspiration from <a href="https://wesbos.com/uses/">Wes Bos</a>, this
       page lists software and hardware I use on a daily basis.
     </p>
-    <section className="md:flex mb-4">
-      <div className="flex-1">
+    <section className="md:grid md:grid-cols-2 md:gap-8 mb-4">
+      <div>
         <h2>Software</h2>
         <ul className="list-disc pl-4">
           <li>
@@ -45,7 +45,7 @@ const UsesPage = () => (
           </li>
         </ul>
       </div>
-      <div className="flex-1">
+      <div>
         <h2>PC Build</h2>
         <p>My main machine as of July 2019 is a custom built PC</p>
         <ul className="list-disc pl-4">
