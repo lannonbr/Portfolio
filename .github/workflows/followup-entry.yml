@@ -1,0 +1,9 @@
+name: Create Follow Up Entry
+on: repository_dispatch
+jobs:
+  run:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - run: echo ${{ github.event.client_payload.name }}
+      - run: echo ${{ github.event.client_payload.url }}
