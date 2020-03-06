@@ -1,5 +1,7 @@
 name: Create Follow Up Entry
-on: repository_dispatch
+on:
+  repository_dispatch:
+    types: [followup_new_entry]
 jobs:
   run:
     runs-on: ubuntu-latest
