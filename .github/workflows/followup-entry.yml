@@ -4,8 +4,41 @@ on:
     types: [followup_new_entry]
 jobs:
   run:
+    env:
+      LIFX_TOKEN: ${{ secrets.LIFX_TOKEN }}
+      LIFX_BULB_ID: ${{ secrets.LIFX_BULB_ID }}
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - run: echo ${{ github.event.client_payload.name }}
-      - run: echo ${{ github.event.client_payload.url }}
+      - uses: ./github/actions/followup-entry-action
+        with:
+          name: ${{ github.event.client_payload.name }}
+          url: ${{ github.event.client_payload.url }}
+      - run: |
+          git config user.name "GitHub Actions Bot"
+          git config user.email "<>"
+
+          git add content/notes/followup.md
+          git commit -m "New Follow up Topic"
+          git push origin master
+
+          yarn
+      - name: Build Site
+        env:
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
+        run: yarn build
+      - name: Deploy Site
+        env:
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+        run: npx netlify-cli deploy --dir=public --prod
+      - name: Trigger light to go green on success
+        if: success()
+        uses: lannonbr/lifx-trigger-action@1.0.0
+        with:
+          color: green
+      - name: Trigger light to go red on failure
+        if: failure()
+        uses: lannonbr/lifx-trigger-action@1.0.0
+        with:
+          color: red

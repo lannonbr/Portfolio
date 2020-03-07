@@ -1,0 +1,13 @@
+name: 'Followup Entry Action'
+description: 'Adds a followup entry to a markdown file in this repo'
+author: 'Benjamin Lannon <>'
+runs:
+  using: node12
+  main: index.js
+inputs:
+  name:
+    description: 'Entry name'
+    required: true
+  url:
+    description: 'Entry URL'
+    required: true
