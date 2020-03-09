@@ -1,11 +1,10 @@
 ---
-title: 'Automations for Follow-up Friday listing'
+title: 'Creating a Twilio SMS Workflow for Follow-up Friday listings'
 date: '2020-03-09'
-description: 'How I used GitHub Actions and tools like Twilio and Siri Shortcuts to automate the process of adding items to a follow-up list'
+description: 'How I used GitHub Actions and tools like Twilio to automate the process of adding items to a follow-up list'
 keywords:
   - GitHub Actions
   - Twilio
-  - Siri Shortcuts
 ---
 
 Talk about Followup Friday
@@ -16,7 +15,7 @@ I created a page on my site to list these topics for things I find myself, but I
 
 ## Programatic SMS with Twilio
 
-To start, I wanted to build a SMS bot that would handle the collection of a title for an entry and the URL that it goes to. Instead of writing a full node script to do all of this and pause execution while I wait for the response or handle timeout and other things, Twilio Studio allowed me to abstract a lot of this. [Twilio Studio](https://www.twilio.com/studio) allows for a SMS flow with a drag-n-drop interface. The entire portion in Twilio is below.
+To start, I wanted to build a SMS bot that would handle the collection of a title for an entry and the URL that it goes to. Instead of writing a full node script to do all of this and pause execution while I wait for the response or handle timeout and other things, Twilio Studio allowed me to abstract a lot of this. [Twilio Studio](https://www.twilio.com/studio) allows for a SMS flow with a drag-n-drop interface. The entire flow in Twilio is below.
 
 ![Twilio Studio flow](./twilio-studio-flow.png)
 
@@ -45,6 +44,10 @@ exports.handler = function(context, event, callback) {
 ```
 
 It sends the two variables over to GitHub with a `repository_dispatch` webhook that is exposed as part of a GitHub Actions workflow. Do note a GitHub personal access token is required in the HTTP call as repository_dispatch requires authenticated API access.
+
+If I actually use this, it will go through the workflow that we set up:
+
+![SMS screenshot](./sms.jpg)
 
 ## Building with GitHub Actions
 
