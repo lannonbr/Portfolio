@@ -19,13 +19,6 @@ module.exports = {
   plugins: [
     // Themes
     `gatsby-theme-lannonbr`,
-    {
-      resolve: `gatsby-theme-notes`,
-      options: {
-        basePath: '/notes',
-        mdx: false,
-      },
-    },
 
     // Other Plugins
     `gatsby-plugin-react-helmet`,
@@ -43,6 +36,13 @@ module.exports = {
       options: {
         name: `blog`,
         path: `${__dirname}/content/blog`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `notes`,
+        path: `${__dirname}/content/notes`,
       },
     },
     {

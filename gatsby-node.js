@@ -7,12 +7,13 @@ const crypto = require('crypto')
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  // Create blogposts
+  // Create blogposts and notes pages
   const blogPostTemplate = path.resolve(`src/templates/blogpost-template.js`)
+  const noteTemplate = path.resolve(`src/templates/note-template.js`)
 
   const { data, errors } = await graphql(`
     query {
-      allMdx(
+      blogposts: allMdx(
         filter: { fileAbsolutePath: { regex: "/blog/" } }
         sort: { order: DESC, fields: [frontmatter___date] }
       ) {
@@ -24,6 +25,13 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
+      notes: allFile(
+        filter: { sourceInstanceName: { eq: "notes" }, extension: { eq: "md" } }
+      ) {
+        nodes {
+          relativePath
+        }
+      }
     }
   `)
 
@@ -31,12 +39,22 @@ exports.createPages = async ({ graphql, actions }) => {
     throw errors
   }
 
-  data.allMdx.edges.forEach(({ node }) => {
+  data.blogposts.edges.forEach(({ node }) => {
     createPage({
       component: blogPostTemplate,
       path: node.fields.slug,
       context: {
         slug: node.fields.slug,
+      },
+    })
+  })
+
+  data.notes.nodes.forEach(node => {
+    createPage({
+      component: noteTemplate,
+      path: `/notes/${node.relativePath.slice(0, -3)}/`,
+      context: {
+        pagePath: node.relativePath,
       },
     })
   })
