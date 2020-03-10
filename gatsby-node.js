@@ -86,7 +86,7 @@ exports.onCreateNode = async ({ node, actions, getNode }) => {
       outputDir: 'og-images/blog',
       data: {
         title: node.frontmatter.title,
-        date: moment(node.frontmatter.date).format('MMM, Do, YYYY'),
+        date: moment(node.frontmatter.date).format('MMM Do, YYYY'),
       },
       component: require.resolve('./src/printer-components/blogpost.js'),
     })
