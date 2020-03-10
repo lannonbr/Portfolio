@@ -17,7 +17,7 @@ To start, I wanted to build a SMS bot that would handle the collection of a titl
 
 ![Twilio Studio flow](./twilio-studio-flow.png)
 
-I start by asking for the two variables, then pass it through to a Twilio function that manages the HTTP call. There is a widget for HTTP requests, but it doesn't allow for custom request headers, so I fellback to a serverless function that was a small node script.
+I start by asking for the two variables, then pass it through to a Twilio function that manages the HTTP call. There is a widget for HTTP requests, but it doesn't allow for custom request headers, so I fellback to a serverless function deployed to Twilio.
 
 ```js title=function.js
 exports.handler = function(context, event, callback) {
