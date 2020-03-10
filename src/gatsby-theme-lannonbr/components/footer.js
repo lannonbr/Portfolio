@@ -16,7 +16,7 @@ const StyledFooter = styled.footer`
 function Footer() {
   return (
     <StyledFooter
-      className="md:flex flex-wrap items-center justify-center text-sm p-2 border border-gray-400 text-sm flex-shrink-0"
+      className="md:flex flex-wrap items-center justify-center text-sm p-2 border-t-2 border-gray-400 text-sm flex-shrink-0"
       style={{
         backgroundColor: 'var(--footerBackground)',
         color: 'var(--bodyTextColor)',
