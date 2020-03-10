@@ -1,19 +1,17 @@
 ---
 title: 'Creating a Twilio SMS Workflow for Follow-up Friday listings'
-date: '2020-03-09'
+date: '2020-03-10'
 description: 'How I used GitHub Actions and tools like Twilio to automate the process of adding items to a follow-up list'
 keywords:
   - GitHub Actions
   - Twilio
 ---
 
-Talk about Followup Friday
-
-A few weeks back, [ChefBrent](https://twitch.tv/chefbrent) started a new show every friday called "Follow-up Friday". The premise is that you may find tons of things through a week during the day. News stories, new software projects, etc. With that, if you don't write it down to look over at a later time, you likely won't remember it. His new weekly show tries to mitigate that and have a scheduled time every week to pull up those topics and look over them.
+A few weeks back, [ChefBrent](https://twitch.tv/chefbrent) started a new show every Friday called "Follow-up Friday". The premise is that you may find tons of things through a week during the day. News stories, new software projects, etc. With that, if you don't write it down to look over at a later time, you likely won't remember it. His new weekly show tries to mitigate that and have a scheduled time every week to pull up those topics and look over them.
 
 I created a page on my site to list these topics for things I find myself, but I wanted to make ways for it to be as easy as possible to add to the list without needing to open a markdown file and make a commit by hand every time I find a new thing. With a combination of Twilio and GitHub Actions, I was able to automate this process.
 
-## Programatic SMS with Twilio
+## Programmatic SMS with Twilio
 
 To start, I wanted to build a SMS bot that would handle the collection of a title for an entry and the URL that it goes to. Instead of writing a full node script to do all of this and pause execution while I wait for the response or handle timeout and other things, Twilio Studio allowed me to abstract a lot of this. [Twilio Studio](https://www.twilio.com/studio) allows for a SMS flow with a drag-n-drop interface. The entire flow in Twilio is below.
 
@@ -152,6 +150,6 @@ jobs:
 
 ## Conclusions
 
-Now when I want to add a new entry, I can pull out my phone or iPad and send a text message and within a few minutes everything will be deployed out to my site. In terms of pricing,Twilio Studio gives a free tier of 1000 calls of the Studio flow and then you only have to pay for a phone number and SMS send / recieve calls. If I say add 10 posts a month, it comes out to being $1.45 a month on the Twilio end ($1.00 for the phone number, $0.0075 / call \* 6 calls per flow \* 10 entries = $0.45) and the GitHub Actions end doesn't cost a cent since it is being run in a public repo.
+Now when I want to add a new entry, I can pull out my phone or iPad and send a text message and within a few minutes everything will be deployed out to my site. In terms of pricing, Twilio Studio gives a free tier of 1000 calls of the Studio flow so for my limited use, I only have to pay for a phone number and SMS send / receive calls. If I say add 10 posts a month, it comes out to being $1.45 a month on the Twilio end ($1.00 for the phone number, $0.0075 / call \* 6 calls per flow \* 10 entries = $0.45) and the GitHub Actions end doesn't cost a cent since it is being run in a public repo.
 
 On top of this, as the GitHub actions portion is just a webhook, I could create other frontends like a CLI app or a browser extension and I never have to touch any of the code on GitHub for it to work as expected. This flow as well can work for plenty of other ideas and allow to interact with platforms by just sending a message to a phone number. This started as an idea to automate a fairly straightforward task and within a few hours of work got it fully up and running.
