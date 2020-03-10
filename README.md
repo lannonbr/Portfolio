@@ -15,9 +15,9 @@ A personal access token for GitHub is required to load in the data on the open s
 Other tools used include:
 
 - [gatsby-theme-lannonbr](https://github.com/lannonbr/gatsby-theme-lannonbr) (A gatsby theme powering features like dark mode & the layout of this site)
-- [gatsby-theme-notes](https://www.gatsbyjs.org/packages/gatsby-theme-notes/)
 - MDX
 - Styled-components
+- TailwindCSS
 - React-feather
 - MomentJS
 
