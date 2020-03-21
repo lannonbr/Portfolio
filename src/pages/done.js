@@ -1,5 +1,5 @@
 import React from 'react'
-import SEO from '../components/Utils/seo'
+import SEO from '../components/seo'
 import { useStaticQuery, graphql } from 'gatsby'
 import { MDXRenderer } from 'gatsby-plugin-mdx'
 

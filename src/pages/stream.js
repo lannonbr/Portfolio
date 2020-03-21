@@ -1,5 +1,5 @@
 import React from 'react'
-import SEO from '../components/Utils/seo'
+import SEO from '../components/seo'
 import IllustrationImg from '../components/illustrationImg'
 
 import streamData from '../images/stream-data.svg'

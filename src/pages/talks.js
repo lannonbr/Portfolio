@@ -1,6 +1,6 @@
 import React from 'react'
 import talk from '../images/talk.svg'
-import SEO from '../components/Utils/seo'
+import SEO from '../components/seo'
 import IllustrationImg from '../components/illustrationImg'
 import { Youtube, File } from 'react-feather'
 import moment from 'moment'

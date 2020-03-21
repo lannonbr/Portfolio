@@ -1,7 +1,7 @@
 import React from 'react'
 import { graphql, Link } from 'gatsby'
 
-import SEO from '../components/Utils/seo'
+import SEO from '../components/seo'
 import IllustrationImg from '../components/illustrationImg'
 
 import office from '../images/office.svg'

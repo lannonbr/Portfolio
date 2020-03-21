@@ -1,5 +1,5 @@
 import React from 'react'
-import SEO from '../components/Utils/seo'
+import SEO from '../components/seo'
 import { graphql, Link } from 'gatsby'
 import IllustrationImg from '../components/illustrationImg'
 import notesIllustration from '../images/taking-notes.svg'

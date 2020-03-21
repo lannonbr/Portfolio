@@ -1,6 +1,6 @@
 import React from 'react'
 
-import SEO from '../components/Utils/seo'
+import SEO from '../components/seo'
 import Project from '../components/project'
 import useFeaturedProjects from '../hooks/useFeaturedProjects'
 
