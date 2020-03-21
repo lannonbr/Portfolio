@@ -5,6 +5,7 @@ description: 'Intro article about me starting to stream on Twitch'
 keywords:
   - Live Streaming
   - Gatsby
+logo: twitch
 ---
 
 So last week I decided on finally streaming. I was thinking about doing it for quite awhile and I ended up just giving it a shot. I gave an introduction to Gatsby as I am planning on using it for various projects on stream as well as an intro to my [Gatsby-github-stats dashboard site](https://gatsby-github-stats.netlify.com/).

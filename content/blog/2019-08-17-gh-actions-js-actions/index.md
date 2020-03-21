@@ -6,6 +6,7 @@ keywords:
   - Javascript
   - GitHub Actions
   - Automation
+logo: github-actions
 ---
 
 ![GitHub Actions branding](./GitHubActions.png)

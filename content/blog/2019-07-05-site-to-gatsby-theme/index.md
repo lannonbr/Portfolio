@@ -5,6 +5,7 @@ description: 'A look into how I took a fully-functional Gatsby site and transfor
 keywords:
   - Gatsby Themes
   - Gatsby
+logo: gatsby
 ---
 
 July 3rd was a big launch for Gatsby Themes. It is a API to share functionality, data sourcing, styles, and other features of Gatsby sites into packages. Themes used to be available in Gatsby under a `__experimentalThemes` field of the `gatsby-config`, but as of Wednesday with the official launch of Themes in Gatsby 2.13.0, the functionality of themes are just now part of Gatsby's plugin ecosystem.

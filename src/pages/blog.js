@@ -2,6 +2,15 @@ import React from 'react'
 import SEO from '../components/Utils/seo'
 import { graphql, Link } from 'gatsby'
 
+const LogolessLogo = () => (
+  <div
+    className="inline-block w-6 h-6 rounded-full mr-2"
+    style={{
+      backgroundImage: 'linear-gradient( 135deg, #E2B0FF 10%, #9F44D3 100%)',
+    }}
+  />
+)
+
 const BlogIndexPage = ({ data }) => {
   return (
     <>
@@ -10,22 +19,26 @@ const BlogIndexPage = ({ data }) => {
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
       />
       <h1>Blog</h1>
-      <h2>All Posts</h2>
-      <div className="grid gap-4 grid-cols-1 md:grid-cols-3 lg:grid-cols-4 xl:grid-cols-5">
+      <div className="">
         {data.allMdx.nodes.map(node => {
+          const logo =
+            node.frontmatter.logo &&
+            data.blogLogos.nodes.filter(
+              logo => logo.name === node.frontmatter.logo
+            )[0].publicURL
+
           return (
             <Link
               key={node.fields.slug}
               to={node.fields.slug}
-              className="inline-block h-64 rounded-md flex flex-col justify-end pb-5 px-3 text-2xl shadow-xl hover:shadow-2xl transition-all duration-200 ease-in-out transform translate-y-0 hover:-translate-y-1"
-              style={{
-                color: 'white',
-                backgroundImage:
-                  'linear-gradient(0deg, hsl(272.6, 64.5%, 42%) 1%, hsl(290.7, 50.2%, 52%) 72%)',
-              }}
+              className="inline-block flex items-center py-2 px-3 text-xl rounded-sm transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 mb-3"
             >
-              {node.frontmatter.title}
-              <time className="text-lg mt-3">{node.frontmatter.date}</time>
+              {node.frontmatter.logo ? (
+                <img src={logo} alt="" className="w-6 mr-2" />
+              ) : (
+                <LogolessLogo />
+              )}
+              <span>{node.frontmatter.title}</span>
             </Link>
           )
         })}
@@ -38,6 +51,13 @@ export default BlogIndexPage
 
 export const query = graphql`
   query {
+    blogLogos: allFile(filter: { relativePath: { regex: "/^blog-icons/" } }) {
+      nodes {
+        name
+        publicURL
+      }
+    }
+
     allMdx(
       filter: { fileAbsolutePath: { regex: "/blog/" } }
       sort: { fields: frontmatter___date, order: DESC }
@@ -49,6 +69,7 @@ export const query = graphql`
         frontmatter {
           title
           date(formatString: "ll")
+          logo
         }
       }
     }

@@ -5,6 +5,7 @@ description: 'Tutorial on making commits in github actions'
 keywords:
   - Git
   - GitHub Actions
+logo: github-actions
 ---
 
 GitHub Actions provides full access to the runner at your disposal, and one thing you may want to do is make commits in a workflow run and push it back up to GitHub automatically. I'm going to show a simple example where we run the `date` unix command, save the contents to a file, and push it back to the master branch.
@@ -34,7 +35,7 @@ jobs:
       # Checkout the branch
       - name: checkout
         uses: actions/checkout@v2-beta # use either @v2-beta or @master. Eventually there will be a @v2 tag.
-      
+
       - name: save current date
         run: |
           # do some operation that changes a file in the git repo
@@ -45,7 +46,7 @@ jobs:
           # setup the username and email. I tend to use 'GitHub Actions Bot' with no email by default
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
-          
+
       - name: commit
         run: |
           # Stage the file, commit and push

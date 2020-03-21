@@ -5,6 +5,7 @@ description: 'A retrospective for what I did in 2019'
 keywords:
   - Rust
   - WebAssembly
+logo: wasm
 ---
 
 ![Rust/WASM crustacean logo](./wasm-ferris.png)

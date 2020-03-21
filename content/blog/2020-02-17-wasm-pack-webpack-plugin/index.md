@@ -5,6 +5,7 @@ description: 'How to take rust code and compile and bundle it down into a webpac
 keywords:
   - Rust
   - WebAssembly
+logo: wasm
 ---
 
 On top of using [wasm-pack](https://github.com/rustwasm/wasm-pack) directly, you can also use it in JS bundlers. In this case, there has been an implementation to integrate wasm-pack into a webpack bundle with little code.

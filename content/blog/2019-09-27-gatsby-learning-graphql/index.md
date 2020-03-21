@@ -5,6 +5,7 @@ description: 'The GraphQL Ecosystem in Gatsby can be seen as a progressive ecosy
 keywords:
   - GraphQL
   - Gatsby
+logo: gatsby
 ---
 
 ![GraphQL Logo](graphql-logo.png)

@@ -5,6 +5,7 @@ description: 'A guide on how to use Twilio and GitHub Actions to send weekly eve
 keywords:
   - GitHub Actions
   - Twilio
+logo: twilio
 ---
 
 When I open my web browser, there is a page I developed where I can see upcoming events.

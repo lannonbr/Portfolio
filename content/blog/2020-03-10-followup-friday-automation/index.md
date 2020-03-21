@@ -5,6 +5,7 @@ description: 'How I used GitHub Actions and tools like Twilio to automate the pr
 keywords:
   - GitHub Actions
   - Twilio
+logo: twilio
 ---
 
 A few weeks back, [ChefBrent](https://twitch.tv/chefbrent) started a new show every Friday called "Follow-up Friday". The premise is that you may find tons of things through a week during the day. News stories, new software projects, etc. With that, if you don't write it down to look over at a later time, you likely won't remember it. His new weekly show tries to mitigate that and have a scheduled time every week to pull up those topics and look over them.

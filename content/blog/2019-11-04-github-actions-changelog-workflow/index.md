@@ -7,6 +7,7 @@ keywords:
   - Automation
   - GitHub
   - Fauna
+logo: github-actions
 ---
 
 Over the past week, I spun up a new workflow with GitHub Actions for an upcoming site of mine where I will be pushing resources and other content for GitHub Actions. For one of the pages, I wanted to get all updates on Actions from [GitHub's Changelog](https://github.blog/changelog/) and display them as a list.
