@@ -6,7 +6,7 @@ function TinkerProjects() {
 
   return (
     <div className="grid gap-5 grid-cols-1 md:grid-cols-2">
-      {tinkerProjects.nodes.map(project => (
+      {tinkerProjects.nodes.map((project) => (
         <section
           key={project.id}
           className="border border-gray-400 p-4 rounded flex flex-col"

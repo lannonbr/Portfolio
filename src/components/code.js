@@ -4,13 +4,7 @@ import theme from 'prism-react-renderer/themes/nightOwl'
 
 const getParams = (name = ``) => {
   const [lang, params = ``] = name.split(` `)
-  return [
-    lang
-      .split(`language-`)
-      .pop()
-      .split(`{`)
-      .shift(),
-  ].concat(
+  return [lang.split(`language-`).pop().split(`{`).shift()].concat(
     params.split(`&`).reduce((merged, param) => {
       const [key, value] = param.split(`=`)
       merged[key] = value

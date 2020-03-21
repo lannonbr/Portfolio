@@ -22,7 +22,7 @@ const DoneList = () => {
 
   let months = {}
 
-  data.allDoneListYaml.nodes.forEach(entry => {
+  data.allDoneListYaml.nodes.forEach((entry) => {
     let [month, , year] = entry.date.split(' ')
 
     if (!Object.keys(months).includes(`${month} ${year}`)) {
@@ -53,7 +53,7 @@ const DoneList = () => {
                 {month}
               </h2>
               <hr className="border-purple-800" />
-              {events.map(entry => {
+              {events.map((entry) => {
                 let descBody = entry.childCustomMdxStringNode.childMdx.body
 
                 return (

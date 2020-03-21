@@ -22,7 +22,7 @@ export default ({ data }) => {
             <a href="https://lannonbr.dev/">lannonbr.dev</a>.
           </p>
           <ul>
-            {data.allFile.nodes.map(node => {
+            {data.allFile.nodes.map((node) => {
               const file = node.relativePath.slice(0, -3)
 
               return (

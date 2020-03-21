@@ -66,7 +66,7 @@ const TalksPage = () => {
             about technologies and tools that I use or interest me.
           </p>
           <h2>List of Talks</h2>
-          {talks.map(talk => {
+          {talks.map((talk) => {
             return (
               <article className="border border-solid border-gray-400 rounded p-4 flex flex-col mb-5">
                 <header className="p-0 md:flex justify-between items-center">

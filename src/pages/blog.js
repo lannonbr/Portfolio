@@ -20,11 +20,11 @@ const BlogIndexPage = ({ data }) => {
       />
       <h1>Blog</h1>
       <div className="">
-        {data.allMdx.nodes.map(node => {
+        {data.allMdx.nodes.map((node) => {
           const logo =
             node.frontmatter.logo &&
             data.blogLogos.nodes.filter(
-              logo => logo.name === node.frontmatter.logo
+              (logo) => logo.name === node.frontmatter.logo
             )[0].publicURL
 
           return (

@@ -28,7 +28,7 @@ function Project({ project, idx }) {
           <a href={project.github_link}>GitHub Link</a>
         </div>
         <div className="grid grid-cols-3 gap-2 mt-6 md:flex md:flex-wrap">
-          {project.technologies.map(tech => (
+          {project.technologies.map((tech) => (
             <span
               key={tech}
               className="px-2 py-1 border border-solid border-gray-400 mr-2 text-sm inline-block rounded"

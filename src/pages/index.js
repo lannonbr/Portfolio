@@ -26,7 +26,7 @@ const IndexPage = ({ data }) => (
           <Coffee className="mr-3" />
           New Posts
         </h2>
-        {data.newBlogposts.nodes.map(post => {
+        {data.newBlogposts.nodes.map((post) => {
           return (
             <div className="mb-2">
               <Link to={post.fields.slug}>{post.frontmatter.title}</Link>

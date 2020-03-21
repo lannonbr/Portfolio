@@ -7,7 +7,7 @@ function SEO({ description, lang, meta, keywords, title, ogImage }) {
   return (
     <StaticQuery
       query={detailsQuery}
-      render={data => {
+      render={(data) => {
         const metaDescription =
           description || data.site.siteMetadata.description
 

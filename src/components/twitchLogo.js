@@ -4,7 +4,7 @@ import PropTypes from 'prop-types'
 /**
  * Twitch logo From feather icons as if it was in react-feather
  */
-const Twitch = props => {
+const Twitch = (props) => {
   const { color, size, ...otherProps } = props
   return (
     <svg
