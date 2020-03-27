@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Mail, GitHub, Twitter } from 'react-feather'
-import Twitch from '../../components/twitchLogo'
+import Twitch from './twitchLogo'
 
 const StyledFooter = styled.footer`
   a {

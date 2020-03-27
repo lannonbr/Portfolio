@@ -17,9 +17,6 @@ module.exports = {
     ],
   },
   plugins: [
-    // Themes
-    `gatsby-theme-lannonbr`,
-
     // Other Plugins
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-printer`,
@@ -66,6 +63,22 @@ module.exports = {
           Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
         },
         fetchOptions: {},
+      },
+    },
+    `gatsby-plugin-dark-mode`,
+    `gatsby-plugin-styled-components`,
+    {
+      resolve: `gatsby-plugin-web-font-loader`,
+      options: {
+        google: {
+          families: ['Inter'],
+        },
+      },
+    },
+    {
+      resolve: `gatsby-plugin-layout`,
+      options: {
+        component: require.resolve('./src/components/layout.js'),
       },
     },
     {
