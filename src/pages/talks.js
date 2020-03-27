@@ -8,7 +8,7 @@ import moment from 'moment'
 const talks = [
   {
     name: 'Getting up to speed with GitHub Actions',
-    date: '2019-03-17',
+    date: '2020-03-17',
     event: 'Reactadelphia (Remote)',
     location: 'Philidelphia, PA',
     slides: 'https://lannonbr-phl-mar20.netlify.com',
