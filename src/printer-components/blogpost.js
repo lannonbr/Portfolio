@@ -12,7 +12,7 @@ export default ({ date, title }) => {
         overflowX: 'hidden',
         backgroundImage: 'linear-gradient(270deg, #747dbc 21%, #8CB5D9 92%)',
         color: 'white',
-        fontFamily: 'Oswald, Arial, Helvetica, sans-serif',
+        fontFamily: 'Inter, Arial, Helvetica, sans-serif',
       }}
     >
       <div
