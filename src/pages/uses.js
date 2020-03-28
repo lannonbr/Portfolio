@@ -87,7 +87,9 @@ const UsesPage = () => (
             </a>
           </li>
           <li>Sony a5100 Mirrorless Camera</li>
-          <li>Blue Yeti USB Mic w/ arm &amp; pop filter</li>
+          <li>Shure SM58 Dynamic XLR Microphone</li>
+          <li>Cloudlifter CL-1 Mic Activator</li>
+          <li>Focusrite Scarlett Solo USB Audio Interface</li>
           <li>
             <a href="https://www.elgato.com/en/gaming/stream-deck">
               Elgato 15-button Stream Deck
