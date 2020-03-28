@@ -16,7 +16,6 @@ Other tools used include:
 
 - [gatsby-theme-lannonbr](https://github.com/lannonbr/gatsby-theme-lannonbr) (A gatsby theme powering features like dark mode & the layout of this site)
 - MDX
-- Styled-components
 - TailwindCSS
 - React-feather
 - MomentJS

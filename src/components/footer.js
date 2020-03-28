@@ -1,21 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
 import { Mail, GitHub, Twitter } from 'react-feather'
 import Twitch from './twitchLogo'
 
-const StyledFooter = styled.footer`
-  a {
-    color: var(--footerLink);
-  }
-
-  a:hover {
-    color: var(--footerLinkHover);
-  }
-`
-
 function Footer() {
   return (
-    <StyledFooter
+    <footer
       className="md:flex flex-wrap items-center justify-center text-sm p-2 border-t-2 border-gray-400 text-sm flex-shrink-0"
       style={{
         backgroundColor: 'var(--footerBackground)',
@@ -78,7 +67,7 @@ function Footer() {
           <Twitch />
         </a>
       </div>
-    </StyledFooter>
+    </footer>
   )
 }
 

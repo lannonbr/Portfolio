@@ -1,17 +1,9 @@
 import React from 'react'
-import styled from 'styled-components'
 import Header from './header'
 import Footer from './footer'
 
-const LayoutContainer = styled.div`
-  main a {
-    color: var(--bodyLink);
-    text-decoration: none;
-  }
-`
-
 const Layout = ({ location, children }) => (
-  <LayoutContainer className="min-h-screen flex flex-col overflow-x-hidden">
+  <div className="min-h-screen flex flex-col overflow-x-hidden">
     <Header location={location} />
     <main
       className="flex-grow flex-shrink-0 py-5 px-2 w-full mx-auto"
@@ -20,7 +12,7 @@ const Layout = ({ location, children }) => (
       {children}
     </main>
     <Footer />
-  </LayoutContainer>
+  </div>
 )
 
 export default Layout

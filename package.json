@@ -7,7 +7,6 @@
   "dependencies": {
     "@mdx-js/mdx": "^1.5.7",
     "@mdx-js/react": "^1.5.7",
-    "babel-plugin-styled-components": "^1.10.7",
     "dotenv": "^8.2.0",
     "gatsby": "^2.20.2",
     "gatsby-image": "^2.3.0",
@@ -20,7 +19,6 @@
     "gatsby-plugin-react-helmet": "^3.2.0",
     "gatsby-plugin-remove-serviceworker": "^1.0.0",
     "gatsby-plugin-sharp": "^2.5.1",
-    "gatsby-plugin-styled-components": "^3.2.1",
     "gatsby-plugin-web-font-loader": "^1.0.4",
     "gatsby-remark-images": "^3.2.0",
     "gatsby-source-filesystem": "^2.2.1",
@@ -34,8 +32,7 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-feather": "^2.0.3",
-    "react-helmet": "^5.2.1",
-    "styled-components": "^5.0.1"
+    "react-helmet": "^5.2.1"
   },
   "keywords": [
     "gatsby"
