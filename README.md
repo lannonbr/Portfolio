@@ -8,13 +8,7 @@ The site is developed in Gatsby.
 
 ## What's involved
 
-- Data sourced from GitHub using their v4 GraphQL API
-
-A personal access token for GitHub is required to load in the data on the open source page correctly.
-
-Other tools used include:
-
-- [gatsby-theme-lannonbr](https://github.com/lannonbr/gatsby-theme-lannonbr) (A gatsby theme powering features like dark mode & the layout of this site)
+- Data sourced from the GitHub v4 GraphQL API
 - MDX
 - TailwindCSS
 - React-feather
