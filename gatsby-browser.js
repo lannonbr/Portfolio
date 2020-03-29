@@ -2,6 +2,7 @@ import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
 import Code from './src/components/code'
 import { preToCodeBlock } from 'mdx-utils'
+import Warning from './src/components/warning'
 
 import './src/styles/tailwind-include.css'
 
@@ -21,7 +22,7 @@ const components = {
       </code>
     )
   },
-  pre: preProps => {
+  pre: (preProps) => {
     const props = preToCodeBlock(preProps)
 
     if (props) {
@@ -30,6 +31,7 @@ const components = {
       return <pre {...preProps} />
     }
   },
+  Warning,
 }
 
 export const wrapPageElement = ({ element }) => {
