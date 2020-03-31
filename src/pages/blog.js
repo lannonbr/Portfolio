@@ -14,7 +14,7 @@ const LogolessLogo = () => (
 const CuratedButton = ({ logo, name, handleClick, isSelected }) => {
   return (
     <button
-      className={`border border-black p-2 flex items-center rounded text-sm mb-3 md:mr-3 md:mb-0 hover:shadow-xl ${
+      className={`border border-black px-2 py-4 md:py-2 flex items-center rounded text-sm mb-5 md:mr-3 md:mb-0 hover:shadow-xl ${
         isSelected && 'shadow-xl font-extrabold'
       }`}
       style={{
