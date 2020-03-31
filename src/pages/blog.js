@@ -14,7 +14,7 @@ const LogolessLogo = () => (
 const CuratedButton = ({ logo, name, handleClick, isSelected }) => {
   return (
     <button
-      className={`border border-black p-2 flex items-center rounded text-sm mr-3 hover:shadow-xl ${
+      className={`border border-black p-2 flex items-center rounded text-sm mb-3 md:mr-3 md:mb-0 hover:shadow-xl ${
         isSelected && 'shadow-xl font-extrabold'
       }`}
       style={{
@@ -45,7 +45,7 @@ const BlogIndexPage = ({ data }) => {
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
       />
       <h1>Blog</h1>
-      <div className="flex my-8">
+      <div className="flex flex-col md:flex-row my-8">
         {categories.map(({ cat, name }) => (
           <CuratedButton
             name={name}
