@@ -45,7 +45,7 @@ const BlogIndexPage = ({ data }) => {
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
       />
       <h1>Blog</h1>
-      <div className="flex flex-col md:flex-row my-8">
+      <div className="flex flex-col md:flex-row my-4 md:my-8">
         {categories.map(({ cat, name }) => (
           <CuratedButton
             name={name}
