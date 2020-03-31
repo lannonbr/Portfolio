@@ -18,7 +18,6 @@ const BlogPost = ({ data }) => {
         Blog Home
       </Link>
       <h1 className="mb-2">{data.mdx.frontmatter.title}</h1>
-      <time className="block mb-8">{data.mdx.frontmatter.date}</time>
       <MDXRenderer>{data.mdx.body}</MDXRenderer>
     </article>
   )
@@ -30,7 +29,6 @@ export const PageQuery = graphql`
       body
       frontmatter {
         title
-        date(formatString: "ll")
         keywords
         description
       }

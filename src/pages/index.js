@@ -28,11 +28,8 @@ const IndexPage = ({ data }) => (
         </h2>
         {data.newBlogposts.nodes.map((post) => {
           return (
-            <div className="mb-2">
+            <div className="mb-3">
               <Link to={post.fields.slug}>{post.frontmatter.title}</Link>
-              <time dateTime={post.frontmatter.fullDate} className="ml-3">
-                {post.frontmatter.date}
-              </time>
             </div>
           )
         })}
@@ -59,8 +56,6 @@ export const query = graphql`
       nodes {
         frontmatter {
           title
-          date(formatString: "ll")
-          fullDate: date
         }
         fields {
           slug
