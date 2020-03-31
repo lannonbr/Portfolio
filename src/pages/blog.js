@@ -14,7 +14,7 @@ const LogolessLogo = () => (
 const CuratedButton = ({ logo, name, handleClick, isSelected }) => {
   return (
     <button
-      className={`border border-black px-2 py-4 md:py-2 flex items-center rounded text-sm mb-5 md:mr-3 md:mb-0 hover:shadow-xl ${
+      className={`border border-black px-2 py-3 md:py-2 flex items-center rounded text-sm mb-4 md:mr-3 md:mb-0 hover:shadow-xl ${
         isSelected && 'shadow-xl font-extrabold'
       }`}
       style={{
@@ -83,7 +83,7 @@ const BlogIndexPage = ({ data }) => {
               <Link
                 key={node.fields.slug}
                 to={node.fields.slug}
-                className="inline-block flex items-center py-2 px-3 text-xl rounded-sm transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 mb-3"
+                className="inline-block flex items-center py-2 px-3 text-md md:text-xl rounded-sm transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 mb-3"
               >
                 {node.frontmatter.logo ? (
                   <img src={logo} alt="" className="w-6 mr-2" />
