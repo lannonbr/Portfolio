@@ -13,7 +13,7 @@ const BlogPost = ({ data }) => {
         description={data.mdx.frontmatter.description}
         ogImage={data.mdx.fields.ogFileName}
       />
-      <Link className="flex items-center mb-4" to="/blog/">
+      <Link className="inline-flex items-center mb-4" to="/blog/">
         <Home className="mr-2" />
         Blog Home
       </Link>
