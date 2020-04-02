@@ -38,7 +38,7 @@ const Header = ({ location }) => {
     <ThemeToggler>
       {({ theme, toggleTheme }) => (
         <header
-          className="py-5 px-3 mx-auto max-w-6xl w-full"
+          className="py-5 px-4 w-full mx-auto"
           style={{
             maxWidth: 1600,
           }}
