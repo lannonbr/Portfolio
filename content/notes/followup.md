@@ -1,9 +1,10 @@
 # Things to Follow up on:
 
-- [Voicemeeter](https://www.vb-audio.com/Voicemeeter/potato.htm)
+- [Gatsby Recipes](https://github.com/gatsbyjs/gatsby/pull/22709)
 
 ## Topics already discussed
 
+- [Voicemeeter](https://www.vb-audio.com/Voicemeeter/potato.htm)
 - [Twilio / GitHub Actions flow for Follow Up Friday entries](https://lannonbr.com/blog/2020-03-10-followup-friday-automation/)
 - [CSS-only Landscape Codepen](https://codepen.io/ivorjetski/full/xxGYWQG)
 - [VS Code Code Tour extension](https://github.com/vsls-contrib/code-tour)
