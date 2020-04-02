@@ -19,7 +19,8 @@ export default ({ data }) => {
             This is a collection of personal notes that may not be fully
             organized, but just is a place to write down ideas before moving it
             into either a blogpost or a page on{' '}
-            <a href="https://lannonbr.dev/">lannonbr.dev</a>.
+            <a href="https://lannonbr.dev/">lannonbr.dev</a>. Do not depend for
+            these to always exist.
           </p>
           <ul>
             {data.allFile.nodes.map((node) => {
