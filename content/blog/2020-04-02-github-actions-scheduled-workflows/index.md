@@ -1,4 +1,11 @@
-# Scheduled Workflows
+---
+title: 'Scheduled Workflows in GitHub Actions'
+date: '2020-04-02'
+description: 'GitHub Actions scheduled workflows allow for a task to be done in GitHub Actions on a fixed schedule using a cron syntax'
+keywords:
+  - GitHub Actions
+logo: github-actions
+---
 
 using the `schedule` trigger event, you can run workflows on a recurruing schedule.
 
