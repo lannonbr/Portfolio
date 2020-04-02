@@ -106,7 +106,7 @@ const TalksPage = () => {
             )
           })}
         </div>
-        <div>
+        <div className="hidden md:block">
           <IllustrationImg src={talk} alt="speaking illustration" />
         </div>
       </section>

@@ -51,7 +51,7 @@ const StreamPage = () => {
             on Notion.
           </p>
         </div>
-        <div>
+        <div className="hidden md:block">
           <IllustrationImg src={streamData} alt="data illustration" />
         </div>
       </section>

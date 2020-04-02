@@ -33,7 +33,7 @@ export default ({ data }) => {
             })}
           </ul>
         </div>
-        <div>
+        <div className="hidden md:block">
           <IllustrationImg
             src={notesIllustration}
             alt="Taking Notes illustration"

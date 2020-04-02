@@ -34,7 +34,7 @@ const IndexPage = ({ data }) => (
           )
         })}
       </div>
-      <div>
+      <div className="hidden md:block">
         <IllustrationImg
           src={office}
           alt="Person sitting on desk illustration"

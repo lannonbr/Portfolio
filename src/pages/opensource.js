@@ -48,7 +48,7 @@ const OpenSourcePage = () => {
               })}
           </ul>
         </div>
-        <div>
+        <div className="hidden md:block">
           <IllustrationImg src={vc} alt="version control illustration" />
         </div>
       </section>

@@ -29,7 +29,7 @@ const WorkPage = () => (
           <a href="https://lannonbr.dev">Lannonbr.dev</a>.
         </p>
       </div>
-      <div>
+      <div className="hidden md:block">
         <IllustrationImg
           src={conversation}
           alt="Two people having a conversation"
