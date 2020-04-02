@@ -10,10 +10,10 @@ module.exports = {
       { url: '/work/', name: 'Work' },
       { url: '/projects/', name: 'Projects' },
       { url: '/opensource/', name: 'Open Source' },
-      { url: '/talks/', name: 'Talks' },
       { url: '/blog/', name: 'Blog' },
       { url: '/notes/', name: 'Notes' },
       { url: '/stream/', name: 'Stream' },
+      { url: '/talks/', name: 'Talks' },
     ],
   },
   plugins: [
