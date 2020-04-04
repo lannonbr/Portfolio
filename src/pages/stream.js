@@ -38,18 +38,6 @@ const StreamPage = () => {
             maintainence of these projects that gives a balance between product
             and tooling.
           </p>
-
-          <h2>Stream Notes</h2>
-          <p>
-            I store notes about my stream up on{' '}
-            <a href="https://www.notion.so/">Notion</a>. This allows me to
-            publish clean notes about the stream and have them updated in real
-            time. If you wish to view them, head over to{' '}
-            <a href="https://www.notion.so/Lannonbr-Livestream-Notes-30e76904569b4c9aaebdd8422644fc0d">
-              Lannonbr Livestream Notes
-            </a>{' '}
-            on Notion.
-          </p>
         </div>
         <div className="hidden md:block">
           <IllustrationImg src={streamData} alt="data illustration" />
