@@ -35,3 +35,27 @@ const components = {
 export const wrapPageElement = ({ element }) => {
   return <MDXProvider components={components}>{element}</MDXProvider>
 }
+
+export const onRenderBody = ({ setPreBodyComponents }) => {
+  setPreBodyComponents([
+    React.createElement('script', {
+      key: 'tailwind-dark-mode',
+      dangerouslySetInnerHTML: {
+        __html: `
+function checkDarkMode() {
+  if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+    return true;
+  }
+  return false;
+}
+
+if (checkDarkMode()) {
+  document.documentElement.classList.add('mode-dark');
+} else {
+  document.documentElement.classList.remove('mode-dark');
+}       
+        `,
+      },
+    }),
+  ])
+}

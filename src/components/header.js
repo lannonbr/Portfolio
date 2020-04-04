@@ -1,26 +1,29 @@
 import { Link, useStaticQuery, graphql } from 'gatsby'
 import React, { useState, useEffect } from 'react'
-import { ThemeToggler } from 'gatsby-plugin-dark-mode'
 
 // Components
 import Navigation from './navigation'
-import MobileNav from './mobileNav'
 
 // SVGs
-import MenuSVG from '../images/menu.svg'
-import MenuWhiteSVG from '../images/menu-white.svg'
 import MoonSVG from '../images/moon.svg'
 import SunSVG from '../images/sun.svg'
 
-const Header = ({ location }) => {
-  const [mobileNavOpened, setMobileNavOpened] = useState(false)
+const Header = () => {
+  const [mode, setMode] = useState('light')
 
   useEffect(() => {
-    setMobileNavOpened(false)
-    if (window) {
-      window.scrollTo({ top: 0 })
+    if ([...document.documentElement.classList].includes('mode-dark')) {
+      setMode('dark')
     }
-  }, [location])
+  }, [])
+
+  useEffect(() => {
+    if (mode === 'dark') {
+      document.documentElement.classList.add('mode-dark')
+    } else {
+      document.documentElement.classList.remove('mode-dark')
+    }
+  }, [mode])
 
   const data = useStaticQuery(graphql`
     query {
@@ -32,73 +35,25 @@ const Header = ({ location }) => {
     }
   `)
 
-  let title = data.site.siteMetadata.title
-
   return (
-    <ThemeToggler>
-      {({ theme, toggleTheme }) => (
-        <header
-          className="py-5 px-4 w-full mx-auto"
-          style={{
-            maxWidth: 1600,
-          }}
+    <header className="py-5 px-4 shadow-lg w-full mx-auto grid items-center mb-8 md:mb-0 md:shadow-none">
+      <h1 className="text-2xl md:text-4xl m-0">
+        <Link
+          className="h-full no-underline text-purple-700 dark:text-teal-200"
+          to="/"
         >
-          <div className="px-3 pb-0 md:p-0 flex justify-between items-center">
-            <h1 className="h-20 m-0">
-              <Link
-                className="h-full no-underline flex items-center"
-                style={{
-                  color: 'var(--primaryColor)',
-                }}
-                to="/"
-              >
-                {title}
-              </Link>
-            </h1>
-            <div className="hidden md:flex md:items-center">
-              <Navigation />
-              <button
-                onClick={() => toggleTheme(theme === 'dark' ? 'light' : 'dark')}
-              >
-                <img
-                  src={theme === 'dark' ? SunSVG : MoonSVG}
-                  alt="Dark mode toggler"
-                />
-              </button>
-            </div>
-            <div className="flex items-end md:hidden">
-              <MobileNav open={mobileNavOpened} />
-              <button
-                onClick={() => toggleTheme(theme === 'dark' ? 'light' : 'dark')}
-              >
-                <img
-                  src={theme === 'dark' ? SunSVG : MoonSVG}
-                  alt="Dark mode toggler"
-                />
-              </button>
-              <button
-                className={`navButton ${mobileNavOpened ? 'open' : ''}`}
-                onClick={() => {
-                  if (mobileNavOpened) {
-                    if (window) {
-                      window.scrollTo({ top: 0 })
-                    }
-                  }
-                  setMobileNavOpened(!mobileNavOpened)
-                }}
-              >
-                <img
-                  src={
-                    theme === 'dark' || mobileNavOpened ? MenuWhiteSVG : MenuSVG
-                  }
-                  alt="Open Mobile Navigation"
-                />
-              </button>
-            </div>
-          </div>
-        </header>
-      )}
-    </ThemeToggler>
+          {data.site.siteMetadata.title}
+        </Link>
+      </h1>
+      <div className="spacer"></div>
+      <Navigation />
+      <button
+        className="w-10 h-10 flex justify-center items-center bg-transparent m-0 p-0 border-none outline-none"
+        onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
+      >
+        <img src={mode === 'dark' ? SunSVG : MoonSVG} alt="Dark mode toggler" />
+      </button>
+    </header>
   )
 }
 

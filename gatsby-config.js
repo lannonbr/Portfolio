@@ -65,7 +65,6 @@ module.exports = {
         fetchOptions: {},
       },
     },
-    `gatsby-plugin-dark-mode`,
     {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
@@ -108,6 +107,7 @@ module.exports = {
       options: {
         printRejected: true,
         tailwind: true,
+        whitelist: ['mode-dark'],
       },
     },
   ],

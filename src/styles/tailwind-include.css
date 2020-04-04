@@ -28,7 +28,7 @@ body {
   color: var(--bodyTextColor);
   font-weight: 400;
 }
-body.dark {
+.mode-dark {
   background: #404040;
   --bodyTextColor: #f0f0f0;
   --bodyLink: #81cfe0;
@@ -98,18 +98,36 @@ p {
 
 /* custom styles */
 
+header {
+  grid-template-areas: 'h1 spacer nav toggle';
+  grid-template-columns: 320px 1fr auto auto;
+  grid-template-rows: 80px;
+  max-width: 1600px;
+}
+
+@media (max-width: 768px) {
+  header {
+    grid-template-areas: 'h1 h1 h1 toggle' 'spacer spacer spacer spacer' 'nav nav nav nav';
+    grid-template-columns: auto auto auto 50px;
+    grid-template-rows: 80px 20px 1fr;
+  }
+}
+
+nav {
+  grid-area: nav;
+}
+
+.spacer {
+  grid-area: spacer;
+}
+
+header button {
+  grid-area: toggle;
+}
+
 main a {
   color: var(--bodyLink);
   text-decoration: none;
-}
-
-nav.desktop a {
-  color: var(--bodyTextColor);
-  margin: 0 16px;
-}
-nav.desktop a:hover,
-nav.desktop a.active {
-  border-bottom-color: var(--primaryColor);
 }
 
 footer a {
@@ -118,29 +136,6 @@ footer a {
 
 footer a:hover {
   color: var(--footerLinkHover);
-}
-
-header button {
-  width: 40px;
-  height: 40px;
-  border: 0;
-  background: transparent;
-  padding: 0;
-  margin: 0;
-  outline: 0;
-  color: gray;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-header button.navButton {
-  z-index: 11;
-  position: relative;
-}
-
-header button.open {
-  position: fixed;
 }
 
 @tailwind components;
