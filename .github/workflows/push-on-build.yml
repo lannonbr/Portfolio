@@ -13,8 +13,6 @@ jobs:
       - name: Install Deps
         run: yarn
       - name: Build Site
-        env:
-          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: yarn build
       - name: Deploy Site
         env:

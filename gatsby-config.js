@@ -9,7 +9,6 @@ module.exports = {
     navigationLinks: [
       { url: '/work/', name: 'Work' },
       { url: '/projects/', name: 'Projects' },
-      { url: '/opensource/', name: 'Open Source' },
       { url: '/blog/', name: 'Blog' },
       { url: '/notes/', name: 'Notes' },
       { url: '/stream/', name: 'Stream' },
@@ -53,18 +52,6 @@ module.exports = {
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
     `gatsby-plugin-postcss`,
-    {
-      resolve: `gatsby-source-graphql`,
-      options: {
-        typeName: 'GitHub',
-        fieldName: 'github',
-        url: 'https://api.github.com/graphql',
-        headers: {
-          Authorization: `bearer ${process.env.GITHUB_TOKEN}`,
-        },
-        fetchOptions: {},
-      },
-    },
     {
       resolve: `gatsby-plugin-web-font-loader`,
       options: {
