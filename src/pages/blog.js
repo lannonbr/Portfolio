@@ -39,7 +39,7 @@ const BlogIndexPage = ({ data }) => {
   ]
 
   return (
-    <>
+    <div className="max-w-6xl mx-auto">
       <SEO
         title="Blog"
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
@@ -80,22 +80,28 @@ const BlogIndexPage = ({ data }) => {
               )[0].publicURL
 
             return (
-              <Link
-                key={node.fields.slug}
-                to={node.fields.slug}
-                className="inline-block flex items-center py-2 px-3 text-md md:text-xl rounded-sm transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 mb-3"
-              >
-                {node.frontmatter.logo ? (
-                  <img src={logo} alt="" className="w-6 mr-2" />
-                ) : (
-                  <LogolessLogo />
-                )}
-                <span>{node.frontmatter.title}</span>
-              </Link>
+              <article className="py-2 px-3 transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 mb-2">
+                <Link
+                  key={node.fields.slug}
+                  to={node.fields.slug}
+                  className="flex items-center text-md md:text-xl rounded-sm mb-3"
+                >
+                  {node.frontmatter.logo ? (
+                    <img src={logo} alt="" className="w-6 mr-2" />
+                  ) : (
+                    <LogolessLogo />
+                  )}
+                  <span>{node.frontmatter.title}</span>
+                  <br />
+                </Link>
+                <p className="text-sm md:text-base mb-0">
+                  {node.frontmatter.description}
+                </p>
+              </article>
             )
           })}
       </div>
-    </>
+    </div>
   )
 }
 
@@ -122,6 +128,7 @@ export const query = graphql`
           title
           date(formatString: "ll")
           logo
+          description
         }
       }
     }
