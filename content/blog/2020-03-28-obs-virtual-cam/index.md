@@ -1,7 +1,7 @@
 ---
 title: 'Using OBS video output as a virtual webcam'
 date: '2020-03-28'
-description: 'How to use obs-virtual-cam to use OBS as a video source for apps like Skype or Zoom'
+description: 'obs-virtual-cam provides an interface where you can take the video output and convert it into a virtual webcam for apps like Skype or Zoom'
 keywords:
   - OBS
 ---

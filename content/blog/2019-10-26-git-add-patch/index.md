@@ -1,7 +1,7 @@
 ---
 title: 'Granular staging with "git add --patch"'
 date: '2019-10-26'
-description: 'How to use git add --patch'
+description: 'How to selectively add what you want to stage for a git commit using the --patch flag'
 keywords:
   - Git
 ---

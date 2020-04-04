@@ -1,7 +1,7 @@
 ---
 title: 'Deploying a site to Netlify with GitHub Actions'
 date: '2020-03-31'
-description: 'How to deploy a site on Netlify with GitHub Actions'
+description: 'How to create a GitHub Action workflow to trigger deploys to Netlify whenever a commit to master is made'
 keywords:
   - GitHub Actions
 logo: github-actions

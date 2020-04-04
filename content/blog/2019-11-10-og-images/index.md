@@ -1,7 +1,7 @@
 ---
 title: 'Creating Open Graph Images with React & Gatsby'
 date: '2019-11-10'
-description: 'How I programatically create Open Graph images for my blogposts'
+description: 'How I programatically create Open Graph images in react that can be then seen in places like Twitter, Discord, and other soical platforms'
 keywords:
   - React
   - Puppeteer

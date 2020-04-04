@@ -1,7 +1,7 @@
 ---
 title: 'Running Tests in GitHub Actions'
 date: '2020-03-30'
-description: 'How to run tests on Pull Requests in GitHub Actions'
+description: 'Using the pull_request GitHub Actions trigger, you can write workflows to run tests on pull requests'
 keywords:
   - GitHub Actions
 logo: github-actions

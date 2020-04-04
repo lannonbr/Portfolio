@@ -1,7 +1,7 @@
 ---
 title: 'Bundling NPM modules for use in GitHub Actions'
 date: '2020-02-23'
-description: 'How to bundle NodeJS with node modules to be used in a GitHub Action'
+description: 'How to bundle NodeJS with node modules to be used in a GitHub Action as GitHub does not include node modules automatically'
 keywords:
   - GitHub Actions
 logo: github-actions

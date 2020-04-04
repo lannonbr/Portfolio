@@ -1,7 +1,7 @@
 ---
-title: 'GitHub Actions v2: JS Actions'
+title: 'GitHub Actions: JS Actions'
 date: '2019-08-17'
-description: 'Intro to building GitHub Actions with Javascript'
+description: 'How to build a GitHub Action using Javascript'
 keywords:
   - Javascript
   - GitHub Actions

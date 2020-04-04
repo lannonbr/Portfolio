@@ -1,7 +1,7 @@
 ---
 title: 'Getting started building WASM modules with Rust & wasm-pack'
 date: '2020-01-07'
-description: 'A retrospective for what I did in 2019'
+description: 'An introduction on how you can write WebAssembly modules in Rust using wasm-pack'
 keywords:
   - Rust
   - WebAssembly

@@ -1,7 +1,7 @@
 ---
 title: 'Happy Hacktoberfest 2019'
 date: '2019-10-01'
-description: "How I'm participating in Hacktoberfest this year"
+description: "How I'm participating in Hacktoberfest 2019, A celebration of the Open Source community put on by DigitalOcean"
 keywords:
   - Open Source
   - GitHub

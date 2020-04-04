@@ -1,7 +1,7 @@
 ---
 title: 'Making a "Done" List'
 date: '2019-12-21'
-description: 'Creating a new page on my site for listing things I have done'
+description: 'Instead of having a TODO list, I flipped the idea around and created a new page on my site for listing things I have done'
 keywords:
   - Productivity
   - Todo List

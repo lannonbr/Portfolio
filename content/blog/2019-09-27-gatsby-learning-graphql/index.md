@@ -1,7 +1,7 @@
 ---
 title: 'A pathway to learn GraphQL with Gatsby'
 date: '2019-09-27'
-description: 'The GraphQL Ecosystem in Gatsby can be seen as a progressive ecosystem rather than thrown all at once at you.'
+description: 'A look in how one can learn portions of the GraphQL Ecosystem with Gatsby progressively rather all at once'
 keywords:
   - GraphQL
   - Gatsby
@@ -168,7 +168,7 @@ exports.createResolvers = ({ createResolvers }) => {
         type: [`BlogPost`],
         resolve: (source, args, context, info) => {
           const posts = context.nodeModel.getAllNodes({ type: `BlogPost` })
-          const georgePosts = posts.filter(post => {
+          const georgePosts = posts.filter((post) => {
             return post.author === `George`
           })
           return georgePosts

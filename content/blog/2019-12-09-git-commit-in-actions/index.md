@@ -1,7 +1,7 @@
 ---
 title: 'Using git commit in GitHub Actions'
 date: '2019-12-09'
-description: 'Tutorial on making commits in github actions'
+description: 'Tutorial on how you can use Git and have a GitHub Actions workflow make git commits on your behalf automatically'
 keywords:
   - Git
   - GitHub Actions

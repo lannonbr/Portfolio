@@ -1,7 +1,7 @@
 ---
 title: "Array.shift optimizations in Firefox's JS Engine"
 date: '2020-01-27'
-description: 'A look into a JS optimization in Firefox involving array.shift'
+description: 'A look into a JS optimization in Firefox that makes the array.shift method as fast as array.pop'
 keywords:
   - Firefox
   - JS Engines
