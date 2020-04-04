@@ -8,7 +8,6 @@ The site is developed in Gatsby.
 
 ## What's involved
 
-- Data sourced from the GitHub v4 GraphQL API
 - MDX
 - TailwindCSS
 - React-feather
