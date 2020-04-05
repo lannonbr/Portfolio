@@ -1,20 +1,16 @@
 @tailwind base;
 
-ul {
-  @apply list-disc;
-  @apply pl-4;
-}
-
 :root {
-  --headerFont: 'Inter', Arial, Helvetica, sans-serif;
-  --bodyFont: 'Inter', Arial, Helvetica, sans-serif;
-  --primaryColor: #663399;
-  --footerLink: #66339988;
-  --footerLinkHover: #663399dd;
-  --footerBackground: #66339906;
   --bodyLink: #2574a9;
   --bodyTextColor: #404040;
 }
+
+.mode-dark {
+  background: #404040;
+  --bodyTextColor: #f0f0f0;
+  --bodyLink: #81cfe0;
+}
+
 html {
   box-sizing: border-box;
 }
@@ -24,21 +20,9 @@ html {
 body {
   padding: 0;
   margin: 0;
-  font-family: var(--bodyFont);
+  font-family: 'Inter', Arial, Helvetica, sans-serif;
   color: var(--bodyTextColor);
   font-weight: 400;
-}
-.mode-dark {
-  background: #404040;
-  --bodyTextColor: #f0f0f0;
-  --bodyLink: #81cfe0;
-  --footerLink: #81cfe0;
-  --footerLinkHover: #e4f1fe;
-  --primaryColor: #81cfe0;
-  --footerBackground: #81cfe020;
-}
-h1 {
-  font-family: var(--headerFont);
 }
 h1 {
   font-size: 2.25rem;
@@ -98,11 +82,15 @@ p {
 
 /* custom styles */
 
+ul {
+  @apply list-disc;
+  @apply pl-4;
+}
+
 header {
   grid-template-areas: 'h1 spacer nav toggle';
   grid-template-columns: 320px 1fr auto auto;
   grid-template-rows: 80px;
-  max-width: 1600px;
 }
 
 @media (max-width: 768px) {
@@ -130,12 +118,8 @@ main a {
   text-decoration: none;
 }
 
-footer a {
-  color: var(--footerLink);
-}
-
-footer a:hover {
-  color: var(--footerLinkHover);
+main a:hover {
+  text-decoration: underline;
 }
 
 @tailwind components;

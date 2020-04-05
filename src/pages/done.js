@@ -44,12 +44,7 @@ const DoneList = () => {
         {Object.entries(months).map(([month, events]) => {
           return (
             <div key={month} className="mb-8">
-              <h2
-                className="text-2xl mt-3 mb-1"
-                style={{
-                  color: 'var(--primaryColor)',
-                }}
-              >
+              <h2 className="text-2xl mt-3 mb-1 text-rebecca-purple">
                 {month}
               </h2>
               <hr className="border-purple-800" />

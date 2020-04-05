@@ -36,10 +36,10 @@ const Header = () => {
   `)
 
   return (
-    <header className="py-5 px-4 shadow-lg w-full mx-auto grid items-center mb-8 md:mb-0 md:shadow-none">
+    <header className="py-5 px-4 shadow-lg w-full max-w-7xl mx-auto grid items-center mb-8 md:mb-0 md:shadow-none">
       <h1 className="text-2xl md:text-4xl m-0">
         <Link
-          className="h-full no-underline text-purple-700 dark:text-teal-200"
+          className="h-full no-underline text-rebecca-purple dark:text-cyan"
           to="/"
         >
           {data.site.siteMetadata.title}

@@ -14,11 +14,10 @@ const LogolessLogo = () => (
 const CuratedButton = ({ logo, name, handleClick, isSelected }) => {
   return (
     <button
-      className={`border border-black px-2 py-3 md:py-2 flex items-center rounded text-sm mb-4 md:mr-3 md:mb-0 hover:shadow-xl ${
+      className={`border border-black px-2 py-3 md:py-2 flex items-center rounded text-sm bg-rebecca-purple-lightest dark:bg-cyan-transparent mb-4 md:mr-3 md:mb-0 hover:shadow-xl ${
         isSelected && 'shadow-xl font-extrabold'
       }`}
       style={{
-        backgroundColor: 'var(--footerBackground)',
         color: 'var(--bodyLink)',
       }}
       onClick={handleClick}
@@ -80,11 +79,11 @@ const BlogIndexPage = ({ data }) => {
               )[0].publicURL
 
             return (
-              <article className="py-2 px-3 transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 mb-2">
+              <article className="py-2 px-3 transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 dark-hover:bg-cyan-transparent dark-hover:text-cyan-light mb-2">
                 <Link
                   key={node.fields.slug}
                   to={node.fields.slug}
-                  className="flex items-center text-md md:text-xl rounded-sm mb-3"
+                  className="flex items-center text-md md:text-xl rounded-sm mb-3 hover:no-underline"
                 >
                   {node.frontmatter.logo ? (
                     <img src={logo} alt="" className="w-6 mr-2" />
