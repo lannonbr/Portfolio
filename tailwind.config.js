@@ -1,6 +1,9 @@
 module.exports = {
   theme: {
     extend: {
+      boxShadow: {
+        in: '1px 1px 0px rgba(255, 255, 255, 0.1)',
+      },
       minHeight: {
         '100': '100px',
       },

@@ -14,8 +14,10 @@ const LogolessLogo = () => (
 const CuratedButton = ({ logo, name, handleClick, isSelected }) => {
   return (
     <button
-      className={`border border-black px-2 py-3 md:py-2 flex items-center rounded text-sm bg-rebecca-purple-lightest dark:bg-cyan-transparent mb-4 md:mr-3 md:mb-0 hover:shadow-xl ${
-        isSelected && 'shadow-xl font-extrabold'
+      className={`border border-black px-2 py-3 md:py-2 flex items-center rounded text-sm mb-4 md:mr-3 md:mb-0 hover:shadow-md ${
+        isSelected
+          ? 'shadow-in bg-purple-200 dark:bg-gray-900'
+          : 'dark:bg-cyan-transparent'
       }`}
       style={{
         color: 'var(--bodyLink)',
