@@ -20,23 +20,25 @@ const StreamPage = () => {
             streaming myself and about halfway through 2019, I took the plunge.
           </p>
           <p>
-            In June 2019, I began a livestream on Twitch.tv. I tinker around
+            In June 2019, I began livestreaming on Twitch.tv. I tinker around
             with many technologies like Gatsby, React, GitHub Actions, Docker,
             Node, etc. Tune in every Wednesday Evening at 4PM ET (UTC-4) at{' '}
             <a href="https://twitch.tv/lannonbr">https://twitch.tv/lannonbr</a>
           </p>
           <p>
             I am member of the Twitch{` `}
-            <a href="https://livecoders.dev">Live Coders</a> team.
+            <a href="https://livecoders.dev">Live Coders</a> team, an outgoing
+            and enthusiastic group of devs that write code, teach about
+            technology, and promote the technical community.
           </p>
 
-          <h2>Projects: Gatsby / GitHub Actions</h2>
+          <h2>Stream Projects</h2>
           <p>
-            Ony my stream, you will see a lot of various projects spread out
-            between using Gatsby and GitHub Actions. It's the mixture of
-            developing applications and websites alongside automations around
-            maintainence of these projects that gives a balance between product
-            and tooling.
+            On my stream, you will see a lot of various projects spread out
+            focusing around three main topics: Frontend Development, Data
+            Vizualization, and Automation. From websites and frontend resources
+            to data collection and vizualization, I try to balance my content
+            between developing products and tooling.
           </p>
         </div>
         <div className="hidden md:block">
