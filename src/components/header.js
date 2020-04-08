@@ -36,24 +36,29 @@ const Header = () => {
   `)
 
   return (
-    <header className="pb-5 pt-2 md:pt-5 px-4 shadow-lg w-full max-w-7xl mx-auto grid items-center mb-8 md:mb-0 bg-rebecca-purple-lightest dark:bg-cyan-transparent md:bg-transparent md:shadow-none">
-      <h1 className="text-2xl md:text-4xl m-0">
-        <Link
-          className="h-full no-underline text-rebecca-purple dark:text-cyan"
-          to="/"
+    <div className="bg-rebecca-purple-lightest dark:bg-cyan-transparent md:bg-transparent mb-8 md:mb-0">
+      <header className="pb-5 pt-2 md:pt-5 px-4 shadow-lg w-full max-w-7xl mx-auto grid items-center  md:shadow-none">
+        <h1 className="text-2xl md:text-4xl m-0">
+          <Link
+            className="h-full no-underline text-rebecca-purple dark:text-cyan"
+            to="/"
+          >
+            {data.site.siteMetadata.title}
+          </Link>
+        </h1>
+        <div className="spacer"></div>
+        <Navigation />
+        <button
+          className="w-10 h-10 flex justify-center items-center bg-transparent m-0 p-0 border-none outline-none"
+          onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
         >
-          {data.site.siteMetadata.title}
-        </Link>
-      </h1>
-      <div className="spacer"></div>
-      <Navigation />
-      <button
-        className="w-10 h-10 flex justify-center items-center bg-transparent m-0 p-0 border-none outline-none"
-        onClick={() => setMode(mode === 'dark' ? 'light' : 'dark')}
-      >
-        <img src={mode === 'dark' ? SunSVG : MoonSVG} alt="Dark mode toggler" />
-      </button>
-    </header>
+          <img
+            src={mode === 'dark' ? SunSVG : MoonSVG}
+            alt="Dark mode toggler"
+          />
+        </button>
+      </header>
+    </div>
   )
 }
 
