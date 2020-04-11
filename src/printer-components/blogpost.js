@@ -1,4 +1,5 @@
 import React from 'react'
+import Avatar from '../images/avatar.jpg'
 
 export default ({ date, title }) => {
   return (
@@ -6,11 +7,10 @@ export default ({ date, title }) => {
       style={{
         width: 1280,
         height: 720,
-        padding: 30,
-        paddingBottom: 0,
+        padding: 50,
         boxSizing: 'border-box',
         overflowX: 'hidden',
-        backgroundImage: 'linear-gradient(270deg, #747dbc 21%, #8CB5D9 92%)',
+        backgroundImage: 'linear-gradient( 135deg, #3B2667 10%, #BC78EC 100%)',
         color: 'white',
         fontFamily: 'Inter, Arial, Helvetica, sans-serif',
       }}
@@ -20,20 +20,39 @@ export default ({ date, title }) => {
           fontSize: 60,
           display: 'flex',
           flexDirection: 'column',
+          height: '100%',
         }}
       >
         <h1
           style={{
-            fontSize: '1.4em',
-            marginBottom: 0,
+            fontSize: '1.2em',
+            marginBottom: 30,
           }}
         >
           {title}
         </h1>
         <h2 style={{ fontSize: '1em', flexGrow: 1 }}>{date}</h2>
-        <h2 style={{ fontSize: '1em', textAlign: 'right', marginRight: 30 }}>
-          Lannonbr.com
-        </h2>
+        <div
+          style={{
+            display: 'flex',
+            justifyContent: 'space-between',
+            alignItems: 'flex-end',
+          }}
+        >
+          <img
+            src={Avatar}
+            style={{
+              width: 250,
+              height: 250,
+              borderRadius: 125,
+              border: '10px solid #dadada',
+            }}
+            alt=""
+          />
+          <h2 style={{ fontSize: '1em', textAlign: 'right', marginBottom: 0 }}>
+            Lannonbr.com
+          </h2>
+        </div>
       </div>
     </div>
   )
