@@ -1,6 +1,5 @@
 import React from 'react'
-import { Mail, GitHub, Twitter } from 'react-feather'
-import Twitch from './twitchLogo'
+import { Mail, GitHub, Twitter, Twitch } from 'react-feather'
 
 function Footer() {
   return (
