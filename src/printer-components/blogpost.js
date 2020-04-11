@@ -31,28 +31,10 @@ export default ({ date, title }) => {
         >
           {title}
         </h1>
-        <h2 style={{ fontSize: '1em', flexGrow: 1 }}>{date}</h2>
-        <div
-          style={{
-            display: 'flex',
-            justifyContent: 'space-between',
-            alignItems: 'flex-end',
-          }}
-        >
-          <img
-            src={Avatar}
-            style={{
-              width: 250,
-              height: 250,
-              borderRadius: 125,
-              border: '10px solid #dadada',
-            }}
-            alt=""
-          />
-          <h2 style={{ fontSize: '1em', textAlign: 'right', marginBottom: 0 }}>
-            Lannonbr.com
-          </h2>
-        </div>
+        <h2 style={{ fontSize: '1em', flexGrow: 1 }}>{date}</h2>\
+        <h2 style={{ fontSize: '1em', textAlign: 'right', marginBottom: 0 }}>
+          Lannonbr.com
+        </h2>
       </div>
     </div>
   )
