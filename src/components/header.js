@@ -40,13 +40,15 @@ const Header = () => {
       <header className="pb-5 pt-2 md:pt-5 px-4 shadow-lg w-full max-w-7xl mx-auto grid items-center  md:shadow-none">
         <h1 className="text-2xl md:text-4xl m-0">
           <Link
-            className="h-full no-underline"
+            className="h-full no-underline bg-repeat bg-scroll bg-left-top"
             style={{
+              backgroundOrigin: 'padding-box',
               backgroundImage:
                 mode !== 'dark'
                   ? 'linear-gradient(to right, #9d50bb, #6e48aa)'
                   : 'linear-gradient(to left, #50c9c3, #96deda)',
-              background: 'rgba(0,0,0,0)  repeat scroll 0% 0% padding-box text',
+              backgroundColor: 'rgba(0,0,0,0)',
+              backgroundClip: 'text',
               WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
             }}
