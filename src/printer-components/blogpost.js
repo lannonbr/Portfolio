@@ -30,7 +30,7 @@ export default ({ date, title }) => {
         >
           {title}
         </h1>
-        <h2 style={{ fontSize: '1em', flexGrow: 1 }}>{date}</h2>\
+        <h2 style={{ fontSize: '1em', flexGrow: 1 }}>{date}</h2>
         <h2 style={{ fontSize: '1em', textAlign: 'right', marginBottom: 0 }}>
           Lannonbr.com
         </h2>
