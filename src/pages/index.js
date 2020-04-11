@@ -5,7 +5,7 @@ import SEO from '../components/seo'
 import IllustrationImg from '../components/illustrationImg'
 
 import office from '../images/office.svg'
-import { Coffee } from 'react-feather'
+import { ChevronRight } from 'react-feather'
 
 const IndexPage = ({ data }) => (
   <>
@@ -22,10 +22,16 @@ const IndexPage = ({ data }) => (
           I'm a web developer in Upstate New York with a passion for exploration
           and continual learning.
         </p>
-        <h2 className="inline-flex items-center">
-          <Coffee className="mr-3" />
-          New Posts
-        </h2>
+        <div className="inline-flex items-baseline justify-between">
+          <h2>New Posts</h2>
+          <Link
+            to="/blog/"
+            className="flex items-center transform transition-transform duration-200 hover:translate-x-1"
+          >
+            All Posts
+            <ChevronRight className="h-5 w-5 relative right-0 " />
+          </Link>
+        </div>
         {data.newBlogposts.nodes.map((post) => {
           return (
             <div className="mb-3">
