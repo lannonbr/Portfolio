@@ -14,15 +14,16 @@ jobs:
         with:
           name: ${{ github.event.client_payload.name }}
           url: ${{ github.event.client_payload.url }}
-      - run: |
+      - name: Commit File
+        run: |
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
 
           git add content/notes/followup.md
           git commit -m "New Follow up Topic"
           git push origin master
-
-          yarn
+      - name: Install Deps
+        run: yarn
       - name: Build Site
         run: yarn build
       - name: Deploy Site
