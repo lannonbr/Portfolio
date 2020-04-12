@@ -12,6 +12,18 @@ jobs:
       - uses: actions/checkout@v2
       - name: Install Deps
         run: yarn
+      - name: Cache .cache
+        id: cache-cache
+        uses: actions/cache@v1
+        with:
+          path: .cache
+          key: ${{ runner.os }}-lannonbr-com-gatsby-cache-${{ hashFiles('.cache/**') }}
+      - name: Cache gatsby public folder
+        id: cache-public
+        uses: actions/cache@v1
+        with:
+          path: public
+          key: ${{ runner.os }}-lannonbr-com-gatsby-public-${{ hashFiles('public/**') }}
       - name: Build Site
         run: yarn build
       - name: Deploy Site
