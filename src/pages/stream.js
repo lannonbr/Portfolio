@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import SEO from '../components/seo'
 import IllustrationImg from '../components/illustrationImg'
 
@@ -30,6 +31,12 @@ const StreamPage = () => {
             <a href="https://livecoders.dev">Live Coders</a> team, an outgoing
             and enthusiastic group of devs that write code, teach about
             technology, and promote the technical community.
+          </p>
+
+          <p>
+            If you want to learn about how I run the show, take a read through
+            my <Link to="/blog/2020-04-12-stream-setup/">Streaming Setup</Link>{' '}
+            post.
           </p>
 
           <h2>Stream Projects</h2>
