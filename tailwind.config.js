@@ -36,6 +36,7 @@ module.exports = {
       'dark-hover',
       'dark-focus',
     ],
+    translate: ['hover', 'responsive', 'focus', 'group-hover'],
   },
   plugins: [require('tailwindcss-dark-mode')()],
 }
