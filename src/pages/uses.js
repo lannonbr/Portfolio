@@ -68,8 +68,8 @@ const UsesPage = () => (
           </li>
           <li>
             A{' '}
-            <a href="https://www.amazon.com/Dell-Optical-Mouse-MS116-275-BBCB/dp/B012DT5U96/">
-              basic Dell mouse
+            <a href="https://www.logitech.com/en-us/product/mx-master-3">
+              Logitech MX Master 3 mouse
             </a>
             .
           </li>
