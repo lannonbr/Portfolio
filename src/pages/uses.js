@@ -95,6 +95,21 @@ const UsesPage = () => (
               Elgato 15-button Stream Deck
             </a>
           </li>
+          <li>
+            <a href="https://www.amazon.com/Novation-Launchpad-Mini-Controller-Ableton/dp/B07WNSHR3V/">
+              Novation Launchpad Mini MK3
+            </a>
+          </li>
+          <li>
+            <a href="https://www.amazon.com/Novation-Launchkey-Mini-25-Mini-Key-Keyboard/dp/B07WJZCPT3/">
+              Novation Launchkey Mini MK3
+            </a>
+          </li>
+          <li>
+            <a href="https://www.amazon.com/Novation-Control-Ableton-Controller-Integration/dp/B01N592MVS/">
+              Novation LaunchControl XL
+            </a>
+          </li>
         </ul>
       </div>
     </section>
