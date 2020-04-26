@@ -15,7 +15,7 @@ For a demo, I am using the [Novation Launchcontrol XL](https://novationmusic.com
 
 To start, clone the repo down and you have to make sure the OBS-websocket is installed. Install all of the dependencies for the python script with `pip install -r requirements.txt`.
 
-Then connect your MIDI controller to your computer and make sure OBS is open. if you run `setup.py`, it recognize any MIDI controllers plugged in and you can choose which one you want to setup. Then it will ask you to either move the fader / knob or press a button that you want to map to an action. If you press a button, it will give you a large variety of actions you can bind to it:
+Then connect your MIDI controller to your computer and make sure OBS is open. If you run `setup.py`, it recognize any MIDI controllers plugged in and you can choose which one you want to setup. Then it will ask you to either move the fader / knob or press a button that you want to map to an action. If you press a button, it will give you a large variety of actions you can bind to it:
 
 ```
 Select Action:
@@ -76,7 +76,7 @@ Select 0-6:
 We'll setup `SetSourcePosition`. It then asks what source you want to control:
 
 ```
-Updating scene list, plase wait
+Updating scene list, please wait
 Scenes updated
 0: Source 'GettingStartedBrowser' in scene 'Getting Started'
 1: Source 'Voicemeeter B1' in scene 'Full screen me'
