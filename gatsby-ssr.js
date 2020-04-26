@@ -3,6 +3,7 @@ import { MDXProvider } from '@mdx-js/react'
 import Code from './src/components/code'
 import { preToCodeBlock } from 'mdx-utils'
 import Warning from './src/components/warning'
+import Video from './src/components/video'
 
 const components = {
   inlineCode: ({ children }) => {
@@ -30,6 +31,7 @@ const components = {
     }
   },
   Warning,
+  Video,
 }
 
 export const wrapPageElement = ({ element }) => {
