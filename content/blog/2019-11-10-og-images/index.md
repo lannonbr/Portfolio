@@ -69,7 +69,7 @@ The blogpost printer component then gets the fields in the `data` param as props
 ```js title=src/printer-components/blogpost.js
 import React from 'react'
 
-export default ({ date, title }) => {
+const BlogPostComponent = ({ date, title }) => {
   return (
     <div
       style={{
@@ -107,6 +107,8 @@ export default ({ date, title }) => {
     </div>
   )
 }
+
+export default BlogPostComponent
 ```
 
 After everything is set, `gatsby-plugin-printer` will then generate some react components with the data that is passed down. During the build process, it will compile down those components with Rollup and Babel into a bundle that is passed into a Puppeteer browser instance. As I set the main container to be 1280x720px, it will then generate an image of that size with Puppeteer.

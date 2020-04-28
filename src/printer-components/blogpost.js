@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default ({ date, title }) => {
+const BlogPostComponent = ({ date, title }) => {
   return (
     <div
       style={{
@@ -38,3 +38,5 @@ export default ({ date, title }) => {
     </div>
   )
 }
+
+export default BlogPostComponent
