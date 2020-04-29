@@ -4,7 +4,7 @@ import Highlight, { defaultProps } from 'prism-react-renderer'
 import theme from 'prism-react-renderer/themes/nightOwl'
 
 const calculateLinesToHighlight = (meta) => {
-  const RE = /highlight={([\d,-]+)}/
+  const RE = /{([\d,-]+)}/
   if (RE.test(meta)) {
     const strlineNumbers = RE.exec(meta)[1]
     const lineNumbers = rangeParser(strlineNumbers)
@@ -14,27 +14,22 @@ const calculateLinesToHighlight = (meta) => {
   }
 }
 
-const getParams = (name = ``) => {
-  const [lang, params = ``] = name.split(` `)
-  return [lang.split(`language-`).pop().split(`{`).shift()].concat(
-    params.split(`&`).reduce((merged, param) => {
-      const [key, value] = param.split(`=`)
-      merged[key] = value
-      return merged
-    }, {})
-  )
-}
-
-const Code = ({ codeString, language, className, metastring, ...props }) => {
-  const [lang, { title = `` }] = getParams(className + ' ' + metastring)
-
-  const shouldHighlightLine = calculateLinesToHighlight(metastring)
+const Code = ({
+  codeString,
+  language,
+  className,
+  metastring,
+  highlight,
+  title,
+  ...props
+}) => {
+  const shouldHighlightLine = calculateLinesToHighlight(highlight)
 
   return (
     <Highlight
       {...defaultProps}
       code={codeString}
-      language={lang}
+      language={language}
       theme={theme}
     >
       {({ className, style, tokens, getLineProps, getTokenProps }) => (
