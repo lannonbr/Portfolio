@@ -1,6 +1,3 @@
-// Load Environment variables locally
-require('dotenv').config()
-
 module.exports = {
   siteMetadata: {
     title: `Benjamin Lannon`,

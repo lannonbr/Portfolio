@@ -49,7 +49,7 @@ exports.createPages = async ({ graphql, actions }) => {
     })
   })
 
-  data.notes.nodes.forEach(node => {
+  data.notes.nodes.forEach((node) => {
     createPage({
       component: noteTemplate,
       path: `/notes/${node.relativePath.slice(0, -3)}/`,
@@ -106,10 +106,7 @@ exports.onCreateNode = async ({ node, actions, getNode }) => {
       children: [],
       internal: {
         type: `CustomMdxStringNode`,
-        contentDigest: crypto
-          .createHash('md5')
-          .update(node.desc)
-          .digest('hex'),
+        contentDigest: crypto.createHash('md5').update(node.desc).digest('hex'),
         mediaType: `text/markdown`,
         content: node.desc,
         description: 'Custom MDX Node',
