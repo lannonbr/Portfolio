@@ -1,9 +1,10 @@
 # Things to Follow up on:
 
-- [Ableton Live](https://www.ableton.com/en/live/)
+- [MIDItoOBS](https://lannonbr.com/blog/2020-04-26-obs-midi-control/)
 
 ## Topics already discussed
 
+- [Ableton Live](https://www.ableton.com/en/live/)
 - [Gatsby Recipes](https://github.com/gatsbyjs/gatsby/pull/22709)
 - [Voicemeeter](https://www.vb-audio.com/Voicemeeter/potato.htm)
 - [Twilio / GitHub Actions flow for Follow Up Friday entries](https://lannonbr.com/blog/2020-03-10-followup-friday-automation/)
