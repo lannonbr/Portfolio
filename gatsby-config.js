@@ -1,6 +1,3 @@
-// Load Environment variables locally
-require('dotenv').config()
-
 module.exports = {
   siteMetadata: {
     title: `Benjamin Lannon`,
@@ -19,7 +16,6 @@ module.exports = {
     // Other Plugins
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-printer`,
-    `gatsby-plugin-remove-serviceworker`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {
