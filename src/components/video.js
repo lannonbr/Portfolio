@@ -9,6 +9,7 @@ const Video = ({ videoSrc, videoTitle }) => {
         position: 'relative',
         paddingBottom: '56.25%',
         paddingTop: 25,
+        marginBottom: '1.45rem',
         height: 0,
       }}
     >
