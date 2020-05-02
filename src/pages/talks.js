@@ -75,16 +75,17 @@ const TalksPage = () => {
           </p>
           <h2>List of Talks</h2>
           {talks.map((talk) => {
+            let formattedDate = format(
+              parse(talk.date, 'yyyy-MM-dd', new Date()),
+              'LLL d, yyyy'
+            )
+
             return (
               <article className="border border-solid border-gray-400 rounded p-4 flex flex-col mb-5">
                 <header className="p-0 md:flex justify-between items-center">
                   <h3>{talk.name}</h3>
                   <p>
-                    {format(
-                      parse(talk.date, 'yyyy-MM-dd', new Date()),
-                      'LLL d, yyyy'
-                    )}{' '}
-                    | {talk.event} | {talk.location}
+                    {formattedDate} | {talk.event} | {talk.location}
                   </p>
                 </header>
                 <ul className="m-0 pl-0">
