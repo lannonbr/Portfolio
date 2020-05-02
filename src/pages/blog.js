@@ -32,6 +32,11 @@ const CuratedButton = ({ logo, name, handleClick, isSelected }) => {
 
 const BlogIndexPage = ({ data }) => {
   const [category, setCategory] = useState('')
+  const [titleFilter, setTitleFilter] = useState('')
+
+  const handleTitleFilterChange = (evt) => {
+    setTitleFilter(evt.target.value)
+  }
 
   const categories = [
     { name: 'GitHub Actions', cat: 'github-actions' },
@@ -46,7 +51,19 @@ const BlogIndexPage = ({ data }) => {
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
       />
       <h1>Blog</h1>
-      <div className="flex flex-col md:flex-row my-4 md:my-8">
+      <div className="flex flex-col md:items-center md:flex-row">
+        <strong className="mr-3">Search:</strong>
+        <input
+          type="text"
+          name="titleFilter"
+          id="titleFilter"
+          onChange={handleTitleFilterChange}
+          className="border border-black p-2 w-full rounded"
+          placeholder="Search for a post"
+        />
+      </div>
+      <div className="flex flex-col md:flex-row md:items-center my-4 md:my-8">
+        <strong className="mr-3">Categories:</strong>
         {categories.map(({ cat, name }) => (
           <CuratedButton
             name={name}
@@ -72,6 +89,13 @@ const BlogIndexPage = ({ data }) => {
           .filter((post) => {
             if (category === '') return true
             else return post.frontmatter.logo === category
+          })
+          .filter((post) => {
+            if (titleFilter === '') return true
+            else
+              return post.frontmatter.title
+                .toLowerCase()
+                .includes(titleFilter.toLowerCase())
           })
           .map((node) => {
             const logo =
