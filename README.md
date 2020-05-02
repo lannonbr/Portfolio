@@ -1,6 +1,6 @@
-# Portfolio-Gatsby
+# Portfolio
 
-![](https://github.com/lannonbr/Portfolio-Gatsby/workflows/Daily%20Build/badge.svg)
+![](https://github.com/lannonbr/Portfolio/workflows/Daily%20Build/badge.svg)
 
 This is the current iteration of my personal portfolio site as of early 2019.
 

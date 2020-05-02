@@ -1,5 +1,5 @@
 {
-  "name": "gatsby-portolio",
+  "name": "portfolio",
   "private": true,
   "description": "My personal portfolio website as of 2019",
   "version": "0.1.0",
@@ -48,9 +48,9 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/lannonbr/portfolio-gatsby"
+    "url": "https://github.com/lannonbr/portfolio"
   },
   "bugs": {
-    "url": "https://github.com/lannonbr/portfolio-gatsby/issues"
+    "url": "https://github.com/lannonbr/portfolio/issues"
   }
 }
