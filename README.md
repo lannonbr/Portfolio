@@ -11,7 +11,7 @@ The site is developed in Gatsby.
 - MDX
 - TailwindCSS
 - React-feather
-- MomentJS
+- Date-fns
 
 ## Other Tidbits
 

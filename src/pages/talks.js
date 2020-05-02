@@ -3,7 +3,7 @@ import talk from '../images/talk.svg'
 import SEO from '../components/seo'
 import IllustrationImg from '../components/illustrationImg'
 import { Youtube, File } from 'react-feather'
-import moment from 'moment'
+import { parse, format } from 'date-fns'
 
 const talks = [
   {
@@ -80,8 +80,11 @@ const TalksPage = () => {
                 <header className="p-0 md:flex justify-between items-center">
                   <h3>{talk.name}</h3>
                   <p>
-                    {moment(talk.date).format('ll')} | {talk.event} |{' '}
-                    {talk.location}
+                    {format(
+                      parse(talk.date, 'yyyy-MM-dd', new Date()),
+                      'LLL d, yyyy'
+                    )}{' '}
+                    | {talk.event} | {talk.location}
                   </p>
                 </header>
                 <ul className="m-0 pl-0">

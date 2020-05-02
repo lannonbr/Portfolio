@@ -1,7 +1,7 @@
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
 const { createPrinterNode } = require('gatsby-plugin-printer')
-const moment = require('moment')
+const { parse, format } = require('date-fns')
 const crypto = require('crypto')
 
 exports.createPages = async ({ graphql, actions }) => {
@@ -86,7 +86,10 @@ exports.onCreateNode = async ({ node, actions, getNode }) => {
       outputDir: 'og-images/blog',
       data: {
         title: node.frontmatter.title,
-        date: moment(node.frontmatter.date).format('MMM Do, YYYY'),
+        date: format(
+          parse(node.frontmatter.date, 'yyyy-MM-dd', new Date()),
+          'LLL do, yyyy'
+        ),
       },
       component: require.resolve('./src/printer-components/blogpost.js'),
     })
