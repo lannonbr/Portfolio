@@ -7,15 +7,15 @@ keywords:
   - MIDI
 ---
 
-MIDI controllers are well known in the sound design production industry to be able control software like Ableton Live or interact with sythesizers. With the livestreaming industry booming, it's possible to use this equipment as well with tools like OBS Studio. lebaston100 on GitHub created a python script that enables interactions between a MIDI controller and OBS called [MIDItoOBS](https://github.com/lebaston100/MIDItoOBS). Using the [OBS-websocket](https://github.com/Palakis/obs-websocket) plugin, MIDItoOBS can send button presses, faders, or knobs signals to OBS Studio to control scenes and sources.
+MIDI controllers are well known in the sound design production industry to be able to control software like Ableton Live or interact with sythesizers. With the livestreaming industry booming, it's possible to use this equipment as well with tools like OBS Studio. lebaston100 on GitHub created a python script that enables interactions between a MIDI controller and OBS called [MIDItoOBS](https://github.com/lebaston100/MIDItoOBS). Using the [OBS-websocket](https://github.com/Palakis/obs-websocket) plugin, MIDItoOBS can send button presses, faders, or knobs signals to OBS Studio to control scenes and sources.
 
-For a demo, I am using the [Novation Launchcontrol XL](https://novationmusic.com/en/launch/launch-control-xl) as an example controller. I'm hooking up one of the faders up to control the positioning of my webcam in one of my scenes.
+For a demo, I am using the [Novation Launchcontrol XL](https://novationmusic.com/en/launch/launch-control-xl) as an example controller. I'm hooking up one of the faders to control the positioning of my webcam in one of my scenes.
 
 ![LaunchControl XL](./launchcontrol.png)
 
 To start, clone the repo down and you have to make sure the OBS-websocket is installed. Install all of the dependencies for the python script with `pip install -r requirements.txt`.
 
-Then connect your MIDI controller to your computer and make sure OBS is open. If you run `setup.py`, it recognize any MIDI controllers plugged in and you can choose which one you want to setup. Then it will ask you to either move the fader / knob or press a button that you want to map to an action. If you press a button, it will give you a large variety of actions you can bind to it:
+Then connect your MIDI controller to your computer and make sure OBS is open. If you run `setup.py`, it will recognize any MIDI controllers plugged in and you can choose which one you want to setup. Then it will ask you to either move the fader / knob or press a button that you want to map to an action. If you press a button, it will give you a large variety of actions you can bind to it:
 
 ```
 Select Action:
@@ -112,8 +112,8 @@ Select higher output value: 22
 Saved control_change with control 84 for action SetSourcePosition on device 1
 ```
 
-Once the setup is done, you can exit out of it with `CTRL+C`. If you run `main.py`, it will now send the mapped bindings you created in `setup.py` to OBS. Here's a demo of the final result where the rightmost fader controls my camrera's Y positioning.
+Once the setup is done, you can exit out of it with `CTRL+C`. If you run `main.py`, it will now send the mapped bindings you created in `setup.py` to OBS. Here's a demo of the final result where the rightmost fader controls my camera's Y positioning.
 
 <Video videoSrc="https://www.youtube.com/embed/kpGyjv73-vU" videoTitle="MIDItoOBS Demo" />
 
-This now can be extrapolated to any of the other various functionalities of MIDItoOBS and allow for further control of OBS even when OBS is not the focused app on your computer. As well this is can be an alternative to a Stream Deck so if you want to use the buttons on a MIDI controller to change scenes or toggle sources, you can control it with any MIDI device.
+This now can be extrapolated to any of the other various functionalities of MIDItoOBS and allow for further control of OBS even when OBS is not the focused app on your computer. As well this can be an alternative to a Stream Deck so if you want to use the buttons on a MIDI controller to change scenes or toggle sources, you can control it with any MIDI device.
