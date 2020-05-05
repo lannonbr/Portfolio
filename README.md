@@ -13,4 +13,4 @@ The site is developed in Gatsby.
 
 ## Other Tidbits
 
-The site is deployed on Netlify. Either any time a commit is pushed to the `master` branch or at 12am every day, the site will be rebuilt and redeployed.
+The site is deployed on Netlify. Any time a commit is pushed to the `master` branch, the site will be rebuilt and redeployed.
