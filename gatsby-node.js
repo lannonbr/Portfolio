@@ -7,7 +7,7 @@ const crypto = require('crypto')
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
 
-  // Create blogposts and notes pages
+  // Create blogposts
   const blogPostTemplate = path.resolve(`src/templates/blogpost-template.js`)
 
   const { data, errors } = await graphql(`
