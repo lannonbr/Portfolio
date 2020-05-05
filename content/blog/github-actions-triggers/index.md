@@ -1,4 +1,11 @@
-# Triggers
+---
+title: 'GitHub Actions Triggers'
+date: '2020-05-04'
+description: 'A listing of the events that can kick off a workflow in GitHub Actions'
+keywords:
+  - GitHub Actions
+logo: github-actions
+---
 
 ## PRs
 

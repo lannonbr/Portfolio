@@ -1,4 +1,11 @@
-# Steps in Workflows
+---
+title: 'GitHub Actions Workflow Step Types'
+date: '2020-05-04'
+description: 'Various things that can be run as building blocks of GitHub Actions'
+keywords:
+  - GitHub Actions
+logo: github-actions
+---
 
 ## Bare commands
 

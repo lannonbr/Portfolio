@@ -9,7 +9,6 @@ exports.createPages = async ({ graphql, actions }) => {
 
   // Create blogposts and notes pages
   const blogPostTemplate = path.resolve(`src/templates/blogpost-template.js`)
-  const noteTemplate = path.resolve(`src/templates/note-template.js`)
 
   const { data, errors } = await graphql(`
     query {
@@ -25,13 +24,6 @@ exports.createPages = async ({ graphql, actions }) => {
           }
         }
       }
-      notes: allFile(
-        filter: { sourceInstanceName: { eq: "notes" }, extension: { eq: "md" } }
-      ) {
-        nodes {
-          relativePath
-        }
-      }
     }
   `)
 
@@ -45,16 +37,6 @@ exports.createPages = async ({ graphql, actions }) => {
       path: node.fields.slug,
       context: {
         slug: node.fields.slug,
-      },
-    })
-  })
-
-  data.notes.nodes.forEach((node) => {
-    createPage({
-      component: noteTemplate,
-      path: `/notes/${node.relativePath.slice(0, -3)}/`,
-      context: {
-        pagePath: node.relativePath,
       },
     })
   })

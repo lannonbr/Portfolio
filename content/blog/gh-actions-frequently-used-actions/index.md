@@ -1,4 +1,11 @@
-# Frequently Used Actions
+---
+title: 'Frequently Used GitHub Actions'
+date: '2020-05-04'
+description: 'Some frequently used GitHub Actions that may appear in many workflows'
+keywords:
+  - GitHub Actions
+logo: github-actions
+---
 
 ## actions/checkout
 

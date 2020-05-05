@@ -17,6 +17,42 @@
   force = true
 
 [[redirects]]
+  from = "https://lannonbr.com/notes/github-actions/artifacts/"
+  to = "https://lannonbr.com/blog/github-actions-artifacts/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://lannonbr.com/notes/github-actions/workflow-step-types/"
+  to = "https://lannonbr.com/blog/github-actions-workflow-step-types/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://lannonbr.com/notes/github-actions/triggers/"
+  to = "https://lannonbr.com/blog/github-actions-triggers/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://lannonbr.com/notes/github-actions/github-actions-hierarchy/"
+  to = "https://lannonbr.com/blog/github-actions-hierarchy/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://lannonbr.com/notes/github-actions/frequently-used-actions/"
+  to = "https://lannonbr.com/blog/gh-actions-frequently-used-actions/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://lannonbr.com/notes/"
+  to = "https://lannonbr.com/blog/"
+  status = 301
+  force = true
+
+[[redirects]]
   from = "https://lannonbr.com/notes/followup/"
   to = "https://lannonbr.com/blog/followup/"
   status = 301

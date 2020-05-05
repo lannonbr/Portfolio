@@ -1,10 +1,17 @@
-# GitHub Actions Hierarchy
+---
+title: 'GitHub Actions Hierarchy'
+date: '2020-05-04'
+description: 'A top down hierarchy of GitHub Actions components'
+keywords:
+  - GitHub Actions
+logo: github-actions
+---
 
 Going from complete setups down to the atomic level of a GitHub Actions workflow consists of 3 parts
 
-1. Workflows
-2. Jobs
-3. Steps
+- Workflows
+- Jobs
+- Steps
 
 ## Workflows
 

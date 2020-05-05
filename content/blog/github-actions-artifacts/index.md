@@ -1,4 +1,11 @@
-# GitHub Actions Artifacts
+---
+title: 'GitHub Actions Artifacts'
+date: '2020-05-04'
+description: 'A method to create artifacts from GitHub Actions runs'
+keywords:
+  - GitHub Actions
+logo: github-actions
+---
 
 since Jobs are in completely isolated environments from each other, you can use Artifacts to move files between Jobs.
 
@@ -27,7 +34,7 @@ This echo's some text into a file and then uses `actions/upload-artifact` to zip
 
 As well, now we can download it out of Actions onto our own machine if we wish:
 
-![artifact download in top right corner of GitHub Actions log interface](./img/artifacts.png)
+![artifact download in top right corner of GitHub Actions log interface](./artifacts.png)
 
 ## Download Artifacts
 
