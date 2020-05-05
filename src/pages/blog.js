@@ -50,7 +50,7 @@ const BlogIndexPage = ({ data }) => {
         title="Blog"
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
       />
-      <h1>Blog</h1>
+      <h1>Posts</h1>
       <div className="flex flex-col md:items-center md:flex-row">
         <strong className="mr-3">Search:</strong>
         <input

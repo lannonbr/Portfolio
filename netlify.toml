@@ -1,0 +1,23 @@
+[[redirects]]
+  from = "https://lannonbr.com/notes/vscode/extensions/"
+  to = "https://lannonbr.com/blog/vscode-extensions/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://lannonbr.com/notes/chefbrent-highlights/"
+  to = "https://lannonbr.com/blog/chefbrent-highlights/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://lannonbr.com/notes/github-actions/types-of-actions/"
+  to = "https://lannonbr.com/blog/gh-actions-types-of-actions/"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://lannonbr.com/notes/followup/"
+  to = "https://lannonbr.com/blog/followup/"
+  status = 301
+  force = true

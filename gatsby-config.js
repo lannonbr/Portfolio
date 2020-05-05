@@ -6,7 +6,7 @@ module.exports = {
     navigationLinks: [
       { url: '/work/', name: 'Work' },
       { url: '/projects/', name: 'Projects' },
-      { url: '/blog/', name: 'Blog' },
+      { url: '/blog/', name: 'Posts' },
       { url: '/notes/', name: 'Notes' },
       { url: '/stream/', name: 'Stream' },
       { url: '/talks/', name: 'Talks' },

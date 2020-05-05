@@ -1,4 +1,12 @@
-# Things to Follow up on:
+---
+title: 'Things to Follow up on'
+date: '2020-05-04'
+description: 'A collection of topics to follow up on (or that have been already followed up)'
+keywords:
+  - Twitch
+---
+
+This is a listing of things to follow up on.
 
 - [MIDItoOBS](https://lannonbr.com/blog/2020-04-26-obs-midi-control/)
 

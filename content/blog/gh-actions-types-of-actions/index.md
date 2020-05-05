@@ -1,4 +1,11 @@
-# Types of Actions
+---
+title: 'Types of GitHub Actions'
+date: '2020-05-04'
+description: 'Notes on the types of actions that are either written in JS or Docker'
+keywords:
+  - GitHub Actions
+logo: github-actions
+---
 
 ## JS Actions
 

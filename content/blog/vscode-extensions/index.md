@@ -1,4 +1,10 @@
-# VS Code Extensions
+---
+title: 'VS Code Extensions'
+date: '2020-05-04'
+description: 'A Collection of VS Code extensions I use and reccomend'
+keywords:
+  - VS Code
+---
 
 This is a list of extensions I use in [VS Code](https://code.visualstudio.com/).
 
