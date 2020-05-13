@@ -1,6 +1,5 @@
 import React from 'react'
 import { MDXProvider } from '@mdx-js/react'
-import Code from './src/components/code'
 import { preToCodeBlock } from 'mdx-utils'
 import Warning from './src/components/warning'
 import Video from './src/components/video'
@@ -25,7 +24,7 @@ const components = {
     const props = preToCodeBlock(preProps)
 
     if (props) {
-      return <Code {...props} />
+      return <div dangerouslySetInnerHTML={{ __html: props.codeString }} />
     } else {
       return <pre {...preProps} />
     }

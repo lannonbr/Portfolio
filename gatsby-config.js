@@ -58,6 +58,7 @@ module.exports = {
       resolve: `gatsby-plugin-mdx`,
       options: {
         extensions: [`.md`, `.mdx`],
+        rehypePlugins: [require('./utils/prism-rehype-plugin')],
         gatsbyRemarkPlugins: [
           {
             resolve: `gatsby-remark-images`,

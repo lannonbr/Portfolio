@@ -28,7 +28,8 @@
     "react": "^16.13.1",
     "react-dom": "^16.13.1",
     "react-feather": "^2.0.8",
-    "react-helmet": "^6.0.0"
+    "react-helmet": "^6.0.0",
+    "unist-util-visit": "^2.0.2"
   },
   "keywords": [
     "gatsby"
