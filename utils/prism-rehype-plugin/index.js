@@ -92,9 +92,12 @@ const Code = ({
               }
               return createElement(
                 'div',
-                { ...lineProps },
+                { ...lineProps, key: i },
                 line.map((token, key) =>
-                  createElement('span', { ...getTokenProps({ token, key }) })
+                  createElement('span', {
+                    ...getTokenProps({ token, key }),
+                    key,
+                  })
                 )
               )
             })
