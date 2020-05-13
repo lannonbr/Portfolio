@@ -58,8 +58,11 @@ const BlogIndexPage = ({ data }) => {
           name="titleFilter"
           id="titleFilter"
           onChange={handleTitleFilterChange}
-          className="border border-black p-2 w-full rounded"
+          className="border border-black p-2 w-full rounded dark:bg-cyan-transparent"
           placeholder="Search for a post"
+          style={{
+            color: 'var(--bodyText)',
+          }}
         />
       </div>
       <div className="flex flex-col md:flex-row md:items-center my-4 md:my-8">

@@ -143,5 +143,13 @@ main a:hover {
   border-left: 0.5em solid #81cfe0;
 }
 
+input#titleFilter::placeholder {
+  color: #404040;
+}
+
+.mode-dark input#titleFilter::placeholder {
+  color: #81cfe0;
+}
+
 @tailwind components;
 @tailwind utilities;
