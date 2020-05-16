@@ -1,3 +1,5 @@
+const path = require('path')
+
 module.exports = {
   siteMetadata: {
     title: `Benjamin Lannon`,
@@ -83,6 +85,10 @@ module.exports = {
       options: {
         tailwind: true,
         whitelist: ['mode-dark'],
+        content: [
+          path.join(__dirname, 'utils', '**', '*.js'),
+          path.join(__dirname, 'src', '**', '*.js'),
+        ],
       },
     },
   ],
