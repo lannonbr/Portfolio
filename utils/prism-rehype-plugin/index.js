@@ -4,6 +4,9 @@ const rangeParser = require('parse-numeric-range')
 const Highlight = require('prism-react-renderer')
 const theme = require('prism-react-renderer/themes/nightOwl')
 const visit = require('unist-util-visit')
+const Prism = require('prismjs')
+const loadLanguages = require('prismjs/components/index')
+const prismComponents = require('prismjs/components')
 
 module.exports = (options) => (ast) => {
   visit(ast, 'element', (node) => {
@@ -28,6 +31,18 @@ module.exports = (options) => (ast) => {
       node.children[0].value = result
     }
   })
+}
+
+try {
+  // meta doesn't exist in the prismjs package. TOML files are rendered differently with the syntax highlighting so I removed it.
+  loadLanguages(
+    Object.keys(prismComponents.languages).filter((v) => {
+      return v !== 'meta' && v !== 'toml'
+    })
+  )
+} catch (e) {
+  // this is here in case prismjs ever removes a language, so we can easily debug
+  console.log(e)
 }
 
 const calculateLinesToHighlight = (meta) => {
@@ -59,6 +74,7 @@ const Code = ({
       code: codeString,
       language: language,
       theme: theme,
+      Prism: Prism,
     },
     ({ className, style, tokens, getLineProps, getTokenProps }) => {
       return createElement(
