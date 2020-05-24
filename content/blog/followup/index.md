@@ -8,10 +8,11 @@ keywords:
 
 This is a listing of things to follow up on.
 
-- [MIDItoOBS](https://lannonbr.com/blog/2020-04-26-obs-midi-control/)
+- [Nu Shell](https://github.com/nushell/nushell)
 
 ## Topics already discussed
 
+- [MIDItoOBS](https://lannonbr.com/blog/2020-04-26-obs-midi-control/)
 - [Ableton Live](https://www.ableton.com/en/live/)
 - [Gatsby Recipes](https://github.com/gatsbyjs/gatsby/pull/22709)
 - [Voicemeeter](https://www.vb-audio.com/Voicemeeter/potato.htm)
