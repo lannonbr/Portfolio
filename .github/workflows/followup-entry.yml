@@ -19,7 +19,7 @@ jobs:
           git config user.name "GitHub Actions Bot"
           git config user.email "<>"
 
-          git add content/notes/followup.md
+          git add content/blog/followup/index.md
           git commit -m "New Follow up Topic"
           git push origin master
       - name: Install Deps
