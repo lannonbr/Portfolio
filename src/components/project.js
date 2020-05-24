@@ -8,10 +8,10 @@ function Project({ project, idx }) {
   let date = project.created_date
 
   return (
-    <article idx={idx} className="flex flex-col md:flex-row p-3 mb-6">
+    <article idx={idx} className="flex flex-col md:flex-row p-3 pl-0 mb-6">
       <a className="flex-1" href={project.website_link}>
         <Img
-          className="mb-5 md:mb-0 md:mx-5 rounded shadow-lg"
+          className="mb-5 md:mb-0 md:mr-5 rounded shadow-lg"
           fluid={img.childImageSharp.fluid}
         />
       </a>
