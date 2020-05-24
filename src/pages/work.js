@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import SEO from '../components/seo'
 import { Link } from 'gatsby'
 import IllustrationImg from '../components/illustrationImg'
@@ -6,7 +6,7 @@ import conversation from '../images/conversation.svg'
 import TinkerProjects from '../components/TinkerProjects'
 
 const WorkPage = () => (
-  <>
+  <Fragment>
     <SEO
       title="Work"
       keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
@@ -64,7 +64,7 @@ const WorkPage = () => (
       These are a few technologies I am tinkering with by building side projects
     </p>
     <TinkerProjects />
-  </>
+  </Fragment>
 )
 
 export default WorkPage

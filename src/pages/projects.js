@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 
 import SEO from '../components/seo'
 import Project from '../components/project'
@@ -8,7 +8,7 @@ const ProjectsPage = () => {
   const projects = useFeaturedProjects()
 
   return (
-    <>
+    <Fragment>
       <SEO
         title="Projects"
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
@@ -18,7 +18,7 @@ const ProjectsPage = () => {
       {projects.nodes.map((project, idx) => (
         <Project project={project} idx={idx} key={idx} />
       ))}
-    </>
+    </Fragment>
   )
 }
 

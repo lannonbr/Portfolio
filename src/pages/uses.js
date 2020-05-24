@@ -1,8 +1,8 @@
-import React from 'react'
+import React, { Fragment } from 'react'
 import SEO from '../components/seo'
 
 const UsesPage = () => (
-  <>
+  <Fragment>
     <SEO
       title="Uses"
       keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
@@ -113,7 +113,7 @@ const UsesPage = () => (
         </ul>
       </div>
     </section>
-  </>
+  </Fragment>
 )
 
 export default UsesPage

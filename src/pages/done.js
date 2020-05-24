@@ -32,39 +32,35 @@ const DoneList = () => {
   })
 
   return (
-    <>
+    <div>
       <SEO
         title="Done List"
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
       />
-      <div>
-        <h1>Done List</h1>
-        <p>This is a listing of things I've accomplished.</p>
+      <h1>Done List</h1>
+      <p>This is a listing of things I've accomplished.</p>
 
-        {Object.entries(months).map(([month, events]) => {
-          return (
-            <div key={month} className="mb-8">
-              <h2 className="text-2xl mt-3 mb-1 text-rebecca-purple">
-                {month}
-              </h2>
-              <hr className="border-purple-800" />
-              {events.map((entry) => {
-                let descBody = entry.childCustomMdxStringNode.childMdx.body
+      {Object.entries(months).map(([month, events]) => {
+        return (
+          <div key={month} className="mb-8">
+            <h2 className="text-2xl mt-3 mb-1 text-rebecca-purple">{month}</h2>
+            <hr className="border-purple-800" />
+            {events.map((entry) => {
+              let descBody = entry.childCustomMdxStringNode.childMdx.body
 
-                return (
-                  <div key={entry.id} className="mb-5">
-                    <MDXRenderer>{descBody}</MDXRenderer>
-                    <time className="-mt-4 block text-gray-600 italic">
-                      {entry.date}
-                    </time>
-                  </div>
-                )
-              })}
-            </div>
-          )
-        })}
-      </div>
-    </>
+              return (
+                <div key={entry.id} className="mb-5">
+                  <MDXRenderer>{descBody}</MDXRenderer>
+                  <time className="-mt-4 block text-gray-600 italic">
+                    {entry.date}
+                  </time>
+                </div>
+              )
+            })}
+          </div>
+        )
+      })}
+    </div>
   )
 }
 

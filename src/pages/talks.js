@@ -61,60 +61,58 @@ const talks = [
 
 const TalksPage = () => {
   return (
-    <>
+    <section className="md:grid md:grid-cols-2 md:gap-8 mb-4">
       <SEO
         title="Talks"
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
       />
-      <section className="md:grid md:grid-cols-2 md:gap-8 mb-4">
-        <div>
-          <h1>Talks</h1>
-          <p>
-            Through 2019, I've been starting to give presentations and workshops
-            about technologies and tools that I use or interest me.
-          </p>
-          <h2>List of Talks</h2>
-          {talks.map((talk) => {
-            let formattedDate = format(
-              parse(talk.date, 'yyyy-MM-dd', new Date()),
-              'LLL d, yyyy'
-            )
+      <div>
+        <h1>Talks</h1>
+        <p>
+          Through 2019, I've been starting to give presentations and workshops
+          about technologies and tools that I use or interest me.
+        </p>
+        <h2>List of Talks</h2>
+        {talks.map((talk) => {
+          let formattedDate = format(
+            parse(talk.date, 'yyyy-MM-dd', new Date()),
+            'LLL d, yyyy'
+          )
 
-            return (
-              <article className="border border-solid border-gray-400 rounded p-4 flex flex-col mb-5">
-                <header className="p-0 md:flex justify-between items-center">
-                  <h3>{talk.name}</h3>
-                  <p>
-                    {formattedDate} | {talk.event} | {talk.location}
-                  </p>
-                </header>
-                <ul className="m-0 pl-0">
-                  {talk.slides && (
-                    <li className="flex items-center">
-                      <File />
-                      <a href={talk.slides} className="ml-2">
-                        Slides
-                      </a>
-                    </li>
-                  )}
-                  {talk.recording && (
-                    <li className="flex items-center">
-                      <Youtube />
-                      <a href={talk.recording} className="ml-2">
-                        Recording
-                      </a>
-                    </li>
-                  )}
-                </ul>
-              </article>
-            )
-          })}
-        </div>
-        <div className="hidden md:block">
-          <IllustrationImg src={talk} alt="speaking illustration" />
-        </div>
-      </section>
-    </>
+          return (
+            <article className="border border-solid border-gray-400 rounded p-4 flex flex-col mb-5">
+              <header className="p-0 md:flex justify-between items-center">
+                <h3>{talk.name}</h3>
+                <p>
+                  {formattedDate} | {talk.event} | {talk.location}
+                </p>
+              </header>
+              <ul className="m-0 pl-0">
+                {talk.slides && (
+                  <li className="flex items-center">
+                    <File />
+                    <a href={talk.slides} className="ml-2">
+                      Slides
+                    </a>
+                  </li>
+                )}
+                {talk.recording && (
+                  <li className="flex items-center">
+                    <Youtube />
+                    <a href={talk.recording} className="ml-2">
+                      Recording
+                    </a>
+                  </li>
+                )}
+              </ul>
+            </article>
+          )
+        })}
+      </div>
+      <div className="hidden md:block">
+        <IllustrationImg src={talk} alt="speaking illustration" />
+      </div>
+    </section>
   )
 }
 
