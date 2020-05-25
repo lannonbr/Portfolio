@@ -1,6 +1,6 @@
 import React from 'react'
 
-const BlogPostComponent = ({ date, title }) => {
+const BlogPostComponent = ({ title }) => {
   return (
     <div
       style={{
@@ -25,12 +25,11 @@ const BlogPostComponent = ({ date, title }) => {
         <h1
           style={{
             fontSize: '1.2em',
-            marginBottom: 30,
+            flexGrow: 1,
           }}
         >
           {title}
         </h1>
-        <h2 style={{ fontSize: '1em', flexGrow: 1 }}>{date}</h2>
         <h2 style={{ fontSize: '1em', textAlign: 'right', marginBottom: 0 }}>
           Lannonbr.com
         </h2>
