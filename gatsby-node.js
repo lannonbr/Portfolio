@@ -3,6 +3,7 @@ const { createFilePath } = require('gatsby-source-filesystem')
 const { createPrinterNode } = require('gatsby-plugin-printer')
 const { parse, format } = require('date-fns')
 const crypto = require('crypto')
+const fs = require('fs')
 
 exports.createPages = async ({ graphql, actions }) => {
   const { createPage } = actions
@@ -18,6 +19,9 @@ exports.createPages = async ({ graphql, actions }) => {
       ) {
         edges {
           node {
+            frontmatter {
+              title
+            }
             fields {
               slug
             }
@@ -40,6 +44,23 @@ exports.createPages = async ({ graphql, actions }) => {
       },
     })
   })
+
+  if (!fs.existsSync(path.join(__dirname, 'public'))) {
+    fs.mkdirSync(path.join(__dirname, 'public'))
+  }
+
+  fs.writeFileSync(
+    path.join(__dirname, 'public', 'posts.json'),
+    JSON.stringify({
+      items: data.blogposts.edges.map(({ node }) => {
+        return {
+          title: node.frontmatter.title,
+          subtitle: `https://lannonbr.com${node.fields.slug}`,
+          arg: `https://lannonbr.com${node.fields.slug}`,
+        }
+      }),
+    })
+  )
 }
 
 exports.onCreateNode = async ({ node, actions, getNode }) => {
