@@ -1,6 +1,5 @@
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
-const { createPrinterNode } = require('gatsby-plugin-printer')
 const crypto = require('crypto')
 const fs = require('fs')
 
