@@ -3,10 +3,7 @@ on:
   push:
     branches: [master]
 jobs:
-  build:
-    env:
-      LIFX_TOKEN: ${{ secrets.LIFX_TOKEN }}
-      LIFX_BULB_ID: ${{ secrets.LIFX_BULB_ID }}
+  gatsby-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
@@ -14,6 +11,43 @@ jobs:
         run: yarn
       - name: Build Site
         run: yarn build
+      - name: Upload public dir as artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: public-dir
+          path: public/
+  gen-og-images:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Build files
+        run: |
+          cd .github/actions/gen-og-images-action
+          yarn
+          yarn build
+          node index.js
+      - name: Upload files
+        uses: actions/upload-artifact@v2
+        with:
+          name: og-images
+          path: .github/actions/gen-og-images-action/dist/posts/
+  deploy-build:
+    needs: [gen-og-images, gatsby-build]
+    env:
+      LIFX_TOKEN: ${{ secrets.LIFX_TOKEN }}
+      LIFX_BULB_ID: ${{ secrets.LIFX_BULB_ID }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: get public dir
+        uses: actions/download-artifact@v2
+        with:
+          name: public-dir
+          path: public
+      - name: get og-images dir
+        uses: actions/download-artifact@v2
+        with:
+          name: og-images
+          path: public/og-images/blog/
       - name: Deploy Site
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
