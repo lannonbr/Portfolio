@@ -22,7 +22,7 @@ function SEO({
         if (ogImage) {
           imageIncluded.push({
             name: `twitter:image`,
-            content: `https://lannonbr.com/og-images/blog/${ogImage}.png`,
+            content: `https://lannonbr.com/og-images/blog/${ogImage}.jpg`,
           })
         }
 
