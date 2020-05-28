@@ -16,7 +16,6 @@ module.exports = {
   plugins: [
     // Other Plugins
     `gatsby-plugin-react-helmet`,
-    `gatsby-plugin-printer`,
     {
       resolve: `gatsby-source-filesystem`,
       options: {

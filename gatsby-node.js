@@ -78,19 +78,9 @@ exports.onCreateNode = async ({ node, actions, getNode }) => {
 
     createNodeField({ node, name: 'slug', value: `/blog${slug}` })
 
-    // Create og-images with gatsby-plugin-printer
+    // Create og-images filepath
     let filePathSplit = node.fileAbsolutePath.split('/')
     let fileName = filePathSplit[filePathSplit.length - 2]
-
-    createPrinterNode({
-      id: node.id,
-      fileName,
-      outputDir: 'og-images/blog',
-      data: {
-        title: node.frontmatter.title,
-      },
-      component: require.resolve('./src/printer-components/blogpost.js'),
-    })
 
     actions.createNodeField({
       node,
