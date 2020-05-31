@@ -38,6 +38,7 @@ jobs:
       LIFX_BULB_ID: ${{ secrets.LIFX_BULB_ID }}
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v2
       - name: get public dir
         uses: actions/download-artifact@v2
         with:
@@ -52,7 +53,7 @@ jobs:
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: npx netlify-cli@2.51.0 deploy --dir=public --prod
+        run: npx netlify-cli deploy --dir=public --prod
       - name: Trigger light to go green on success
         if: success()
         uses: lannonbr/lifx-trigger-action@1.0.0
