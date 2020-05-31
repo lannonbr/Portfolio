@@ -29,16 +29,12 @@
     "react-helmet": "^6.0.0",
     "unist-util-visit": "^2.0.2"
   },
-  "keywords": [
-    "gatsby"
-  ],
   "license": "MIT",
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
     "clean": "gatsby clean",
     "start": "npm run develop",
-    "format": "prettier --write \"src/**/*.js\"",
     "post": "plop post"
   },
   "devDependencies": {
