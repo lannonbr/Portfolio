@@ -1,4 +1,8 @@
 module.exports = {
+  purge: {
+    content: ['./src/**/*.js', './utils/**/*.js'],
+    whitelist: ['mode-dark'],
+  },
   theme: {
     extend: {
       boxShadow: {
