@@ -8,10 +8,11 @@ keywords:
 
 This is a listing of things to follow up on.
 
-- [Nu Shell](https://github.com/nushell/nushell)
+- [Moog Mother-32](https://www.moogmusic.com/products/mother-32)
 
 ## Topics already discussed
 
+- [Nu Shell](https://github.com/nushell/nushell)
 - [MIDItoOBS](https://lannonbr.com/blog/2020-04-26-obs-midi-control/)
 - [Ableton Live](https://www.ableton.com/en/live/)
 - [Gatsby Recipes](https://github.com/gatsbyjs/gatsby/pull/22709)
