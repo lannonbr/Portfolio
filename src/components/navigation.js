@@ -7,7 +7,7 @@ function Navigation() {
 
   return (
     <nav className="w-full grid grid-cols-2 gap-3 items-center md:block md:px-4">
-      {navLinks.map((link) => (
+      {/* {navLinks.map((link) => (
         <Link
           key={link.name}
           to={link.url}
@@ -15,7 +15,7 @@ function Navigation() {
         >
           {link.name}
         </Link>
-      ))}
+      ))} */}
     </nav>
   )
 }
