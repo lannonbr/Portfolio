@@ -55,6 +55,7 @@ const BlogIndexPage = ({ data }) => {
         <strong className="mr-3">Search:</strong>
         <input
           type="text"
+          aria-label="Search for a post"
           name="titleFilter"
           id="titleFilter"
           onChange={handleTitleFilterChange}
