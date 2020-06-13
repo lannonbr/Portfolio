@@ -2,6 +2,7 @@
 title: 'Searching Digital Gardens with Alfred'
 date: '2020-05-25'
 description: 'How to be able to trigger an alfred workflow to search through and easily navigate a digital garden'
+logo: alfred
 ---
 
 It started with an idea from [Roberttables](https://twitter.com/drpoindexter/), the more content one has in a [Digital Garden](https://joelhooks.com/digital-garden), the more content that can be referenced in conversations. The current workflow I have though is I have to go to my site, go to the listings of my posts, and find the one I want to link. Instead, I wrote up a workflow using [Alfred](https://www.alfredapp.com/) that allows me to search and navigate through my content faster.
