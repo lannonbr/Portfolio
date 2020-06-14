@@ -61,7 +61,7 @@ const Banner = () => {
 
 const LogolessLogo = () => (
   <div
-    className="inline-block w-6 h-6 rounded-full mr-2"
+    className="inline-block w-6 h-6 rounded-full mr-4"
     style={{
       backgroundImage: 'linear-gradient( 135deg, #E2B0FF 10%, #9F44D3 100%)',
     }}
