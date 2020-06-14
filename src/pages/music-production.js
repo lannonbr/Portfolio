@@ -19,6 +19,12 @@ const MusicProductionPage = () => {
           production. I'm still in a very experimenting phase but looking to
           eventually start aranging tracks.
         </p>
+        <h2>Software</h2>
+        <ul className="list-disc pl-4">
+          <li>
+            <a href="https://www.ableton.com/en/live/">Ableton Live 10 Suite</a>
+          </li>
+        </ul>
         <h2>Equipment</h2>
         <ul className="list-disc pl-4">
           <li>
