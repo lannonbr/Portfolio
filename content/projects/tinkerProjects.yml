@@ -1,5 +1,12 @@
+- name: Music Production
+  created_date: 2020-03-15
+  desc: |
+    Over the quarantine in 2020, I decided to take a deep dive into music production. I'm still in a very experimenting phase but looking to eventually start aranging tracks.
+  links:
+    - name: Music Production Page
+      url: /music-production/
 - name: WebAssembly
-  created_date: 2018-12-15
+  created_date: 2019-12-15
   desc: |
     WebAssembly (Also known as WASM) is a binary format that can compile languages like C, Rust, Go, and other non-native web languages to be used on the web. This can bring performance boosts for high-computation tasks and be able to move tasks that previously needed a server to be run clientside inside a website.
   links:

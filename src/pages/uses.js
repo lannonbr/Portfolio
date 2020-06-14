@@ -1,5 +1,6 @@
 import React, { Fragment } from 'react'
 import SEO from '../components/seo'
+import { Link } from 'gatsby'
 
 const UsesPage = () => (
   <Fragment>
@@ -87,30 +88,12 @@ const UsesPage = () => (
             </a>
           </li>
           <li>Sony a5100 Mirrorless Camera</li>
-          <li>Shure SM58 Dynamic XLR Microphone</li>
-          <li>Cloudlifter CL-1 Mic Activator</li>
-          <li>Focusrite Scarlett Solo USB Audio Interface</li>
-          <li>
-            <a href="https://www.elgato.com/en/gaming/stream-deck">
-              Elgato 15-button Stream Deck
-            </a>
-          </li>
-          <li>
-            <a href="https://www.amazon.com/Novation-Launchpad-Mini-Controller-Ableton/dp/B07WNSHR3V/">
-              Novation Launchpad Mini MK3
-            </a>
-          </li>
-          <li>
-            <a href="https://www.amazon.com/Novation-Launchkey-Mini-25-Mini-Key-Keyboard/dp/B07WJZCPT3/">
-              Novation Launchkey Mini MK3
-            </a>
-          </li>
-          <li>
-            <a href="https://www.amazon.com/Novation-Control-Ableton-Controller-Integration/dp/B01N592MVS/">
-              Novation LaunchControl XL
-            </a>
-          </li>
         </ul>
+        <h2>Audio &amp; Music Gear</h2>
+        <p>
+          Visit the <Link to="/music-production/">Music Production</Link> page
+          for more info.
+        </p>
       </div>
     </section>
   </Fragment>

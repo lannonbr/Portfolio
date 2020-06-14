@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'gatsby'
 import useTinkerProjects from '../hooks/useTinkerProjects'
 
 function TinkerProjects() {
@@ -16,11 +17,19 @@ function TinkerProjects() {
           <p className="flex-grow">{project.desc}</p>
           <div className="flex flex-col md:flex-row">
             {project.links.map((link, idx) => {
-              return (
-                <a key={idx} href={link.url} className="md:mr-4">
-                  {link.name}
-                </a>
-              )
+              if (link.url.startsWith('https')) {
+                return (
+                  <a key={idx} href={link.url} className="md:mr-4">
+                    {link.name}
+                  </a>
+                )
+              } else {
+                return (
+                  <Link key={idx} to={link.url} className="md:mr-4">
+                    {link.name}
+                  </Link>
+                )
+              }
             })}
           </div>
         </section>
