@@ -48,7 +48,13 @@
 
 [[redirects]]
   from = "https://lannonbr.com/notes/"
-  to = "https://lannonbr.com/garden/"
+  to = "https://lannonbr.com/garden"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://lannonbr.com/blog/"
+  to = "https://lannonbr.com/garden"
   status = 301
   force = true
 
