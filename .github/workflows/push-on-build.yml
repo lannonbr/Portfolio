@@ -36,7 +36,7 @@ jobs:
           name: og-images
           path: .github/actions/gen-og-images-action/dist/posts/
   deploy-build:
-    needs: [gen-og-images, gatsby-build]
+    needs: [gen-og-images, toast-build]
     env:
       LIFX_TOKEN: ${{ secrets.LIFX_TOKEN }}
       LIFX_BULB_ID: ${{ secrets.LIFX_BULB_ID }}
