@@ -3,13 +3,17 @@ on:
   push:
     branches: [master]
 jobs:
-  gatsby-build:
+  toast-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Install Deps
         run: yarn
       - name: Build Site
+        env:
+          CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
+          CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
+          CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
         run: yarn build
       - name: Upload public dir as artifact
         uses: actions/upload-artifact@v2

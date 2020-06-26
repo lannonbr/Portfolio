@@ -88,15 +88,15 @@ ul {
 }
 
 header {
-  grid-template-areas: 'h1 spacer nav toggle';
-  grid-template-columns: 320px 1fr auto auto;
+  grid-template-areas: 'h1 spacer nav';
+  grid-template-columns: 320px 1fr auto;
   grid-template-rows: 60px;
 }
 
 @media (max-width: 768px) {
   header {
-    grid-template-areas: 'h1 h1 h1 toggle' 'spacer spacer spacer spacer' 'nav nav nav nav';
-    grid-template-columns: auto auto auto 50px;
+    grid-template-areas: 'h1 h1 h1' 'spacer spacer spacer' 'nav nav nav';
+    grid-template-columns: auto auto auto;
     grid-template-rows: 60px 20px 1fr;
   }
 }
@@ -107,10 +107,6 @@ nav {
 
 .spacer {
   grid-area: spacer;
-}
-
-header button {
-  grid-area: toggle;
 }
 
 main a {

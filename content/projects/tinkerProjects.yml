@@ -1,30 +1,31 @@
-- name: Music Production
-  created_date: 2020-03-15
-  desc: |
-    Over the quarantine in 2020, I decided to take a deep dive into music production. I'm still in a very experimenting phase but looking to eventually start aranging tracks.
-  links:
-    - name: Music Production Page
-      url: /music-production/
-- name: WebAssembly
-  created_date: 2019-12-15
-  desc: |
-    WebAssembly (Also known as WASM) is a binary format that can compile languages like C, Rust, Go, and other non-native web languages to be used on the web. This can bring performance boosts for high-computation tasks and be able to move tasks that previously needed a server to be run clientside inside a website.
-  links:
-    - name: WASM MDN Docs
-      url: https://developer.mozilla.org/en-US/docs/WebAssembly
-- name: GitHub Actions
-  created_date: 2018-11-01
-  desc: |
-    GitHub Actions allow developers to integrate workflows into GitHub. It's a step beyond normal CI/CD and I'm testing ways of expanding ideas on how I can create tools to extend GitHub.
-  links:
-    - name: GitHub Actions Splash Page
-      url: https://github.com/features/actions
-    - name: GitHub Actions Docs
-      url: https://help.github.com/en/categories/automating-your-workflow-with-github-actions
-- name: Gatsby
-  created_date: 2018-08-01
-  desc: |
-    A React based web framework. I've been using it to generate many of my sites that can be pushed out to something like Netlify. As well, I am an active contributor to the project itself by helping triage issues and PRs as well as helping improve the documentation on the official site.
-  links:
-    - name: Gatsbyjs.org
-      url: https://gatsbyjs.org
+projects:
+  - name: Music Production
+    created_date: 2020-03-15
+    desc: |
+      Over the quarantine in 2020, I decided to take a deep dive into music production. I'm still in a very experimenting phase but looking to eventually start aranging tracks.
+    links:
+      - name: Music Production Page
+        url: /music-production/
+  - name: WebAssembly
+    created_date: 2019-12-15
+    desc: |
+      WebAssembly (Also known as WASM) is a binary format that can compile languages like C, Rust, Go, and other non-native web languages to be used on the web. This can bring performance boosts for high-computation tasks and be able to move tasks that previously needed a server to be run clientside inside a website.
+    links:
+      - name: WASM MDN Docs
+        url: https://developer.mozilla.org/en-US/docs/WebAssembly
+  - name: GitHub Actions
+    created_date: 2018-11-01
+    desc: |
+      GitHub Actions allow developers to integrate workflows into GitHub. It's a step beyond normal CI/CD and I'm testing ways of expanding ideas on how I can create tools to extend GitHub.
+    links:
+      - name: GitHub Actions Splash Page
+        url: https://github.com/features/actions
+      - name: GitHub Actions Docs
+        url: https://help.github.com/en/categories/automating-your-workflow-with-github-actions
+  - name: Gatsby
+    created_date: 2018-08-01
+    desc: |
+      A React based web framework. I've been using it to generate many of my sites that can be pushed out to something like Netlify. As well, I am an active contributor to the project itself by helping triage issues and PRs as well as helping improve the documentation on the official site.
+    links:
+      - name: Gatsbyjs.org
+        url: https://gatsbyjs.org

@@ -1,5 +1,4 @@
 import React from 'react'
-import Img from 'gatsby-image'
 
 function Project({ project, idx }) {
   const title = project.name
@@ -10,16 +9,11 @@ function Project({ project, idx }) {
   return (
     <article idx={idx} className="flex flex-col md:flex-row p-3 pl-0 mb-6">
       <a className="flex-1" href={project.website_link}>
-        <Img
-          className="mb-5 md:mb-0 md:mr-5 rounded shadow-lg"
-          fluid={img.childImageSharp.fluid}
-        />
+        <img className="mb-5 md:mb-0 rounded shadow-lg" src={img} />
       </a>
-      <div className="flex-1">
+      <div className="flex-1 md:ml-5">
         <h2 className="mb-0">{title}</h2>
-        <time className="mb-6 inline-block" dateTime={project.origin_date}>
-          Created {date}
-        </time>
+        <p className="mb-6 inline-block">Created {date}</p>
         <p>{description}</p>
         <div className="flex">
           <a href={project.website_link} className="mr-5">
