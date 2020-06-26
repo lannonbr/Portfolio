@@ -1,15 +1,12 @@
 import React from 'react'
-// import SEO from '../components/seo'
+import SEO from '../components/seo.js'
 
 import MusicProdIllustration from '../images/music-prod.js'
 
 const MusicProductionPage = () => {
   return (
     <section className="md:grid md:grid-cols-2 md:gap-8 mb-4">
-      {/* <SEO
-        title="Music Production"
-        keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
-      /> */}
+      <SEO title="Music Production" />
       <div>
         <h1>Music Production</h1>
         <p>

@@ -1,16 +1,11 @@
 import React from 'react'
-// import SEO from '../components/seo'
-// import IllustrationImg from '../components/illustrationImg'
-
+import SEO from '../components/seo.js'
 import StreamData from '../images/stream-data.js'
 
 const StreamPage = () => {
   return (
     <section className="md:grid md:grid-cols-2 md:gap-8 mb-4">
-      {/* <SEO
-        title="Stream"
-        keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
-      /> */}
+      <SEO title="Stream" />
       <div>
         <h1>Live Coding on Twitch</h1>
         <p>

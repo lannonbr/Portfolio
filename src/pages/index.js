@@ -1,7 +1,5 @@
 import React from 'react'
-
-// import SEO from '../components/seo'
-
+import SEO from '../components/seo.js'
 import Office from '../images/office.js'
 import ChevronRight from '../components/feather/chevron-right.js'
 
@@ -85,10 +83,7 @@ const LogolessLogo = () => (
 
 const IndexPage = ({ posts }) => (
   <section className="md:grid md:grid-cols-2 md:gap-8 mb-4">
-    {/* <SEO
-      title="Home"
-      keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
-    /> */}
+    <SEO title="Home" />
     <Banner />
     <div className="flex flex-col justify-center">
       <h1 className="text-center text-4xl md:text-left md:text-6xl">

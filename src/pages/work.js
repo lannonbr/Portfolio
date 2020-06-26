@@ -1,15 +1,12 @@
 import React, { Fragment } from 'react'
-// import SEO from '../components/seo'
+import SEO from '../components/seo.js'
 
 import Conversation from '../images/conversation.js'
 import TinkerProjects from '../components/TinkerProjects.js'
 
 const WorkPage = ({ projects }) => (
   <Fragment>
-    {/* <SEO
-      title="Work"
-      keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
-    /> */}
+    <SEO title="Work" />
     <section className="md:grid md:grid-cols-2 md:gap-8 mb-4">
       <div>
         <h1>Work</h1>

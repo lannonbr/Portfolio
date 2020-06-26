@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-// import SEO from '../components/seo'
+import SEO from '../components/seo.js'
 
 const images = preval`
   const fs = require('fs')
@@ -66,10 +66,7 @@ const BlogIndexPage = ({ posts }) => {
 
   return (
     <div className="max-w-6xl mx-auto">
-      {/* <SEO
-        title="Blog"
-        keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
-      /> */}
+      <SEO title="Blog" />
       <h1>Posts</h1>
       <div className="flex flex-col md:items-center md:flex-row">
         <strong className="mr-3">Search:</strong>
@@ -152,31 +149,3 @@ const BlogIndexPage = ({ posts }) => {
 }
 
 export default BlogIndexPage
-
-// export const query = graphql`
-//   query {
-//     blogLogos: allFile(filter: { relativePath: { regex: "/^blog-icons/" } }) {
-//       nodes {
-//         name
-//         publicURL
-//       }
-//     }
-
-//     allMdx(
-//       filter: { fileAbsolutePath: { regex: "/blog/" } }
-//       sort: { fields: frontmatter___date, order: DESC }
-//     ) {
-//       nodes {
-//         fields {
-//           slug
-//         }
-//         frontmatter {
-//           title
-//           date(formatString: "ll")
-//           logo
-//           description
-//         }
-//       }
-//     }
-//   }
-// `

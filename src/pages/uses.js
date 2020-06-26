@@ -1,12 +1,9 @@
 import React, { Fragment } from 'react'
-// import SEO from '../components/seo'
+import SEO from '../components/seo.js'
 
 const UsesPage = () => (
   <Fragment>
-    {/* <SEO
-      title="Uses"
-      keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
-    /> */}
+    <SEO title="Uses" />
     <h1>Uses</h1>
     <p>
       With inspiration from <a href="https://wesbos.com/uses/">Wes Bos</a>, this

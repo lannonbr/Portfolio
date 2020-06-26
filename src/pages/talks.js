@@ -1,6 +1,6 @@
 import React from 'react'
 import TalkIllustration from '../images/talk.js'
-// import SEO from '../components/seo'
+import SEO from '../components/seo.js'
 import Youtube from '../components/feather/youtube.js'
 import File from '../components/feather/file.js'
 import format from 'date-fns/format'
@@ -63,10 +63,7 @@ const talks = [
 const TalksPage = () => {
   return (
     <section className="md:grid md:grid-cols-2 md:gap-8 mb-4">
-      {/* <SEO
-        title="Talks"
-        keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
-      /> */}
+      <SEO title="Talks" />
       <div>
         <h1>Talks</h1>
         <p>
