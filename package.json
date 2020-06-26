@@ -30,11 +30,10 @@
     "clean": "rm -rf public .cache && yarn prepare",
     "prepare": "breadbox --dest public/web_modules",
     "breadbox": "breadbox --dest public/web_modules",
-    "post": "plop post"
+    "post": "npx plop post"
   },
   "devDependencies": {
     "@sector/breadbox": "^0.0.4",
-    "plop": "^2.7.1",
     "prettier": "^2.0.5",
     "tailwindcss": "^1.4.6",
     "tailwindcss-dark-mode": "^1.1.4"
