@@ -1,21 +1,18 @@
 import React, { Fragment } from 'react'
 
-import SEO from '../components/seo'
-import Project from '../components/project'
-import useFeaturedProjects from '../hooks/useFeaturedProjects'
+// import SEO from '../components/seo'
+import Project from '../components/project.js'
 
-const ProjectsPage = () => {
-  const projects = useFeaturedProjects()
-
+const ProjectsPage = ({ projects }) => {
   return (
     <Fragment>
-      <SEO
+      {/* <SEO
         title="Projects"
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
-      />
+      /> */}
       <h1>Projects</h1>
       <p>Here are a few larger scale projects I've created.</p>
-      {projects.nodes.map((project, idx) => (
+      {projects.map((project, idx) => (
         <Project project={project} idx={idx} key={idx} />
       ))}
     </Fragment>

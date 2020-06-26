@@ -2,7 +2,7 @@
 
 This is the current iteration of my personal portfolio site as of early 2019.
 
-The site is developed in Gatsby.
+The site is developed in Toast.
 
 ## What's involved
 

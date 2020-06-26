@@ -1,17 +1,16 @@
 import React from 'react'
-import { Link } from 'gatsby'
-import SEO from '../components/seo'
-import IllustrationImg from '../components/illustrationImg'
+// import SEO from '../components/seo'
+// import IllustrationImg from '../components/illustrationImg'
 
-import streamData from '../images/stream-data.svg'
+import StreamData from '../images/stream-data.js'
 
 const StreamPage = () => {
   return (
     <section className="md:grid md:grid-cols-2 md:gap-8 mb-4">
-      <SEO
+      {/* <SEO
         title="Stream"
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
-      />
+      /> */}
       <div>
         <h1>Live Coding on Twitch</h1>
         <p>
@@ -34,7 +33,7 @@ const StreamPage = () => {
 
         <p>
           If you want to learn about how I run the show, take a read through my{' '}
-          <Link to="/blog/2020-04-12-stream-setup/">Streaming Setup</Link> post.
+          <a href="/blog/2020-04-12-stream-setup/">Streaming Setup</a> post.
         </p>
 
         <h2>Stream Projects</h2>
@@ -46,8 +45,8 @@ const StreamPage = () => {
           developing products and tooling.
         </p>
       </div>
-      <div className="hidden md:block">
-        <IllustrationImg src={streamData} alt="data illustration" />
+      <div className="hidden md:block mx-0 sm:mr-8 w-full">
+        <StreamData />
       </div>
     </section>
   )

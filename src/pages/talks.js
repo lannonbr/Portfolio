@@ -1,9 +1,10 @@
 import React from 'react'
-import talk from '../images/talk.svg'
-import SEO from '../components/seo'
-import IllustrationImg from '../components/illustrationImg'
-import { Youtube, File } from 'react-feather'
-import { parse, format } from 'date-fns'
+import TalkIllustration from '../images/talk.js'
+// import SEO from '../components/seo'
+import Youtube from '../components/feather/youtube.js'
+import File from '../components/feather/file.js'
+import format from 'date-fns/format'
+import parse from 'date-fns/parse'
 
 const talks = [
   {
@@ -62,10 +63,10 @@ const talks = [
 const TalksPage = () => {
   return (
     <section className="md:grid md:grid-cols-2 md:gap-8 mb-4">
-      <SEO
+      {/* <SEO
         title="Talks"
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
-      />
+      /> */}
       <div>
         <h1>Talks</h1>
         <p>
@@ -110,7 +111,7 @@ const TalksPage = () => {
         })}
       </div>
       <div className="hidden md:block">
-        <IllustrationImg src={talk} alt="speaking illustration" />
+        <TalkIllustration />
       </div>
     </section>
   )

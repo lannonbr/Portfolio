@@ -1,5 +1,8 @@
 import React from 'react'
-import { Mail, GitHub, Twitter, Twitch } from 'react-feather'
+import Mail from './feather/mail.js'
+import GitHub from './feather/github.js'
+import Twitter from './feather/twitter.js'
+import Twitch from './feather/twitch.js'
 
 function Footer() {
   return (
@@ -14,10 +17,10 @@ function Footer() {
           <b>Built with</b>
           <p className="m-0">
             <a
-              href="https://www.gatsbyjs.org"
+              href="https://github.com/christopherbiscardi/toast"
               className="pr-4 font-semibold no-underline hover:underline text-rebecca-purple-light dark:text-cyan hover:text-rebecca-purple-lighter dark-hover:text-cyan-light"
             >
-              Gatsby
+              Toast
             </a>
           </p>
         </div>

@@ -1,17 +1,15 @@
 import React from 'react'
-import SEO from '../components/seo'
+// import SEO from '../components/seo'
 
-import IllustrationImg from '../components/illustrationImg'
-
-import musicProdIllustration from '../images/music-prod.svg'
+import MusicProdIllustration from '../images/music-prod.js'
 
 const MusicProductionPage = () => {
   return (
     <section className="md:grid md:grid-cols-2 md:gap-8 mb-4">
-      <SEO
+      {/* <SEO
         title="Music Production"
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
-      />
+      /> */}
       <div>
         <h1>Music Production</h1>
         <p>
@@ -65,10 +63,7 @@ const MusicProductionPage = () => {
         </ul>
       </div>
       <div className="hidden md:block">
-        <IllustrationImg
-          src={musicProdIllustration}
-          alt="Music notes illustration"
-        />
+        <MusicProdIllustration />
       </div>
     </section>
   )

@@ -1,6 +1,22 @@
 import React, { useState } from 'react'
-import SEO from '../components/seo'
-import { graphql, Link } from 'gatsby'
+// import SEO from '../components/seo'
+
+const images = preval`
+  const fs = require('fs')
+  const path = require('path')
+
+  const imgDir = path.resolve(__dirname, 'src/images/blog-icons')
+
+  let files = fs.readdirSync(imgDir).map(file => {
+    return {
+      name: file.split(".")[0],
+      format: file.split(".")[1],
+      image: fs.readFileSync(path.join(imgDir, file), 'base64')
+    };
+  })
+
+  module.exports = files
+`
 
 const LogolessLogo = () => (
   <div
@@ -24,13 +40,17 @@ const CuratedButton = ({ logo, name, handleClick, isSelected }) => {
       }}
       onClick={handleClick}
     >
-      <img src={logo} alt="" className="w-5 mr-3" />
+      <img
+        src={`data:image/${logo.format};base64,${logo.image}`}
+        alt=""
+        className="w-5 mr-3"
+      />
       <span>{name}</span>
     </button>
   )
 }
 
-const BlogIndexPage = ({ data }) => {
+const BlogIndexPage = ({ posts }) => {
   const [category, setCategory] = useState('')
   const [titleFilter, setTitleFilter] = useState('')
 
@@ -46,10 +66,10 @@ const BlogIndexPage = ({ data }) => {
 
   return (
     <div className="max-w-6xl mx-auto">
-      <SEO
+      {/* <SEO
         title="Blog"
         keywords={[`Benjamin Lannon`, `Portfolio`, `Web Developer`, `gatsby`]}
-      />
+      /> */}
       <h1>Posts</h1>
       <div className="flex flex-col md:items-center md:flex-row">
         <strong className="mr-3">Search:</strong>
@@ -72,10 +92,7 @@ const BlogIndexPage = ({ data }) => {
           <CuratedButton
             name={name}
             isSelected={!!(category === cat)}
-            logo={
-              data.blogLogos.nodes.filter((logo) => logo.name === cat)[0]
-                .publicURL
-            }
+            logo={images.filter((logo) => logo.name === cat)[0]}
             handleClick={() => {
               if (category === '') {
                 setCategory(cat)
@@ -89,43 +106,43 @@ const BlogIndexPage = ({ data }) => {
         ))}
       </div>
       <div>
-        {data.allMdx.nodes
+        {posts
+          .reverse()
           .filter((post) => {
             if (category === '') return true
-            else return post.frontmatter.logo === category
+            else return post.logo === category
           })
           .filter((post) => {
             if (titleFilter === '') return true
             else
-              return post.frontmatter.title
+              return post.title
                 .toLowerCase()
                 .includes(titleFilter.toLowerCase())
           })
-          .map((node) => {
+          .map((post) => {
             const logo =
-              node.frontmatter.logo &&
-              data.blogLogos.nodes.filter(
-                (logo) => logo.name === node.frontmatter.logo
-              )[0].publicURL
+              post.logo && images.filter((logo) => logo.name === post.logo)[0]
 
             return (
               <article className="py-2 px-3 transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 dark-hover:bg-cyan-transparent dark-hover:text-cyan-light mb-2">
-                <Link
-                  key={node.fields.slug}
-                  to={node.fields.slug}
+                <a
+                  key={post.slug}
+                  href={`/${post.slug}`}
                   className="flex items-center text-md md:text-xl rounded-sm mb-3 hover:no-underline"
                 >
-                  {node.frontmatter.logo ? (
-                    <img src={logo} alt="" className="w-6 mr-2" />
+                  {post.logo ? (
+                    <img
+                      src={`data:image/${logo.format};base64,${logo.image}`}
+                      alt=""
+                      className="w-6 mr-2"
+                    />
                   ) : (
                     <LogolessLogo />
                   )}
-                  <span>{node.frontmatter.title}</span>
+                  <span>{post.title}</span>
                   <br />
-                </Link>
-                <p className="text-sm md:text-base mb-0">
-                  {node.frontmatter.description}
-                </p>
+                </a>
+                <p className="text-sm md:text-base mb-0">{post.description}</p>
               </article>
             )
           })}
@@ -136,30 +153,30 @@ const BlogIndexPage = ({ data }) => {
 
 export default BlogIndexPage
 
-export const query = graphql`
-  query {
-    blogLogos: allFile(filter: { relativePath: { regex: "/^blog-icons/" } }) {
-      nodes {
-        name
-        publicURL
-      }
-    }
+// export const query = graphql`
+//   query {
+//     blogLogos: allFile(filter: { relativePath: { regex: "/^blog-icons/" } }) {
+//       nodes {
+//         name
+//         publicURL
+//       }
+//     }
 
-    allMdx(
-      filter: { fileAbsolutePath: { regex: "/blog/" } }
-      sort: { fields: frontmatter___date, order: DESC }
-    ) {
-      nodes {
-        fields {
-          slug
-        }
-        frontmatter {
-          title
-          date(formatString: "ll")
-          logo
-          description
-        }
-      }
-    }
-  }
-`
+//     allMdx(
+//       filter: { fileAbsolutePath: { regex: "/blog/" } }
+//       sort: { fields: frontmatter___date, order: DESC }
+//     ) {
+//       nodes {
+//         fields {
+//           slug
+//         }
+//         frontmatter {
+//           title
+//           date(formatString: "ll")
+//           logo
+//           description
+//         }
+//       }
+//     }
+//   }
+// `

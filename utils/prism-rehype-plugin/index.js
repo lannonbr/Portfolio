@@ -1,5 +1,6 @@
-const { createElement } = require('react')
-const { renderToString } = require('react-dom/server')
+const preact = require('preact')
+const { h } = preact
+const renderToString = require('preact-render-to-string')
 const rangeParser = require('parse-numeric-range')
 const Highlight = require('prism-react-renderer')
 const theme = require('prism-react-renderer/themes/nightOwl')
@@ -18,7 +19,7 @@ module.exports = (options) => (ast) => {
         node.properties.className[0].split('-')[1]
 
       const result = renderToString(
-        createElement(Code, {
+        h(Code, {
           codeString: codeString.trim(),
           language: language,
           highlight: node.properties.highlight,
@@ -28,7 +29,12 @@ module.exports = (options) => (ast) => {
         })
       )
 
-      node.children[0].value = result
+      node.children = [
+        {
+          value: result,
+          type: 'text',
+        },
+      ]
     }
   })
 }
@@ -67,7 +73,7 @@ const Code = ({
 }) => {
   const shouldHighlightLine = calculateLinesToHighlight(highlight)
 
-  return createElement(
+  return h(
     Highlight.default,
     {
       ...Highlight.defaultProps,
@@ -77,14 +83,14 @@ const Code = ({
       Prism: Prism,
     },
     ({ className, style, tokens, getLineProps, getTokenProps }) => {
-      return createElement(
+      return h(
         'div',
         {
-          className: 'codeBlock gatsby-highlight mb-4 shadow-xl text-sm',
+          className: 'codeBlock toast-highlight mb-4 shadow-xl text-sm',
         },
         [
           title &&
-            createElement(
+            h(
               'div',
               {
                 className: className + ' text-sm px-5 py-4',
@@ -92,7 +98,7 @@ const Code = ({
               },
               title
             ),
-          createElement(
+          h(
             'pre',
             {
               className: className + ' p-5 mt-0 overflow-auto',
@@ -106,11 +112,11 @@ const Code = ({
               if (shouldHighlightLine(i)) {
                 lineProps.className = `${lineProps.className} highlight-line`
               }
-              return createElement(
+              return h(
                 'div',
                 { ...lineProps, key: i },
                 line.map((token, key) =>
-                  createElement('span', {
+                  h('span', {
                     ...getTokenProps({ token, key }),
                     key,
                   })
