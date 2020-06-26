@@ -9,6 +9,7 @@
     "@mdx-js/preact": "^1.6.6",
     "cloudinary": "^1.22.0",
     "date-fns": "^2.14.0",
+    "globby": "^11.0.1",
     "gray-matter": "^4.0.2",
     "js-yaml": "^3.14.0",
     "parse-numeric-range": "^1.2.0",
