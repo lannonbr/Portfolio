@@ -58,7 +58,7 @@ export default ({ children, ...props }) => {
           <div className="max-w-7xl mx-auto px-2">
             {props.title && (
               <a className="inline-flex items-center mb-4" href="/garden">
-                <Home className="mr-2" />
+                <Home className="mr-2" alt="" />
                 Blog Home
               </a>
             )}

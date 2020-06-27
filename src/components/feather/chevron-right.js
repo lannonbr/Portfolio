@@ -1,7 +1,7 @@
 import React, { forwardRef } from 'react'
 
 const ChevronRight = forwardRef(
-  ({ color = 'currentColor', size = 24, ...rest }, ref) => {
+  ({ color = 'currentColor', size = 24, alt, ...rest }, ref) => {
     return (
       <svg
         ref={ref}
@@ -16,6 +16,7 @@ const ChevronRight = forwardRef(
         strokeLinejoin="round"
         {...rest}
       >
+        <title>{alt}</title>
         <polyline points="9 18 15 12 9 6" />
       </svg>
     )

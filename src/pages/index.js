@@ -97,7 +97,10 @@ const IndexPage = ({ posts }) => (
         <h2>New Posts</h2>
         <a href="/blog" className="flex items-center group">
           All Posts
-          <ChevronRight className="h-5 w-5 relative right-0 transform transition-transform duration-200 group-hover:translate-x-1" />
+          <ChevronRight
+            className="h-5 w-5 relative right-0 transform transition-transform duration-200 group-hover:translate-x-1"
+            alt=""
+          />
         </a>
       </div>
       {posts.map((post) => {

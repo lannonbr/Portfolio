@@ -41,25 +41,25 @@ function Footer() {
           href="mailto:benjamin@lannonbr.com"
           className="pr-4 md:pr-5 font-semibold no-underline hover:underline text-rebecca-purple-light dark:text-cyan hover:text-rebecca-purple-lighter dark-hover:text-cyan-light"
         >
-          <Mail />
+          <Mail alt="Email me" />
         </a>
         <a
           href="https://github.com/lannonbr"
           className="pr-4 md:pr-5 font-semibold no-underline hover:underline text-rebecca-purple-light dark:text-cyan hover:text-rebecca-purple-lighter dark-hover:text-cyan-light"
         >
-          <GitHub />
+          <GitHub alt="Visit my GitHub" />
         </a>
         <a
           href="https://twitter.com/lannonbr"
           className="pr-4 md:pr-5 font-semibold no-underline hover:underline text-rebecca-purple-light dark:text-cyan hover:text-rebecca-purple-lighter dark-hover:text-cyan-light"
         >
-          <Twitter />
+          <Twitter alt="Visit my Twitter" />
         </a>
         <a
           href="https://twitch.tv/lannonbr"
           className="font-semibold no-underline hover:underline text-rebecca-purple-light dark:text-cyan hover:text-rebecca-purple-lighter dark-hover:text-cyan-light"
         >
-          <Twitch />
+          <Twitch alt="Visit my Twitch" />
         </a>
       </div>
     </footer>

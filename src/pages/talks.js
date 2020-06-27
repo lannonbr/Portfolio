@@ -88,7 +88,7 @@ const TalksPage = () => {
               <ul className="m-0 pl-0">
                 {talk.slides && (
                   <li className="flex items-center">
-                    <File />
+                    <File alt="" />
                     <a href={talk.slides} className="ml-2">
                       Slides
                     </a>
@@ -96,7 +96,7 @@ const TalksPage = () => {
                 )}
                 {talk.recording && (
                   <li className="flex items-center">
-                    <Youtube />
+                    <Youtube alt="YouTube Recording" />
                     <a href={talk.recording} className="ml-2">
                       Recording
                     </a>
