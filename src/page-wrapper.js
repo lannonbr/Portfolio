@@ -13,6 +13,7 @@ export default ({ children, ...props }) => {
   return (
     <div className="min-h-screen flex flex-col overflow-x-hidden">
       <Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="/style.css" />
         <link
           rel="stylesheet"
