@@ -4,9 +4,20 @@ import GitHub from './feather/github.js'
 import Twitter from './feather/twitter.js'
 import Twitch from './feather/twitch.js'
 
+function IconLink({ href, children }) {
+  return (
+    <a
+      href={href}
+      className="pr-4 md:pr-5 font-semibold no-underline hover:underline text-rebecca-purple-light dark:text-cyan hover:text-rebecca-purple-lighter dark-hover:text-cyan-light"
+    >
+      {children}
+    </a>
+  )
+}
+
 function Footer() {
   return (
-    <footer className="md:flex flex-wrap items-center justify-center text-sm p-2 border-t-2 border-gray-400 text-sm flex-shrink-0 bg-rebecca-purple-lightest dark:bg-cyan-transparent min-h-100">
+    <footer className="md:flex flex-wrap items-center justify-center text-sm p-2 border-t-2 border-gray-400 flex-shrink-0 bg-rebecca-purple-lightest dark:bg-cyan-transparent min-h-100">
       <div className="flex justify-around md:justify-start mb-5 md:mb-0 md:mr-16">
         <div className="md:mr-16">
           <b>© {new Date().getFullYear()}</b>
@@ -37,30 +48,18 @@ function Footer() {
         </div>
       </div>
       <div className="flex justify-center">
-        <a
-          href="mailto:benjamin@lannonbr.com"
-          className="pr-4 md:pr-5 font-semibold no-underline hover:underline text-rebecca-purple-light dark:text-cyan hover:text-rebecca-purple-lighter dark-hover:text-cyan-light"
-        >
+        <IconLink href="mailto:benjamin@lannonbr.com">
           <Mail alt="Email me" />
-        </a>
-        <a
-          href="https://github.com/lannonbr"
-          className="pr-4 md:pr-5 font-semibold no-underline hover:underline text-rebecca-purple-light dark:text-cyan hover:text-rebecca-purple-lighter dark-hover:text-cyan-light"
-        >
+        </IconLink>
+        <IconLink href="https://github.com/lannonbr">
           <GitHub alt="Visit my GitHub" />
-        </a>
-        <a
-          href="https://twitter.com/lannonbr"
-          className="pr-4 md:pr-5 font-semibold no-underline hover:underline text-rebecca-purple-light dark:text-cyan hover:text-rebecca-purple-lighter dark-hover:text-cyan-light"
-        >
+        </IconLink>
+        <IconLink href="https://twitter.com/lannonbr">
           <Twitter alt="Visit my Twitter" />
-        </a>
-        <a
-          href="https://twitch.tv/lannonbr"
-          className="font-semibold no-underline hover:underline text-rebecca-purple-light dark:text-cyan hover:text-rebecca-purple-lighter dark-hover:text-cyan-light"
-        >
+        </IconLink>
+        <IconLink href="https://twitch.tv/lannonbr">
           <Twitch alt="Visit my Twitch" />
-        </a>
+        </IconLink>
       </div>
     </footer>
   )
