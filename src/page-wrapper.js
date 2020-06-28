@@ -19,6 +19,7 @@ export default ({ children, ...props }) => {
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
         />
+        <meta name="theme-color" content="#663399" />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
       </Helmet>
       <Header />
