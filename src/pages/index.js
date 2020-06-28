@@ -34,8 +34,8 @@ const Banner = () => {
         gridColumn: '1 / span 2',
       }}
     >
-      <h1>#BlackLivesMatter</h1>
-      <p className="text-xl">
+      <h1 className="text-2xl md:text-3xl">#BlackLivesMatter</h1>
+      <p className="text-base md:text-xl">
         <strong>I stand in solidarity</strong> with George Floyd, Natosha
         McDade, Yassin Mohamed, Finan H. Berhe, Sean Reed, Steven Demarco
         Taylor, Breonna Taylor, Ariane McCree, Terrance Franklin, Miles Hall,
