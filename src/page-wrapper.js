@@ -17,7 +17,7 @@ export default ({ children, ...props }) => {
         <link rel="stylesheet" href="/style.css" />
         <link
           rel="stylesheet"
-          href="https://fonts.googleapis.com/css2?family=Inter"
+          href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
         />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
       </Helmet>
