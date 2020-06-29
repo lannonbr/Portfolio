@@ -31,7 +31,8 @@
     "clean": "rm -rf public .cache && yarn prepare",
     "prepare": "breadbox --dest public/web_modules",
     "breadbox": "breadbox --dest public/web_modules",
-    "post": "npx plop post"
+    "post": "npx plop post",
+    "serve": "npx http-server -p 8000 public"
   },
   "devDependencies": {
     "@sector/breadbox": "^0.0.4",
