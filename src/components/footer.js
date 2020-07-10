@@ -18,7 +18,7 @@ function IconLink({ href, children }) {
 function Footer() {
   return (
     <footer
-      className="md:flex flex-wrap items-center justify-center text-sm p-2 border-t-2 border-gray-400 flex-shrink-0 bg-rebecca-purple-lightest dark:bg-cyan-transparent min-h-100"
+      className="md:flex flex-wrap items-center justify-center text-sm p-2 border-t-2 border-gray-400 bg-rebecca-purple-lightest dark:bg-cyan-transparent min-h-100"
       style={{
         gridColumn: '1 / span 4',
       }}

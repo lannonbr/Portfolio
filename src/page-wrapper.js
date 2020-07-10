@@ -25,7 +25,7 @@ export default ({ children, ...props }) => {
       <Header />
 
       <main
-        className="flex-grow flex-shrink-0 py-4"
+        className="py-4"
         style={{
           gridColumn: '2 / span 2',
         }}
