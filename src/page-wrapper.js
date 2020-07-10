@@ -11,7 +11,7 @@ import SEO from './components/seo.js'
 
 export default ({ children, ...props }) => {
   return (
-    <div className="min-h-screen flex flex-col overflow-x-hidden">
+    <div id="pageWrapper" className="min-h-screen grid overflow-x-hidden">
       <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="/style.css" />
@@ -24,7 +24,12 @@ export default ({ children, ...props }) => {
       </Helmet>
       <Header />
 
-      <main className="flex-grow flex-shrink-0 py-5 px-4 w-full mx-auto max-w-7xl">
+      <main
+        className="flex-grow flex-shrink-0 py-4"
+        style={{
+          gridColumn: '2 / span 2',
+        }}
+      >
         <MDXProvider
           components={{
             Warning,

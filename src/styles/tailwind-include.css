@@ -87,6 +87,14 @@ ul {
   @apply pl-4;
 }
 
+#pageWrapper {
+  display: grid;
+  grid-template-columns:
+    minmax(0.5rem, 1fr) minmax(auto, 800px) minmax(auto, 800px)
+    minmax(0.5rem, 1fr);
+  grid-template-rows: auto 1fr 100px;
+}
+
 header {
   grid-template-areas: 'h1 spacer nav';
   grid-template-columns: 320px 1fr auto;

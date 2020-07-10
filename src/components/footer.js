@@ -17,7 +17,12 @@ function IconLink({ href, children }) {
 
 function Footer() {
   return (
-    <footer className="md:flex flex-wrap items-center justify-center text-sm p-2 border-t-2 border-gray-400 flex-shrink-0 bg-rebecca-purple-lightest dark:bg-cyan-transparent min-h-100">
+    <footer
+      className="md:flex flex-wrap items-center justify-center text-sm p-2 border-t-2 border-gray-400 flex-shrink-0 bg-rebecca-purple-lightest dark:bg-cyan-transparent min-h-100"
+      style={{
+        gridColumn: '1 / span 4',
+      }}
+    >
       <div className="flex justify-around md:justify-start mb-5 md:mb-0 md:mr-16">
         <div className="md:mr-16">
           <b>© {new Date().getFullYear()}</b>
