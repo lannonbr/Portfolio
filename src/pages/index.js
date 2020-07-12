@@ -71,8 +71,7 @@ const IndexPage = ({ posts }) => (
         Hi all, I'm Benjamin
       </h1>
       <p className="lg:text-xl md:leading-loose">
-        I'm a web developer in Upstate New York with a passion for{' '}
-        <span className="text-green-700">exploration</span>
+        I'm a web developer in Upstate New York with a passion for exploration
         and continual learning.
       </p>
       <div className="inline-flex items-baseline justify-between">
