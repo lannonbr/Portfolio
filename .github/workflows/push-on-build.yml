@@ -35,6 +35,28 @@ jobs:
         with:
           name: og-images
           path: .github/actions/gen-og-images-action/dist/posts/
+  push-css-stats:
+    needs: [toast-build]
+    runs-on: ubuntu-latest
+    env:
+      COMMIT_SHA: ${{ github.sha }}
+    steps:
+      - uses: actions/checkout@v2
+      - name: Configure AWS Credentials
+        uses: aws-actions/configure-aws-credentials@v1
+        with:
+          aws-access-key-id: ${{ secrets.CSS_STATS_AWS_ACCESS_KEY_ID }}
+          aws-secret-access-key: ${{ secrets.CSS_STATS_AWS_SECRET_ACCESS_KEY }}
+          aws-region: us-east-1
+      - name: get public dir
+        uses: actions/download-artifact@v2
+        with:
+          name: public-dir
+          path: public
+      - run: |
+          cd .github/actions/save-css-stats-action
+          yarn
+          node index.js
   deploy-build:
     needs: [gen-og-images, toast-build]
     env:

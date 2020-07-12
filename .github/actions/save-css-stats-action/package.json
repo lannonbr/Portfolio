@@ -1,0 +1,13 @@
+{
+  "name": "save-css-stats-action",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "aws-sdk": "^2.713.0",
+    "cssstats": "^3.4.1",
+    "dotenv": "^8.2.0",
+    "fs-extra": "^9.0.1",
+    "moment": "^2.27.0"
+  }
+}
