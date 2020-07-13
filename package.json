@@ -48,6 +48,9 @@
     "url": "https://github.com/lannonbr/portfolio/issues"
   },
   "snowpack": {
+    "exclude": [
+      "public/**"
+    ],
     "installOptions": {
       "alias": {
         "react": "preact/compat"
