@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import SEO from '../components/seo.js'
+import EmptyStreet from '../images/empty-street.js'
 
 const images = preval`
   const fs = require('fs')
@@ -50,6 +51,19 @@ const CuratedButton = ({ logo, name, handleClick, isSelected }) => {
   )
 }
 
+const NoPosts = (props) => {
+  return (
+    <div className="flex items-center flex-col">
+      <span className="hidden md:block">
+        <EmptyStreet />
+      </span>
+      <p className="md:text-2xl md:mt-4">
+        Sorry, No posts came up with those search terms or categories.
+      </p>
+    </div>
+  )
+}
+
 const BlogIndexPage = ({ posts }) => {
   const [category, setCategory] = useState('')
   const [titleFilter, setTitleFilter] = useState('')
@@ -63,6 +77,17 @@ const BlogIndexPage = ({ posts }) => {
     { name: 'WebAssembly', cat: 'wasm' },
     { name: 'Gatsby', cat: 'gatsby' },
   ]
+
+  const visiblePosts = posts
+    .reverse()
+    .filter((post) => {
+      if (category === '') return true
+      else return post.logo === category
+    })
+    .filter((post) => {
+      if (titleFilter === '') return true
+      else return post.title.toLowerCase().includes(titleFilter.toLowerCase())
+    })
 
   return (
     <div className="max-w-6xl mx-auto">
@@ -103,20 +128,8 @@ const BlogIndexPage = ({ posts }) => {
         ))}
       </div>
       <div>
-        {posts
-          .reverse()
-          .filter((post) => {
-            if (category === '') return true
-            else return post.logo === category
-          })
-          .filter((post) => {
-            if (titleFilter === '') return true
-            else
-              return post.title
-                .toLowerCase()
-                .includes(titleFilter.toLowerCase())
-          })
-          .map((post) => {
+        {visiblePosts.length > 0 ? (
+          visiblePosts.map((post) => {
             const logo =
               post.logo && images.filter((logo) => logo.name === post.logo)[0]
 
@@ -142,7 +155,10 @@ const BlogIndexPage = ({ posts }) => {
                 <p className="text-sm md:text-base mb-0">{post.description}</p>
               </article>
             )
-          })}
+          })
+        ) : (
+          <NoPosts />
+        )}
       </div>
     </div>
   )
