@@ -80,7 +80,7 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: |
-          yarn global add netlify-cli
+          yarn global add netlify-cli@2.58.0
           "$(yarn global bin)/netlify" deploy --dir=public --prod
       - name: Trigger light to go green on success
         if: success()
