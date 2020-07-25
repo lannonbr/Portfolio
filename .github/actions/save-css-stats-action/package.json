@@ -4,7 +4,7 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
-    "aws-sdk": "^2.713.0",
+    "aws-sdk": "^2.720.0",
     "cssstats": "^3.4.1",
     "dotenv": "^8.2.0",
     "fs-extra": "^9.0.1",
