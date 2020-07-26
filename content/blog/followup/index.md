@@ -9,10 +9,11 @@ status: budding
 
 This is a listing of things to follow up on.
 
-- [Moog Mother-32](https://www.moogmusic.com/products/mother-32)
+- Schiit Audio devices, specifically the [Modi](https://www.schiit.com/products/modi-1) and [Magni](https://www.schiit.com/products/magni-1)
 
 ## Topics already discussed
 
+- [Moog Mother-32](https://www.moogmusic.com/products/mother-32)
 - [Nu Shell](https://github.com/nushell/nushell)
 - [MIDItoOBS](https://lannonbr.com/blog/2020-04-26-obs-midi-control/)
 - [Ableton Live](https://www.ableton.com/en/live/)
