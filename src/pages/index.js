@@ -76,7 +76,7 @@ const IndexPage = ({ posts }) => (
       </p>
       <div className="inline-flex items-baseline justify-between">
         <h2>New Posts</h2>
-        <a href="/blog" className="flex items-center group">
+        <a href="/garden" className="flex items-center group">
           All Posts
           <ChevronRight
             className="h-5 w-5 relative right-0 transform transition-transform duration-200 group-hover:translate-x-1"
