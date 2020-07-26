@@ -6,6 +6,7 @@ keywords:
   - GitHub Actions
   - Twilio
 logo: twilio
+status: fully-grown
 ---
 
 When I open my web browser, there is a page I developed where I can see upcoming events.
@@ -72,7 +73,7 @@ const countdowns = JSON.parse(
 )
 
 // Filter through all of the events taht are in the next 7 days from right now
-countdowns.forEach(event => {
+countdowns.forEach((event) => {
   let hoursTillEvent = moment(event.date).diff(moment(), 'hours')
 
   if (hoursTillEvent > -1 && hoursTillEvent < 24 * 7) {
@@ -84,7 +85,7 @@ countdowns.forEach(event => {
 if (thisWeekEvents.length > 0) {
   let str = `This week's events (${moment().format('ll')})\n`
 
-  thisWeekEvents.forEach(event => {
+  thisWeekEvents.forEach((event) => {
     str += '- ' + event.title + '\n'
   })
 
@@ -97,8 +98,8 @@ if (thisWeekEvents.length > 0) {
       from: process.env.from_num,
       to: process.env.to_num,
     })
-    .then(message => console.log(message))
-    .catch(err => console.error(err))
+    .then((message) => console.log(message))
+    .catch((err) => console.error(err))
 }
 ```
 

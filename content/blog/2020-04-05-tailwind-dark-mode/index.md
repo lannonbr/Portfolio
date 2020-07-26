@@ -5,6 +5,7 @@ description: 'With use of the tailwindcss-dark-mode plugin, you can add support 
 keywords:
   - TailwindCSS
 logo: tailwind
+status: fully-grown
 ---
 
 When using Tailwind, you may want to add functionality to integrate a dark mode into the site. By default Tailwind does not provide this, but there is a plugin you can add into your workflow to enable this. [tailwindcss-dark-mode](https://github.com/ChanceArthur/tailwindcss-dark-mode/) drops in various variants (`dark:`, `dark-hover:`, etc) to just append more utilities to your components when in a dark mode.

@@ -6,6 +6,7 @@ keywords:
   - GraphQL
   - Gatsby
 logo: gatsby
+status: fully-grown
 ---
 
 ![GraphQL Logo](graphql-logo.png)

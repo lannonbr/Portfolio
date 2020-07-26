@@ -5,6 +5,7 @@ description: 'Using the pull_request GitHub Actions trigger, you can write workf
 keywords:
   - GitHub Actions
 logo: github-actions
+status: fully-grown
 ---
 
 When developing a CI/CD solution for a repository, you likely want to run a testing suite against a codebase to make sure the project does what you want it to.

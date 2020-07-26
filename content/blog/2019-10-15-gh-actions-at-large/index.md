@@ -7,6 +7,7 @@ keywords:
   - Automation
   - GitHub
 logo: github-actions
+status: fully-grown
 ---
 
 GitHub Actions is nothing new, yet the scale and placement is changing how we use GitHub. With a month away from the general availability of Actions, I've been interacting with it over the past year and through the various stages that it's been made, Actions is providing a way to run code that automates workflows around your repos on GitHub's servers. It's a mindshift that rather than being limited to GitHub's toolchain, you can rather expand how GitHub works.

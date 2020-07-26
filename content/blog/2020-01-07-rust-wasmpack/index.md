@@ -6,6 +6,7 @@ keywords:
   - Rust
   - WebAssembly
 logo: wasm
+status: fully-grown
 ---
 
 ![Rust/WASM crustacean logo](./wasm-ferris.png)

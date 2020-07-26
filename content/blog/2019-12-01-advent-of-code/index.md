@@ -4,6 +4,7 @@ date: '2019-12-01'
 description: 'A post discussing Advent of Code 2019, a programming advent calendar with daily programming puzzles'
 keywords:
   - Programming Puzzles
+status: fully-grown
 ---
 
 Every December, [Eric Wastl](https://twitter.com/ericwastl) creates an Advent calendar consisting of programming puzzles that are holiday themed. Every day, you get a 2-part puzzle, where the first part introduces a problem, and then the second part builds upon it. You can do it in any language of your choosing and there are people who do it competitively to get on the leaderboard of people who do it the fastest after it is released as well as people who are more casual.

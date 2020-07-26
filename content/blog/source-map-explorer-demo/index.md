@@ -2,6 +2,7 @@
 title: 'Analyzing JS Bundles with source-map-explorer'
 date: '2020-06-14'
 description: 'How to examine a JavaScript bundle that includes a source map to dig into what ends up in a bundle shipped to production'
+status: fully-grown
 ---
 
 [danvk/source-map-explorer](https://github.com/danvk/source-map-explorer) offers a visual representation of any JavaScript bundle that also has a source-map. This will work across bundlers (Webpack, Parcel, Rollup, etc) as long as the bundle you want to analyze also has a source-map that can be passed along.

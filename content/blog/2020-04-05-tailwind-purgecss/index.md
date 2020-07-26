@@ -6,6 +6,7 @@ keywords:
   - TailwindCSS
   - Gatsby
 logo: tailwind
+status: fully-grown
 ---
 
 Tailwind is a powerful tool, but out of the box, it outputs a huge CSS file around the size of 750kb. By adding a library called PurgeCSS to your workflow, it can get rid of any css classes from Tailwind you do not use.

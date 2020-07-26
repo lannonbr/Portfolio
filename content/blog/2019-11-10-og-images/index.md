@@ -7,6 +7,7 @@ keywords:
   - Puppeteer
   - Gatsby
 logo: gatsby
+status: fully-grown
 ---
 
 I had a simple goal. I wanted to add some style to the embed cards for my blogposts Twitter injects for links with their meta tags. With this, I approached it using a Gatsby plugin by [Chris Biscardi](https://twitter.com/chrisbiscardi) to create a React component so I could create the image programmatically as part of my Gatsby build process.

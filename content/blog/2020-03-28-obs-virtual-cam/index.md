@@ -4,6 +4,7 @@ date: '2020-03-28'
 description: 'obs-virtual-cam provides an interface where you can take the video output and convert it into a virtual webcam for apps like Skype or Zoom'
 keywords:
   - OBS
+status: fully-grown
 ---
 
 When I livestream on Twitch, I have setup various sources to add in overlays, added filters to my camera, and have the ability to switch between various scenes in OBS. Though, I can't pull all of these things out to be used in an app like Skype. With the use of a OBS plugin, You can make OBS act as a webcam. CatxFish on GitHub created an OBS plugin called [obs-virtual-cam](https://github.com/CatxFish/obs-virtual-cam) which installs virtual webcams which can playback your video output coming from OBS. It requires you have at least OBS 24.0.0 installed.

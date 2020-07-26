@@ -6,6 +6,7 @@ keywords:
   - Git
   - GitHub Actions
 logo: github-actions
+status: fully-grown
 ---
 
 GitHub Actions provides full access to the runner at your disposal, and one thing you may want to do is make commits in a workflow run and push it back up to GitHub automatically. I'm going to show a simple example where we run the `date` unix command, save the contents to a file, and push it back to the master branch.

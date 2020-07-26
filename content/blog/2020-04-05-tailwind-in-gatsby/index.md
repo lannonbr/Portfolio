@@ -6,6 +6,7 @@ keywords:
   - TailwindCSS
   - Gatsby
 logo: tailwind
+status: fully-grown
 ---
 
 TailwindCSS is a CSS framework which instead of defining named classes and adding a CSS rule with various properties on it, you use constructed CSS classes which will apply styles for you.

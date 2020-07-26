@@ -5,6 +5,7 @@ description: 'Trigger actions and modify settings of OBS scenes and sources usin
 keywords:
   - OBS
   - MIDI
+status: fully-grown
 ---
 
 MIDI controllers are well known in the sound design production industry to be able to control software like Ableton Live or interact with sythesizers. With the livestreaming industry booming, it's possible to use this equipment as well with tools like OBS Studio. lebaston100 on GitHub created a python script that enables interactions between a MIDI controller and OBS called [MIDItoOBS](https://github.com/lebaston100/MIDItoOBS). Using the [OBS-websocket](https://github.com/Palakis/obs-websocket) plugin, MIDItoOBS can send button presses, faders, or knobs signals to OBS Studio to control scenes and sources.

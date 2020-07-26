@@ -8,6 +8,7 @@ keywords:
   - GitHub
   - Fauna
 logo: github-actions
+status: fully-grown
 ---
 
 Over the past week, I spun up a new workflow with GitHub Actions for an upcoming site of mine where I will be pushing resources and other content for GitHub Actions. For one of the pages, I wanted to get all updates on Actions from [GitHub's Changelog](https://github.blog/changelog/) and display them as a list.
@@ -49,16 +50,16 @@ const getPostsFromFauna = async () => {
 
   return client
     .paginate(q.Match(q.Index('all_changelog_entries')))
-    .map(ref => q.Get(ref))
-    .each(page => {
-      page.map(doc => {
+    .map((ref) => q.Get(ref))
+    .each((page) => {
+      page.map((doc) => {
         faunaPosts.push(doc)
       })
     })
     .then(() => {
       return faunaPosts
     })
-    .catch(err => {
+    .catch((err) => {
       console.error('Failed to pull down fauna posts')
       console.error(err)
     })
@@ -70,7 +71,7 @@ The main meat of the code here sends a request to get a paginated results from w
 Now that both the posts from Fauna and from GitHub's site are both loaded, I check each of the GitHub entries and if they aren't already in the database, I will upload them.
 
 ```js
-const addPostToFauna = async post => {
+const addPostToFauna = async (post) => {
   try {
     await client.query(
       q.Create(q.Collection('changelog_entries'), {

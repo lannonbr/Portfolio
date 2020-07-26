@@ -5,6 +5,7 @@ description: 'A retrospective for what I did in 2019'
 keywords:
   - Retrospective
   - Productivity
+status: fully-grown
 ---
 
 And with that, 2019 is wrapping up, but for one final post of the year, I wanted to highlight some of my wins for the year covering 4 topics: Public Speaking, websites I launched this year, My part in Open Source, and Twitch Live Coding.

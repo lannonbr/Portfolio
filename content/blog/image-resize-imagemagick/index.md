@@ -2,6 +2,7 @@
 title: 'Resizing images with ImageMagick ZSH function'
 date: '2020-06-13'
 description: 'A look at a zsh function I wrote to quickly resize images using the imagemagick convert command'
+status: fully-grown
 ---
 
 If I want to optimize an image by solely shrinking the dimensions, [ImageMagick](https://imagemagick.org/index.php) has a command to do this.

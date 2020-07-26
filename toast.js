@@ -30,7 +30,7 @@ exports.prepData = async ({ cacheDir, publicDir }) => {
   } = require(path.resolve(cacheDir, 'featured-projects.json'))
 
   const allPostsData = mdxPostsData.map(
-    ({ title, date, slug, description, keywords, logo }) => ({
+    ({ title, date, slug, description, keywords, logo, status }) => ({
       title,
       updatedAt: date,
       slug,
@@ -38,6 +38,7 @@ exports.prepData = async ({ cacheDir, publicDir }) => {
       keywords,
       logo,
       contentType: 'post',
+      status,
     })
   )
   await fs.writeFile(

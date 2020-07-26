@@ -5,6 +5,7 @@ description: 'A top down hierarchy of GitHub Actions components'
 keywords:
   - GitHub Actions
 logo: github-actions
+status: fully-grown
 ---
 
 Going from complete setups down to the atomic level of a GitHub Actions workflow consists of 3 parts

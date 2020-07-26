@@ -4,6 +4,7 @@ date: '2020-05-04'
 description: 'A collection of topics to follow up on (or that have been already followed up)'
 keywords:
   - Twitch
+status: budding
 ---
 
 This is a listing of things to follow up on.

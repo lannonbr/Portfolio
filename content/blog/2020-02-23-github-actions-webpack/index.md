@@ -5,6 +5,7 @@ description: 'How to bundle NodeJS with node modules to be used in a GitHub Acti
 keywords:
   - GitHub Actions
 logo: github-actions
+status: fully-grown
 ---
 
 When working with GitHub Actions if you want to expose some code as an action where you can just use it without needing to dive into the internals, there is two scenarios of either running it inside a docker container or bundling the code down. I'll be looking at the latter here.

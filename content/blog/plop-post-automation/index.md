@@ -2,6 +2,7 @@
 title: 'Automating blogpost creation with Plop'
 date: '2020-05-09'
 description: 'How I am automating creation of new posts on my site with Plop'
+status: fully-grown
 ---
 
 Whenever I come in to create a new post here, theres some of a schema of default fields and things I need for each post, I decided to automate this using the [Plop](https://plopjs.com/) JS library.

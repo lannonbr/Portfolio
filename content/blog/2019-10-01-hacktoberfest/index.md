@@ -6,6 +6,7 @@ keywords:
   - Open Source
   - GitHub
   - Outreach
+status: fully-grown
 ---
 
 ![Hacktoberfest logo](./hacktoberfest-logo.png)

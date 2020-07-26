@@ -6,6 +6,7 @@ keywords:
   - Gatsby Themes
   - Gatsby
 logo: gatsby
+status: fully-grown
 ---
 
 July 3rd was a big launch for Gatsby Themes. It is a API to share functionality, data sourcing, styles, and other features of Gatsby sites into packages. Themes used to be available in Gatsby under a `__experimentalThemes` field of the `gatsby-config`, but as of Wednesday with the official launch of Themes in Gatsby 2.13.0, the functionality of themes are just now part of Gatsby's plugin ecosystem.
@@ -119,7 +120,7 @@ module.exports = {
 Now, in the theme's `gatsby-config` file, we can switch the export from an object into a function so we can grab the options.
 
 ```js
-module.exports = options => ({
+module.exports = (options) => ({
   plugins: [
     {
       resolve: `gatsby-source-filesystem`,
@@ -151,7 +152,7 @@ And then add it in the `gatsby-config` and point it to use the `src/pages/` in t
 ```js
 const path = require('path')
 
-module.exports = options => ({
+module.exports = (options) => ({
   plugins: [
     {
       resolve: `gatsby-plugin-page-creator`,

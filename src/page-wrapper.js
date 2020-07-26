@@ -66,7 +66,7 @@ export default ({ children, ...props }) => {
             {props.title && (
               <a className="inline-flex items-center mb-4" href="/garden">
                 <Home className="mr-2" alt="" />
-                Blog Home
+                Digital Garden Home
               </a>
             )}
             {props.title && <h1>{props.title}</h1>}

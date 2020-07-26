@@ -6,6 +6,7 @@ keywords:
   - GitHub Actions
   - Twilio
 logo: twilio
+status: fully-grown
 ---
 
 A few weeks back, [ChefBrent](https://twitch.tv/chefbrent) started a new show every Friday called "Follow-up Friday". The premise is that you may find tons of things through a week during the day. News stories, new software projects, etc. With that, if you don't write it down to look over at a later time, you likely won't remember it. His new weekly show tries to mitigate that and have a scheduled time every week to pull up those topics and look over them.
@@ -21,7 +22,7 @@ To start, I wanted to build a SMS bot that would handle the collection of a titl
 I start by asking for the two variables, then pass it through to a Twilio function that manages the HTTP call. There is a widget for HTTP requests, but it doesn't allow for custom request headers, so I fellback to a serverless function deployed to Twilio.
 
 ```js title=function.js
-exports.handler = function(context, event, callback) {
+exports.handler = function (context, event, callback) {
   const fetch = require('node-fetch')
 
   fetch('https://api.github.com/repos/lannonbr/Portfolio-Gatsby/dispatches', {
@@ -38,7 +39,7 @@ exports.handler = function(context, event, callback) {
         url: event.url,
       },
     }),
-  }).then(resp => callback())
+  }).then((resp) => callback())
 }
 ```
 

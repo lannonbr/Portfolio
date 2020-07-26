@@ -6,6 +6,7 @@ keywords:
   - Live Streaming
   - PC Build
 logo: twitch
+status: fully-grown
 ---
 
 So, I built my PC live a little bit over a week ago. We went from the entire process of starting with a bunch of boxes and got all the way to Windows 10 fully installed on the machine.

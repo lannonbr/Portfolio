@@ -5,6 +5,7 @@ description: 'GitHub Actions scheduled workflows allow for a task to be done in 
 keywords:
   - GitHub Actions
 logo: github-actions
+status: fully-grown
 ---
 
 using the `schedule` trigger event, you can run workflows on a recurruing schedule.

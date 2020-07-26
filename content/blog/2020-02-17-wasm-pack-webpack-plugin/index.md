@@ -6,6 +6,7 @@ keywords:
   - Rust
   - WebAssembly
 logo: wasm
+status: fully-grown
 ---
 
 On top of using [wasm-pack](https://github.com/rustwasm/wasm-pack) directly, you can also use it in JS bundlers. In this case, there has been an implementation to integrate wasm-pack into a webpack bundle with little code.
@@ -51,7 +52,7 @@ pub fn add(a: i32, b: i32) -> i32 {
 Following, we will want to create a JS file that is the entrypoint for our webpack bundle at `lib.js` in the root directory.
 
 ```js title=lib.js
-import('./pkg/').then(lib => {
+import('./pkg/').then((lib) => {
   // lib is the wasm library you can now use.
   console.log(`2 + 2 = ${lib.add(2, 2)}`)
 })

@@ -5,6 +5,7 @@ description: 'How to create a GitHub Action workflow to trigger deploys to Netli
 keywords:
   - GitHub Actions
 logo: github-actions
+status: fully-grown
 ---
 
 You have a site. You want to deploy it up to Netlify. As of late last year, Netlify added a cap of 300 "build minutes" on a free account. If your builds take a while or you deploy your site often, you can run into that cap very quickly. Instead, if you use GitHub Actions as your method of building a site and pushing to production, then you can build a very similar workflow at zero cost if your site is in a public repo. With this method, any time there is a commit to master, it will run a build and deploy to Netlify on your behalf.

@@ -7,6 +7,7 @@ keywords:
   - GitHub Actions
   - Automation
 logo: github-actions
+status: fully-grown
 ---
 
 ![GitHub Actions branding](./GitHubActions.png)

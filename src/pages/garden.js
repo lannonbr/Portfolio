@@ -19,6 +19,11 @@ const images = preval`
   module.exports = files
 `
 
+const statusMap = {
+  budding: '🌱',
+  'fully-grown': '🌲',
+}
+
 const LogolessLogo = () => (
   <div
     className="inline-block w-6 h-6 rounded-full mr-2"
@@ -92,7 +97,11 @@ const BlogIndexPage = ({ posts }) => {
   return (
     <div className="max-w-6xl mx-auto">
       <SEO title="Blog" />
-      <h1>Posts</h1>
+      <h1>Digital Garden</h1>
+      <p>
+        This is a evergrowing garden of content. Some pieces are budding while
+        others are fully grown.
+      </p>
       <div className="flex flex-col md:items-center md:flex-row">
         <strong className="mr-3">Search:</strong>
         <input
@@ -149,7 +158,8 @@ const BlogIndexPage = ({ posts }) => {
                   ) : (
                     <LogolessLogo />
                   )}
-                  <span>{post.title}</span>
+                  <span className="flex-grow">{post.title}</span>
+                  {post.status && <span>{statusMap[post.status]}</span>}
                   <br />
                 </a>
                 <p className="text-sm md:text-base mb-0">{post.description}</p>

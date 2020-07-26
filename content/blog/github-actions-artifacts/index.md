@@ -5,6 +5,7 @@ description: 'A method to create artifacts from GitHub Actions runs'
 keywords:
   - GitHub Actions
 logo: github-actions
+status: fully-grown
 ---
 
 since Jobs are in completely isolated environments from each other, you can use Artifacts to move files between Jobs.
