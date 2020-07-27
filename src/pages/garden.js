@@ -84,7 +84,6 @@ const BlogIndexPage = ({ posts }) => {
   ]
 
   const visiblePosts = posts
-    .reverse()
     .filter((post) => {
       if (category === '') return true
       else return post.logo === category

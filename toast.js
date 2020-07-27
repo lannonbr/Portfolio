@@ -41,6 +41,15 @@ exports.prepData = async ({ cacheDir, publicDir }) => {
       status,
     })
   )
+
+  allPostsData.sort((b, a) => {
+    const da = new Date(a.updatedAt).getTime()
+    const db = new Date(b.updatedAt).getTime()
+    if (da < db) return -1
+    if (da === db) return 0
+    if (da > db) return 1
+  })
+
   await fs.writeFile(
     path.resolve(publicDir, 'src/pages/garden.json'),
     JSON.stringify({ posts: allPostsData })
@@ -68,13 +77,6 @@ exports.prepData = async ({ cacheDir, publicDir }) => {
 
   // index.html
   const topPostsData = allPostsData
-    .sort((b, a) => {
-      const da = new Date(a.updatedAt).getTime()
-      const db = new Date(b.updatedAt).getTime()
-      if (da < db) return -1
-      if (da === db) return 0
-      if (da > db) return 1
-    })
     .filter(({ contentType }) => contentType === 'post')
     .slice(0, 5)
 
