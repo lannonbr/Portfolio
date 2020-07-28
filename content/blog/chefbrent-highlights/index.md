@@ -1,7 +1,7 @@
 ---
 title: 'ChefBrent Stream Highlights'
 date: '2020-05-04'
-description: 'Trigger actions and modify settings of OBS scenes and sources using a MIDI controller'
+description: 'Twitch content production streams by ChefBrent'
 keywords:
   - Twitch
 logo: twitch
