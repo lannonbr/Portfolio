@@ -47,7 +47,7 @@ const UsesPage = () => (
         <p>My main machine as of July 2019 is a custom built PC</p>
         <ul className="list-disc pl-4">
           <li>AMD Ryzen 7 3700x - 8 core / 16 thread CPU</li>
-          <li>Corsair Vengence LPX 3200MHz DDR4 RAM - 32GB (2x16GB)</li>
+          <li>Corsair Vengence RGB Pro 2666MHz DDR4 RAM - 32GB (2x16GB)</li>
           <li>Samsung 970 Evo Plus NvMe M.2 1TB SSD</li>
           <li>Nvidia GeForce RTX 2070 Super GPU</li>
           <li>MSI MPG x570 Gaming Edge Wifi Motherboard</li>
