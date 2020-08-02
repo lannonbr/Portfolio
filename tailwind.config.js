@@ -10,6 +10,7 @@ module.exports = {
       },
       minHeight: {
         '100': '100px',
+        '150': '150px',
       },
       maxWidth: {
         '7xl': '100rem',

@@ -92,7 +92,13 @@ ul {
   grid-template-columns:
     minmax(0.5rem, 1fr) minmax(auto, 800px) minmax(auto, 800px)
     minmax(0.5rem, 1fr);
-  grid-template-rows: auto 1fr 100px;
+  grid-template-rows: auto 1fr 150px;
+}
+
+@media (max-width: 768px) {
+  #pageWrapper {
+    grid-template-rows: auto 1fr auto;
+  }
 }
 
 header {
