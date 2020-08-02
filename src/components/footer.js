@@ -47,7 +47,7 @@ function Footer() {
       </div>
       <div>
         <b>Main Navigation</b>
-        <div className="flex flex-col">
+        <div className="flex flex-col space-y-2">
           <Link href="/work">Work</Link>
           <Link href="/projects">Projects</Link>
           <Link href="/garden">Digital Garden</Link>
@@ -57,14 +57,14 @@ function Footer() {
       </div>
       <div>
         <b>Misc Pages</b>
-        <div className="flex flex-col">
+        <div className="flex flex-col space-y-2">
           <Link href="/uses">Uses</Link>
           <Link href="/music-production">Music Production</Link>
         </div>
       </div>
       <div>
         <b>Socials</b>
-        <div className="flex flex-col">
+        <div className="flex flex-col space-y-2">
           <Link href="mailto:benjamin@lannonbr.com">Email me</Link>
           <Link href="https://github.com/lannonbr">Visit my GitHub</Link>
           <Link href="https://twitter.com/lannonbr">Visit my Twitter</Link>
