@@ -19,6 +19,9 @@ const MusicProductionPage = () => {
           <li>
             <a href="https://www.ableton.com/en/live/">Ableton Live 10 Suite</a>
           </li>
+          <li>
+            <a href="https://vcvrack.com/">VCV Rack</a>
+          </li>
         </ul>
         <h2>Equipment</h2>
         <ul className="list-disc pl-4">
