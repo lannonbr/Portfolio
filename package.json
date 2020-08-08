@@ -13,10 +13,10 @@
     "gray-matter": "^4.0.2",
     "js-yaml": "^3.14.0",
     "parse-numeric-range": "^1.2.0",
-    "preact": "^10.4.6",
+    "preact": "^10.4.7",
     "preact-render-to-string": "^5.1.10",
     "prism-react-renderer": "^1.1.1",
-    "prismjs": "^1.20.0",
+    "prismjs": "^1.21.0",
     "react-helmet": "^6.1.0",
     "rehype-local-image-to-cloudinary": "^1.0.2",
     "rehype-slug": "^3.0.0",
@@ -37,8 +37,8 @@
   "devDependencies": {
     "@sector/breadbox": "^0.0.4",
     "prettier": "^2.0.5",
-    "tailwindcss": "^1.6.1",
-    "tailwindcss-dark-mode": "^1.1.5"
+    "tailwindcss": "^1.6.2",
+    "tailwindcss-dark-mode": "^1.1.6"
   },
   "repository": {
     "type": "git",
