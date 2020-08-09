@@ -87,6 +87,11 @@ ul {
   @apply pl-4;
 }
 
+summary {
+  cursor: pointer;
+  @apply pb-4;
+}
+
 #pageWrapper {
   display: grid;
   grid-template-columns:
