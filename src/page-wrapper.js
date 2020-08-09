@@ -51,6 +51,9 @@ export default ({ children, ...props }) => {
             img: (props) => {
               return <img className="max-w-3xl mx-auto" {...props} />
             },
+            blockquote: ({ children }) => {
+              return <blockquote className="px-8 italic">{children}</blockquote>
+            },
             pre: (props) => {
               return (
                 <div
