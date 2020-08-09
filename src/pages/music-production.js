@@ -55,12 +55,14 @@ const MusicProductionPage = () => {
               Novation LaunchControl XL MIDI Controller
             </a>
           </li>
-          <li>
-            <a href="https://www.moogmusic.com/products/mother-32">
-              Moog Mother-32 Analog Synthesizer
-            </a>
-          </li>
         </ul>
+        <h2>Eurorack Modular Synth</h2>
+        <p>
+          My current rack on ModularGrid:{' '}
+          <a href="https://www.modulargrid.net/e/racks/view/1289453">
+            https://www.modulargrid.net/e/racks/view/1289453
+          </a>
+        </p>
       </div>
       <div className="hidden md:block">
         <MusicProdIllustration />
