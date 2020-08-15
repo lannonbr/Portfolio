@@ -49,7 +49,7 @@ export default ({ children, ...props }) => {
               </code>
             ),
             img: (props) => {
-              return <img className="max-w-3xl mx-auto" {...props} />
+              return <img className="md:max-w-3xl mx-auto" {...props} />
             },
             blockquote: ({ children }) => {
               return <blockquote className="px-8 italic">{children}</blockquote>
