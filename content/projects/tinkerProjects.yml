@@ -22,10 +22,3 @@ projects:
         url: https://github.com/features/actions
       - name: GitHub Actions Docs
         url: https://help.github.com/en/categories/automating-your-workflow-with-github-actions
-  - name: Gatsby
-    created_date: 2018-08-01
-    desc: |
-      A React based web framework. I've been using it to generate many of my sites that can be pushed out to something like Netlify. As well, I am an active contributor to the project itself by helping triage issues and PRs as well as helping improve the documentation on the official site.
-    links:
-      - name: Gatsbyjs.org
-        url: https://gatsbyjs.org

@@ -8,7 +8,7 @@ The site is developed in Toast.
 
 - MDX
 - TailwindCSS
-- React-feather
+- Feather icons set
 - Date-fns
 
 ## Other Tidbits
