@@ -28,7 +28,8 @@ projects:
     github_link: 'https://github.com/lannonbr/ActionsResourceSite'
     website_link: 'https://gars.dev'
     technologies:
-      - Gatsby
+      - Toast
+      - Tailwind CSS
       - GitHub Actions
       - Fauna
       - MDX
