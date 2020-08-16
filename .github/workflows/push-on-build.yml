@@ -53,7 +53,7 @@ jobs:
         with:
           name: public-dir
           path: public
-      - uses: ./.github/actions/save-css-stats-action
+      - uses: lannonbr/save-css-stats-action@v1
         with:
           filepath: public/style.css
           dynamo-table-name: lannonbr.com-css-stats
