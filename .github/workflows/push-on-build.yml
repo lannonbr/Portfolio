@@ -53,10 +53,10 @@ jobs:
         with:
           name: public-dir
           path: public
-      - run: |
-          cd .github/actions/save-css-stats-action
-          yarn
-          node index.js
+      - uses: ./.github/actions/save-css-stats-action
+        with:
+          filepath: public/style.css
+          dynamo-table-name: lannonbr.com-css-stats
   deploy-build:
     needs: [gen-og-images, toast-build]
     env:

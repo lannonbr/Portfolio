@@ -5,6 +5,11 @@ const moment = require('moment')
 
 require('dotenv').config()
 
+const core = require('@actions/core')
+
+const filePath = core.getInput('filepath')
+const dynamoTableName = core.getInput('dynamo-table-name')
+
 const AWS = require('aws-sdk')
 AWS.config.update({ region: 'us-east-1' })
 const docClient = new AWS.DynamoDB.DocumentClient({ apiVersion: '2012-08-10' })
@@ -15,7 +20,7 @@ function unique(arr) {
   return [...new Set(arr)]
 }
 
-const cssPath = path.resolve(__dirname, '..', '..', '..', 'public', 'style.css')
+const cssPath = path.resolve(process.env.GITHUB_WORKSPACE, filePath)
 
 if (!fs.existsSync(cssPath)) {
   console.error("public/styles.css does not exist. Try running 'yarn build'")
@@ -57,7 +62,7 @@ const maxWidths = JSON.stringify(
 const now = moment()
 
 const params = {
-  TableName: 'lannonbr.com-css-stats',
+  TableName: dynamoTableName,
   Item: {
     month: now.format('YYYY-MM'),
     timestamp: now.unix(),

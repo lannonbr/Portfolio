@@ -1,0 +1,12 @@
+name: Save CSSStats Action
+description: Save stats from cssstats to Dynamo table
+inputs:
+  filepath:
+    description: css filepath location
+    required: true
+  dynamo-table-name:
+    description: dynamo table name
+    required: true
+runs:
+  using: 'node12'
+  main: 'lib/index.js'

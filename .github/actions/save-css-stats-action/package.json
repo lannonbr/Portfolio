@@ -4,10 +4,18 @@
   "main": "index.js",
   "license": "MIT",
   "dependencies": {
+    "@actions/core": "^1.2.4",
     "aws-sdk": "^2.720.0",
     "cssstats": "^3.4.1",
     "dotenv": "^8.2.0",
     "fs-extra": "^9.0.1",
     "moment": "^2.27.0"
+  },
+  "scripts": {
+    "build": "webpack --mode production"
+  },
+  "devDependencies": {
+    "webpack": "^4.44.1",
+    "webpack-cli": "^3.3.12"
   }
 }
