@@ -17,7 +17,7 @@ exports.sourceData = async ({ createPage, ...options }) => {
 
   let data = await files.map(async (filename) => {
     return beeline.startAsyncSpan(
-      { sourceType: 'mdx', filename },
+      { name: 'fetchMDX', filename },
       async (span) => {
         const file = await fs.readFile(
           `./content/blog/${filename}/index.md`,
