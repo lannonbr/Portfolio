@@ -28,7 +28,10 @@ exports.sourceData = async ({ createPage, ...options }) => {
 
         const { data, content } = frontmatter(file)
 
+        let mdxCompileTimer
+
         try {
+          mdxCompileTimer = beeline.startTimer('mdx_compile')
           compiledMDX = await mdx(content, {
             rehypePlugins: [
               rehypePrism,
@@ -46,7 +49,9 @@ exports.sourceData = async ({ createPage, ...options }) => {
           console.log(e)
           throw e
         }
+        beeline.finishTimer(mdxCompileTimer)
 
+        let createPageTimer = beeline.startTimer('create_page')
         await createPage({
           module: `/** @jsx mdx */
               import {mdx} from '@mdx-js/preact';
@@ -54,6 +59,7 @@ exports.sourceData = async ({ createPage, ...options }) => {
           slug: `blog/${filename}`,
           data: { ...data, slug: filename },
         })
+        beeline.finishTimer(createPageTimer)
 
         beeline.finishSpan(span)
 
