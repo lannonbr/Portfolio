@@ -21,7 +21,11 @@
     "rehype-local-image-to-cloudinary": "^1.0.2",
     "rehype-slug": "^3.0.0",
     "toast": "^0.2.10",
-    "unist-util-visit": "^2.0.3"
+    "unist-util-visit": "^2.0.3",
+    "@sector/breadbox": "^0.0.4",
+    "prettier": "^2.0.5",
+    "tailwindcss": "^1.6.2",
+    "tailwindcss-dark-mode": "^1.1.6"
   },
   "license": "MIT",
   "scripts": {
@@ -33,12 +37,6 @@
     "breadbox": "breadbox --dest public/web_modules",
     "post": "npx plop post",
     "serve": "npx http-server -p 8000 public"
-  },
-  "devDependencies": {
-    "@sector/breadbox": "^0.0.4",
-    "prettier": "^2.0.5",
-    "tailwindcss": "^1.6.2",
-    "tailwindcss-dark-mode": "^1.1.6"
   },
   "repository": {
     "type": "git",
