@@ -17,19 +17,16 @@ const Header = () => {
         gridColumn: '1 / span 4',
       }}
     >
-      <header className="pb-5 pt-2 md:pt-5 px-4 shadow-lg w-full max-w-7xl mx-auto grid items-center  md:shadow-none">
+      <header className="pb-5 pt-2 md:pt-5 px-4 shadow-lg w-full max-w-7xl mx-auto grid items-center md:shadow-none">
         <h1 className="text-2xl md:text-3xl m-0">
           <a
-            className="h-full no-underline bg-repeat bg-scroll bg-left-top"
+            className="h-full no-underline bg-repeat bg-scroll bg-left-top bg-clip-text bg-transparent"
             style={{
               backgroundOrigin: 'padding-box',
               backgroundImage:
                 mode !== 'dark'
                   ? 'linear-gradient(to right, #9d50bb, #6e48aa)'
                   : 'linear-gradient(to left, #50c9c3, #96deda)',
-              backgroundColor: 'rgba(0,0,0,0)',
-              backgroundClip: 'text',
-              WebkitBackgroundClip: 'text',
               WebkitTextFillColor: 'transparent',
             }}
             href="/"

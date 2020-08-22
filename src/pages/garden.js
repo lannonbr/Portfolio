@@ -6,7 +6,7 @@ const images = preval`
   const fs = require('fs')
   const path = require('path')
 
-  const imgDir = path.resolve(__dirname, 'src/images/blog-icons')
+  const imgDir = path.resolve(__dirname, '../images/blog-icons')
 
   let files = fs.readdirSync(imgDir).map(file => {
     return {

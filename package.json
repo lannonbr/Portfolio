@@ -24,7 +24,7 @@
     "unist-util-visit": "^2.0.3",
     "@sector/breadbox": "^0.0.4",
     "prettier": "^2.0.5",
-    "tailwindcss": "^1.6.2",
+    "tailwindcss": "^1.7.3",
     "tailwindcss-dark-mode": "^1.1.6"
   },
   "license": "MIT",
