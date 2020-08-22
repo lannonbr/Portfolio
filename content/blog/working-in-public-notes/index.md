@@ -115,3 +115,49 @@ The debate of whether the community should be centralized vs decentralized. shou
 ### Thoughts on The Structure of an Open Source Project
 
 At large, open source is a very diverse thing due to the nature of how different projects are. Do you have a project a few people are working on and they'll likely only be the only users, or do you have a small 12-line node script used by millions. What are the ramifications for strong / weak governance, and what happens when a project that should have a strong governance doesn't? Why do you think of an open source project as "daunting" or "approachable"?
+
+## Part 1 - How People Make: 03 - Roles, Incentives and Relationships
+
+Theory of the commons - working in public, outside the bounds of creating things for monetary purposes and more for personal / communal satisfaction.
+
+> "The Rules that govern the commons should match the actual conditons" ... "those who violate the rules are subject to _graduated sanctions_.
+
+Hmm, what happens when the following is broken by the maintainers themselves?
+
+Social identity in online communities have existed from the early BB days all the way to modern social media & open source even. From lurkers, casual participants, active participants, and maintainers / moderators.
+
+On the flip side of the Commons, it sometimes becomes a barrier of "us vs them" where there's a disconnect between maintainers & contributors, especially when OSS is company-based (ex: Vercel managing Next, Gatsby Inc, Facebook managing React, etc).
+
+Back in the day, OSS was considered not "Real Software" by some, but now companies are clinging onto it and that can be a pro and con.
+
+GitHub homogenized Open Source, but it did such as well as the rest of the tech giants and social medias did. We went from distributed to centralized.
+
+![Wait open source is political, always has been meme](./open-source-is-political.jpg)
+
+Code of Conducts have been put in place for projects far and wide as there needs to be some ground level for acceptable behavior in a community.
+
+Dear god with the opal-gate stuff. For context: [opal/opal#941](https://github.com/opal/opal/issues/941) one of the maintainers commented that "Tech is moral-less" which is a flat out lie.
+
+When these situations arise, people could be biased to have a lower amount of trust based on maintainers reactions to emotionally charged scenarios. Alongside such, people get less trust in the maintainers when the maintainers did something wrong but don't think they did anything wrong.
+
+At the end of the day, what are you doing to make people feel they are being accepted into a community?
+
+**Contribution is not just code**
+
+Maintainers sometimes are a collective, but sometimes a sole person. What happens when that sole person leaves said project?
+
+Distinct between author & maintainer. Some want to just make, make, make, not maintain.
+
+event-stream, leftpad, these situations happen again and again and again.
+
+Contributors can be a one and done situation or a connection that grows. Do you want to solve a bug that you ran into, or get involved with the process of the tool itself. Are you benefiting yourself or the collective?
+
+GitHub has made the casual contributor flourish due to lowering the barrier of entry. This though leads to disconnects of people not understanding the norms & leading to lower quality contributions that may take longer to review.
+
+Contributor count is not the best metric in terms of the health of a project. I could say 50k people submitted a PR saying they are using my technology, but if I'm the only one actually developing it, 50k contributors isn't telling the whole story.
+
+This also brings up other numerical metrics. I could have 3 million downloads for a npm package, but if 2.9999 million are just CI installs, I really don't have 3 million users. With all of this, qualitative insights from quantitative metrics have to be used to truly get a better understanding.
+
+### Thoughts on Roles, Incentives and Relationships
+
+Open source communities at large is about communication and trust. That trust can be easily broken and without guidelines, how can someone know a maintainer is trustworthy? As well, GitHub brought forward a place for the active contributor or casual user to put their voice on the same place, so with that, how do maintainers & communities setup systems for smooth processes so whether you're making your first contribution or your 50th, you can get the backing of the community to push towards the finish line.
