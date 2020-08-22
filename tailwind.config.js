@@ -3,6 +3,9 @@ module.exports = {
     content: ['./src/**/*.js', './utils/**/*.js'],
     whitelist: ['mode-dark'],
   },
+  future: {
+    removeDeprecatedGapUtilities: true,
+  },
   theme: {
     extend: {
       boxShadow: {
