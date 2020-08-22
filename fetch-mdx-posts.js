@@ -15,61 +15,66 @@ exports.sourceData = async ({ createPage, ...options }) => {
   const files = await fs.readdir('./content/blog/')
   beeline.addContext({ numMDXFiles: files.length })
 
-  let data = await files.map(async (filename) => {
-    return beeline.startAsyncSpan(
-      { name: 'fetchMDX', filename },
-      async (span) => {
-        const file = await fs.readFile(
-          `./content/blog/${filename}/index.md`,
-          'utf-8'
-        )
+  const sourceDataResult = []
 
-        let compiledMDX
+  await Promise.all(files.map(async (filename) => {
+    let mdxResult = await beeline.startAsyncSpan(
+        { name: 'fetchMDX', filename },
+        async (span) => {
+          const file = await fs.readFile(
+            `./content/blog/${filename}/index.md`,
+            'utf-8'
+          )
 
-        const { data, content } = frontmatter(file)
+          let compiledMDX
 
-        let mdxCompileTimer
+          const { data, content } = frontmatter(file)
 
-        try {
-          mdxCompileTimer = beeline.startTimer('mdx_compile')
-          compiledMDX = await mdx(content, {
-            rehypePlugins: [
-              rehypePrism,
-              rehypeSlug,
-              [
-                cloudinary,
-                {
-                  baseDir: path.join(__dirname, 'content', 'blog', filename),
-                  uploadFolder: 'lannonbr.com',
-                },
+          let mdxCompileTimer
+
+          try {
+            mdxCompileTimer = beeline.startTimer('mdx_compile')
+            compiledMDX = await mdx(content, {
+              rehypePlugins: [
+                rehypePrism,
+                rehypeSlug,
+                [
+                  cloudinary,
+                  {
+                    baseDir: path.join(__dirname, 'content', 'blog', filename),
+                    uploadFolder: 'lannonbr.com',
+                  },
+                ],
               ],
-            ],
+            })
+          } catch (e) {
+            console.log(e)
+            throw e
+          }
+          beeline.finishTimer(mdxCompileTimer)
+
+          let createPageTimer = beeline.startTimer('create_page')
+          await createPage({
+            module: `/** @jsx mdx */
+                import {mdx} from '@mdx-js/preact';
+                ${compiledMDX}`,
+            slug: `blog/${filename}`,
+            data: { ...data, slug: filename },
           })
-        } catch (e) {
-          console.log(e)
-          throw e
+          beeline.finishTimer(createPageTimer)
+
+          beeline.finishSpan(span)
+
+          // Data to be stored in `mdx-posts.json` file
+          return {
+            ...data,
+            slug: `blog/${filename}`,
+          }
         }
-        beeline.finishTimer(mdxCompileTimer)
+      )
 
-        let createPageTimer = beeline.startTimer('create_page')
-        await createPage({
-          module: `/** @jsx mdx */
-              import {mdx} from '@mdx-js/preact';
-              ${compiledMDX}`,
-          slug: `blog/${filename}`,
-          data: { ...data, slug: filename },
-        })
-        beeline.finishTimer(createPageTimer)
+      sourceDataResult.push(mdxResult)
+  }))
 
-        beeline.finishSpan(span)
-
-        // Data to be stored in `mdx-posts.json` file
-        return {
-          ...data,
-          slug: `blog/${filename}`,
-        }
-      }
-    )
-  })
-  return data
+  return sourceDataResult
 }
