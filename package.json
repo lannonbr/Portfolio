@@ -20,7 +20,7 @@
     "react-helmet": "^6.1.0",
     "rehype-local-image-to-cloudinary": "^1.0.2",
     "rehype-slug": "^3.0.0",
-    "toast": "^0.2.9",
+    "toast": "^0.2.10",
     "unist-util-visit": "^2.0.3"
   },
   "license": "MIT",
