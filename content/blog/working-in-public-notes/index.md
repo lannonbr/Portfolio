@@ -67,3 +67,51 @@ Funny enough, I wrote about Dan & Kent above and of course Nadia is bringing thi
 ## Thoughts on GitHub as a Platform
 
 GitHub really transitioned "Open Source" to be a public space for people to contribute to software, rather than the traditional sense of it being a licensing / distribution tool. With GitHub exploding in popularity, it became a social network for devs, and with such, the cliques form, the celebs rise and fall, and the things we thought were stable may not be anymore.
+
+## Part 1 - How People Make: 02 - The Structure of an Open Source Project
+
+Being part of an open source community may not have all the technical / social norms of "The Open Source Community" as there are so many different subcommunities beneath that things differ from group to group.
+
+The core of contribution is that anyone can suggest changes, but not everyone can approve said changes.
+
+New features can span from a GitHub Issue, to a RFC (Request for Comments) to discuss if the feature _should_ be added, less on if it can be added.
+
+"Maintainers" could be people who have merge access, or as well, those who just have influence. For some OSS projects, this could equate to "core maintainers" or "community maintainers". how one gains access to merge / commit access can vary based on leinent or strict guidelines & trust.
+
+> At the time, [Lorenzo Sciandra] did not feel "good enough" to contribute to React Native ~ Nadia (page 48)
+
+What does it even mean to be "good enough"? to contribute. People I've personally talked to sometimes see a big number of issues or pull requests and it seems daunting to contribute. It may be interesting to think why that's the case.
+
+A repo is not just the code, but the community, discussions, and evolution of the project at large.
+
+Other venues are also used in the process of using, creating, and discussing OSS projects: Slack, Discord, Stack Overflow, etc.
+
+Early timelines of OSS Projects usually go in the order of:
+
+1. Few people developing the project fairly privately / closed off. (Experimental tools may be open source but not always taking contributions from the outside yet)
+2. promotion / growth of a Stablized version of the software. Getting more people involved both in using the tool as well as maybe contributing to it as well.
+
+It's interesting Nadia comments that maintainence of a project (Issues, PRs, etc) is less fun than actually writing code. I could see the flip side of the phase of discussion could be invigorating at certain points.
+
+Users are more familiar with GitHub's project management tools, so when projects move issues to other platforms, people can be put off.
+
+Four Production Models
+
+- High User Growth, High Contributor Growth: Federations (ex: Rust)
+- High User Growth, Low Contributor Growth: Stadiums (ex: Babel)
+- Low User Growth, High Contributor Growth: Clubs (ex: Astropy)
+- Low User Growth, Low Contributor Growth: Toys (ex: ssh-chat)
+
+Federations: The big & open & approachable projects, but given the scale are more complex in governance
+
+Clubs: Niche projects where the people maintaining it are mainly the people using it
+
+Toys: Self-explainitory, not used by many, also described in circles as "Pet projects"
+
+Stadiums: The big projects, but sometimes daunting which lead to smaller contributor growth. Nadia makes a parallel with this to big twitch streamers.
+
+The debate of whether the community should be centralized vs decentralized. should there be a small group calling the shots, or should it be more representative of it's audience.
+
+### Thoughts on The Structure of an Open Source Project
+
+At large, open source is a very diverse thing due to the nature of how different projects are. Do you have a project a few people are working on and they'll likely only be the only users, or do you have a small 12-line node script used by millions. What are the ramifications for strong / weak governance, and what happens when a project that should have a strong governance doesn't? Why do you think of an open source project as "daunting" or "approachable"?
