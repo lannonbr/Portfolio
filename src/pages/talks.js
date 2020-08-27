@@ -3,8 +3,7 @@ import TalkIllustration from '../images/talk.js'
 import SEO from '../components/seo.js'
 import Youtube from '../components/feather/youtube.js'
 import File from '../components/feather/file.js'
-import format from 'date-fns/format'
-import parse from 'date-fns/parse'
+import dayjs from 'dayjs'
 
 const talks = [
   {
@@ -72,10 +71,7 @@ const TalksPage = () => {
         </p>
         <h2>List of Talks</h2>
         {talks.map((talk) => {
-          let formattedDate = format(
-            parse(talk.date, 'yyyy-MM-dd', new Date()),
-            'LLL d, yyyy'
-          )
+          let formattedDate = dayjs(talk.date).format("MMM D, YYYY")
 
           return (
             <article className="border border-solid border-gray-400 rounded p-4 flex flex-col mb-5">

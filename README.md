@@ -9,7 +9,7 @@ The site is developed in Toast.
 - MDX
 - TailwindCSS
 - Feather icons set
-- Date-fns
+- dayjs
 
 ## Other Tidbits
 

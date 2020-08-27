@@ -1,7 +1,7 @@
 module.exports = function (plop) {
-  const format = require('date-fns/format')
-
-  let date = format(new Date(), 'yyyy-MM-dd')
+  const dayjs = require('dayjs')
+  
+  let date = dayjs().format('YYYY-MM-DD')
 
   plop.setGenerator('post', {
     description: 'New Post',

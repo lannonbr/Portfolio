@@ -1,6 +1,6 @@
 const fs = require('fs')
 const yaml = require('js-yaml')
-const { format } = require('date-fns')
+const dayjs = require('dayjs')
 
 exports.sourceData = async (options) => {
   let data = yaml.safeLoad(
@@ -8,7 +8,7 @@ exports.sourceData = async (options) => {
   )
 
   data.projects = data.projects.map((project) => {
-    project.created_date = format(project.created_date, 'MMMM yyyy')
+    project.created_date = dayjs(project.created_date).format('MMMM YYYY')
 
     return project
   })
