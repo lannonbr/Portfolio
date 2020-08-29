@@ -5,7 +5,7 @@ description: 'How to navigate into the repo within GitHub Actions using the GITH
 keywords:
   - GitHub Actions
 logo: github-actions
-status: buddding
+status: budding
 ---
 
 When wanting to access the Filesystem through GitHub Actions, the main location that is focused is the root of the repository when a workflow is being run. To get to that location, GitHub Provides a `GITHUB_WORKSPACE` environment variable that is automatically setup as long as you've run the `actions/checkout` action.
