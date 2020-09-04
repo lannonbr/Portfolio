@@ -101,7 +101,7 @@ const Code = ({
           h(
             'pre',
             {
-              className: className + ' p-5 mt-0 overflow-auto',
+              className: className + ' p-5 mt-0',
               style: {
                 ...style,
                 borderTop: title ? '1px solid #8BADC1' : 'unset',

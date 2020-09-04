@@ -137,15 +137,15 @@ main a:hover {
   text-decoration: underline;
 }
 
-.gatsby-highlight {
+.toast-highlight {
   background-color: #011627;
   overflow: auto;
 }
 
-.gatsby-highlight pre[class*='language-'] {
+.toast-highlight pre[class*='language-'] {
   background-color: transparent;
   float: left;
-  min-width: 100%;
+  max-width: 0px; /* Don't ask it works somehow */
 }
 
 .highlight-line {
