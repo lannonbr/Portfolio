@@ -86,7 +86,7 @@ const Code = ({
       return h(
         'div',
         {
-          className: 'codeBlock toast-highlight mb-4 shadow-xl text-sm',
+          className: 'codeBlock toast-highlight mb-4 shadow-xl text-sm rounded',
         },
         [
           title &&
