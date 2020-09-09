@@ -41,7 +41,7 @@ jobs:
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: npx netlify-cli deploy --dir=public --prod
+        run: netlify deploy --dir=public --prod
 ```
 
 Going through each section of the file, you only trigger the workflow using the `push` event with a filter that it is only the `master` branch. Then, you checkout the repo with the [actions/checkout](https://github.com/actions/checkout) action. This is assumed to be a NodeJS environment so you install dependencies and then run `npm run build` to build your site. Finally, you can use the [netlify-cli](https://www.npmjs.com/package/netlify-cli) to actually deploy your site.
