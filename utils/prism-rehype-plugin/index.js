@@ -94,10 +94,7 @@ const Code = ({
               'div',
               {
                 className: className + ' text-sm px-5 py-4',
-                style: {
-                  ...style,
-                  borderBottom: '1px solid #8BADC1',
-                },
+                style,
               },
               title
             ),
@@ -105,7 +102,11 @@ const Code = ({
             'pre',
             {
               className: className + ' p-5 mt-0',
-              style: style,
+              style: {
+                ...style,
+                borderTop: '1px solid #8BADC1',
+                minWidth: '100%',
+              },
             },
             tokens.map((line, i) => {
               const lineProps = getLineProps({ line, key: i })

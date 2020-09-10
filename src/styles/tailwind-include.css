@@ -95,7 +95,7 @@ summary {
 #pageWrapper {
   display: grid;
   grid-template-columns:
-    minmax(0.5rem, 1fr) minmax(auto, 800px) minmax(auto, 800px)
+    minmax(0.5rem, 1fr) minmax(0, 800px) minmax(0, 800px)
     minmax(0.5rem, 1fr);
   grid-template-rows: auto 1fr 150px;
 }
@@ -145,7 +145,6 @@ main a:hover {
 .toast-highlight pre[class*='language-'] {
   background-color: transparent;
   float: left;
-  max-width: 0px; /* Don't ask it works somehow */
 }
 
 .highlight-line {
