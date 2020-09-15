@@ -104,7 +104,7 @@ const Code = ({
               className: className + ' p-5 mt-0',
               style: {
                 ...style,
-                borderTop: '1px solid #8BADC1',
+                borderTop: title ? '1px solid #8BADC1' : 'none',
                 minWidth: '100%',
               },
             },
