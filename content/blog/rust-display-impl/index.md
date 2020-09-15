@@ -3,6 +3,7 @@ title: 'Implementing the Display trait in Rust'
 date: '2020-09-09'
 description: 'How to implement the Display trait for custom structs in Rust'
 status: fully-grown
+logo: rust
 ---
 
 When interpolating values into a string in a `println!` call, you use the `{}` symbols in a format string followed by the variables as arguments. What this is using to insert a user-facing output into the string is the [fmt::Display](https://doc.rust-lang.org/std/fmt/trait.Display.html) trait. This trait is implemented on all primitives and many other types in the standard library.

@@ -3,6 +3,7 @@ title: 'Debugging serde_json error paths'
 date: '2020-09-14'
 description: 'How to use serde_path_to_error to get more context into why a deserialization is failing'
 status: budding
+logo: rust
 ---
 
 `serde_json` provides an API to convert JSON strings into structured data with Rust structs. This although can get tricky when errors appear. it provides back an error of what broke, but nothing about where except for a line and column number. In the case that the JSON being returned is from an API endpoint, it is all going to be a single string without any lines, so an error like
