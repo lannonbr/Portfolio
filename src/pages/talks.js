@@ -7,6 +7,13 @@ import dayjs from 'dayjs'
 
 const talks = [
   {
+    name: 'Caching Jamstack Sites With GitHub Actions',
+    date: '2020-07-09',
+    event: 'Learn With Jason',
+    location: 'Online',
+    recording: 'https://www.learnwithjason.dev/caching-jamstack-sites-with-github-actions'
+  },
+  {
     name: 'Getting up to speed with GitHub Actions',
     date: '2020-03-17',
     event: 'Reactadelphia (Remote)',
