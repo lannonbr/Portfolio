@@ -20,13 +20,6 @@ const StreamPage = () => {
           <a href="https://twitch.tv/lannonbr">https://twitch.tv/lannonbr</a>
         </p>
         <p>
-          I am member of the Twitch{` `}
-          <a href="https://livecoders.dev">Live Coders</a> team, an outgoing and
-          enthusiastic group of devs that write code, teach about technology,
-          and promote the technical community.
-        </p>
-
-        <p>
           If you want to learn about how I run the show, take a read through my{' '}
           <a href="/blog/2020-04-12-stream-setup/">Streaming Setup</a> post.
         </p>
