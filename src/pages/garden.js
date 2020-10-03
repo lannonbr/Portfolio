@@ -5,23 +5,6 @@ import { useState } from 'preact/hooks'
 import SEO from '../components/seo.js'
 import EmptyStreet from '../images/empty-street.js'
 
-// const images = preval`
-//   const fs = require('fs')
-//   const path = require('path')
-
-//   const imgDir = path.resolve(__dirname, '../images/blog-icons')
-
-//   let files = fs.readdirSync(imgDir).map(file => {
-//     return {
-//       name: file.split(".")[0],
-//       format: file.split(".")[1],
-//       image: fs.readFileSync(path.join(imgDir, file), 'base64')
-//     };
-//   })
-
-//   module.exports = files
-// `
-
 const statusMap = {
   budding: '🌱',
   'fully-grown': '🌲',
@@ -49,11 +32,7 @@ const CuratedButton = ({ logo, name, handleClick, isSelected }) => {
       }}
       onClick={handleClick}
     >
-      {/* <img
-        src={`data:image/${logo.format};base64,${logo.image}`}
-        alt=""
-        className="w-5 mr-3"
-      /> */}
+      <img src={logo.src} alt="" className="w-5 mr-3" />
       <span>{name}</span>
     </button>
   )
@@ -72,7 +51,7 @@ const NoPosts = (props) => {
   )
 }
 
-const BlogIndexPage = ({ posts }) => {
+const BlogIndexPage = ({ posts, images }) => {
   const [category, setCategory] = useState('')
   const [titleFilter, setTitleFilter] = useState('')
 
@@ -126,7 +105,7 @@ const BlogIndexPage = ({ posts }) => {
           <CuratedButton
             name={name}
             isSelected={!!(category === cat)}
-            // logo={images.filter((logo) => logo.name === cat)[0]}
+            logo={images.filter((logo) => logo.name === cat)[0]}
             handleClick={() => {
               if (category === '') {
                 setCategory(cat)
@@ -142,8 +121,8 @@ const BlogIndexPage = ({ posts }) => {
       <div>
         {visiblePosts.length > 0 ? (
           visiblePosts.map((post) => {
-            // const logo =
-            //   post.logo && images.filter((logo) => logo.name === post.logo)[0]
+            const logo =
+              post.logo && images.filter((logo) => logo.name === post.logo)[0]
 
             return (
               <article className="py-2 px-3 transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 dark-hover:bg-cyan-transparent dark-hover:text-cyan-light mb-2">
@@ -152,15 +131,11 @@ const BlogIndexPage = ({ posts }) => {
                   href={`/${post.slug}`}
                   className="flex items-center text-md md:text-xl rounded-sm mb-3 hover:no-underline"
                 >
-                  {/* {post.logo ? (
-                    <img
-                      src={`data:image/${logo.format};base64,${logo.image}`}
-                      alt=""
-                      className="w-6 mr-2"
-                    />
+                  {post.logo ? (
+                    <img src={logo.src} alt="" className="w-6 mr-2" />
                   ) : (
                     <LogolessLogo />
-                  )} */}
+                  )}
                   <span className="flex-grow">{post.title}</span>
                   {post.status && <span>{statusMap[post.status]}</span>}
                   <br />

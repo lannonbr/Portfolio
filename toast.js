@@ -1,4 +1,5 @@
 // Code credit to Chris Biscardi
+import { promises as fs } from 'fs'
 import * as MDXPostsSource from './fetch-mdx-posts.js'
 import * as TinkerProjectsSource from './fetch-tinker-projects.js'
 import * as FeaturedProjectsSource from './fetch-featured-projects.js'
@@ -9,6 +10,14 @@ export const sourceData = async ({ setData, createPage }) => {
     TinkerProjectsSource.sourceData(),
     FeaturedProjectsSource.sourceData(),
   ])
+
+  let images = await fs.readdir('./static/blog-icons')
+  images = images.map((image) => {
+    return {
+      name: image.split('.')[0],
+      src: `/blog-icons/${image}`,
+    }
+  })
 
   const allPostsData = mdxPosts.map(
     ({ title, date, slug, description, keywords, logo, status }) => ({
@@ -31,7 +40,7 @@ export const sourceData = async ({ setData, createPage }) => {
     if (da > db) return 1
   })
 
-  await setData({ slug: '/garden', data: { posts: allPostsData } })
+  await setData({ slug: '/garden', data: { posts: allPostsData, images } })
   await setData({ slug: '/work', data: { projects: tinkerProjects } })
   await setData({ slug: '/projects', data: { projects: featuredProjects } })
 
@@ -50,7 +59,7 @@ export const sourceData = async ({ setData, createPage }) => {
     .filter(({ contentType }) => contentType === 'post')
     .slice(0, 5)
 
-  await setData({ slug: '/', data: { posts: topPostsData } })
+  await setData({ slug: '/', data: { posts: topPostsData, images } })
 
   return
 }
