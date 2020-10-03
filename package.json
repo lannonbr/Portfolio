@@ -14,7 +14,6 @@
     "gray-matter": "^4.0.2",
     "js-yaml": "^3.14.0",
     "parse-numeric-range": "^1.2.0",
-    "patch-package": "^6.2.2",
     "preact": "^10.4.8",
     "preact-render-to-string": "^5.1.10",
     "prettier": "^2.1.1",
@@ -30,7 +29,6 @@
   },
   "license": "MIT",
   "scripts": {
-    "postinstall": "patch-package",
     "build": "yarn build:css && toast incremental .",
     "incremental": "toast incremental .",
     "build:css": "NODE_ENV=production tailwindcss build src/styles/tailwind-include.css --config tailwind.config.cjs --output public/style.css",
