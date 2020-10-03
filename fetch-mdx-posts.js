@@ -6,7 +6,7 @@ import frontmatter from 'gray-matter'
 import mdx from '@mdx-js/mdx'
 import rehypeSlug from 'rehype-slug'
 import cloudinary from 'rehype-local-image-to-cloudinary'
-// import rehypePrism from './utils/prism-rehype-plugin.cjs'
+import rehypePrism from './utils/prism-rehype-plugin/index.cjs'
 
 // import beeline from 'honeycomb-beeline'
 // beeline()
@@ -38,7 +38,7 @@ export const sourceData = async ({ createPage, ...options }) => {
         // mdxCompileTimer = beeline.startTimer('mdx_compile')
         compiledMDX = await mdx(content, {
           rehypePlugins: [
-            // rehypePrism,
+            rehypePrism,
             rehypeSlug,
             [
               cloudinary,

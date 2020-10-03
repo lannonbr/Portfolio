@@ -1,6 +1,6 @@
 module.exports = {
   purge: {
-    content: ['./src/**/*.js', './utils/**/*.js'],
+    content: ['./src/**/*.js', './utils/**/*.cjs'],
     whitelist: ['mode-dark'],
   },
   future: {
