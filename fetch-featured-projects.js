@@ -1,8 +1,8 @@
-const fs = require('fs')
-const yaml = require('js-yaml')
-const dayjs = require('dayjs')
+import fs from 'fs'
+import yaml from 'js-yaml'
+import dayjs from 'dayjs'
 
-exports.sourceData = async (options) => {
+export const sourceData = async (options) => {
   let data = yaml.safeLoad(
     fs.readFileSync('./content/projects/featuredProjects.yml', 'utf-8')
   )
@@ -13,5 +13,5 @@ exports.sourceData = async (options) => {
     return project
   })
 
-  return { data }
+  return data.projects
 }

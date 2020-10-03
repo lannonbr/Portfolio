@@ -1,5 +1,4 @@
 const preact = require('preact')
-const { h } = preact
 const renderToString = require('preact-render-to-string')
 const rangeParser = require('parse-numeric-range')
 const Highlight = require('prism-react-renderer')
@@ -8,6 +7,7 @@ const visit = require('unist-util-visit')
 const Prism = require('prismjs')
 const loadLanguages = require('prismjs/components/index')
 const prismComponents = require('prismjs/components')
+const { h } = preact
 
 module.exports = (options) => (ast) => {
   visit(ast, 'element', (node) => {

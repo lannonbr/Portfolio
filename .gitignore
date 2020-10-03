@@ -36,8 +36,8 @@ jspm_packages/
 # dotenv environment variables file
 .env
 
-# gatsby files
-.cache/
+# toast files
+.tmp/
 public
 
 # Mac files

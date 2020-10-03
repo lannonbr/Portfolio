@@ -1,4 +1,5 @@
-import React from 'react'
+/** @jsx h */
+import { h } from 'preact'
 
 function TinkerProjects({ projects }) {
   return (

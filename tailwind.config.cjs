@@ -12,8 +12,8 @@ module.exports = {
         in: '1px 1px 0px rgba(255, 255, 255, 0.1)',
       },
       minHeight: {
-        '100': '100px',
-        '150': '150px',
+        100: '100px',
+        150: '150px',
       },
       maxWidth: {
         '7xl': '100rem',

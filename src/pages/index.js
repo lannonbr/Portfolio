@@ -1,24 +1,25 @@
-import React from 'react'
+/** @jsx h */
+import { h } from 'preact'
 import SEO from '../components/seo.js'
 import Office from '../images/office.js'
 import ChevronRight from '../components/feather/chevron-right.js'
 
-const images = preval`
-  const fs = require('fs')
-  const path = require('path')
+// const images = preval`
+//   const fs = require('fs')
+//   const path = require('path')
 
-  const imgDir = path.resolve(__dirname, '../images/blog-icons')
+//   const imgDir = path.resolve(__dirname, '../images/blog-icons')
 
-  let files = fs.readdirSync(imgDir).map(file => {
-    return {
-      name: file.split(".")[0],
-      format: file.split(".")[1],
-      image: fs.readFileSync(path.join(imgDir, file), 'base64')
-    };
-  })
+//   let files = fs.readdirSync(imgDir).map(file => {
+//     return {
+//       name: file.split(".")[0],
+//       format: file.split(".")[1],
+//       image: fs.readFileSync(path.join(imgDir, file), 'base64')
+//     };
+//   })
 
-  module.exports = files
-`
+//   module.exports = files
+// `
 
 const Banner = () => {
   return (
@@ -85,8 +86,8 @@ const IndexPage = ({ posts }) => (
         </a>
       </div>
       {posts.map((post) => {
-        const logo =
-          post.logo && images.filter((logo) => logo.name === post.logo)[0]
+        // const logo =
+        //   post.logo && images.filter((logo) => logo.name === post.logo)[0]
 
         return (
           <div className="mb-3">
@@ -94,7 +95,7 @@ const IndexPage = ({ posts }) => (
               href={`/${post.slug}`}
               className="rounded py-2 px-3 flex items-center transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 dark-hover:bg-cyan-transparent dark-hover:text-cyan-light hover:no-underline"
             >
-              {post.logo ? (
+              {/* {post.logo ? (
                 <img
                   src={`data:image/${logo.format};base64,${logo.image}`}
                   alt=""
@@ -102,7 +103,7 @@ const IndexPage = ({ posts }) => (
                 />
               ) : (
                 <LogolessLogo />
-              )}
+              )} */}
               {post.title}
             </a>
           </div>

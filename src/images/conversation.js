@@ -1,4 +1,5 @@
-import React from 'react'
+/** @jsx h */
+import { h } from 'preact'
 
 const Conversation = () => (
   <div className="mx-0 sm:mr-8 w-full">
