@@ -3,7 +3,7 @@ import { h } from 'preact'
 
 const Office = () => {
   return (
-    <div className="mx-0 sm:mr-8 w-full">
+    <div class="mx-0 sm:mr-8 w-full">
       <svg
         data-name="Layer 1"
         xmlns="http://www.w3.org/2000/svg"

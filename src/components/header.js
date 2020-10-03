@@ -15,15 +15,15 @@ const Header = () => {
 
   return (
     <div
-      className="bg-rebecca-purple-lightest dark:bg-cyan-transparent md:bg-transparent mb-8 md:mb-0"
+      class="bg-rebecca-purple-lightest dark:bg-cyan-transparent md:bg-transparent mb-8 md:mb-0"
       style={{
         gridColumn: '1 / span 4',
       }}
     >
-      <header className="pb-5 pt-2 md:pt-5 px-4 shadow-lg w-full max-w-7xl mx-auto grid items-center md:shadow-none">
-        <h1 className="text-2xl md:text-3xl m-0">
+      <header class="pb-5 pt-2 md:pt-5 px-4 shadow-lg w-full max-w-7xl mx-auto grid items-center md:shadow-none">
+        <h1 class="text-2xl md:text-3xl m-0">
           <a
-            className="h-full no-underline bg-repeat bg-scroll bg-left-top bg-clip-text bg-transparent"
+            class="h-full no-underline bg-repeat bg-scroll bg-left-top bg-clip-text bg-transparent"
             style={{
               backgroundOrigin: 'padding-box',
               backgroundImage:
@@ -37,7 +37,7 @@ const Header = () => {
             Benjamin Lannon
           </a>
         </h1>
-        <div className="spacer"></div>
+        <div class="spacer"></div>
         <Navigation />
       </header>
     </div>

@@ -2,7 +2,7 @@
 import { h } from 'preact'
 
 const TalkIllustration = () => (
-  <div className="mx-0 sm:mr-8 w-full">
+  <div class="mx-0 sm:mr-8 w-full">
     <svg
       id="bbd2572f-7b08-4c5d-b64e-2e695104dd4a"
       data-name="Layer 1"

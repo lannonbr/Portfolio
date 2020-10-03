@@ -2,7 +2,7 @@
 import { h } from 'preact'
 
 const Conversation = () => (
-  <div className="mx-0 sm:mr-8 w-full">
+  <div class="mx-0 sm:mr-8 w-full">
     <svg
       id="d000d172-d3f6-4067-9bff-b7a6a8e5b081"
       data-name="Layer 1"

@@ -2,7 +2,7 @@
 import { h } from 'preact'
 
 const MusicProdIllustration = () => (
-  <div className="mx-0 sm:mr-8 w-full">
+  <div class="mx-0 sm:mr-8 w-full">
     <svg
       id="a0c20882-2d18-455a-ade1-f7c359a0c63a"
       data-name="Layer 1"

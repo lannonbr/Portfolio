@@ -72,7 +72,7 @@ const talks = [
 const TalksPage = () => {
   return (
     <Fragment>
-      <section className="md:grid md:grid-cols-2 md:gap-8 mb-4">
+      <section class="md:grid md:grid-cols-2 md:gap-8 mb-4">
         <SEO title="Talks" />
         <div>
           <h1>Talks</h1>
@@ -81,39 +81,39 @@ const TalksPage = () => {
             about technologies and tools that I use or interest me.
           </p>
         </div>
-        <div className="hidden md:block">
+        <div class="hidden md:block">
           <TalkIllustration />
         </div>
       </section>
       <section>
         <h2>List of Talks</h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
           {talks.map((talk) => {
             let formattedDate = dayjs(talk.date).format('MMM D, YYYY')
 
             return (
-              <article className="border border-solid border-gray-400 rounded p-4 flex flex-col">
-                <header className="p-0 md:flex justify-between items-start">
+              <article class="border border-solid border-gray-400 rounded p-4 flex flex-col">
+                <header class="p-0 md:flex justify-between items-start">
                   <h3>{talk.name}</h3>
-                  <div className="mb-4">
-                    <p className="mt-0 mb-1 md:text-right">{formattedDate}</p>
-                    <p className="mt-0 mb-1 md:text-right">{talk.event}</p>
-                    <p className="mt-0 md:text-right">{talk.location}</p>
+                  <div class="mb-4">
+                    <p class="mt-0 mb-1 md:text-right">{formattedDate}</p>
+                    <p class="mt-0 mb-1 md:text-right">{talk.event}</p>
+                    <p class="mt-0 md:text-right">{talk.location}</p>
                   </div>
                 </header>
-                <ul className="m-0 pl-0">
+                <ul class="m-0 pl-0">
                   {talk.slides && (
-                    <li className="flex items-center">
+                    <li class="flex items-center">
                       <File alt="" />
-                      <a href={talk.slides} className="ml-2">
+                      <a href={talk.slides} class="ml-2">
                         Slides
                       </a>
                     </li>
                   )}
                   {talk.recording && (
-                    <li className="flex items-center">
+                    <li class="flex items-center">
                       <Youtube alt="YouTube Recording" />
-                      <a href={talk.recording} className="ml-2">
+                      <a href={talk.recording} class="ml-2">
                         Recording
                       </a>
                     </li>

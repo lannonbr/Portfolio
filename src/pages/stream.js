@@ -5,7 +5,7 @@ import StreamData from '../images/stream-data.js'
 
 const StreamPage = () => {
   return (
-    <section className="md:grid md:grid-cols-2 md:gap-8 mb-4">
+    <section class="md:grid md:grid-cols-2 md:gap-8 mb-4">
       <SEO title="Stream" />
       <div>
         <h1>Live Coding on Twitch</h1>
@@ -34,7 +34,7 @@ const StreamPage = () => {
           developing products and tooling.
         </p>
       </div>
-      <div className="hidden md:block mx-0 sm:mr-8 w-full">
+      <div class="hidden md:block mx-0 sm:mr-8 w-full">
         <StreamData />
       </div>
     </section>

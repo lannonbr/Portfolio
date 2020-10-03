@@ -86,14 +86,14 @@ const Code = ({
       return h(
         'div',
         {
-          className: 'codeBlock toast-highlight mb-4 shadow-xl text-sm rounded',
+          class: 'codeBlock toast-highlight mb-4 shadow-xl text-sm rounded',
         },
         [
           title &&
             h(
               'div',
               {
-                className: className + ' text-sm px-5 py-4',
+                class: className + ' text-sm px-5 py-4',
                 style,
               },
               title
@@ -101,7 +101,7 @@ const Code = ({
           h(
             'pre',
             {
-              className: className + ' p-5 mt-0',
+              class: className + ' p-5 mt-0',
               style: {
                 ...style,
                 borderTop: title ? '1px solid #8BADC1' : 'none',
@@ -111,7 +111,7 @@ const Code = ({
             tokens.map((line, i) => {
               const lineProps = getLineProps({ line, key: i })
               if (shouldHighlightLine(i)) {
-                lineProps.className = `${lineProps.className} highlight-line`
+                lineProps.class = `${lineProps.class} highlight-line`
               }
               return h(
                 'div',

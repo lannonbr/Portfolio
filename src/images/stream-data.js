@@ -2,7 +2,7 @@
 import { h } from 'preact'
 
 const StreamData = () => (
-  <div className="mx-0 sm:mr-8 w-full">
+  <div class="mx-0 sm:mr-8 w-full">
     <svg
       id="fa973782-3a18-4630-a762-87130b613ac3"
       data-name="Layer 1"

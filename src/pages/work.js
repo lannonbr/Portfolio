@@ -8,7 +8,7 @@ import TinkerProjects from '../components/TinkerProjects.js'
 const WorkPage = ({ projects }) => (
   <Fragment>
     <SEO title="Work" />
-    <section className="md:grid md:grid-cols-2 md:gap-8 mb-4">
+    <section class="md:grid md:grid-cols-2 md:gap-8 mb-4">
       <div>
         <h1>Work</h1>
         <p>
@@ -47,7 +47,7 @@ const WorkPage = ({ projects }) => (
           <a href="/stream/">Stream Page</a>.
         </p>
       </div>
-      <div className="hidden md:block">
+      <div class="hidden md:block">
         <Conversation />
       </div>
     </section>

@@ -6,7 +6,7 @@ import MusicProdIllustration from '../images/music-prod.js'
 
 const MusicProductionPage = () => {
   return (
-    <section className="md:grid md:grid-cols-2 md:gap-8 mb-4">
+    <section class="md:grid md:grid-cols-2 md:gap-8 mb-4">
       <SEO title="Music Production" />
       <div>
         <h1>Music Production</h1>
@@ -16,7 +16,7 @@ const MusicProductionPage = () => {
           eventually start aranging tracks.
         </p>
         <h2>Software</h2>
-        <ul className="list-disc pl-4">
+        <ul class="list-disc pl-4">
           <li>
             <a href="https://www.ableton.com/en/live/">Ableton Live 10 Suite</a>
           </li>
@@ -25,7 +25,7 @@ const MusicProductionPage = () => {
           </li>
         </ul>
         <h2>Equipment</h2>
-        <ul className="list-disc pl-4">
+        <ul class="list-disc pl-4">
           <li>
             <a href="https://www.shure.com/en-US/products/microphones/sm58">
               Shure SM58 Dynamic XLR Microphone
@@ -65,7 +65,7 @@ const MusicProductionPage = () => {
           </a>
         </p>
       </div>
-      <div className="hidden md:block">
+      <div class="hidden md:block">
         <MusicProdIllustration />
       </div>
     </section>

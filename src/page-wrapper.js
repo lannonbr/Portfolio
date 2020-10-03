@@ -11,7 +11,7 @@ import SEO from './components/seo.js'
 
 export default ({ children, ...props }) => {
   return (
-    <div id="pageWrapper" className="min-h-screen grid overflow-x-hidden">
+    <div id="pageWrapper" class="min-h-screen grid overflow-x-hidden">
       <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="stylesheet" href="/style.css" />
@@ -25,7 +25,7 @@ export default ({ children, ...props }) => {
       <Header />
 
       <main
-        className="py-4"
+        class="py-4"
         style={{
           gridColumn: '2 / span 2',
         }}
@@ -34,7 +34,7 @@ export default ({ children, ...props }) => {
           components={{
             Warning,
             Video,
-            h1: (props) => <h1 className="text-4xl" {...props} />,
+            h1: (props) => <h1 class="text-4xl" {...props} />,
             inlineCode: ({ children }) => (
               <code
                 style={{
@@ -49,10 +49,10 @@ export default ({ children, ...props }) => {
               </code>
             ),
             img: (props) => {
-              return <img className="md:max-w-3xl mx-auto" {...props} />
+              return <img class="md:max-w-3xl mx-auto" {...props} />
             },
             blockquote: ({ children }) => {
-              return <blockquote className="px-8 italic">{children}</blockquote>
+              return <blockquote class="px-8 italic">{children}</blockquote>
             },
             pre: (props) => {
               return (
@@ -65,10 +65,10 @@ export default ({ children, ...props }) => {
             },
           }}
         >
-          <div className="max-w-7xl mx-auto px-2">
+          <div class="max-w-7xl mx-auto px-2">
             {props.title && (
-              <a className="inline-flex items-center mb-4" href="/garden">
-                <Home className="mr-2" alt="" />
+              <a class="inline-flex items-center mb-4" href="/garden">
+                <Home class="mr-2" alt="" />
                 Digital Garden Home
               </a>
             )}

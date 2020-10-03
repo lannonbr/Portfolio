@@ -18,12 +18,12 @@ const Banner = () => {
         gridColumn: '1 / span 2',
       }}
     >
-      <h1 className="text-2xl md:text-3xl">#BlackLivesMatter</h1>
-      <p className="text-base md:text-xl">
+      <h1 class="text-2xl md:text-3xl">#BlackLivesMatter</h1>
+      <p class="text-base md:text-xl">
         I stand in solidarity with the Black community against racism and
         injustice.
       </p>
-      <p className="mb-0">
+      <p class="mb-0">
         <strong>
           <a
             href="https://blacklivesmatters.carrd.co/"
@@ -39,7 +39,7 @@ const Banner = () => {
 
 const LogolessLogo = () => (
   <div
-    className="inline-block w-6 h-6 rounded-full mr-4"
+    class="inline-block w-6 h-6 rounded-full mr-4"
     style={{
       backgroundImage: 'linear-gradient( 135deg, #E2B0FF 10%, #9F44D3 100%)',
     }}
@@ -47,23 +47,23 @@ const LogolessLogo = () => (
 )
 
 const IndexPage = ({ posts, images }) => (
-  <section className="md:grid md:grid-cols-2 md:gap-8 mb-4">
+  <section class="md:grid md:grid-cols-2 md:gap-8 mb-4">
     <SEO title="Home" />
     <Banner />
-    <div className="flex flex-col justify-center">
-      <h1 className="text-center text-4xl md:text-left md:text-6xl">
+    <div class="flex flex-col justify-center">
+      <h1 class="text-center text-4xl md:text-left md:text-6xl">
         Hi all, I'm Benjamin
       </h1>
-      <p className="lg:text-xl md:leading-loose">
+      <p class="lg:text-xl md:leading-loose">
         I'm a web developer in Upstate New York with a passion for exploration
         and continual learning.
       </p>
-      <div className="inline-flex items-baseline justify-between">
+      <div class="inline-flex items-baseline justify-between">
         <h2>New Posts</h2>
-        <a href="/garden" className="flex items-center group">
+        <a href="/garden" class="flex items-center group">
           All Posts
           <ChevronRight
-            className="h-5 w-5 relative right-0 transform transition-transform duration-200 group-hover:translate-x-1"
+            class="h-5 w-5 relative right-0 transform transition-transform duration-200 group-hover:translate-x-1"
             alt=""
           />
         </a>
@@ -73,13 +73,13 @@ const IndexPage = ({ posts, images }) => (
           post.logo && images.filter((logo) => logo.name === post.logo)[0]
 
         return (
-          <div className="mb-3">
+          <div class="mb-3">
             <a
               href={`/${post.slug}`}
-              className="rounded py-2 px-3 flex items-center transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 dark-hover:bg-cyan-transparent dark-hover:text-cyan-light hover:no-underline"
+              class="rounded py-2 px-3 flex items-center transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 dark-hover:bg-cyan-transparent dark-hover:text-cyan-light hover:no-underline"
             >
               {post.logo ? (
-                <img src={logo.src} alt="" className="w-6 mr-4" />
+                <img src={logo.src} alt="" class="w-6 mr-4" />
               ) : (
                 <LogolessLogo />
               )}
@@ -89,7 +89,7 @@ const IndexPage = ({ posts, images }) => (
         )
       })}
     </div>
-    <div className="hidden md:block">
+    <div class="hidden md:block">
       <Office />
     </div>
   </section>

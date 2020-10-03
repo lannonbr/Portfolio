@@ -5,7 +5,7 @@ const Video = ({ videoSrc, videoTitle }) => {
   return (
     // Responsive div for embed from https://medium.com/@kevinsimper/full-width-youtube-embed-with-react-js-responsive-embed-509de7e7c3bf
     <div
-      className="video"
+      class="video"
       style={{
         position: 'relative',
         paddingBottom: '56.25%',
