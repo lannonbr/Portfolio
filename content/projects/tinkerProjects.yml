@@ -1,4 +1,11 @@
 projects:
+  - name: Rust
+    created_date: 2020-09-03
+    desc: |
+      Into late 2020, I've been getting more involved in projects that are built on top of Rust so I took it upon myself to learn the language further.
+    links:
+      - name: Rust Site
+        url: https://www.rust-lang.org/
   - name: Music Production
     created_date: 2020-03-15
     desc: |
