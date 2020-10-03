@@ -1,4 +1,5 @@
-import React, { Fragment } from 'react'
+/** @jsx h */
+import { h, Fragment } from 'preact'
 import SEO from '../components/seo.js'
 
 const UsesPage = () => (

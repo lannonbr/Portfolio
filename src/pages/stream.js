@@ -1,4 +1,5 @@
-import React from 'react'
+/** @jsx h */
+import { h } from 'preact'
 import SEO from '../components/seo.js'
 import StreamData from '../images/stream-data.js'
 

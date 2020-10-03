@@ -1,4 +1,5 @@
-import React from 'react'
+/** @jsx h */
+import { h } from 'preact'
 import TalkIllustration from '../images/talk.js'
 import SEO from '../components/seo.js'
 import Youtube from '../components/feather/youtube.js'

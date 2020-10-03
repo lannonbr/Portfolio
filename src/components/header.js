@@ -1,4 +1,7 @@
-import React, { useState, useEffect } from 'react'
+/** @jsx h */
+import { h } from 'preact'
+import { useState, useEffect } from 'preact/hooks'
+
 import Navigation from './navigation.js'
 
 const Header = () => {

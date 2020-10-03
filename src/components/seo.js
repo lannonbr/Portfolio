@@ -1,4 +1,5 @@
-import React from 'react'
+/** @jsx h */
+import { h } from 'preact'
 import { Helmet } from 'react-helmet'
 
 function SEO({ description, lang = `en`, meta = [], title, ogImage }) {

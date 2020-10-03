@@ -4,9 +4,10 @@
   "description": "My personal portfolio website as of 2019",
   "version": "0.1.0",
   "author": "Benjamin Lannon <benjamin@lannonbr.com>",
+  "type": "module",
   "dependencies": {
-    "@mdx-js/mdx": "^1.6.16",
-    "@mdx-js/preact": "^1.6.16",
+    "@mdx-js/mdx": "^2.0.0-next.8",
+    "@mdx-js/preact": "^2.0.0-next.8",
     "@sector/breadbox": "^0.0.4",
     "dayjs": "^1.8.34",
     "globby": "^11.0.1",
@@ -23,18 +24,18 @@
     "rehype-slug": "^3.0.0",
     "tailwindcss": "^1.7.5",
     "tailwindcss-dark-mode": "^1.1.6",
-    "toast": "^0.2.10",
+    "toastrs": "^0.0.20",
     "unist-util-visit": "^2.0.3"
   },
   "license": "MIT",
   "scripts": {
-    "build": "yarn build:css && toast incremental",
-    "incremental": "toast incremental",
-    "build:css": "NODE_ENV=production tailwindcss build src/styles/tailwind-include.css --output public/style.css",
-    "clean": "rm -rf public .cache && yarn prepare",
+    "build": "yarn build:css && toast incremental .",
+    "incremental": "toast incremental .",
+    "build:css": "NODE_ENV=production tailwindcss build src/styles/tailwind-include.css --config tailwind.config.cjs --output public/style.css",
+    "clean": "rm -rf public .tmp && yarn prepare",
     "prepare": "breadbox --dest public/web_modules",
     "breadbox": "breadbox --dest public/web_modules",
-    "post": "npx plop post",
+    "post": "npx plop --plopfile plopfile.cjs post",
     "serve": "npx http-server -p 8000 public"
   },
   "repository": {
@@ -46,7 +47,9 @@
   },
   "snowpack": {
     "exclude": [
-      "public/**"
+      "public/**",
+      "toast.js",
+      "fetch-*.js"
     ],
     "installOptions": {
       "alias": {

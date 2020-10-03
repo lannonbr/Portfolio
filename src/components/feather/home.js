@@ -1,3 +1,4 @@
+/** @jsx React.createElement */
 import React, { forwardRef } from 'react'
 
 const Home = forwardRef(

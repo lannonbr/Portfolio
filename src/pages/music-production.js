@@ -1,4 +1,5 @@
-import React from 'react'
+/** @jsx h */
+import { h, Fragment } from 'preact'
 import SEO from '../components/seo.js'
 
 import MusicProdIllustration from '../images/music-prod.js'

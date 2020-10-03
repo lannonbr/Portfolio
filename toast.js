@@ -1,35 +1,25 @@
 // Code credit to Chris Biscardi
+import { promises as fs } from 'fs'
+import * as MDXPostsSource from './fetch-mdx-posts.js'
+import * as TinkerProjectsSource from './fetch-tinker-projects.js'
+import * as FeaturedProjectsSource from './fetch-featured-projects.js'
 
-const { promises: fs } = require('fs')
-const path = require('path')
-const MDXPostsSource = require('./fetch-mdx-posts')
-const TinkerProjectsSource = require('./fetch-tinker-projects')
-const FeaturedProjectsSource = require('./fetch-featured-projects')
-
-exports.sourceData = async ({ withCache, createPage }) => {
-  return Promise.all([
-    withCache('mdx-posts', MDXPostsSource.sourceData({ createPage })),
-    withCache('tinker-projects', TinkerProjectsSource.sourceData()),
-    withCache('featured-projects', FeaturedProjectsSource.sourceData()),
+export const sourceData = async ({ setData, createPage }) => {
+  const [mdxPosts, tinkerProjects, featuredProjects] = await Promise.all([
+    MDXPostsSource.sourceData({ createPage }),
+    TinkerProjectsSource.sourceData(),
+    FeaturedProjectsSource.sourceData(),
   ])
-}
 
-exports.prepData = async ({ cacheDir, publicDir }) => {
-  // have to make sure the directory we want to write in exists
-  // We can probably avoid this by offering some kind of "non-filesystem"-based
-  // API for adding data to paths
-  await fs.mkdir(path.resolve(publicDir, 'src/pages'), { recursive: true })
+  let images = await fs.readdir('./static/blog-icons')
+  images = images.map((image) => {
+    return {
+      name: image.split('.')[0],
+      src: `/blog-icons/${image}`,
+    }
+  })
 
-  // prep page data for index and post pages
-  const mdxPostsData = require(path.resolve(cacheDir, 'mdx-posts.json'))
-  const {
-    data: { projects: tinkerProjects },
-  } = require(path.resolve(cacheDir, 'tinker-projects.json'))
-  const {
-    data: { projects: featuredProjects },
-  } = require(path.resolve(cacheDir, 'featured-projects.json'))
-
-  const allPostsData = mdxPostsData.map(
+  const allPostsData = mdxPosts.map(
     ({ title, date, slug, description, keywords, logo, status }) => ({
       title,
       updatedAt: date,
@@ -50,38 +40,26 @@ exports.prepData = async ({ cacheDir, publicDir }) => {
     if (da > db) return 1
   })
 
-  await fs.writeFile(
-    path.resolve(publicDir, 'src/pages/garden.json'),
-    JSON.stringify({ posts: allPostsData })
-  )
+  await setData({ slug: '/garden', data: { posts: allPostsData, images } })
+  await setData({ slug: '/work', data: { projects: tinkerProjects } })
+  await setData({ slug: '/projects', data: { projects: featuredProjects } })
 
-  await fs.writeFile(
-    path.resolve(publicDir, 'src/pages/work.json'),
-    JSON.stringify({ projects: tinkerProjects })
-  )
-  await fs.writeFile(
-    path.resolve(publicDir, 'src/pages/projects.json'),
-    JSON.stringify({ projects: featuredProjects })
-  )
-
-  await fs.writeFile(
-    path.resolve(publicDir, 'posts.json'),
-    JSON.stringify({
+  await setData({
+    slug: '/posts',
+    data: {
       items: allPostsData.map((post) => ({
         title: post.title,
         subtitle: `https://lannonbr.com/${post.slug}`,
         arg: `https://lannonbr.com/${post.slug}`,
       })),
-    })
-  )
+    },
+  })
 
-  // index.html
   const topPostsData = allPostsData
     .filter(({ contentType }) => contentType === 'post')
     .slice(0, 5)
 
-  await fs.writeFile(
-    path.resolve(publicDir, 'src/pages/index.json'),
-    JSON.stringify({ posts: topPostsData })
-  )
+  await setData({ slug: '/', data: { posts: topPostsData, images } })
+
+  return
 }

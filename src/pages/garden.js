@@ -1,23 +1,9 @@
-import React, { useState } from 'react'
+/** @jsx h */
+import { h } from 'preact'
+import { useState } from 'preact/hooks'
+
 import SEO from '../components/seo.js'
 import EmptyStreet from '../images/empty-street.js'
-
-const images = preval`
-  const fs = require('fs')
-  const path = require('path')
-
-  const imgDir = path.resolve(__dirname, '../images/blog-icons')
-
-  let files = fs.readdirSync(imgDir).map(file => {
-    return {
-      name: file.split(".")[0],
-      format: file.split(".")[1],
-      image: fs.readFileSync(path.join(imgDir, file), 'base64')
-    };
-  })
-
-  module.exports = files
-`
 
 const statusMap = {
   budding: '🌱',
@@ -46,11 +32,7 @@ const CuratedButton = ({ logo, name, handleClick, isSelected }) => {
       }}
       onClick={handleClick}
     >
-      <img
-        src={`data:image/${logo.format};base64,${logo.image}`}
-        alt=""
-        className="w-5 mr-3"
-      />
+      <img src={logo.src} alt="" className="w-5 mr-3" />
       <span>{name}</span>
     </button>
   )
@@ -69,7 +51,7 @@ const NoPosts = (props) => {
   )
 }
 
-const BlogIndexPage = ({ posts }) => {
+const BlogIndexPage = ({ posts, images }) => {
   const [category, setCategory] = useState('')
   const [titleFilter, setTitleFilter] = useState('')
 
@@ -150,11 +132,7 @@ const BlogIndexPage = ({ posts }) => {
                   className="flex items-center text-md md:text-xl rounded-sm mb-3 hover:no-underline"
                 >
                   {post.logo ? (
-                    <img
-                      src={`data:image/${logo.format};base64,${logo.image}`}
-                      alt=""
-                      className="w-6 mr-2"
-                    />
+                    <img src={logo.src} alt="" className="w-6 mr-2" />
                   ) : (
                     <LogolessLogo />
                   )}
