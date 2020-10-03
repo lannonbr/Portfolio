@@ -18,7 +18,7 @@ const WorkPage = ({ projects }) => (
         </p>
         <p>
           If you want to see the hardware / software I use, head over to my{' '}
-          <a href="/uses/">Uses Page</a>.
+          <a href="/uses">Uses Page</a>.
         </p>
         <p>
           As well, I have a site which I list development resources that I
