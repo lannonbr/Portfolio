@@ -4079,10 +4079,10 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
-toast@^0.3.4:
-  version "0.3.4"
-  resolved "https://registry.yarnpkg.com/toast/-/toast-0.3.4.tgz#879e7963b10e5e69a312df0e491ff3185b590c9a"
-  integrity sha512-zhAoMysZxiIQ9c5xmzURckpfHPkN4tMwhwqNc6+dMJhB4nful0gBJW1mhNvxA0gF6KbHGm+kkYzYG1da6zzLJw==
+toast@^0.3.8:
+  version "0.3.8"
+  resolved "https://registry.yarnpkg.com/toast/-/toast-0.3.8.tgz#4f43acf02a51572a941f78c20368fdecfd3a9db8"
+  integrity sha512-NJCwk8lM//RjWDQvtVetRTW/RCqDXYy13B4aAJJ8SM9yjN3ctYMxcS3DsUneBQ/qs33WIWtJ9paR70nMoVhb4w==
   dependencies:
     "@mdx-js/preact" "2.0.0-next.8"
     "@svgr/cli" "^5.4.0"
