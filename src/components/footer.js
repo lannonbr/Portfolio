@@ -28,7 +28,7 @@ function Footer() {
         <b>Built with</b>
         <p class="m-0">
           <a
-            href="https://github.com/christopherbiscardi/toast"
+            href="https://www.toast.dev/"
             class="pr-4 font-semibold no-underline hover:underline text-rebecca-purple-light dark:text-cyan hover:text-rebecca-purple-lighter dark-hover:text-cyan-light"
           >
             Toast
