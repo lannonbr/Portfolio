@@ -31,11 +31,11 @@
   "scripts": {
     "build": "yarn build:css && toast incremental .",
     "incremental": "toast incremental .",
-    "build:css": "NODE_ENV=production tailwindcss build src/styles/tailwind-include.css --config tailwind.config.cjs --output public/style.css",
+    "build:css": "NODE_ENV=production tailwindcss build src/styles/tailwind-include.css --config utils/tailwind.config.js --output public/style.css",
     "clean": "rm -rf public .tmp && yarn prepare",
     "prepare": "breadbox --dest public/web_modules",
     "breadbox": "breadbox --dest public/web_modules",
-    "post": "npx plop --plopfile plopfile.cjs post",
+    "post": "npx plop --plopfile utils/plopfile.js post",
     "serve": "npx http-server -p 8000 public"
   },
   "repository": {
