@@ -30,8 +30,8 @@ module.exports = function (plop) {
     actions: (data) => [
       {
         type: 'add',
-        path: 'content/blog/{{ slug }}/index.md',
-        templateFile: 'plop-templates/post.md',
+        path: '../content/blog/{{ slug }}/index.md',
+        templateFile: '../plop-templates/post.md',
       },
     ],
   })
