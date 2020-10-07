@@ -1,9 +1,10 @@
 module.exports = {
   purge: {
-    content: ['./src/**/*.js', './utils/**/*.cjs'],
+    content: ['./src/**/*.js', './utils/**/*.js'],
     whitelist: ['mode-dark'],
   },
   future: {
+    purgeLayersByDefault: true,
     removeDeprecatedGapUtilities: true,
   },
   theme: {
