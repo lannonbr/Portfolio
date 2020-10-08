@@ -2,6 +2,7 @@
 title: 'Installing local node modules with npm'
 date: '2020-10-05'
 description: 'How to install node modules that are locally on your filesystem into another project'
+status: fully-grown
 ---
 
 With modern versions of NPM, if you have a node module you want to install into another project, if you write the directory with `npm install` and that folder has a `package.json`, it will move the project over.
