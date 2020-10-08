@@ -65,7 +65,7 @@ export default ({ children, ...props }) => {
             },
           }}
         >
-          <div class="max-w-7xl mx-auto px-2">
+          <div class="max-w-7xl mx-auto px-2 md:px-0">
             {props.title && (
               <a class="inline-flex items-center mb-4" href="/garden">
                 <Home class="mr-2" alt="" />

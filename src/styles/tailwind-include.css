@@ -109,14 +109,14 @@ summary {
 header {
   grid-template-areas: 'h1 spacer nav';
   grid-template-columns: 320px 1fr auto;
-  grid-template-rows: 60px;
+  grid-template-rows: 40px;
 }
 
 @media (max-width: 768px) {
   header {
     grid-template-areas: 'h1 h1 h1' 'spacer spacer spacer' 'nav nav nav';
     grid-template-columns: auto auto auto;
-    grid-template-rows: 60px 20px 1fr;
+    grid-template-rows: 40px 20px 1fr;
   }
 }
 

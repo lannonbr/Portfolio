@@ -20,8 +20,8 @@ const Header = () => {
         gridColumn: '1 / span 4',
       }}
     >
-      <header class="pb-5 pt-2 md:pt-5 px-4 shadow-lg w-full max-w-7xl mx-auto grid items-center md:shadow-none">
-        <h1 class="text-2xl md:text-3xl m-0">
+      <header class="pb-2 pt-2 md:pt-2 px-4 md:px-0 shadow-lg w-full max-w-7xl mx-auto grid items-center md:shadow-none">
+        <h1 class="text-2xl m-0">
           <a
             class="h-full no-underline bg-repeat bg-scroll bg-left-top bg-clip-text bg-transparent"
             style={{
