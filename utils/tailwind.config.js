@@ -9,6 +9,9 @@ module.exports = {
   },
   theme: {
     extend: {
+      screens: {
+        '2xl': '1600px',
+      },
       boxShadow: {
         in: '1px 1px 0px rgba(255, 255, 255, 0.1)',
       },

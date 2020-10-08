@@ -11,12 +11,12 @@ function Navigation() {
   ]
 
   return (
-    <nav class="w-full grid grid-cols-2 gap-3 items-center md:block md:px-4">
+    <nav class="w-full grid grid-cols-2 gap-2 items-center md:block md:px-3">
       {navLinks.map((link) => (
         <a
           key={link.name}
           href={link.url}
-          class="text-center no-underline inline-block border-b-2 border-transparent hover:border-purple-700 focus:border-purple-700 dark-hover:border-teal-200 dark-focus:border-teal-200 md:mx-4 text-gray-900 dark:text-gray-100"
+          class="text-center no-underline inline-block border-b-2 border-transparent hover:border-purple-700 focus:border-purple-700 dark-hover:border-teal-200 dark-focus:border-teal-200 md:mx-2 text-gray-900 dark:text-gray-100"
         >
           {link.name}
         </a>

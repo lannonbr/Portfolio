@@ -21,7 +21,7 @@ const Header = () => {
       }}
     >
       <header class="pb-2 pt-2 md:pt-2 px-4 md:px-0 shadow-lg w-full max-w-7xl mx-auto grid items-center md:shadow-none">
-        <h1 class="text-2xl m-0">
+        <h1 class="text-2xl m-0 pl-2 2xl:pl-0">
           <a
             class="h-full no-underline bg-repeat bg-scroll bg-left-top bg-clip-text bg-transparent"
             style={{
