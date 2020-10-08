@@ -111,11 +111,11 @@ const Code = ({
             tokens.map((line, i) => {
               const lineProps = getLineProps({ line, key: i })
               if (shouldHighlightLine(i)) {
-                lineProps.class = `${lineProps.class} highlight-line`
+                lineProps.className = `${lineProps.className} highlight-line`
               }
               return h(
                 'div',
-                { ...lineProps, key: i },
+                { style: lineProps.style, class: lineProps.className, key: i },
                 line.map((token, key) =>
                   h('span', {
                     ...getTokenProps({ token, key }),
