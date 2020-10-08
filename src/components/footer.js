@@ -15,7 +15,7 @@ function Link({ href, children }) {
 function Footer() {
   return (
     <footer
-      class="grid grid-cols-3 row-gap-4 py-8 md:flex md:flex-wrap md:items-start md:justify-center md:space-x-2 lg:space-x-8 text-sm px-2 md:py-4 border-t-2 border-gray-400 bg-rebecca-purple-lightest dark:bg-cyan-transparent min-h-150"
+      class="grid grid-cols-2 gap-y-4 py-8 md:flex md:flex-wrap md:items-start md:justify-center md:space-x-2 lg:space-x-8 text-sm px-2 md:py-4 border-t-2 border-gray-400 bg-rebecca-purple-lightest dark:bg-cyan-transparent min-h-150"
       style={{
         gridColumn: '1 / span 4',
       }}
