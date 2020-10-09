@@ -4079,16 +4079,17 @@ to-regex-range@^5.0.1:
   dependencies:
     is-number "^7.0.0"
 
-toast@^0.3.8:
-  version "0.3.8"
-  resolved "https://registry.yarnpkg.com/toast/-/toast-0.3.8.tgz#4f43acf02a51572a941f78c20368fdecfd3a9db8"
-  integrity sha512-NJCwk8lM//RjWDQvtVetRTW/RCqDXYy13B4aAJJ8SM9yjN3ctYMxcS3DsUneBQ/qs33WIWtJ9paR70nMoVhb4w==
+toast@^0.3.14:
+  version "0.3.14"
+  resolved "https://registry.yarnpkg.com/toast/-/toast-0.3.14.tgz#66b6cbeeb5722acd33bbb1dba5b12f4e6d567009"
+  integrity sha512-Lin4XofNf/NMb48f4LaAblVowQl1tOB0h6TXVa/+9jrVRtwNbd6Y/C3K2ttat6UQaDfUkrQAcQW8/t9yKgQssQ==
   dependencies:
     "@mdx-js/preact" "2.0.0-next.8"
     "@svgr/cli" "^5.4.0"
     axios "^0.20.0"
     binary-install "^0.0.1"
     console.table "^0.10.0"
+    env-paths "^2.2.0"
     got "^11.6.2"
     module-alias "^2.2.2"
     preact "^10.4.8"
