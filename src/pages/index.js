@@ -1,5 +1,5 @@
 /** @jsx h */
-import { h } from 'preact'
+import { Fragment, h } from 'preact'
 import SEO from '../components/seo.js'
 import Office from '../images/office.js'
 import ChevronRight from '../components/feather/chevron-right.js'
@@ -47,52 +47,72 @@ const LogolessLogo = () => (
 )
 
 const IndexPage = ({ posts, images }) => (
-  <section class="md:grid md:grid-cols-2 md:gap-8 mb-4">
-    <SEO title="Home" />
-    <Banner />
-    <div class="flex flex-col justify-center">
-      <h1 class="text-center text-4xl md:text-left md:text-6xl">
-        Hi all, I'm Benjamin
-      </h1>
-      <p class="lg:text-xl md:leading-loose">
-        I'm a web developer in Upstate New York with a passion for exploration
-        and continual learning.
-      </p>
-      <div class="inline-flex items-baseline justify-between">
-        <h2>New Posts</h2>
-        <a href="/garden" class="flex items-center group">
-          All Posts
-          <ChevronRight
-            class="h-5 w-5 relative right-0 transform transition-transform duration-200 group-hover:translate-x-1"
-            alt=""
-          />
-        </a>
-      </div>
-      {posts.map((post) => {
-        const logo =
-          post.logo && images.filter((logo) => logo.name === post.logo)[0]
+  <Fragment>
+    <section class="md:grid md:grid-cols-2 md:gap-8 mb-4">
+      <SEO title="Home" />
+      <Banner />
+      <div class="flex flex-col justify-center">
+        <h1 class="text-center text-4xl md:text-left md:text-6xl">
+          Hi all, I'm Benjamin
+        </h1>
+        <p class="lg:text-xl md:leading-loose">
+          I'm a web developer in Upstate New York with a passion for exploration
+          and continual learning.
+        </p>
+        <div class="inline-flex items-baseline justify-between">
+          <h2>New Posts</h2>
+          <a href="/garden" class="flex items-center group">
+            All Posts
+            <ChevronRight
+              class="h-5 w-5 relative right-0 transform transition-transform duration-200 group-hover:translate-x-1"
+              alt=""
+            />
+          </a>
+        </div>
+        {posts.map((post) => {
+          const logo =
+            post.logo && images.filter((logo) => logo.name === post.logo)[0]
 
-        return (
-          <div class="mb-3">
-            <a
-              href={`/${post.slug}`}
-              class="rounded py-2 px-3 flex items-center transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 dark-hover:bg-cyan-transparent dark-hover:text-cyan-light hover:no-underline"
-            >
-              {post.logo ? (
-                <img src={logo.src} alt="" class="w-6 mr-4" />
-              ) : (
-                <LogolessLogo />
-              )}
-              {post.title}
-            </a>
-          </div>
-        )
-      })}
-    </div>
-    <div class="hidden md:block">
-      <Office />
-    </div>
-  </section>
+          return (
+            <div class="mb-3">
+              <a
+                href={`/${post.slug}`}
+                class="rounded py-2 px-3 flex items-center transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 dark-hover:bg-cyan-transparent dark-hover:text-cyan-light hover:no-underline"
+              >
+                {post.logo ? (
+                  <img src={logo.src} alt="" class="w-6 mr-4" />
+                ) : (
+                  <LogolessLogo />
+                )}
+                {post.title}
+              </a>
+            </div>
+          )
+        })}
+      </div>
+      <div class="hidden md:block">
+        <Office />
+      </div>
+    </section>
+    <section class="mb-4 mx-auto max-w-full md:max-w-4xl p-4 rounded-md border border-gray-800 dark:border-gray-200">
+      <h2>Join my Newsletter</h2>
+      <div>
+        <p>
+          Subscribe to my weekly newsletter to explore what I'm up to and what
+          is exciting me, including emerging development technologies, music
+          production, and more.
+        </p>
+        <span class="inline-flex rounded-md shadow-sm">
+          <a
+            href="https://benjamin-lannon.ck.page/16e9b2e342"
+            class="inline-flex items-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-purple-600 hover:bg-purple-500 focus:outline-none focus:border-purple-700 transition ease-in-out duration-150"
+          >
+            Subscribe
+          </a>
+        </span>
+      </div>
+    </section>
+  </Fragment>
 )
 
 export default IndexPage
