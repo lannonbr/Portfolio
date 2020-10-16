@@ -6,6 +6,7 @@ import Footer from './components/footer.js'
 import { MDXProvider } from '@mdx-js/preact'
 import Warning from './components/warning.js'
 import Video from './components/video.js'
+import { Loadable } from './components/loadable.js'
 import Home from './components/feather/home.js'
 import SEO from './components/seo.js'
 
@@ -34,6 +35,7 @@ export default ({ children, ...props }) => {
           components={{
             Warning,
             Video,
+            Loadable,
             h1: (props) => <h1 class="text-4xl" {...props} />,
             inlineCode: ({ children }) => (
               <code
