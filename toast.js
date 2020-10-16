@@ -4,9 +4,9 @@ import * as MDXPostsSource from './fetch-mdx-posts.js'
 import * as TinkerProjectsSource from './fetch-tinker-projects.js'
 import * as FeaturedProjectsSource from './fetch-featured-projects.js'
 
-export const sourceData = async ({ setData, createPage }) => {
+export const sourceData = async ({ setDataForSlug }) => {
   const [mdxPosts, tinkerProjects, featuredProjects] = await Promise.all([
-    MDXPostsSource.sourceData({ createPage }),
+    MDXPostsSource.sourceData({ setDataForSlug }),
     TinkerProjectsSource.sourceData(),
     FeaturedProjectsSource.sourceData(),
   ])
@@ -40,12 +40,15 @@ export const sourceData = async ({ setData, createPage }) => {
     if (da > db) return 1
   })
 
-  await setData({ slug: '/garden', data: { posts: allPostsData, images } })
-  await setData({ slug: '/work', data: { projects: tinkerProjects } })
-  await setData({ slug: '/projects', data: { projects: featuredProjects } })
+  await setDataForSlug('/garden', {
+    data: { posts: allPostsData, images },
+  })
+  await setDataForSlug('/work', { data: { projects: tinkerProjects } })
+  await setDataForSlug('/projects', {
+    data: { projects: featuredProjects },
+  })
 
-  await setData({
-    slug: '/posts',
+  await setDataForSlug('/posts', {
     data: {
       items: allPostsData.map((post) => ({
         title: post.title,
@@ -59,7 +62,7 @@ export const sourceData = async ({ setData, createPage }) => {
     .filter(({ contentType }) => contentType === 'post')
     .slice(0, 5)
 
-  await setData({ slug: '/', data: { posts: topPostsData, images } })
+  await setDataForSlug('/', { data: { posts: topPostsData, images } })
 
   return
 }

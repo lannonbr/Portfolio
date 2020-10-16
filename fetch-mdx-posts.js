@@ -11,7 +11,7 @@ import rehypePrism from './utils/prism-rehype-plugin/index.js'
 // import beeline from 'honeycomb-beeline'
 // beeline()
 
-export const sourceData = async ({ createPage, ...options }) => {
+export const sourceData = async ({ setDataForSlug, ...options }) => {
   console.log('sourceData')
   const files = await fs.readdir('./content/blog/')
   // beeline.addContext({ numMDXFiles: files.length })
@@ -56,11 +56,13 @@ export const sourceData = async ({ createPage, ...options }) => {
       // beeline.finishTimer(mdxCompileTimer)
 
       // let createPageTimer = beeline.startTimer('create_page')
-      await createPage({
-        module: `/** @jsx mdx */
-                import {mdx} from '@mdx-js/preact';
-                ${compiledMDX}`,
-        slug: `blog/${filename}`,
+      await setDataForSlug(`blog/${filename}`, {
+        component: {
+          mode: 'source',
+          value: `/** @jsx mdx */
+                  import {mdx} from '@mdx-js/preact';
+                  ${compiledMDX}`,
+        },
         data: { ...data, slug: filename },
       })
       // beeline.finishTimer(createPageTimer)

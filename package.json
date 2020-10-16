@@ -24,7 +24,7 @@
     "rehype-slug": "^3.0.0",
     "tailwindcss": "^1.7.5",
     "tailwindcss-dark-mode": "^1.1.6",
-    "toast": "^0.3.14",
+    "toast": "^0.3.19",
     "unist-util-visit": "^2.0.3"
   },
   "license": "MIT",
