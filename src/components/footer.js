@@ -27,23 +27,13 @@ function Footer() {
       <div>
         <b>Built with</b>
         <p class="m-0">
-          <a
-            href="https://www.toast.dev/"
-            class="pr-4 font-semibold no-underline hover:underline text-rebecca-purple-light dark:text-cyan hover:text-rebecca-purple-lighter dark-hover:text-cyan-light"
-          >
-            Toast
-          </a>
+          <Link href="https://www.toast.dev/">Toast</Link>
         </p>
       </div>
       <div>
         <b>Deployed on</b>
         <p class="m-0">
-          <a
-            href="https://netlify.com"
-            class="pr-4 font-semibold no-underline hover:underline text-rebecca-purple-light dark:text-cyan hover:text-rebecca-purple-lighter dark-hover:text-cyan-light"
-          >
-            Netlify
-          </a>
+          <Link href="https://netlify.com">Netlify</Link>
         </p>
       </div>
       <div>
