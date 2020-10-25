@@ -56,6 +56,11 @@ const MusicProductionPage = () => {
               Novation LaunchControl XL MIDI Controller
             </a>
           </li>
+          <li>
+            <a href="https://www.elektron.se/products/digitakt">
+              Elektron Digitakt
+            </a>
+          </li>
         </ul>
         <h2>Eurorack Modular Synth</h2>
         <p>
