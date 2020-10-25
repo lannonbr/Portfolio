@@ -14,7 +14,8 @@ This is a list of extensions I use in [VS Code](https://code.visualstudio.com/).
 ### Extensions
 
 - [Clock in status bar](https://marketplace.visualstudio.com/items?itemName=Compulim.vscode-clock)
-- [GitHub Pull Requests](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
+- [GitHub Actions](https://marketplace.visualstudio.com/items?itemName=cschleiden.vscode-github-actions)
+- [GitHub Pull Requests and Issues](https://marketplace.visualstudio.com/items?itemName=GitHub.vscode-pull-request-github)
 - [GitLens](https://marketplace.visualstudio.com/items?itemName=eamodio.gitlens)
 - [Live Share](https://marketplace.visualstudio.com/items?itemName=MS-vsliveshare.vsliveshare)
 - [MDX](https://marketplace.visualstudio.com/items?itemName=silvenon.mdx)
