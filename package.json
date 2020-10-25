@@ -16,7 +16,6 @@
     "parse-numeric-range": "^1.2.0",
     "preact": "^10.5.4",
     "preact-render-to-string": "^5.1.10",
-    "prettier": "^2.1.2",
     "prism-react-renderer": "^1.1.1",
     "prismjs": "^1.22.0",
     "react-helmet": "^6.1.0",
@@ -27,6 +26,10 @@
     "toast": "^0.3.22",
     "unist-util-visit": "^2.0.3"
   },
+  "devDependencies": {
+    "http-server": "^0.12.3",
+    "prettier": "^2.1.2"
+  },
   "license": "MIT",
   "scripts": {
     "build": "yarn build:css && toast incremental .",
@@ -36,7 +39,7 @@
     "prepare": "breadbox --dest public/web_modules",
     "breadbox": "breadbox --dest public/web_modules",
     "post": "npx plop --plopfile utils/plopfile.js post",
-    "serve": "npx http-server -p 8000 public"
+    "serve": "http-server -p 8000 public"
   },
   "repository": {
     "type": "git",
