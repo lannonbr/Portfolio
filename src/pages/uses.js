@@ -32,14 +32,10 @@ const UsesPage = () => (
             MacOS. Windows Terminal on Windows 10.
           </li>
           <li>Firefox and Chrome for web browsers.</li>
+          <li>I use Discord for text / voice communication with collagues.</li>
           <li>
-            <a href="https://octobox.io">Octobox</a> to keep track of GitHub
-            notifications.
-          </li>
-          <li>I use both Slack and Discord.</li>
-          <li>
-            <a href="https://www.adobe.com/products/xd.html">Adobe XD</a> for
-            design mockups.
+            <a href="https://www.adobe.com/products/xd.html">Adobe XD</a> or{' '}
+            <a href="https://www.figma.com">Figma</a> for design mockups.
           </li>
         </ul>
       </div>
