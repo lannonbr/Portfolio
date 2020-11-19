@@ -8,14 +8,17 @@ const Header = () => {
   const [mode, setMode] = useState('light')
 
   useEffect(() => {
-    if ([...document.documentElement.classList].includes('mode-dark')) {
+    if (
+      window.matchMedia &&
+      window.matchMedia('(prefers-color-scheme: dark)').matches
+    ) {
       setMode('dark')
     }
   }, [])
 
   return (
     <div
-      class="bg-rebecca-purple-lightest dark:bg-cyan-transparent md:bg-transparent mb-8 md:mb-0"
+      class="bg-rebecca-purple-lightest dark:bg-cyan-transparent md:dark:bg-transparent md:bg-transparent mb-8 md:mb-0"
       style={{
         gridColumn: '1 / span 4',
       }}

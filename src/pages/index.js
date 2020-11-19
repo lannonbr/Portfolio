@@ -77,7 +77,7 @@ const IndexPage = ({ posts, images }) => (
             <div class="mb-3">
               <a
                 href={`/${post.slug}`}
-                class="rounded py-2 px-3 flex items-center transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 dark-hover:bg-cyan-transparent dark-hover:text-cyan-light hover:no-underline"
+                class="rounded py-2 px-3 flex items-center transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 dark:hover:bg-cyan-transparent dark:hover:text-cyan-light hover:no-underline"
               >
                 {post.logo ? (
                   <img src={logo.src} alt="" class="w-6 mr-4" />

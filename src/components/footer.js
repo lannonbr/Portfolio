@@ -5,7 +5,7 @@ function Link({ href, children }) {
   return (
     <a
       href={href}
-      class="pr-4 md:pr-5 font-semibold no-underline hover:underline text-rebecca-purple-light dark:text-cyan hover:text-rebecca-purple-lighter dark-hover:text-cyan-light"
+      class="pr-4 md:pr-5 font-semibold no-underline hover:underline text-rebecca-purple-light dark:text-cyan hover:text-rebecca-purple-lighter dark:hover:text-cyan-light"
     >
       {children}
     </a>

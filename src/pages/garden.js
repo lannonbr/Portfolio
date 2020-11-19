@@ -125,7 +125,7 @@ const BlogIndexPage = ({ posts, images }) => {
               post.logo && images.filter((logo) => logo.name === post.logo)[0]
 
             return (
-              <article class="py-2 px-3 transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 dark-hover:bg-cyan-transparent dark-hover:text-cyan-light mb-2">
+              <article class="py-2 px-3 transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 dark:hover:bg-cyan-transparent dark:hover:text-cyan-light mb-2">
                 <a
                   key={post.slug}
                   href={`/${post.slug}`}

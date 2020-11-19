@@ -5,10 +5,20 @@
   --bodyTextColor: #404040;
 }
 
-.mode-dark {
-  background: #404040;
-  --bodyTextColor: #f0f0f0;
-  --bodyLink: #81cfe0;
+input#titleFilter::placeholder {
+  color: #404040;
+}
+
+@media (prefers-color-scheme: dark) {
+  body {
+    background: #404040;
+    --bodyTextColor: #f0f0f0;
+    --bodyLink: #81cfe0;
+  }
+
+  input#titleFilter::placeholder {
+    color: #81cfe0;
+  }
 }
 
 html {
@@ -155,14 +165,6 @@ main a:hover {
   padding-right: 1em;
   padding-left: 0.75em;
   border-left: 0.5em solid #81cfe0;
-}
-
-input#titleFilter::placeholder {
-  color: #404040;
-}
-
-.mode-dark input#titleFilter::placeholder {
-  color: #81cfe0;
 }
 
 @tailwind components;
