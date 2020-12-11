@@ -37,8 +37,8 @@ const MusicProductionPage = () => {
             </a>
           </li>
           <li>
-            <a href="https://focusrite.com/en/usb-audio-interface/scarlett/scarlett-solo">
-              Focusrite Scarlett Solo USB Audio Interface
+            <a href="https://focusrite.com/en/usb-audio-interface/scarlett/scarlett-18i8">
+              Focusrite Scarlett 18i8 (2nd gen) USB Audio Interface
             </a>
           </li>
           <li>

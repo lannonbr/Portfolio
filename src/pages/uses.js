@@ -80,7 +80,8 @@ const UsesPage = () => (
               Elgato key lights
             </a>
           </li>
-          <li>Sony a5100 Mirrorless Camera</li>
+          <li><a href="https://www.amazon.com/gp/product/B00MHPAFAG/">Sony a5100 Mirrorless Camera</a> (with a <a href="https://www.amazon.com/Sigma-16mm-Contemporary-Lens-Sony/dp/B077BWD2BB/">Sigma 16MM f/1.4 Lens</a>)</li>
+          <li><a href="https://www.elgato.com/en/gaming/stream-deck">Elgato StreamDeck</a></li>
         </ul>
         <h2>Audio &amp; Music Gear</h2>
         <p>
