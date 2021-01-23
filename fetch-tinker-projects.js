@@ -3,7 +3,7 @@ import yaml from 'js-yaml'
 import dayjs from 'dayjs'
 
 export const sourceData = async (options) => {
-  let data = yaml.safeLoad(
+  let data = yaml.load(
     fs.readFileSync('./content/projects/tinkerProjects.yml', 'utf-8')
   )
 
