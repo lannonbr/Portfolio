@@ -6,6 +6,7 @@
   "author": "Benjamin Lannon <benjamin@lannonbr.com>",
   "type": "module",
   "dependencies": {
+    "@headlessui/react": "^0.2.0",
     "@mdx-js/mdx": "^2.0.0-next.8",
     "@mdx-js/preact": "^2.0.0-next.8",
     "@sector/breadbox": "^0.0.4",
@@ -15,8 +16,10 @@
     "gray-matter": "^4.0.2",
     "js-yaml": "^4.0.0",
     "parse-numeric-range": "^1.2.0",
+    "patch-package": "^6.2.2",
     "postcss": "^8.2.4",
     "preact": "^10.5.11",
+    "postinstall-postinstall": "^2.1.0",
     "preact-render-to-string": "^5.1.12",
     "prism-react-renderer": "^1.1.1",
     "prismjs": "^1.23.0",
@@ -24,7 +27,7 @@
     "rehype-local-image-to-cloudinary": "^1.0.4",
     "rehype-slug": "^4.0.1",
     "tailwindcss": "^2.0.2",
-    "toast": "^0.3.40",
+    "toast": "^0.3.41",
     "unist-util-visit": "^2.0.3"
   },
   "devDependencies": {
@@ -37,7 +40,7 @@
     "incremental": "toast incremental .",
     "build:css": "NODE_ENV=production tailwindcss build src/styles/tailwind-include.css --config utils/tailwind.config.js --output public/style.css",
     "clean": "rm -rf public .tmp && yarn prepare",
-    "prepare": "breadbox --dest public/web_modules",
+    "prepare": "breadbox --dest public/web_modules && yarn patch-package",
     "breadbox": "breadbox --dest public/web_modules",
     "post": "npx plop --plopfile utils/plopfile.js post",
     "serve": "http-server -p 8000 public"
@@ -65,7 +68,8 @@
       "preact/hooks",
       "@mdx-js/preact",
       "preact/compat",
-      "react-helmet"
+      "react-helmet",
+      "@headlessui/react"
     ]
   }
 }

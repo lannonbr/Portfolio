@@ -1,0 +1,22 @@
+diff --git a/node_modules/@headlessui/react/dist/headlessui.esm.js b/node_modules/@headlessui/react/dist/headlessui.mjs
+similarity index 99%
+rename from node_modules/@headlessui/react/dist/headlessui.esm.js
+rename to node_modules/@headlessui/react/dist/headlessui.mjs
+index ab78fc8..9d9d7b7 100644
+diff --git a/node_modules/@headlessui/react/package.json b/node_modules/@headlessui/react/package.json
+index 88f45cf..b794b5a 100644
+--- a/node_modules/@headlessui/react/package.json
++++ b/node_modules/@headlessui/react/package.json
+@@ -1,9 +1,10 @@
+ {
+   "name": "@headlessui/react",
+   "version": "0.2.0",
+-  "main": "dist/index.js",
+   "typings": "dist/index.d.ts",
+-  "module": "dist/headlessui.esm.js",
++  "exports": {
++    "import": "./dist/headlessui.mjs"
++  },
+   "license": "MIT",
+   "files": [
+     "dist"

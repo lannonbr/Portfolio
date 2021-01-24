@@ -15,13 +15,15 @@ export default ({ children, ...props }) => {
     <div id="pageWrapper" class="min-h-screen grid overflow-x-hidden">
       <Helmet>
         <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <link rel="stylesheet" href="/style.css" />
+
         <link
           rel="stylesheet"
           href="https://fonts.googleapis.com/css2?family=Inter&display=swap"
         />
         <meta name="theme-color" content="#663399" />
         <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
+        <script type="text/javascript" src="/theme.js"></script>
+        <link rel="stylesheet" href="/style.css" />
       </Helmet>
       <Header />
 
