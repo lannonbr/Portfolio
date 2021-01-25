@@ -20,3 +20,5 @@ Then in the project it was installed to, it will be in the `dependencies` field 
   }
 }
 ```
+
+What's useful with this is rather than doing a copy of the files, it creates a symlink to this folder, so you can continually work on the module within itself and then when you want to test it within the project you installed it locally into, you can do such immediately without needing to run `npm install` again.
