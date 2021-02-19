@@ -9,10 +9,15 @@ status: budding
 
 This is a listing of things to follow up on.
 
+- A/V Equipment racks
+  - Looking for a rack ~10U high with a tabletop on top for a side-desk setup
+- [Vite](https://github.com/vitejs/vite)
+- [SWC](https://github.com/swc-project/swc)
+- JS Graphing libraries that fully suport ES Module syntax
+
+## Topics already examined
+
 - Schiit Audio devices, specifically the [Modi](https://www.schiit.com/products/modi-1) and [Magni](https://www.schiit.com/products/magni-1)
-
-## Topics already discussed
-
 - [Moog Mother-32](https://www.moogmusic.com/products/mother-32)
 - [Nu Shell](https://github.com/nushell/nushell)
 - [MIDItoOBS](https://lannonbr.com/blog/2020-04-26-obs-midi-control/)
