@@ -52,6 +52,11 @@ const MusicProductionPage = () => {
             </a>
           </li>
           <li>
+            <a href="https://novationmusic.com/en/keys/launchkey">
+              Novation Launchkey MK3 61-key MIDI Keyboard
+            </a>
+          </li>
+          <li>
             <a href="https://novationmusic.com/en/launch/launch-control-xl">
               Novation LaunchControl XL MIDI Controller
             </a>
@@ -59,6 +64,16 @@ const MusicProductionPage = () => {
           <li>
             <a href="https://www.elektron.se/products/digitakt">
               Elektron Digitakt
+            </a>
+          </li>
+          <li>
+            <a href="https://www.ashunsoundmachines.com/hydrasynth-desk">
+              ASM Hydrasynth Desktop Synth
+            </a>
+          </li>
+          <li>
+            <a href="https://empresseffects.com/products/zoia">
+              Empress Effects Zoia Effects Pedal
             </a>
           </li>
         </ul>
