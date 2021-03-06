@@ -55,10 +55,14 @@ const UsesPage = () => (
           <li>I use a 2015 MacBook Pro for my mobile rig.</li>
           <li>
             An{' '}
-            <a href="https://aziocorp.com/collections/keyboard/products/retro-classic-usb?variant=10731924389931">
-              Azio Retro Classic
+            <a href="https://www.keychron.com/pages/keychron-k8-wireless-mechanical-keyboard">
+              Keychron K8
             </a>{' '}
-            mechanical keyboard. It has Kailh blue switches.
+            mechanical keyboard. It has Gateron brown switches and I have the{' '}
+            <a href="https://thekey.company/collections/islander">
+              Infinikey PBT Islander keycaps
+            </a>{' '}
+            on it.
           </li>
           <li>
             A{' '}
@@ -80,8 +84,21 @@ const UsesPage = () => (
               Elgato key lights
             </a>
           </li>
-          <li><a href="https://www.amazon.com/gp/product/B00MHPAFAG/">Sony a5100 Mirrorless Camera</a> (with a <a href="https://www.amazon.com/Sigma-16mm-Contemporary-Lens-Sony/dp/B077BWD2BB/">Sigma 16MM f/1.4 Lens</a>)</li>
-          <li><a href="https://www.elgato.com/en/gaming/stream-deck">Elgato StreamDeck</a></li>
+          <li>
+            <a href="https://www.amazon.com/gp/product/B00MHPAFAG/">
+              Sony a5100 Mirrorless Camera
+            </a>{' '}
+            (with a{' '}
+            <a href="https://www.amazon.com/Sigma-16mm-Contemporary-Lens-Sony/dp/B077BWD2BB/">
+              Sigma 16MM f/1.4 Lens
+            </a>
+            )
+          </li>
+          <li>
+            <a href="https://www.elgato.com/en/gaming/stream-deck">
+              Elgato StreamDeck
+            </a>
+          </li>
         </ul>
         <h2>Audio &amp; Music Gear</h2>
         <p>
