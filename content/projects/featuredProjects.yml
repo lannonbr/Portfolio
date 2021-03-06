@@ -1,25 +1,24 @@
 projects:
-  - name: Live Coders Website
-    created_date: 2020-03-26
-    img: '/featured-projects/livecoders.jpg'
+  - name: Plaits Cheat Sheet
+    created_date: 2020-08-01
+    img: '/featured-projects/PlaitsCheatSheet.png'
     desc: |
-      The team website for the Live Coders Twitch Team.
-    github_link: 'https://github.com/livecoders/website'
-    website_link: 'https://livecoders.dev'
+      A site to preview the various modes for the Modular Synth module, Mutable Instrument's Plaits.
+    github_link: 'https://github.com/lannonbr/plaits-docs'
+    website_link: 'https://plaits-cheat-sheet.netlify.app'
+    technologies:
+      - Toast
+      - Tailwind
+  - name: 2019 GitHub Actions Advent Calendar
+    created_date: 2019-12-01
+    img: '/featured-projects/ActionsAdventCalendar2019.png'
+    desc: |
+      A resource site to showcase various actions & tips during the month of December 2019.
+    github_link: 'https://github.com/lannonbr/ActionsAdventCalendar'
+    website_link: 'https://lannonbr-actions-advent-calendar.netlify.app/'
     technologies:
       - Gatsby
-  - name: Live Coders Heatmap
-    created_date: 2019-12-24
-    img: '/featured-projects/lc-heatmap.png'
-    desc: |
-      A Heatmap showing when people on the Live Coders Twitch team are live.
-    github_link: 'https://github.com/lannonbr/LC-Heatmap'
-    website_link: 'https://livecoders-heatmap.netlify.com'
-    technologies:
-      - GitHub Actions
-      - DynamoDB
-      - D3
-      - date-fns
+      - MDX
   - name: GARS (GitHub Actions Resource Site)
     created_date: 2019-11-13
     img: '/featured-projects/gars.png'
