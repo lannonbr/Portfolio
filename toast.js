@@ -51,9 +51,9 @@ export const sourceData = async ({ setDataForSlug }) => {
   await setDataForSlug('/posts', {
     data: {
       items: allPostsData.map((post) => ({
-        title: post.title,
-        subtitle: `https://lannonbr.com/${post.slug}`,
-        arg: `https://lannonbr.com/${post.slug}`,
+        name: post.title,
+        description: `https://lannonbr.com/${post.slug}`,
+        value: `https://lannonbr.com/${post.slug}`,
       })),
     },
   })
