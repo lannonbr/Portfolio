@@ -26,7 +26,7 @@
     "react-helmet": "^6.1.0",
     "rehype-local-image-to-cloudinary": "^1.0.4",
     "rehype-slug": "^4.0.1",
-    "tailwindcss": "^2.0.2",
+    "tailwindcss": "^2.1.1",
     "toast": "^0.3.41",
     "unist-util-visit": "^2.0.3"
   },

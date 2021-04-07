@@ -1,4 +1,5 @@
 module.exports = {
+  mode: 'jit',
   darkMode: 'class',
   purge: {
     content: ['./src/**/*.js', './utils/**/*.js'],
@@ -44,12 +45,6 @@ module.exports = {
         },
       },
     },
-  },
-  variants: {
-    backgroundColor: ['hover', 'responsive', ' focus', 'dark'],
-    textColor: ['hover', 'responsive', 'focus', 'dark'],
-    borderColor: ['responsive', 'hover', 'focus', 'dark'],
-    translate: ['hover', 'responsive', 'focus', 'group-hover'],
   },
   plugins: [],
 }

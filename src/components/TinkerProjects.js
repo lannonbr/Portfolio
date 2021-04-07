@@ -13,13 +13,14 @@ function TinkerProjects({ projects }) {
           <h5>As of {project.created_date}</h5>
           <p class="flex-grow">{project.desc}</p>
           <div class="flex flex-col md:flex-row">
-            {project.links.map((link, idx) => {
-              return (
-                <a key={idx} href={link.url} class="md:mr-4">
-                  {link.name}
-                </a>
-              )
-            })}
+            {project.links &&
+              project.links.map((link, idx) => {
+                return (
+                  <a key={idx} href={link.url} class="md:mr-4">
+                    {link.name}
+                  </a>
+                )
+              })}
           </div>
         </section>
       ))}
