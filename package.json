@@ -39,7 +39,7 @@
   "scripts": {
     "build": "yarn build:css && toast incremental .",
     "incremental": "toast incremental .",
-    "build:css": "NODE_ENV=production tailwindcss build src/styles/tailwind-include.css --config utils/tailwind.config.js --output public/style.css",
+    "build:css": "NODE_ENV=production tailwindcss build src/styles/tailwind-include.css --output public/style.css",
     "clean": "rm -rf public .tmp && yarn prepare",
     "prepare": "yarn patch-package",
     "postinstall": "./postinstall.js",
