@@ -107,7 +107,7 @@ exports.createSchemaCustomization = ({ actions }) => {
 }
 ```
 
-Then, we can create types that implement this interface (MDX, Contentful, Wordpress, etc) and when one queries on the `allBlogPost`, all nodes that implement that interface will be obtained. A usecase of this can be seen in the [gatsby-theme-blog-core](https://github.com/gatsbyjs/gatsby/tree/master/themes/gatsby-theme-blog-core) which defines a `BlogPost` interface and a `MDXBlogPost` type.
+Then, we can create types that implement this interface (MDX, Contentful, Wordpress, etc) and when one queries on the `allBlogPost`, all nodes that implement that interface will be obtained. A usecase of this can be seen in the [gatsby-theme-blog-core](https://github.com/gatsbyjs/themes/tree/master/packages/gatsby-theme-blog-core) which defines a `BlogPost` interface and a `MDXBlogPost` type.
 
 ---
 
