@@ -9,25 +9,26 @@
     "@headlessui/react": "^0.2.0",
     "@mdx-js/mdx": "^2.0.0-next.8",
     "@mdx-js/preact": "^2.0.0-next.8",
-    "@sector/breadbox": "^0.0.4",
     "autoprefixer": "^10.2.3",
     "dayjs": "^1.10.3",
+    "esinstall": "^1.1.4",
     "globby": "^11.0.2",
     "gray-matter": "^4.0.2",
     "js-yaml": "^4.0.0",
     "parse-numeric-range": "^1.2.0",
     "patch-package": "^6.2.2",
     "postcss": "^8.2.4",
-    "preact": "^10.5.11",
     "postinstall-postinstall": "^2.1.0",
+    "preact": "^10.5.11",
     "preact-render-to-string": "^5.1.12",
+    "pretty-bytes": "^5.6.0",
     "prism-react-renderer": "^1.1.1",
     "prismjs": "^1.23.0",
     "react-helmet": "^6.1.0",
     "rehype-local-image-to-cloudinary": "^1.1.0",
     "rehype-slug": "^4.0.1",
     "tailwindcss": "^2.1.1",
-    "toast": "^0.3.41",
+    "toast": "^0.3.43",
     "unist-util-visit": "^2.0.3"
   },
   "devDependencies": {
@@ -40,8 +41,8 @@
     "incremental": "toast incremental .",
     "build:css": "NODE_ENV=production tailwindcss build src/styles/tailwind-include.css --config utils/tailwind.config.js --output public/style.css",
     "clean": "rm -rf public .tmp && yarn prepare",
-    "prepare": "breadbox --dest public/web_modules && yarn patch-package",
-    "breadbox": "breadbox --dest public/web_modules",
+    "prepare": "yarn patch-package",
+    "postinstall": "./postinstall.js",
     "post": "npx plop --plopfile utils/plopfile.js post",
     "serve": "http-server -p 8000 public"
   },
@@ -51,25 +52,5 @@
   },
   "bugs": {
     "url": "https://github.com/lannonbr/portfolio/issues"
-  },
-  "snowpack": {
-    "exclude": [
-      "public/**",
-      "toast.js",
-      "fetch-*.js"
-    ],
-    "installOptions": {
-      "alias": {
-        "react": "preact/compat"
-      }
-    },
-    "knownEntrypoints": [
-      "preact",
-      "preact/hooks",
-      "@mdx-js/preact",
-      "preact/compat",
-      "react-helmet",
-      "@headlessui/react"
-    ]
   }
 }
