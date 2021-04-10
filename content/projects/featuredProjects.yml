@@ -46,7 +46,7 @@ projects:
       - Recharts
   - name: Syracuse.io
     created_date: 2019-01-08
-    img: '/featured-projects/syracuseio.png'
+    img: '/featured-projects/syracuseio.jpg'
     desc: |
       Collaborating with Mike Vormwald, we recreated syracuse.io in Gatsby from previously a Jekyll site. Now we still have the benefit of writing content in markdown but have the speed and power that comes through using Gatsby and React.
     github_link: 'https://github.com/syracuseio/syracuseio'
@@ -70,7 +70,7 @@ projects:
       - Firebase
   - name: VS Code Rocks
     created_date: 2018-07-01
-    img: '/featured-projects/vscode-rocks.png'
+    img: '/featured-projects/vscode-rocks.jpg'
     desc: |
       VS Code Rocks is one of my side projects to write content for VS Code and its community. Given I am an extension developer, I write both VS Code's features for normal uses as well as tutorials into various extension APIs on how to extend VS Code. It's a Gatsby site on the back-end and I write individual posts in markdown.
     github_link: 'https://github.com/lannonbr/vscode-rocks'
@@ -81,7 +81,7 @@ projects:
       - Markdown
   - name: Clarkson Mirror Website
     created_date: 2015-12-12
-    img: '/featured-projects/clarkson-mirror.png'
+    img: '/featured-projects/clarkson-mirror.jpg'
     desc: |
       This was a design for the public facing website for Clarkson University's FOSS Mirror which hosts a variety of Linux distributions and other software projects. I designed the frontend to browse the various projects and some graphs using C3.JS to visualize the download traffic over time in a variety of formats. As of 2018, we've been pushing over 100TB a month across the world.
     github_link: 'https://github.com/COSI-Lab/MirrorWebsite'
