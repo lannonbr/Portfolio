@@ -8,17 +8,17 @@
     "build": "webpack --mode production"
   },
   "devDependencies": {
-    "@babel/core": "^7.11.1",
-    "@babel/preset-env": "^7.11.0",
-    "@babel/preset-react": "^7.10.4",
-    "babel-loader": "^8.1.0",
-    "webpack": "^4.44.1",
-    "webpack-cli": "^3.3.12"
+    "@babel/core": "^7.13.15",
+    "@babel/preset-env": "^7.13.15",
+    "@babel/preset-react": "^7.13.13",
+    "babel-loader": "^8.2.2",
+    "webpack": "^5.31.2",
+    "webpack-cli": "^4.6.0"
   },
   "dependencies": {
-    "playwright-firefox": "^1.3.0",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
-    "react-textfit": "^1.1.0"
+    "playwright-firefox": "^1.10.0",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2",
+    "react-textfit": "^1.1.1"
   }
 }
