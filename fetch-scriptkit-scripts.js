@@ -25,8 +25,8 @@ export const sourceData = async (options) => {
   } catch (err) {
     console.error("previous sha doesn't exist, save content")
     fs.writeFile(path.join(cacheDir, 'currentSHA.txt'), commits.data[0].sha)
-    await saveNewScripts(commits.data[0].tree.sha)
-    return
+    await saveNewScripts(commits.data[0].commit.tree.sha)
+    previousSHA = commits.data[0].sha
   }
 
   if (commits.data[0].sha !== previousSHA) {
