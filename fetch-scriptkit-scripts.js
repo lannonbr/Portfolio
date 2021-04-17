@@ -69,6 +69,12 @@ async function saveNewScripts(treeSha) {
 
     const file = Buffer.from(blob.data.content, 'base64').toString()
 
+    try {
+      await fs.access(path.join(cacheDir, 'scripts'))
+    } catch (err) {
+      fs.mkdir(path.join(cacheDir, 'scripts'))
+    }
+
     await fs.writeFile(path.join(cacheDir, 'scripts', script.path), file)
   }
 }
