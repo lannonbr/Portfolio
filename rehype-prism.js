@@ -1,42 +1,43 @@
-const preact = require('preact')
-const renderToString = require('preact-render-to-string')
-const rangeParser = require('parse-numeric-range')
-const Highlight = require('prism-react-renderer')
-const theme = require('prism-react-renderer/themes/nightOwl')
-const visit = require('unist-util-visit')
-const Prism = require('prismjs')
-const loadLanguages = require('prismjs/components/index')
-const prismComponents = require('prismjs/components')
-const { h } = preact
+import { h } from 'preact'
+import renderToString from 'preact-render-to-string'
+import rangeParser from 'parse-numeric-range'
+import Highlight from 'prism-react-renderer'
+import visit from 'unist-util-visit'
+import Prism from 'prismjs'
+import loadLanguages from 'prismjs/components/index.js'
+import prismComponents from 'prismjs/components.js'
+import { nightOwlTheme } from './src/components/prism-themes.js'
 
-module.exports = (options) => (ast) => {
-  visit(ast, 'element', (node) => {
-    if (node.tagName === 'code') {
-      const codeString = node.children[0].value
-      const language =
-        node.properties.className &&
-        node.properties.className[0] &&
-        node.properties.className[0].split('-')[1]
+export default function rehypePrismMdx(options) {
+  return (ast) => {
+    visit(ast, 'element', (node) => {
+      if (node.tagName === 'code') {
+        const codeString = node.children[0].value
+        const language =
+          node.properties.className &&
+          node.properties.className[0] &&
+          node.properties.className[0].split('-')[1]
 
-      const result = renderToString(
-        h(Code, {
-          codeString: codeString.trim(),
-          language: language,
-          highlight: node.properties.highlight,
-          className: node.properties.className,
-          metastring: node.properties.metastring,
-          title: node.properties.title,
-        })
-      )
+        const result = renderToString(
+          h(Code, {
+            codeString: codeString.trim(),
+            language: language,
+            highlight: node.properties.highlight,
+            className: node.properties.className,
+            metastring: node.properties.metastring,
+            title: node.properties.title,
+          })
+        )
 
-      node.children = [
-        {
-          value: result,
-          type: 'text',
-        },
-      ]
-    }
-  })
+        node.children = [
+          {
+            value: result,
+            type: 'text',
+          },
+        ]
+      }
+    })
+  }
 }
 
 try {
@@ -79,7 +80,7 @@ const Code = ({
       ...Highlight.defaultProps,
       code: codeString,
       language: language,
-      theme: theme,
+      theme: nightOwlTheme,
       Prism: Prism,
     },
     ({ className, style, tokens, getLineProps, getTokenProps }) => {

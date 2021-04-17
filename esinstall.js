@@ -5,6 +5,7 @@ export const specs = [
   'preact/compat',
   'react-helmet',
   '@headlessui/react',
+  'prism-react-renderer',
 ]
 
 export const options = {

@@ -2,7 +2,7 @@ module.exports = {
   mode: 'jit',
   darkMode: 'class',
   purge: {
-    content: ['./src/**/*.js', './utils/**/*.js'],
+    content: ['./src/**/*.js', './rehype-prism.js'],
   },
   theme: {
     fontSize: {

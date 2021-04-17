@@ -6,7 +6,7 @@ import frontmatter from 'gray-matter'
 import mdx from '@mdx-js/mdx'
 import rehypeSlug from 'rehype-slug'
 import cloudinary from 'rehype-local-image-to-cloudinary'
-import rehypePrism from './utils/prism-rehype-plugin/index.js'
+import rehypePrism from './rehype-prism.js'
 
 // import beeline from 'honeycomb-beeline'
 // beeline()
