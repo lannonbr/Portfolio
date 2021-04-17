@@ -9,6 +9,12 @@ const client = new Octokit({
 })
 
 export const sourceData = async (options) => {
+  try {
+    await fs.access(cacheDir)
+  } catch (err) {
+    fs.mkdir(cacheDir)
+  }
+
   // Get lastest commit to check if we need to download scripts
   const commits = await client.repos.listCommits({
     owner: 'lannonbr',
