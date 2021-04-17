@@ -39,6 +39,7 @@ jspm_packages/
 # toast files
 .tmp/
 public
+cache
 
 # Mac files
 .DS_Store
