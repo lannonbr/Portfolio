@@ -3,10 +3,9 @@ on:
   push:
     branches: [master]
   workflow_dispatch:
-defaults:
-  runs-on: ubuntu-latest
 jobs:
   toast-build:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2-beta
@@ -28,6 +27,7 @@ jobs:
           name: public-dir
           path: public/
   gen-og-images:
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Build files
@@ -42,6 +42,7 @@ jobs:
           name: og-images
           path: .github/actions/gen-og-images-action/dist/posts/
   push-css-stats:
+    runs-on: ubuntu-latest
     needs: [toast-build]
     env:
       COMMIT_SHA: ${{ github.sha }}
@@ -63,6 +64,7 @@ jobs:
           filepath: public/style.css
           dynamo-table-name: lannonbr.com-css-stats
   deploy-build:
+    runs-on: ubuntu-latest
     needs: [gen-og-images, toast-build]
     env:
       LIFX_TOKEN: ${{ secrets.LIFX_TOKEN }}
