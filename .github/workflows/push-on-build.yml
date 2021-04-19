@@ -2,9 +2,10 @@ name: Build on push
 on:
   push:
     branches: [master]
+defaults:
+  runs-on: ubuntu-latest
 jobs:
   toast-build:
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2-beta
@@ -25,7 +26,6 @@ jobs:
           name: public-dir
           path: public/
   gen-og-images:
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: Build files
@@ -41,7 +41,6 @@ jobs:
           path: .github/actions/gen-og-images-action/dist/posts/
   push-css-stats:
     needs: [toast-build]
-    runs-on: ubuntu-latest
     env:
       COMMIT_SHA: ${{ github.sha }}
     steps:
@@ -66,7 +65,6 @@ jobs:
     env:
       LIFX_TOKEN: ${{ secrets.LIFX_TOKEN }}
       LIFX_BULB_ID: ${{ secrets.LIFX_BULB_ID }}
-    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
       - name: get public dir
