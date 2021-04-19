@@ -1,5 +1,5 @@
 /** @jsx h */
-import { h } from 'preact'
+import { h, Fragment } from 'preact'
 import { useState } from 'preact/hooks'
 
 import SEO from '../components/seo.js'
@@ -77,7 +77,7 @@ const BlogIndexPage = ({ posts, images }) => {
     })
 
   return (
-    <div class="max-w-6xl mx-auto">
+    <Fragment>
       <SEO title="Blog" />
       <h1>Digital Garden</h1>
       <p>
@@ -148,7 +148,7 @@ const BlogIndexPage = ({ posts, images }) => {
           <NoPosts />
         )}
       </div>
-    </div>
+    </Fragment>
   )
 }
 

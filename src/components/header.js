@@ -38,7 +38,7 @@ function ThemeToggle({ theme, setTheme }) {
   }, [theme])
 
   return (
-    <div class="ml-3 relative" id="themeToggle">
+    <div class="mx-3 relative" id="themeToggle">
       <div>
         <button
           class="max-w-xs bg-white dark:bg-transparent flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
@@ -145,7 +145,7 @@ const Header = () => {
         gridColumn: '1 / span 4',
       }}
     >
-      <header class="pb-2 pt-2 md:pt-2 px-4 md:px-0 shadow-lg w-full max-w-7xl mx-auto grid items-center md:shadow-none">
+      <header class="pb-2 pt-2 md:py-4 px-4 md:px-0 shadow-lg w-full max-w-7xl mx-auto grid items-center md:shadow-none">
         <h1 class="text-2xl m-0 pl-2 2xl:pl-0">
           <a
             class="h-full no-underline bg-repeat bg-scroll bg-left-top bg-clip-text bg-transparent"

@@ -2,6 +2,7 @@ name: Build on push
 on:
   push:
     branches: [master]
+  workflow_dispatch:
 defaults:
   runs-on: ubuntu-latest
 jobs:
@@ -10,7 +11,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v2-beta
         with:
-          node-version: '14.13.x'
+          node-version: '14.16.x'
       - name: Install Deps
         run: yarn
       - name: Build Site
@@ -19,6 +20,7 @@ jobs:
           CLOUDINARY_API_KEY: ${{ secrets.CLOUDINARY_API_KEY }}
           CLOUDINARY_API_SECRET: ${{ secrets.CLOUDINARY_API_SECRET }}
           HONEYCOMB_WRITE_KEY: ${{ secrets.HONEYCOMB_WRITE_KEY }}
+          GITHUB_TOKEN: ${{ secrets.GH_TOKEN }}
         run: yarn build
       - name: Upload public dir as artifact
         uses: actions/upload-artifact@v2

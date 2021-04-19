@@ -51,6 +51,7 @@ function Footer() {
         <div class="flex flex-col space-y-2 md:space-y-0">
           <Link href="/uses">Uses</Link>
           <Link href="/music-production">Music Production</Link>
+          <Link href="/scriptkit-scripts">Scripts</Link>
         </div>
       </div>
       <div>

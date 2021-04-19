@@ -3,12 +3,19 @@ import { promises as fs } from 'fs'
 import * as MDXPostsSource from './fetch-mdx-posts.js'
 import * as TinkerProjectsSource from './fetch-tinker-projects.js'
 import * as FeaturedProjectsSource from './fetch-featured-projects.js'
+import * as ScriptKitScriptsSource from './fetch-scriptkit-scripts.js'
 
 export const sourceData = async ({ setDataForSlug }) => {
-  const [mdxPosts, tinkerProjects, featuredProjects] = await Promise.all([
+  const [
+    mdxPosts,
+    tinkerProjects,
+    featuredProjects,
+    scriptsData,
+  ] = await Promise.all([
     MDXPostsSource.sourceData({ setDataForSlug }),
     TinkerProjectsSource.sourceData(),
     FeaturedProjectsSource.sourceData(),
+    ScriptKitScriptsSource.sourceData(),
   ])
 
   let images = await fs.readdir('./static/blog-icons')
@@ -38,6 +45,10 @@ export const sourceData = async ({ setDataForSlug }) => {
     if (da < db) return -1
     if (da === db) return 0
     if (da > db) return 1
+  })
+
+  await setDataForSlug('/scriptkit-scripts', {
+    data: { scriptsData },
   })
 
   await setDataForSlug('/garden', {
