@@ -1,3 +1,5 @@
+const { amber, yellow } = require('tailwindcss/colors')
+
 module.exports = {
   mode: 'jit',
   darkMode: 'class',
@@ -32,6 +34,8 @@ module.exports = {
         '7xl': '100rem',
       },
       colors: {
+        yellow,
+        amber,
         'rebecca-purple': {
           DEFAULT: '#663399',
           light: '#66339988',

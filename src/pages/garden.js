@@ -4,6 +4,7 @@ import { useState } from 'preact/hooks'
 
 import SEO from '../components/seo.js'
 import EmptyStreet from '../images/empty-street.js'
+import ScriptKit from '../images/scriptkit-logo.js'
 
 const statusMap = {
   budding: '🌱',
@@ -121,8 +122,12 @@ const BlogIndexPage = ({ posts, images }) => {
       <div>
         {visiblePosts.length > 0 ? (
           visiblePosts.map((post) => {
-            const logo =
+            let logo =
               post.logo && images.filter((logo) => logo.name === post.logo)[0]
+
+            if (post.logo === 'script-kit') {
+              logo = null
+            }
 
             return (
               <article class="py-2 px-3 transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 dark:hover:bg-cyan-transparent dark:hover:text-cyan-light mb-2">
@@ -131,8 +136,10 @@ const BlogIndexPage = ({ posts, images }) => {
                   href={`/${post.slug}`}
                   class="flex items-center text-md md:text-xl rounded-sm mb-3 hover:no-underline"
                 >
-                  {post.logo ? (
+                  {logo ? (
                     <img src={logo.src} alt="" class="w-6 mr-2" />
+                  ) : post.logo === 'script-kit' ? (
+                    <ScriptKit />
                   ) : (
                     <LogolessLogo />
                   )}
