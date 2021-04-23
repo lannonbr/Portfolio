@@ -1,7 +1,7 @@
 /** @jsx h */
-import { h } from 'preact'
+import { Fragment, h } from 'preact'
 import { useState, useEffect } from 'preact/hooks'
-import { Transition } from '@headlessui/react'
+import { Transition, Menu } from '@headlessui/react'
 
 import Navigation from './navigation.js'
 import Moon from './feather/moon.js'
@@ -37,83 +37,58 @@ function ThemeToggle({ theme, setTheme }) {
     console.log(localStorage.theme)
   }, [theme])
 
-  return (
-    <div class="mx-3 relative" id="themeToggle">
-      <div>
-        <button
-          class="max-w-xs bg-white dark:bg-transparent flex items-center text-sm rounded-full focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
-          id="user-menu"
-          aria-haspopup="true"
-          onClick={() => {
-            setOpen(!open)
-          }}
-        >
-          <span class="sr-only">Open Theme Menu</span>
-          <Moon alt="" />
-        </button>
-      </div>
+  const themeOptions = [
+    { name: 'Light', value: 'light' },
+    { name: 'Dark', value: 'dark' },
+    { name: 'System UI', value: 'system' },
+  ]
 
-      <Transition
-        show={open}
-        enter="transition ease-out duration-200"
-        enterFrom="transform opacity-0 scale-95"
-        enterTo="transform opacity-100 scale-100"
-        leave="transition ease-in duration-75"
-        leaveFrom="transform opacity-100 scale-100"
-        leaveTo="transform opacity-0 scale-95"
-      >
-        {(ref) => {
-          return (
-            <div
-              ref={ref}
-              class={
-                'flex flex-col origin-top-right absolute right-0 mt-2 w-48 rounded-md shadow-lg py-1 bg-white ring-1 ring-black ring-opacity-5' +
-                (open
-                  ? ' transform opacity-100 scale-100'
-                  : ' transform opacity-0 scale-95')
-              }
-              role="menu"
-              aria-orientation="vertical"
-              aria-labelledby="user-menu"
+  return (
+    <Menu as="div" class="flex-shrink-0 relative">
+      {({ open }) => (
+        <Fragment>
+          <div>
+            <Menu.Button class="rounded-full flex focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500">
+              <span class="sr-only">Open Theme Settings</span>
+              <Moon alt="" class="h-6 w-6 rounded-full" />
+            </Menu.Button>
+          </div>
+          <Transition
+            as={Fragment}
+            show={open}
+            enter="transition ease-out duration-200"
+            enterFrom="transform opacity-0 scale-95"
+            enterTo="transform opacity-100 scale-100"
+            leave="transition ease-in duration-75"
+            leaveFrom="transform opacity-100 scale-100"
+            leaveTo="transform opacity-0 scale-95"
+          >
+            <Menu.Items
+              static
+              class="flex flex-col origin-top-right absolute z-10 right-0 mt-2 w-48 rounded-md shadow-lg bg-white ring-1 ring-black ring-opacity-5 py-1 focus:outline-none"
             >
-              <label class="text-black">
-                <input
-                  type="radio"
-                  name="theme"
-                  id="option-light"
-                  value="light"
-                  checked={theme === 'light'}
-                  onClick={() => setTheme('light')}
-                />
-                <span class="ml-2">Light</span>
-              </label>
-              <label class="text-black">
-                <input
-                  type="radio"
-                  name="theme"
-                  id="option-dark"
-                  value="dark"
-                  checked={theme === 'dark'}
-                  onClick={() => setTheme('dark')}
-                />
-                <span class="ml-2">Dark</span>
-              </label>
-              <label class="text-black">
-                <input
-                  type="radio"
-                  name="theme"
-                  id="option-system"
-                  value="system"
-                  checked={theme === 'system'}
-                  onClick={() => setTheme('system')}
-                />
-                <span class="ml-2">System UI</span>
-              </label>
-            </div>
-          )
-        }}
-      </Transition>
-    </div>
+              {themeOptions.map((opt) => (
+                <Menu.Item key={opt.name}>
+                  {({ active }) => (
+                    <label for={`theme-toggle-${opt.value}`} class="flex ml-2">
+                      <input
+                        type="radio"
+                        name="theme"
+                        id={`theme-toggle-${opt.value}`}
+                        value={opt.value}
+                        checked={theme === opt.value}
+                        onClick={() => setTheme(opt.value)}
+                      />
+                      <span class="ml-2 text-black">{opt.name}</span>
+                    </label>
+                  )}
+                </Menu.Item>
+              ))}
+            </Menu.Items>
+          </Transition>
+        </Fragment>
+      )}
+    </Menu>
   )
 }
 

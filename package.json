@@ -6,7 +6,7 @@
   "author": "Benjamin Lannon <benjamin@lannonbr.com>",
   "type": "module",
   "dependencies": {
-    "@headlessui/react": "^0.2.0",
+    "@headlessui/react": "^1.0.0",
     "@mdx-js/mdx": "^2.0.0-next.9",
     "@mdx-js/preact": "2.0.0-next.8",
     "@octokit/rest": "^18.5.2",

@@ -1,16 +1,19 @@
 diff --git a/node_modules/@headlessui/react/dist/headlessui.esm.js b/node_modules/@headlessui/react/dist/headlessui.mjs
-similarity index 99%
+similarity index 100%
 rename from node_modules/@headlessui/react/dist/headlessui.esm.js
 rename to node_modules/@headlessui/react/dist/headlessui.mjs
-index ab78fc8..9d9d7b7 100644
+diff --git a/node_modules/@headlessui/react/dist/headlessui.esm.js.map b/node_modules/@headlessui/react/dist/headlessui.mjs.map
+similarity index 100%
+rename from node_modules/@headlessui/react/dist/headlessui.esm.js.map
+rename to node_modules/@headlessui/react/dist/headlessui.mjs.map
 diff --git a/node_modules/@headlessui/react/package.json b/node_modules/@headlessui/react/package.json
-index 88f45cf..b794b5a 100644
+index 395393d..ccd140b 100644
 --- a/node_modules/@headlessui/react/package.json
 +++ b/node_modules/@headlessui/react/package.json
-@@ -1,9 +1,10 @@
- {
+@@ -2,9 +2,10 @@
    "name": "@headlessui/react",
-   "version": "0.2.0",
+   "version": "1.0.0",
+   "description": "A set of completely unstyled, fully accessible UI components for React, designed to integrate beautifully with Tailwind CSS.",
 -  "main": "dist/index.js",
    "typings": "dist/index.d.ts",
 -  "module": "dist/headlessui.esm.js",
@@ -19,4 +22,4 @@ index 88f45cf..b794b5a 100644
 +  },
    "license": "MIT",
    "files": [
-     "dist"
+     "README.md",

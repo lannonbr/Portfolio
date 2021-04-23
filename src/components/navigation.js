@@ -11,7 +11,7 @@ function Navigation() {
   ]
 
   return (
-    <nav class="w-full grid grid-cols-2 gap-2 items-center md:block md:px-3">
+    <nav class="md:ml-5 w-full grid grid-cols-2 gap-2 items-center md:block md:px-3">
       {navLinks.map((link) => (
         <a
           key={link.name}
