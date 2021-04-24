@@ -12,7 +12,7 @@ jobs:
         with:
           node-version: '14.16.x'
       - name: Install Deps
-        run: yarn install --frozen-lockfile
+        run: yarn install
       - name: Build Site
         env:
           CLOUDINARY_CLOUD_NAME: ${{ secrets.CLOUDINARY_CLOUD_NAME }}
@@ -71,8 +71,6 @@ jobs:
       LIFX_BULB_ID: ${{ secrets.LIFX_BULB_ID }}
     steps:
       - uses: actions/checkout@v2
-      - name: Install Deps
-        run: yarn install --frozen-lockfile
       - name: get public dir
         uses: actions/download-artifact@v2
         with:
@@ -87,7 +85,7 @@ jobs:
         env:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-        run: yarn deploy
+        run: netlify deploy --dir=public --prod
       - name: Trigger light to go green on success
         if: success()
         uses: lannonbr/lifx-trigger-action@1.0.0
