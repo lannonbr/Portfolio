@@ -34,6 +34,7 @@
   },
   "devDependencies": {
     "http-server": "^0.12.3",
+    "netlify-cli": "^3.21.9",
     "prettier": "^2.2.1"
   },
   "license": "MIT",
@@ -45,7 +46,8 @@
     "prepare": "yarn patch-package",
     "postinstall": "./postinstall.js",
     "post": "npx plop --plopfile utils/plopfile.js post",
-    "serve": "http-server -p 8000 public"
+    "serve": "http-server -p 8000 public",
+    "deploy": "netlify deploy --dir=public --prod"
   },
   "repository": {
     "type": "git",
