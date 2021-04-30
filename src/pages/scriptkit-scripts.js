@@ -2,6 +2,7 @@
 import { h } from 'preact'
 import * as Prism from 'prism-react-renderer'
 import { nightOwlTheme } from '../components/prism-themes.js'
+import SEO from '../components/seo.js'
 const defaultProps = Prism.defaultProps
 
 // Because of the differing modules between node & browser I have to do a conditional to get the default export
@@ -15,9 +16,13 @@ if (typeof window === 'undefined') {
 const Scripts = (props) => {
   return (
     <div>
+      <SEO title="Scripts" />
       <header>
         <h2>Scripts</h2>
-        <p>This is a listing of all the scripts I use with Script Kit</p>
+        <p>
+          This is a listing of all the scripts I use with{' '}
+          <a href="https://www.scriptkit.com/">Script Kit</a>.
+        </p>
       </header>
       <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
         {props.scriptsData.map((script) => {
