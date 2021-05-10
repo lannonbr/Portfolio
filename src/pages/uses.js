@@ -6,10 +6,6 @@ const UsesPage = () => (
   <Fragment>
     <SEO title="Uses" />
     <h1>Uses</h1>
-    <p>
-      With inspiration from <a href="https://wesbos.com/uses/">Wes Bos</a>, this
-      page lists software and hardware I use on a daily basis.
-    </p>
     <section class="md:grid md:grid-cols-2 md:gap-8 mb-4">
       <div>
         <h2>Software</h2>
@@ -31,7 +27,7 @@ const UsesPage = () => (
             <a href="https://www.iterm2.com/">iTerm2</a> as my terminal on
             MacOS. Windows Terminal on Windows 10.
           </li>
-          <li>Firefox and Chrome for web browsers.</li>
+          <li>Firefox and Microsoft Edge for web browsers.</li>
           <li>I use Discord for text / voice communication with collagues.</li>
           <li>
             <a href="https://www.adobe.com/products/xd.html">Adobe XD</a> or{' '}
@@ -45,16 +41,16 @@ const UsesPage = () => (
         <ul class="list-disc pl-4">
           <li>AMD Ryzen 7 3700x - 8 core / 16 thread CPU</li>
           <li>Corsair Vengence RGB Pro 2666MHz DDR4 RAM - 32GB (2x16GB)</li>
-          <li>Samsung 970 Evo Plus NvMe M.2 1TB SSD</li>
+          <li>2x Samsung 970 Evo Plus NvMe M.2 1TB SSD</li>
           <li>Nvidia GeForce RTX 2070 Super GPU</li>
           <li>MSI MPG x570 Gaming Edge Wifi Motherboard</li>
           <li>EVGA Supernova 750W G3 Gold Power Suppy</li>
         </ul>
         <h2>Other Hardware</h2>
         <ul class="list-disc pl-4">
-          <li>I use a 2015 MacBook Pro for my mobile rig.</li>
+          <li>I use a 2021 M1 Mac Mini as my secondary machine.</li>
           <li>
-            An{' '}
+            A{' '}
             <a href="https://www.keychron.com/pages/keychron-k8-wireless-mechanical-keyboard">
               Keychron K8
             </a>{' '}
