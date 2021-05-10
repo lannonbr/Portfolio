@@ -3,6 +3,7 @@ import { Fragment, h } from 'preact'
 import SEO from '../components/seo.js'
 import Office from '../images/office.js'
 import ChevronRight from '../components/feather/chevron-right.js'
+import ScriptKit from '../images/scriptkit-logo.js'
 
 const Banner = () => {
   return (
@@ -70,8 +71,12 @@ const IndexPage = ({ posts, images }) => (
           </a>
         </div>
         {posts.map((post) => {
-          const logo =
+          let logo =
             post.logo && images.filter((logo) => logo.name === post.logo)[0]
+
+          if (post.logo === 'script-kit') {
+            logo = null
+          }
 
           return (
             <div class="mb-3">
@@ -79,11 +84,13 @@ const IndexPage = ({ posts, images }) => (
                 href={`/${post.slug}`}
                 class="rounded py-2 px-3 flex items-center transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 dark:hover:bg-cyan-transparent dark:hover:text-cyan-light hover:no-underline"
               >
-                {post.logo ? (
-                  <img src={logo.src} alt="" class="w-6 mr-4" />
-                ) : (
-                  <LogolessLogo />
-                )}
+                {logo ? (
+                    <img src={logo.src} alt="" class="w-6 mr-2" />
+                  ) : post.logo === 'script-kit' ? (
+                    <ScriptKit />
+                  ) : (
+                    <LogolessLogo />
+                  )}
                 {post.title}
               </a>
             </div>
