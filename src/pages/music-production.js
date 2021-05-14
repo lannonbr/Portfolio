@@ -1,5 +1,5 @@
 /** @jsx h */
-import { h, Fragment } from 'preact'
+import { h } from 'preact'
 import SEO from '../components/seo.js'
 
 import MusicProdIllustration from '../images/music-prod.js'
