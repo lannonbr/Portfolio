@@ -31,5 +31,3 @@ exec('open https://cards-dev.twitter.com/validator')
 ```
 
 Having the ability to setup keyboard shortcuts for NodeJS scripts has been an extremely handy boost to my usage of my Mac. Further beyond, it can be enhanced further with tools like [Karabiner Elements](https://karabiner-elements.pqrs.org/) or [Keyboard Maestro](https://www.keyboardmaestro.com/main/) to make working on MacOS a very automated system whether I am in a programming aspect or just day to day general usage.
-
-test
