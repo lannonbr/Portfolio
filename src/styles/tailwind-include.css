@@ -10,7 +10,7 @@ input#titleFilter::placeholder {
 }
 
 html.dark body {
-  background: #404040;
+  background-color: #111827; /* Tailwind bg-gray-900 */
   --bodyTextColor: #f0f0f0;
   --bodyLink: #81cfe0;
 }
