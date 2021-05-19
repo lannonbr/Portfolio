@@ -89,7 +89,6 @@ jobs:
           wget https://github.com/lannonbr/netlify_deploy/releases/download/pre-release-86d0ca03f920ab445a3daf4c52fd39ef02a12922/netlify-deploy-linux-86d0ca03f920ab445a3daf4c52fd39ef02a12922.tar.gz
           tar -xvf netlify-deploy-linux-86d0ca03f920ab445a3daf4c52fd39ef02a12922.tar.gz
 
-          ls -lah
           ./release/netlify_deploy --path public --prod
       - name: Trigger light to go green on success
         if: success()
