@@ -86,8 +86,8 @@ jobs:
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
         run: |
-          wget https://github.com/lannonbr/netlify_deploy/releases/download/pre-release-86d0ca03f920ab445a3daf4c52fd39ef02a12922/netlify-deploy-linux-86d0ca03f920ab445a3daf4c52fd39ef02a12922.tar.gz
-          tar -xvf netlify-deploy-linux-86d0ca03f920ab445a3daf4c52fd39ef02a12922.tar.gz
+          wget https://github.com/lannonbr/netlify_deploy/releases/download/netlify_deploy-v0.2.1/netlify-deploy-linux-0.2.1.tar.gz
+          tar -xvf netlify-deploy-linux-0.2.1.tar.gz
 
           ./release/netlify_deploy --path public --prod
       - name: Trigger light to go green on success
