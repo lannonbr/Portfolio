@@ -84,6 +84,11 @@ const MusicProductionPage = () => {
             https://www.modulargrid.net/e/racks/view/1289453
           </a>
         </p>
+        <p>
+          I also have a{' '}
+          <a href="https://www.korg.com/us/products/dj/sq_64/">KORG SQ-64</a>{' '}
+          sequencer to sequence my Eurorack modules.
+        </p>
       </div>
       <div class="hidden md:block">
         <MusicProdIllustration />
