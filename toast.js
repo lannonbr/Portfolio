@@ -6,17 +6,13 @@ import * as FeaturedProjectsSource from './fetch-featured-projects.js'
 import * as ScriptKitScriptsSource from './fetch-scriptkit-scripts.js'
 
 export const sourceData = async ({ setDataForSlug }) => {
-  const [
-    mdxPosts,
-    tinkerProjects,
-    featuredProjects,
-    scriptsData,
-  ] = await Promise.all([
-    MDXPostsSource.sourceData({ setDataForSlug }),
-    TinkerProjectsSource.sourceData(),
-    FeaturedProjectsSource.sourceData(),
-    ScriptKitScriptsSource.sourceData(),
-  ])
+  const [mdxPosts, tinkerProjects, featuredProjects, scriptsData] =
+    await Promise.all([
+      MDXPostsSource.sourceData({ setDataForSlug }),
+      TinkerProjectsSource.sourceData(),
+      FeaturedProjectsSource.sourceData(),
+      ScriptKitScriptsSource.sourceData(),
+    ])
 
   let images = await fs.readdir('./static/blog-icons')
   images = images.map((image) => {

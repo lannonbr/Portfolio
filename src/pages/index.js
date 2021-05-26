@@ -85,12 +85,12 @@ const IndexPage = ({ posts, images }) => (
                 class="rounded py-2 px-3 flex items-center transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 dark:hover:bg-cyan-transparent dark:hover:text-cyan-light hover:no-underline"
               >
                 {logo ? (
-                    <img src={logo.src} alt="" class="w-6 mr-2" />
-                  ) : post.logo === 'script-kit' ? (
-                    <ScriptKit />
-                  ) : (
-                    <LogolessLogo />
-                  )}
+                  <img src={logo.src} alt="" class="w-6 mr-2" />
+                ) : post.logo === 'script-kit' ? (
+                  <ScriptKit />
+                ) : (
+                  <LogolessLogo />
+                )}
                 {post.title}
               </a>
             </div>
