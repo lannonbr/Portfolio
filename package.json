@@ -10,15 +10,15 @@
     "@mdx-js/mdx": "^2.0.0-next.9",
     "@mdx-js/preact": "2.0.0-next.8",
     "@octokit/rest": "^18.5.3",
-    "autoprefixer": "^10.2.5",
-    "dayjs": "^1.10.4",
+    "autoprefixer": "^10.2.6",
+    "dayjs": "^1.10.5",
     "esinstall": "^1.1.4",
     "globby": "^11.0.3",
     "gray-matter": "^4.0.3",
     "js-yaml": "^4.1.0",
     "parse-numeric-range": "^1.2.0",
     "patch-package": "^6.4.7",
-    "postcss": "^8.2.12",
+    "postcss": "^8.3.0",
     "postinstall-postinstall": "^2.1.0",
     "preact": "^10.5.13",
     "preact-render-to-string": "^5.1.19",
@@ -30,7 +30,7 @@
     "rehype-slug": "^4.0.1",
     "tailwindcss": "^2.1.2",
     "toast": "^0.3.43",
-    "unist-util-visit": "^3.0.0"
+    "unist-util-visit": "^3.1.0"
   },
   "devDependencies": {
     "http-server": "^0.12.3",
