@@ -38,14 +38,6 @@ const WorkPage = ({ projects }) => (
           about my open source work, head over to my{' '}
           <a href="https://github.com/lannonbr">Github</a>.
         </p>
-        <p>
-          Finally, I've found a haven in the Twitch Dev community of individuals
-          livestreaming and learning with others. I partake in discussions with
-          other streamers and community members in the stream chatrooms and
-          getting involved with projects they're building and putting up on
-          GitHub. You can learn more about my stream on the{' '}
-          <a href="/stream/">Stream Page</a>.
-        </p>
       </div>
       <div class="hidden md:block">
         <Conversation />

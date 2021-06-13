@@ -6,7 +6,6 @@ function Navigation() {
     { url: '/work', name: 'Work' },
     { url: '/projects', name: 'Projects' },
     { url: '/garden', name: 'Garden' },
-    { url: '/stream', name: 'Stream' },
     { url: '/talks', name: 'Talks' },
   ]
 

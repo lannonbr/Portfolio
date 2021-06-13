@@ -42,7 +42,6 @@ function Footer() {
           <Link href="/work">Work</Link>
           <Link href="/projects">Projects</Link>
           <Link href="/garden">Digital Garden</Link>
-          <Link href="/stream">Stream</Link>
           <Link href="/talks">Talks</Link>
         </div>
       </div>
