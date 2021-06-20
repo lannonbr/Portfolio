@@ -63,7 +63,6 @@ const BlogIndexPage = ({ posts, images }) => {
   const categories = [
     { name: 'GitHub Actions', cat: 'github-actions' },
     { name: 'WebAssembly', cat: 'wasm' },
-    { name: 'Gatsby', cat: 'gatsby' },
     { name: 'Rust', cat: 'rust' },
   ]
 
