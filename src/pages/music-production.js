@@ -6,7 +6,7 @@ import MusicProdIllustration from '../images/music-prod.js'
 
 const MusicProductionPage = () => {
   return (
-    <section class="md:grid md:grid-cols-2 md:gap-8 mb-4">
+    <section class="split-grid">
       <SEO title="Music Production" />
       <div>
         <h1>Music Production</h1>
@@ -90,7 +90,7 @@ const MusicProductionPage = () => {
           sequencer to sequence my Eurorack modules.
         </p>
       </div>
-      <div class="hidden md:block">
+      <div class="illustration-container">
         <MusicProdIllustration />
       </div>
     </section>

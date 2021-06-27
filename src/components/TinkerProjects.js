@@ -3,20 +3,17 @@ import { h } from 'preact'
 
 function TinkerProjects({ projects }) {
   return (
-    <div class="grid gap-5 grid-cols-1 md:grid-cols-2">
+    <div id="tinker-projects">
       {projects.map((project) => (
-        <section
-          key={project.name}
-          class="border border-gray-400 p-4 rounded flex flex-col"
-        >
+        <section key={project.name} class="tinker-project">
           <h3>{project.name}</h3>
-          <h5>As of {project.created_date}</h5>
-          <p class="flex-grow">{project.desc}</p>
-          <div class="flex flex-col md:flex-row">
+          <h4>As of {project.created_date}</h4>
+          <p>{project.desc}</p>
+          <div class="links">
             {project.links &&
               project.links.map((link, idx) => {
                 return (
-                  <a key={idx} href={link.url} class="md:mr-4">
+                  <a key={idx} href={link.url}>
                     {link.name}
                   </a>
                 )

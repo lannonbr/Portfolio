@@ -49,7 +49,7 @@ const LogolessLogo = () => (
 
 const IndexPage = ({ posts, images }) => (
   <Fragment>
-    <section class="md:grid md:grid-cols-2 md:gap-8 mb-4">
+    <section class="split-grid">
       <SEO title="Home" />
       <Banner />
       <div class="flex flex-col justify-center">
@@ -97,7 +97,7 @@ const IndexPage = ({ posts, images }) => (
           )
         })}
       </div>
-      <div class="hidden md:block">
+      <div class="illustration-container">
         <Office />
       </div>
     </section>

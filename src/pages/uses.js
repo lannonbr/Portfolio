@@ -6,7 +6,7 @@ const UsesPage = () => (
   <Fragment>
     <SEO title="Uses" />
     <h1>Uses</h1>
-    <section class="md:grid md:grid-cols-2 md:gap-8 mb-4">
+    <section class="split-grid">
       <div>
         <h2>Software</h2>
         <ul>

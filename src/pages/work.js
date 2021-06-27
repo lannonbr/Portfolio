@@ -8,7 +8,7 @@ import TinkerProjects from '../components/TinkerProjects.js'
 const WorkPage = ({ projects }) => (
   <Fragment>
     <SEO title="Work" />
-    <section class="md:grid md:grid-cols-2 md:gap-8 mb-4">
+    <section class="split-grid">
       <div>
         <h1>Work</h1>
         <p>
@@ -39,7 +39,7 @@ const WorkPage = ({ projects }) => (
           <a href="https://github.com/lannonbr">Github</a>.
         </p>
       </div>
-      <div class="hidden md:block">
+      <div class="illustration-container">
         <Conversation />
       </div>
     </section>
