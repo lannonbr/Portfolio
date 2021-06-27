@@ -11,29 +11,17 @@ const statusMap = {
   'fully-grown': '🌲',
 }
 
-const LogolessLogo = () => (
-  <div
-    class="inline-block w-6 h-6 rounded-full mr-2"
-    style={{
-      backgroundImage: 'linear-gradient( 135deg, #E2B0FF 10%, #9F44D3 100%)',
-    }}
-  />
-)
-
 const CuratedButton = ({ logo, name, handleClick, isSelected }) => {
   return (
     <button
-      class={`border border-black px-2 py-3 md:py-2 flex items-center rounded text-sm mb-4 md:mr-3 md:mb-0 hover:shadow-md ${
+      class={`curated-button md:py-2 md:mr-3 md:mb-0 hover:shadow-md ${
         isSelected
           ? 'shadow-in bg-purple-200 dark:bg-gray-900'
           : 'dark:bg-cyan-transparent'
       }`}
-      style={{
-        color: 'var(--bodyLink)',
-      }}
       onClick={handleClick}
     >
-      <img src={logo.src} alt="" class="w-5 mr-3" />
+      <img src={logo.src} alt="" />
       <span>{name}</span>
     </button>
   )
@@ -42,7 +30,7 @@ const CuratedButton = ({ logo, name, handleClick, isSelected }) => {
 const NoPosts = (props) => {
   return (
     <div class="flex items-center flex-col">
-      <span class="hidden md:block">
+      <span class="illustration-container">
         <EmptyStreet />
       </span>
       <p class="md:text-2xl md:mt-4">
@@ -140,7 +128,7 @@ const BlogIndexPage = ({ posts, images }) => {
                   ) : post.logo === 'script-kit' ? (
                     <ScriptKit />
                   ) : (
-                    <LogolessLogo />
+                    <div class="logoless-logo" />
                   )}
                   <span class="flex-grow">{post.title}</span>
                   {post.status && <span>{statusMap[post.status]}</span>}

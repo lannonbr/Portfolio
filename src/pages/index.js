@@ -38,13 +38,53 @@ const Banner = () => {
   )
 }
 
-const LogolessLogo = () => (
-  <div
-    class="inline-block w-6 h-6 rounded-full mr-4"
-    style={{
-      backgroundImage: 'linear-gradient( 135deg, #E2B0FF 10%, #9F44D3 100%)',
-    }}
-  />
+const RecentPosts = ({ posts, images }) => {
+  return posts.map((post) => {
+    let logo = post.logo && images.filter((logo) => logo.name === post.logo)[0]
+
+    if (post.logo === 'script-kit') {
+      logo = null
+    }
+
+    return (
+      <div class="mb-3">
+        <a
+          href={`/${post.slug}`}
+          class="rounded py-2 px-3 flex items-center transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 dark:hover:bg-cyan-transparent dark:hover:text-cyan-light hover:no-underline"
+        >
+          {logo ? (
+            <img src={logo.src} alt="" class="w-6 mr-2" />
+          ) : post.logo === 'script-kit' ? (
+            <ScriptKit />
+          ) : (
+            <div class="logoless-logo" />
+          )}
+          {post.title}
+        </a>
+      </div>
+    )
+  })
+}
+
+const Newsletter = () => (
+  <section class="newsletter">
+    <h2>Join my Newsletter</h2>
+    <div>
+      <p>
+        Subscribe to my weekly newsletter to explore what I'm up to and what is
+        exciting me, including emerging development technologies, music
+        production, and more.
+      </p>
+      <span>
+        <a
+          href="https://benjamin-lannon.ck.page/16e9b2e342"
+          class="bg-purple-600 hover:bg-purple-500 focus:outline-none focus:border-purple-700 transition ease-in-out duration-150"
+        >
+          Subscribe
+        </a>
+      </span>
+    </div>
+  </section>
 )
 
 const IndexPage = ({ posts, images }) => (
@@ -70,55 +110,13 @@ const IndexPage = ({ posts, images }) => (
             />
           </a>
         </div>
-        {posts.map((post) => {
-          let logo =
-            post.logo && images.filter((logo) => logo.name === post.logo)[0]
-
-          if (post.logo === 'script-kit') {
-            logo = null
-          }
-
-          return (
-            <div class="mb-3">
-              <a
-                href={`/${post.slug}`}
-                class="rounded py-2 px-3 flex items-center transition-all duration-200 ease-in-out hover:text-purple-700 hover:bg-purple-100 dark:hover:bg-cyan-transparent dark:hover:text-cyan-light hover:no-underline"
-              >
-                {logo ? (
-                  <img src={logo.src} alt="" class="w-6 mr-2" />
-                ) : post.logo === 'script-kit' ? (
-                  <ScriptKit />
-                ) : (
-                  <LogolessLogo />
-                )}
-                {post.title}
-              </a>
-            </div>
-          )
-        })}
+        <RecentPosts posts={posts} images={images} />
       </div>
       <div class="illustration-container">
         <Office />
       </div>
     </section>
-    <section class="mb-4 mx-auto max-w-full md:max-w-4xl p-4 rounded-md border border-gray-800 dark:border-gray-200">
-      <h2>Join my Newsletter</h2>
-      <div>
-        <p>
-          Subscribe to my weekly newsletter to explore what I'm up to and what
-          is exciting me, including emerging development technologies, music
-          production, and more.
-        </p>
-        <span class="inline-flex rounded-md shadow-sm">
-          <a
-            href="https://benjamin-lannon.ck.page/16e9b2e342"
-            class="inline-flex items-center px-6 py-3 border border-transparent text-base leading-6 font-medium rounded-md text-white bg-purple-600 hover:bg-purple-500 focus:outline-none focus:border-purple-700 transition ease-in-out duration-150"
-          >
-            Subscribe
-          </a>
-        </span>
-      </div>
-    </section>
+    <Newsletter />
   </Fragment>
 )
 
